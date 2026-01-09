@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "cataclysmWuxia",
+    "name": "Wuxia",
+    "description": "Add Wuxia elements to the Cataclysm",
+    "category": "magical",
+    "authors": [ "Runesturn" ],
+    "dependencies": [ "dda" ]
+  }
+]
