@@ -1,0 +1,26 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GAIN_MAX_QI",
+    "//": "",
+    "effect": [
+      {
+        "math": [
+          "u_vitamin('qi_vitamin') = 1000"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOSE_ALL_QI",
+    "//": "",
+    "effect": [
+      {
+        "math": [
+          "u_vitamin('qi_vitamin') = 0"
+        ]
+      }
+    ]
+  }
+]

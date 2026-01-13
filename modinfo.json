@@ -5,7 +5,11 @@
     "name": "Wuxia",
     "description": "Add Wuxia elements to the Cataclysm",
     "category": "magical",
-    "authors": [ "Runesturn" ],
-    "dependencies": [ "dda" ]
+    "authors": [
+      "Runesturn"
+    ],
+    "dependencies": [
+      "dda"
+    ]
   }
 ]
