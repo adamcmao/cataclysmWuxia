@@ -1,0 +1,96 @@
+[
+  {
+    "id": "qi_graph",
+    "type": "widget",
+    "label": "Qi",
+    "var": "custom",
+    "custom_var": {
+      "value": {
+        "math": [
+          "u_vitamin('qi_vitamin')"
+        ]
+      },
+      "range": [
+        0,
+        1000
+      ]
+    },
+    "style": "graph",
+    "width": 30,
+    "symbols": ".=",
+    "fill": "bucket",
+    "colors": [
+      "c_red",
+      "c_light_red",
+      "c_magenta",
+      "c_light_blue",
+      "c_blue"
+    ],
+    "padding": 0
+  },
+  {
+    "id": "qi_graph_block",
+    "type": "widget",
+    "style": "layout",
+    "label": "Qi Graph",
+    "arrange": "minimum_columns",
+    "widgets": [
+      "qi_graph"
+    ]
+  },
+  {
+    "//": "Extend the custom sidebar with Wuxia-specific sections",
+    "copy-from": "legacy_classic_sidebar",
+    "type": "widget",
+    "id": "legacy_classic_sidebar",
+    "extend": {
+      "widgets": [
+        "qi_graph_block"
+      ]
+    }
+  },
+  {
+    "//": "Extend the custom sidebar with Wuxia-specific sections",
+    "copy-from": "legacy_compact_sidebar",
+    "type": "widget",
+    "id": "legacy_compact_sidebar",
+    "extend": {
+      "widgets": [
+        "qi_graph_block"
+      ]
+    }
+  },
+  {
+    "//": "Extend the custom sidebar with Wuxia-specific sections",
+    "copy-from": "legacy_labels_narrow_sidebar",
+    "type": "widget",
+    "id": "legacy_labels_narrow_sidebar",
+    "extend": {
+      "widgets": [
+        "qi_graph_block"
+      ]
+    }
+  },
+  {
+    "//": "Extend the custom sidebar with Wuxia-specific sections",
+    "copy-from": "legacy_labels_sidebar",
+    "type": "widget",
+    "id": "legacy_labels_sidebar",
+    "extend": {
+      "widgets": [
+        "qi_graph_block"
+      ]
+    }
+  },
+  {
+    "//": "Extend the custom sidebar with Wuxia-specific sections",
+    "copy-from": "structured_sidebar",
+    "type": "widget",
+    "id": "structured_sidebar",
+    "extend": {
+      "widgets": [
+        "qi_graph_block"
+      ]
+    }
+  }
+]
