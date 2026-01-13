@@ -40,10 +40,10 @@
     }
   },
   {
-    "id": "recover_qi",
-    "//": "Test ability to recover to 1000 qi",
+    "id": "gain_all_qi",
+    "//": "Test ability to gain to 1000 qi",
     "type": "SPELL",
-    "name": "Recover Qi",
+    "name": "Recover All Qi",
     "description": "Recovers all Qi",
     "message": "Through the power of TEST, you recover all qi",
     "shape": "blast",
@@ -63,15 +63,61 @@
     }
   },
   {
-    "id": "lose_qi",
+    "id": "lose_all_qi",
     "//": "Test ability to lose all qi",
     "type": "SPELL",
-    "name": "Lose Qi",
+    "name": "Lose All Qi",
     "description": "Lose all Qi",
     "message": "Through the power of TEST, you lose all qi",
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_LOSE_ALL_QI",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_FAIL"
+    ],
+    "base_energy_cost": 0,
+    "energy_source": {
+      "type": "VITAMIN",
+      "vitamin": "qi_vitamin",
+      "color": "c_blue"
+    }
+  },
+  {
+    "id": "gain_100_qi",
+    "//": "Test ability to recover 100 qi",
+    "type": "SPELL",
+    "name": "Gain 100 Qi",
+    "description": "Gain 100 Qi",
+    "message": "Through the power of TEST, you recover 100 qi",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_GAIN_100_QI",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_FAIL"
+    ],
+    "base_energy_cost": 0,
+    "energy_source": {
+      "type": "VITAMIN",
+      "vitamin": "qi_vitamin",
+      "color": "c_blue"
+    }
+  },
+  {
+    "id": "lose_100_qi",
+    "//": "Test ability to lose 100 qi",
+    "type": "SPELL",
+    "name": "Lose 100 Qi",
+    "description": "Lose 100 Qi",
+    "message": "Through the power of TEST, you lose 100 qi",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_LOSE_100_QI",
     "valid_targets": [
       "self"
     ],
