@@ -1,0 +1,11 @@
+[
+  {
+    "id": "qi_vitamin",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": "Qi",
+    "min": 0,
+    "max": 1000,
+    "rate": "0 m"
+  }
+]
