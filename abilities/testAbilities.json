@@ -1,45 +1,5 @@
 [
   {
-    "id": "blazing_fist",
-    "//": "",
-    "type": "SPELL",
-    "name": "Blazing Fist",
-    "description": "Concentrate your energy into your fist, resulting in a powerful strike",
-    "message": "You strike with a blazing fist",
-    "shape": "blast",
-    "effect": "attack",
-    "damage_type": "bash",
-    "min_damage": {
-      "math": [
-        "(u_spell_level('blazing_fist') * 0.75) + 5"
-      ]
-    },
-    "max_damage": {
-      "math": [
-        "(u_spell_level('blazing_fist') * 5) + 10"
-      ]
-    },
-    "max_level": 10,
-    "valid_targets": [
-      "hostile"
-    ],
-    "flags": [
-      "NO_FAIL",
-      "NON_MAGICAL",
-      "RANDOM_DAMAGE",
-      "SOMATIC"
-    ],
-    "base_casting_time": 75,
-    "base_energy_cost": 50,
-    "min_range": 1,
-    "max_range": 1,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
-  },
-  {
     "id": "gain_all_qi",
     "//": "Test ability to gain to 1000 qi",
     "type": "SPELL",

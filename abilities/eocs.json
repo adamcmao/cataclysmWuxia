@@ -49,38 +49,46 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_FORGET_TEST_ABILITY",
-    "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_spell_level('test_ability') =- 1"
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LEARN_TEST_ABILITY",
-    "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_spell_level('test_ability') = 1"
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
     "id": "EOC_LEARN_TEST_ABILITY_ON_CHARACTER_CREATION",
     "eoc_type": "EVENT",
     "required_event": "game_start",
-    "effect": {
-      "math": [
-        "u_spell_level('learn_test_ability') = 1",
-        "u_spell_level('forget_test_ability') = 1"
+    "effect": [
+      {
+        "math": [
+          "u_spell_level('weak_punch') = 0"
+        ]
+      },
+      {
+        "math": [
+          "u_spell_level('learn_test_ability') = 1"
+        ]
+      },
+      {
+        "math": [
+          "u_spell_level('forget_test_ability') = 1"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEARN_BLAZING_FIST",
+    "eoc_type": "EVENT",
+    "required_event": "character_learns_spell",
+    "condition": {
+      "compare_string": [
+        "blazing_fist",
+        {
+          "context_val": "spell"
+        }
       ]
-    }
+    },
+    "effect": [
+      {
+        "math": [
+          "u_spell_level('weak_punch') = -1"
+        ]
+      }
+    ]
   }
 ]
