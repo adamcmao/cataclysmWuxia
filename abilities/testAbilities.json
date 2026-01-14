@@ -130,5 +130,73 @@
       "vitamin": "qi_vitamin",
       "color": "c_blue"
     }
+  },
+  {
+    "id": "forget_test_ability",
+    "//": "Testing the ability to forget a skill",
+    "type": "SPELL",
+    "name": "Mind Purge",
+    "description": "You purge your mind of a test skill",
+    "message": "Through the power of TEST, you forget a skill",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_FORGET_TEST_ABILITY",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_FAIL"
+    ],
+    "base_energy_cost": 0,
+    "energy_source": {
+      "type": "VITAMIN",
+      "vitamin": "qi_vitamin",
+      "color": "c_blue"
+    }
+  },
+  {
+    "id": "learn_test_ability",
+    "//": "Testing the ability to learn a skill",
+    "type": "SPELL",
+    "name": "Mind Enlightenment",
+    "description": "You focus and learn a test skill",
+    "message": "Through the power of TEST, you learn a skill",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_LEARN_TEST_ABILITY",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_FAIL"
+    ],
+    "base_energy_cost": 0,
+    "energy_source": {
+      "type": "VITAMIN",
+      "vitamin": "qi_vitamin",
+      "color": "c_blue"
+    }
+  },
+  {
+    "id": "test_ability",
+    "//": "Test ability used for testing the add/removal of abilities",
+    "type": "SPELL",
+    "name": "Test Ability",
+    "description": "Recovers all Qi",
+    "message": "Through the power of TEST, you do nothing?",
+    "shape": "blast",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_FAIL"
+    ],
+    "effect": "noise",
+    "base_energy_cost": 0,
+    "energy_source": {
+      "type": "VITAMIN",
+      "vitamin": "qi_vitamin",
+      "color": "c_blue"
+    }
   }
 ]
