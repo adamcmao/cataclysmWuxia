@@ -74,5 +74,40 @@
         "u_message": "All this tripping has given you an idea. What if, you fell on purpose?"
       }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_BASIC_QI",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      {
+        "math": [
+          "u_spell_level('blazing_fist') = 0"
+        ]
+      },
+      {
+        "math": [
+          "u_spell_level('gain_all_qi') = 0"
+        ]
+      },
+      {
+        "math": [
+          "u_spell_level('lose_all_qi') = 0"
+        ]
+      },
+      {
+        "math": [
+          "u_spell_level('gain_100_qi') = 0"
+        ]
+      },
+      {
+        "math": [
+          "u_spell_level('lose_100_qi') = 0"
+        ]
+      },
+      {
+        "u_message": "You take your first step towards the truth."
+      }
+    ]
   }
 ]

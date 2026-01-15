@@ -1,48 +1,68 @@
 [
   {
     "type": "effect_on_condition",
-    "id": "EOC_GAIN_MAX_QI",
-    "//": "",
+    "id": "EOC_LEARN_BASIC_MEDITATION_1",
+    "eoc_type": "EVENT",
+    "required_event": "character_learns_spell",
+    "condition": {
+      "compare_string": [
+        "straight_punch",
+        {
+          "context_val": "spell"
+        }
+      ]
+    },
     "effect": [
       {
-        "math": [
-          "u_vitamin('qi_vitamin') = 1000"
+        "u_message": "TEST MESSAGE: EOC_LEARN_BASIC_MEDITATION_1"
+      },
+      {
+        "if": {
+          "math": [
+            "u_spell_level('donkey_roll') >=0"
+          ]
+        },
+        "then": [
+          {
+            "u_learn_recipe": "meditate_to_unlock_qi"
+          },
+          {
+            "u_message": "You feel strange, perhaps you should think and meditate?"
+          }
         ]
       }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_LOSE_ALL_QI",
-    "//": "",
+    "id": "EOC_LEARN_BASIC_MEDITATION_2",
+    "eoc_type": "EVENT",
+    "required_event": "character_learns_spell",
+    "condition": {
+      "compare_string": [
+        "donkey_roll",
+        {
+          "context_val": "spell"
+        }
+      ]
+    },
     "effect": [
       {
-        "math": [
-          "u_vitamin('qi_vitamin') = 0"
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_GAIN_100_QI",
-    "//": "",
-    "effect": [
+        "u_message": "TEST MESSAGE: EOC_LEARN_BASIC_MEDITATION_2"
+      },
       {
-        "math": [
-          "u_vitamin('qi_vitamin') += 100"
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LOSE_100_QI",
-    "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_vitamin('qi_vitamin') -= 100"
+        "if": {
+          "math": [
+            "u_spell_level('straight_punch') >=0"
+          ]
+        },
+        "then": [
+          {
+            "u_learn_recipe": "meditate_to_unlock_qi"
+          },
+          {
+            "u_message": "You feel strange, perhaps you should think and meditate?"
+          }
         ]
       }
     ]

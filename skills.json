@@ -1,0 +1,10 @@
+[
+  {
+    "type": "skill",
+    "id": "wuxia",
+    "name": "wuxia",
+    "display_category": "display_interaction",
+    "sort_rank": 30000,
+    "description": "To seek the truth and the dao"
+  }
+]
