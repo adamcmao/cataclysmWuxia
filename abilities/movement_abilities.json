@@ -18,8 +18,7 @@
     "base_energy_cost": 200,
     "min_range": 1,
     "max_range": 1,
-    "energy_source": "STAMINA",
-    "learn_spells": { "donkey_roll": 1 }
+    "energy_source": "STAMINA"
   },
   {
     "id": "donkey_roll",
