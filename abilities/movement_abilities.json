@@ -5,7 +5,7 @@
     "type": "SPELL",
     "name": "Dash",
     "description": "You have heard rumours of being able to move light on your feet, perhaps you can try it yourself?",
-    "message": "As you attempt to move quickly, you feel your feet become tangled and you trip",
+    "message": "As you attempt to move quickly, you feel your feet become tangled and you trip loudly",
     "shape": "blast",
     "effect": "dash",
     "damage_type": "bash",
