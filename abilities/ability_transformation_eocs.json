@@ -45,6 +45,9 @@
         "math": [
           "u_spell_level('weak_punch') = -1"
         ]
+      },
+      {
+        "u_message": "Instead of swinging like a windmill, perhaps a straight line would be more efficient?"
       }
     ]
   },

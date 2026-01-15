@@ -30,9 +30,8 @@
     "max_range": 1,
     "energy_source": "STAMINA",
     "learn_spells": {
-      "blazing_fist": 1
-    },
-    "condition_fail_message": "You swing with all your might and feel your fist land softly against your leg."
+      "straight_punch": 1
+    }
   },
     {
     "id": "straight_punch",
@@ -63,8 +62,7 @@
     "base_energy_cost": 100,
     "min_range": 1,
     "max_range": 1,
-    "energy_source": "STAMINA",
-    "condition_fail_message": "You lose balance, and your fist brushes against your target"
+    "energy_source": "STAMINA"
   },
   {
     "id": "blazing_fist",
