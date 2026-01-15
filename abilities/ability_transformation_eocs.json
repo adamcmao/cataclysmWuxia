@@ -5,26 +5,10 @@
     "eoc_type": "EVENT",
     "required_event": "game_start",
     "effect": [
-      {
-        "math": [
-          "u_spell_level('weak_punch') = 0"
-        ]
-      },
-      {
-        "math": [
-          "u_spell_level('clumsy_dash') = 0"
-        ]
-      },
-      {
-        "math": [
-          "u_spell_level('learn_test_ability') = 1"
-        ]
-      },
-      {
-        "math": [
-          "u_spell_level('forget_test_ability') = 1"
-        ]
-      }
+      { "math": [ "u_spell_level('weak_punch') = 0" ] },
+      { "math": [ "u_spell_level('clumsy_dash') = 0" ] },
+      { "math": [ "u_spell_level('learn_test_ability') = 1" ] },
+      { "math": [ "u_spell_level('forget_test_ability') = 1" ] }
     ]
   },
   {
@@ -32,23 +16,10 @@
     "id": "EOC_LEARN_STRAIGHT_PUNCH",
     "eoc_type": "EVENT",
     "required_event": "character_learns_spell",
-    "condition": {
-      "compare_string": [
-        "straight_punch",
-        {
-          "context_val": "spell"
-        }
-      ]
-    },
+    "condition": { "compare_string": [ "straight_punch", { "context_val": "spell" } ] },
     "effect": [
-      {
-        "math": [
-          "u_spell_level('weak_punch') = -1"
-        ]
-      },
-      {
-        "u_message": "Instead of swinging like a windmill, perhaps a straight line would be more efficient?"
-      }
+      { "math": [ "u_spell_level('weak_punch') = -1" ] },
+      { "u_message": "Instead of swinging like a windmill, perhaps a straight line would be more efficient?" }
     ]
   },
   {
@@ -56,23 +27,10 @@
     "id": "EOC_LEARN_DONKEY_ROLL",
     "eoc_type": "EVENT",
     "required_event": "character_learns_spell",
-    "condition": {
-      "compare_string": [
-        "donkey_roll",
-        {
-          "context_val": "spell"
-        }
-      ]
-    },
+    "condition": { "compare_string": [ "donkey_roll", { "context_val": "spell" } ] },
     "effect": [
-      {
-        "math": [
-          "u_spell_level('clumsy_dash') = -1"
-        ]
-      },
-      {
-        "u_message": "All this tripping has given you an idea. What if, you fell on purpose?"
-      }
+      { "math": [ "u_spell_level('clumsy_dash') = -1" ] },
+      { "u_message": "All this tripping has given you an idea. What if, you fell on purpose?" }
     ]
   },
   {
@@ -80,34 +38,12 @@
     "id": "EOC_UNLOCK_BASIC_QI",
     "eoc_type": "ACTIVATION",
     "effect": [
-      {
-        "math": [
-          "u_spell_level('blazing_fist') = 0"
-        ]
-      },
-      {
-        "math": [
-          "u_spell_level('gain_all_qi') = 0"
-        ]
-      },
-      {
-        "math": [
-          "u_spell_level('lose_all_qi') = 0"
-        ]
-      },
-      {
-        "math": [
-          "u_spell_level('gain_100_qi') = 0"
-        ]
-      },
-      {
-        "math": [
-          "u_spell_level('lose_100_qi') = 0"
-        ]
-      },
-      {
-        "u_message": "You take your first step towards the truth."
-      }
+      { "math": [ "u_spell_level('blazing_fist') = 0" ] },
+      { "math": [ "u_spell_level('gain_all_qi') = 0" ] },
+      { "math": [ "u_spell_level('lose_all_qi') = 0" ] },
+      { "math": [ "u_spell_level('gain_100_qi') = 0" ] },
+      { "math": [ "u_spell_level('lose_100_qi') = 0" ] },
+      { "u_message": "You take your first step towards the truth." }
     ]
   }
 ]

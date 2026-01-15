@@ -12,22 +12,14 @@
     "min_damage": 0,
     "max_damage": 0,
     "max_level": 1,
-    "valid_targets": [
-      "ground"
-    ],
-    "flags": [
-      "NON_MAGICAL",
-      "LOUD",
-      "NO_HANDS"
-    ],
+    "valid_targets": [ "ground" ],
+    "flags": [ "NON_MAGICAL", "LOUD", "NO_HANDS" ],
     "base_casting_time": 150,
     "base_energy_cost": 200,
     "min_range": 1,
     "max_range": 1,
     "energy_source": "STAMINA",
-    "learn_spells": {
-      "donkey_roll": 1
-    }
+    "learn_spells": { "donkey_roll": 1 }
   },
   {
     "id": "donkey_roll",
@@ -42,13 +34,8 @@
     "min_damage": 0,
     "max_damage": 0,
     "max_level": 5,
-    "valid_targets": [
-      "ground"
-    ],
-    "flags": [
-      "NON_MAGICAL",
-      "NO_HANDS"
-    ],
+    "valid_targets": [ "ground" ],
+    "flags": [ "NON_MAGICAL", "NO_HANDS" ],
     "base_casting_time": 100,
     "base_energy_cost": 50,
     "min_range": 1,

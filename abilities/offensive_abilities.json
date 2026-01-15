@@ -9,31 +9,19 @@
     "shape": "blast",
     "effect": "attack",
     "damage_type": "bash",
-    "min_damage": {
-      "math": [
-        "(u_spell_level('weak_punch') * 0.5)"
-      ]
-    },
-    "max_damage": {
-      "math": [
-        "(u_spell_level('weak_punch') * 1)"
-      ]
-    },
+    "min_damage": { "math": [ "(u_spell_level('weak_punch') * 0.5)" ] },
+    "max_damage": { "math": [ "(u_spell_level('weak_punch') * 1)" ] },
     "max_level": 1,
-    "valid_targets": [
-      "hostile"
-    ],
-    "flags": ["NON_MAGICAL", "LOUD", "NO_LEGS"],
+    "valid_targets": [ "hostile" ],
+    "flags": [ "NON_MAGICAL", "LOUD", "NO_LEGS" ],
     "base_casting_time": 150,
     "base_energy_cost": 150,
     "min_range": 1,
     "max_range": 1,
     "energy_source": "STAMINA",
-    "learn_spells": {
-      "straight_punch": 1
-    }
+    "learn_spells": { "straight_punch": 1 }
   },
-    {
+  {
     "id": "straight_punch",
     "//": "You will not forget this ability once it hits max level",
     "type": "SPELL",
@@ -43,21 +31,11 @@
     "shape": "blast",
     "effect": "attack",
     "damage_type": "bash",
-    "min_damage": {
-      "math": [
-        "(u_spell_level('straight_punch') * 1)"
-      ]
-    },
-    "max_damage": {
-      "math": [
-        "(u_spell_level('straight_punch') * 2)"
-      ]
-    },
+    "min_damage": { "math": [ "(u_spell_level('straight_punch') * 1)" ] },
+    "max_damage": { "math": [ "(u_spell_level('straight_punch') * 2)" ] },
     "max_level": 5,
-    "valid_targets": [
-      "hostile"
-    ],
-    "flags": ["NON_MAGICAL", "NO_LEGS"],
+    "valid_targets": [ "hostile" ],
+    "flags": [ "NON_MAGICAL", "NO_LEGS" ],
     "base_casting_time": 125,
     "base_energy_cost": 100,
     "min_range": 1,
@@ -74,34 +52,15 @@
     "shape": "blast",
     "effect": "attack",
     "damage_type": "bash",
-    "min_damage": {
-      "math": [
-        "(u_spell_level('blazing_fist') * 0.75) + 5"
-      ]
-    },
-    "max_damage": {
-      "math": [
-        "(u_spell_level('blazing_fist') * 5) + 10"
-      ]
-    },
+    "min_damage": { "math": [ "(u_spell_level('blazing_fist') * 0.75) + 5" ] },
+    "max_damage": { "math": [ "(u_spell_level('blazing_fist') * 5) + 10" ] },
     "max_level": 5,
-    "valid_targets": [
-      "hostile"
-    ],
-    "flags": [
-      "NO_FAIL",
-      "NON_MAGICAL",
-      "RANDOM_DAMAGE",
-      "SOMATIC"
-    ],
+    "valid_targets": [ "hostile" ],
+    "flags": [ "NO_FAIL", "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC" ],
     "base_casting_time": 75,
     "base_energy_cost": 50,
     "min_range": 1,
     "max_range": 1,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]

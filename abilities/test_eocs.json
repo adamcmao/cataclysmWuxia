@@ -3,72 +3,36 @@
     "type": "effect_on_condition",
     "id": "EOC_GAIN_MAX_QI",
     "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_vitamin('qi_vitamin') = 1000"
-        ]
-      }
-    ]
+    "effect": [ { "math": [ "u_vitamin('qi_vitamin') = 1000" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_ALL_QI",
     "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_vitamin('qi_vitamin') = 0"
-        ]
-      }
-    ]
+    "effect": [ { "math": [ "u_vitamin('qi_vitamin') = 0" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_100_QI",
     "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_vitamin('qi_vitamin') += 100"
-        ]
-      }
-    ]
+    "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 100" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_100_QI",
     "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_vitamin('qi_vitamin') -= 100"
-        ]
-      }
-    ]
+    "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 100" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_FORGET_TEST_ABILITY",
     "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_spell_level('test_ability') =- 1"
-        ]
-      }
-    ]
+    "effect": [ { "math": [ "u_spell_level('test_ability') =- 1" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEARN_TEST_ABILITY",
     "//": "",
-    "effect": [
-      {
-        "math": [
-          "u_spell_level('test_ability') = 1"
-        ]
-      }
-    ]
+    "effect": [ { "math": [ "u_spell_level('test_ability') = 1" ] } ]
   }
 ]

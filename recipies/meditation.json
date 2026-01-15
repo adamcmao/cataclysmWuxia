@@ -11,16 +11,7 @@
     "difficulty": 0,
     "time": "1 s",
     "autolearn": false,
-    "flags": [
-      "BLIND_EASY",
-      "NO_MANIP",
-      "AFFECTED_BY_PAIN",
-      "NO_BENCH",
-      "NO_ENCHANTMENT",
-      "SECRET"
-    ],
-    "result_eocs": [
-      "EOC_UNLOCK_BASIC_QI"
-    ]
+    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ],
+    "result_eocs": [ "EOC_UNLOCK_BASIC_QI" ]
   }
 ]
