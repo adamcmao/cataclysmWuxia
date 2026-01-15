@@ -9,18 +9,10 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_GAIN_MAX_QI",
-    "valid_targets": [
-      "self"
-    ],
-    "flags": [
-      "NO_FAIL"
-    ],
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL" ],
     "base_energy_cost": 0,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
     "id": "lose_all_qi",
@@ -32,18 +24,10 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_LOSE_ALL_QI",
-    "valid_targets": [
-      "self"
-    ],
-    "flags": [
-      "NO_FAIL"
-    ],
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL" ],
     "base_energy_cost": 0,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
     "id": "gain_100_qi",
@@ -55,18 +39,10 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_GAIN_100_QI",
-    "valid_targets": [
-      "self"
-    ],
-    "flags": [
-      "NO_FAIL"
-    ],
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL" ],
     "base_energy_cost": 0,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
     "id": "lose_100_qi",
@@ -78,18 +54,10 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_LOSE_100_QI",
-    "valid_targets": [
-      "self"
-    ],
-    "flags": [
-      "NO_FAIL"
-    ],
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL" ],
     "base_energy_cost": 0,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
     "id": "forget_test_ability",
@@ -101,18 +69,10 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_FORGET_TEST_ABILITY",
-    "valid_targets": [
-      "self"
-    ],
-    "flags": [
-      "NO_FAIL"
-    ],
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL" ],
     "base_energy_cost": 0,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
     "id": "learn_test_ability",
@@ -124,18 +84,10 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_LEARN_TEST_ABILITY",
-    "valid_targets": [
-      "self"
-    ],
-    "flags": [
-      "NO_FAIL"
-    ],
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL" ],
     "base_energy_cost": 0,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
     "id": "test_ability",
@@ -145,18 +97,10 @@
     "description": "Recovers all Qi",
     "message": "Through the power of TEST, you do nothing?",
     "shape": "blast",
-    "valid_targets": [
-      "self"
-    ],
-    "flags": [
-      "NO_FAIL"
-    ],
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL" ],
     "effect": "noise",
     "base_energy_cost": 0,
-    "energy_source": {
-      "type": "VITAMIN",
-      "vitamin": "qi_vitamin",
-      "color": "c_blue"
-    }
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
