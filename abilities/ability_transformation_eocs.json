@@ -13,37 +13,37 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_LEARN_STRAIGHT_PUNCH",
-    "eoc_type": "EVENT",
-    "required_event": "character_learns_spell",
-    "condition": { "compare_string": [ "straight_punch", { "context_val": "spell" } ] },
-    "effect": [
-      { "math": [ "u_spell_level('weak_punch') = -1" ] },
-      { "u_message": "Instead of swinging like a windmill, perhaps a straight line would be more efficient?" }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LEARN_DONKEY_ROLL",
-    "eoc_type": "EVENT",
-    "required_event": "character_learns_spell",
-    "condition": { "compare_string": [ "donkey_roll", { "context_val": "spell" } ] },
+    "id": "EOC_UNLOCK_BASIC_PHYSICAL",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "math": [ "u_spell_level('clumsy_dash') == 1" ] }, { "math": [ "u_spell_level('weak_punch') == 1" ] } ] },
     "effect": [
       { "math": [ "u_spell_level('clumsy_dash') = -1" ] },
-      { "u_message": "All this tripping has given you an idea. What if, you fell on purpose?" }
-    ]
+      { "math": [ "u_spell_level('weak_punch') = -1" ] },
+      { "math": [ "u_spell_level('straight_punch') = 0" ] },
+      { "u_message": "Instead of swinging like a windmill, perhaps a straight line would be more efficient" },
+      { "math": [ "u_spell_level('donkey_roll') = 0" ] },
+      { "u_message": "All this tripping has given you an idea. What if you fall on purpose?" },
+      { "u_forget_recipe": "meditate_to_basic_physical" },
+      { "u_learn_recipe": "meditate_to_unlock_qi" }
+    ],
+    "false_effect": [ { "u_message": "Something doesn't feel right. You feet don't move as you want, and your fists swing off target" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_BASIC_QI",
     "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [ { "math": [ "u_spell_level('straight_punch') >= 1" ] }, { "math": [ "u_spell_level('donkey_roll') >= 1" ] } ]
+    },
     "effect": [
       { "math": [ "u_spell_level('blazing_fist') = 0" ] },
       { "math": [ "u_spell_level('gain_all_qi') = 0" ] },
       { "math": [ "u_spell_level('lose_all_qi') = 0" ] },
       { "math": [ "u_spell_level('gain_100_qi') = 0" ] },
       { "math": [ "u_spell_level('lose_100_qi') = 0" ] },
+      { "u_forget_recipe": "meditate_to_unlock_qi" },
       { "u_message": "You take your first step towards the truth." }
-    ]
+    ],
+    "false_effect": [ { "u_message": "You feel like you are on the verge of a breakthrough, but something is missing." } ]
   }
 ]

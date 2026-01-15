@@ -18,8 +18,7 @@
     "base_energy_cost": 150,
     "min_range": 1,
     "max_range": 1,
-    "energy_source": "STAMINA",
-    "learn_spells": { "straight_punch": 1 }
+    "energy_source": "STAMINA"
   },
   {
     "id": "straight_punch",
