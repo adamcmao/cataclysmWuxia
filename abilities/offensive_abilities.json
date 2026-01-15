@@ -3,9 +3,9 @@
     "id": "weak_punch",
     "//": "A skill that you start with that will be removed once it hits max level",
     "type": "SPELL",
-    "name": "Weak Punch",
-    "description": "You are still trying to understand the technique, your poor form leads to a weak pathetic punch",
-    "message": "You awkwardly reach your fist out, in what may have been an attempt at a punch",
+    "name": "Punch",
+    "description": "You swing your arm with all your might!",
+    "message": "You shout as you awkwardly swing your fist, in what may have been an attempt at a punch",
     "shape": "blast",
     "effect": "attack",
     "damage_type": "bash",
@@ -23,15 +23,48 @@
     "valid_targets": [
       "hostile"
     ],
-    "flags": [],
-    "base_casting_time": 75,
-    "base_energy_cost": 50,
+    "flags": ["NON_MAGICAL", "LOUD", "NO_LEGS"],
+    "base_casting_time": 150,
+    "base_energy_cost": 150,
     "min_range": 1,
     "max_range": 1,
     "energy_source": "STAMINA",
     "learn_spells": {
       "blazing_fist": 1
-    }
+    },
+    "condition_fail_message": "You swing with all your might and feel your fist land softly against your leg."
+  },
+    {
+    "id": "straight_punch",
+    "//": "You will not forget this ability once it hits max level",
+    "type": "SPELL",
+    "name": "Straight Punch",
+    "description": "A straightforward punch",
+    "message": "You plant your feet, and strike straight",
+    "shape": "blast",
+    "effect": "attack",
+    "damage_type": "bash",
+    "min_damage": {
+      "math": [
+        "(u_spell_level('straight_punch') * 1)"
+      ]
+    },
+    "max_damage": {
+      "math": [
+        "(u_spell_level('straight_punch') * 2)"
+      ]
+    },
+    "max_level": 5,
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": ["NON_MAGICAL", "NO_LEGS"],
+    "base_casting_time": 125,
+    "base_energy_cost": 100,
+    "min_range": 1,
+    "max_range": 1,
+    "energy_source": "STAMINA",
+    "condition_fail_message": "You lose balance, and your fist brushes against your target"
   },
   {
     "id": "blazing_fist",
@@ -53,7 +86,7 @@
         "(u_spell_level('blazing_fist') * 5) + 10"
       ]
     },
-    "max_level": 10,
+    "max_level": 5,
     "valid_targets": [
       "hostile"
     ],
