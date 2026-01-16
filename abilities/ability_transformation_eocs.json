@@ -36,7 +36,7 @@
       "and": [ { "math": [ "u_spell_level('straight_punch') >= 1" ] }, { "math": [ "u_spell_level('donkey_roll') >= 1" ] } ]
     },
     "effect": [
-      { "math": [ "u_spell_level('blazing_fist') = 0" ] },
+      { "math": [ "u_spell_level('mountain_shaking_fist') = 0" ] },
       { "math": [ "u_spell_level('gain_all_qi') = 0" ] },
       { "math": [ "u_spell_level('lose_all_qi') = 0" ] },
       { "math": [ "u_spell_level('gain_100_qi') = 0" ] },
