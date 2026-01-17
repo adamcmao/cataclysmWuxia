@@ -1,0 +1,22 @@
+[
+  {
+    "id": "drain_1_qi",
+    "//": "",
+    "type": "SPELL",
+    "name": "Monster Drain 1 Qi, YOU SHOULD NOT SEE THIS",
+    "description": "Drains 1 Qi",
+    "message": "",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_LOSE_1_QI",
+    "damage_type": "bash",
+    "max_level": 10,
+    "valid_targets": [ "hostile" ],
+    "flags": [ "NO_FAIL", "NON_MAGICAL", "SILENT" ],
+    "base_casting_time": 75,
+    "base_energy_cost": 0,
+    "min_range": 1,
+    "max_range": 1,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  }
+]
