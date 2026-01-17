@@ -17,6 +17,10 @@
       "cooldown": 5,
       "monster_message": "You feel a tiny chill on your skin."
     },
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "WARM", "BASHES", "GROUP_BASH", "POISON", "NO_BREATHE", "REVIVES", "FILTHY" ]
+    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "WARM", "BASHES", "GROUP_BASH", "POISON", "NO_BREATHE", "REVIVES", "FILTHY" ],
+    "//fear_triggers": "Need to override this, because the parent mon_black_rat has one that interferes",
+    "fear_triggers": [  ],
+    "//aggro_character": "//Also need to override this because of parent mon_black_rat",
+    "aggro_character": true
   }
 ]
