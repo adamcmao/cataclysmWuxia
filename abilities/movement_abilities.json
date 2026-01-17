@@ -25,8 +25,8 @@
     "//": "You will not forget this ability once it hits max level",
     "type": "SPELL",
     "name": "Donkey Roll",
-    "description": "You are still trying to understand the technique, your poor form leads to a weak pathetic punch",
-    "message": "You shout as you awkwardly reach your fist out, in what may have been an attempt at a punch",
+    "description": "You throw away any pride you have and dive across the ground",
+    "message": "You shift your weight and inelegantly yet gracefully roll across the ground",
     "shape": "blast",
     "effect": "dash",
     "damage_type": "bash",
@@ -41,5 +41,24 @@
     "max_range": 2,
     "range_increment": 0.5,
     "energy_source": "STAMINA"
+  },
+  {
+    "id": "wind_following_steps",
+    "//": "",
+    "type": "SPELL",
+    "name": "Wind Following Steps",
+    "description": "You channel energy into your feet and legs, making your movements flow with the wind",
+    "message": "Your movements become smooth and natural",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_WIND_FOLLOWING_STEPS_START",
+    "max_level": 10,
+    "min_duration": { "math": [ "(u_spell_level('wind_following_steps') * 1000) + 5000" ] },
+    "max_duration": { "math": [ "(u_spell_level('wind_following_steps') * 10000) + 10000" ] },
+    "valid_targets": [ "self" ],
+    "flags": [ "NON_MAGICAL", "NO_HANDS", "SILENT", "RANDOM_DURATION", "NO_FAIL" ],
+    "base_casting_time": 100,
+    "base_energy_cost": 150,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
