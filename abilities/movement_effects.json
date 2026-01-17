@@ -1,0 +1,14 @@
+[
+  {
+    "type": "effect_type",
+    "id": "effect_wind_following_steps",
+    "name": [ "Wind Following Steps" ],
+    "desc": [ "You move with the flow of the wind." ],
+    "apply_message": "Your feel the wind aid your steps.",
+    "remove_message": "The wind no longer guides your feet.",
+    "rating": "good",
+    "max_duration": "1 days",
+    "max_intensity": 25,
+    "enchantments": [ { "values": [ { "value": "SPEED", "add": { "math": [ "u_spell_level('wind_following_steps') * 5" ] } } ] } ]
+  }
+]

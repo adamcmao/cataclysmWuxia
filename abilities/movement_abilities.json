@@ -43,7 +43,7 @@
     "energy_source": "STAMINA"
   },
   {
-    "id": "wind_following_step",
+    "id": "wind_following_steps",
     "//": "",
     "type": "SPELL",
     "name": "Wind Following Steps",
@@ -51,15 +51,14 @@
     "message": "Your movements become smooth and natural",
     "shape": "blast",
     "effect": "effect_on_condition",
-    "effect_str": "EOC_DOES_NOT_EXIST_YET",
-    "max_level": 1,
-    "min_duration": ,
-    "max_duration": 
+    "effect_str": "EOC_WIND_FOLLOWING_STEPS_START",
+    "max_level": 10,
+    "min_duration": { "math": [ "(u_spell_level('wind_following_steps') * 1000) + 5000" ] },
+    "max_duration": { "math": [ "(u_spell_level('wind_following_steps') * 10000) + 10000" ] },
     "valid_targets": [ "self" ],
-    "flags": [ "NON_MAGICAL", "NO_HANDS", "SILENT" ],
+    "flags": [ "NON_MAGICAL", "NO_HANDS", "SILENT", "RANDOM_DURATION", "NO_FAIL" ],
     "base_casting_time": 100,
-    "base_energy_cost": 50,
-    "range_increment": 0.5,
+    "base_energy_cost": 150,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
