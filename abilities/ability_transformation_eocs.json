@@ -82,7 +82,8 @@
     "effect": [
       { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] },
       { "math": [ "u_spell_level('red_thread_binding') = 0" ] },
-      { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] }
+      { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] },
+      { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] }
     ]
   }
 ]
