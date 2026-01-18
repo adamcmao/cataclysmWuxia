@@ -49,7 +49,7 @@
       "and": [ { "math": [ "u_spell_level('straight_punch') >= 1" ] }, { "math": [ "u_spell_level('donkey_roll') >= 1" ] } ]
     },
     "effect": [
-      { "run_eocs": [ "EOC_UNLOCK_BASIC_FIST_QI", "EOC_UNLOCK_BASIC_BEGGAR" ] },
+      { "run_eocs": [ "EOC_UNLOCK_UNIVERSAL_QI", "EOC_UNLOCK_BASIC_BEGGAR", "EOC_UNLOCK_BASIC_BLOOD" ] },
       { "u_forget_recipe": "meditate_to_unlock_qi" },
       { "u_message": "You take your first step towards the truth." }
     ],
@@ -57,7 +57,7 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_UNLOCK_BASIC_FIST_QI",
+    "id": "EOC_UNLOCK_UNIVERSAL_QI",
     "eoc_type": "ACTIVATION",
     "effect": [
       { "math": [ "u_spell_level('mountain_shaking_fist') = 0" ] },
@@ -73,6 +73,15 @@
       { "math": [ "u_spell_level('staff_turns_beggar_firm') = 0" ] },
       { "math": [ "u_spell_level('pierce_the_alley') = 0" ] },
       { "math": [ "u_spell_level('stick_snags_the_sleeve') = 0" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_BASIC_BLOOD",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] },
+      { "math": [ "u_spell_level('red_thread_binding') = 0" ] }
     ]
   }
 ]

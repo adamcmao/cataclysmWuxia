@@ -1,0 +1,43 @@
+[
+  {
+    "id": "scarlet_knife_pulse",
+    "type": "SPELL",
+    "name": "Scarlet Knife Pulse",
+    "description": "Use your own essence to pierce a distant foe.",
+    "message": "Slicing your own hand, a stream of blood shoots out towards an opponent.",
+    "spell_class": "SCARLET",
+    "shape": "blast",
+    "effect": "attack",
+    "damage_type": "stab",
+    "extra_effects": [ { "id": "drain_blood_small_hidden", "hit_self": true } ],
+    "min_damage": { "math": [ "(u_spell_level('scarlet_knife_pulse') * 1) + 10 " ] },
+    "max_damage": { "math": [ "(u_spell_level('scarlet_knife_pulse') * 5) + 20" ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 25,
+    "min_range": 5,
+    "range_increment": 0.5,
+    "max_range": 10,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "drain_blood_small_hidden",
+    "type": "SPELL",
+    "name": "Drain Blood Small",
+    "description": "",
+    "message": "",
+    "spell_class": "SCARLET",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_LOSE_BLOOD_SMALL",
+    "max_level": 0,
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL", "SILENT", "NON_MAGICAL", "NO_HANDS", "NO_EXPLOSION_SFX" ],
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "max_range": 0,
+    "energy_source": { "type": "VITAMIN", "vitamin": "blood", "color": "c_red" }
+  }
+]

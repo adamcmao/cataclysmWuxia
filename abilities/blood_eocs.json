@@ -1,0 +1,40 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOSE_BLOOD_SMALL",
+    "//": "",
+    "effect": [ { "math": [ "u_vitamin('blood') -= 1000" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOSE_BLOOD_MEDIUM",
+    "//": "",
+    "effect": [ { "math": [ "u_vitamin('blood') -= 3000" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOSE_BLOOD_LARGE",
+    "//": "",
+    "effect": [ { "math": [ "u_vitamin('blood') -= 5000" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOSE_BLOOD_HUGE",
+    "//": "",
+    "effect": [ { "math": [ "u_vitamin('blood') -= 10000" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SCARLET_STOP_BLEEDING",
+    "effect": [ { "run_eocs": "EOC_LOSE_BLOOD_SMALL" }, { "u_add_effect": "effect_stop_bleeding", "duration": 0 } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_stop_bleeding",
+    "name": [ "Stop Bleeding" ],
+    "desc": [ "You do not bleed.  At all." ],
+    "rating": "good",
+    "removes_effects": [ "bleed" ],
+    "flags": [ "BLEED_IMMUNE" ]
+  }
+]
