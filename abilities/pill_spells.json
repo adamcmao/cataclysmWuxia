@@ -1,5 +1,23 @@
 [
   {
+    "id": "spawn_qi_pills",
+    "type": "SPELL",
+    "name": "Spawn Qi Pills - HIDDEN",
+    "description": "",
+    "message": "Pills fall out of thin air.",
+    "shape": "blast",
+    "effect": "spawn_item",
+    "effect_str": "wuxia_qi_pill_tier_2",
+    "max_level": 0,
+    "min_damage": 1,
+    "max_damage": 10,
+    "valid_targets": [ "self" ],
+    "flags": [ "PERMANENT_ALL_LEVELS", "SILENT", "NON_MAGICAL", "NO_HANDS", "NO_FAIL", "RANDOM_DAMAGE" ],
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
     "id": "dot_qi_recovery_tier_1",
     "type": "SPELL",
     "name": "DoT qi recovery tier 1 - HIDDEN",
