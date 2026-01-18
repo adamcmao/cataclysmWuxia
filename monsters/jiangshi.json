@@ -6,9 +6,9 @@
     "description": "The jiangshi abstract",
     "default_faction": "player",
     "bodytype": "human",
-    "species": [ "ZOMBIE", "HUMAN" ],
+    "species": [ "ZOMBIE", "HUMAN", "JIANGSHI" ],
     "volume": "62500 ml",
-    "weight": "81500 g",
+    "weight": "40000 g",
     "hp": 80,
     "speed": 70,
     "material": [ "flesh" ],
@@ -56,7 +56,6 @@
     "copy-from": "wuxia_jiangshi_base",
     "type": "MONSTER",
     "name": "white haired jiangshi",
-    "description": "",
-    "revert_to_itype": "wuxia_jiangshi_basic_inert"
+    "description": ""
   }
 ]

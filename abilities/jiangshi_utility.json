@@ -1,0 +1,26 @@
+[
+  {
+    "id": "yin_essence_reforging",
+    "type": "SPELL",
+    "name": "Yin Essence Reforging",
+    "description": "Draw energy from yourself to heal a jiangshi",
+    "message": "As your energy flows into the jiangshi, you see torn flesh and bones twist and snap into its original form.",
+    "spell_class": "JIANGSHI",
+    "valid_targets": [ "ally" ],
+    "min_damage": { "math": [ "(u_spell_level('yin_essence_reforging') * -1) - 1" ] },
+    "max_damage": { "math": [ "(u_spell_level('yin_essence_reforging') * -5) - 5" ] },
+    "max_level": 10,
+    "min_range": 1,
+    "range_increment": 0.25,
+    "max_range": 3,
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [ "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "SILENT", "NO_HANDS" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" },
+    "condition": { "npc_has_species": "JIANGSHI" },
+    "//": "Spell just won't trigger unless you select a Jiangshi, won't get error message",
+    "condition_fail_message": "Must be cast on your jiangshi."
+  }
+]

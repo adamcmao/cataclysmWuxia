@@ -94,6 +94,10 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_JIANGSHI",
     "eoc_type": "ACTIVATION",
-    "effect": [ { "u_learn_recipe": "wuxia_jiangshi_basic_inert" } ]
+    "effect": [
+      { "u_learn_recipe": "wuxia_jiangshi_basic_inert" },
+      { "u_learn_recipe": "wuxia_wooden_casket" },
+      { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
+    ]
   }
 ]
