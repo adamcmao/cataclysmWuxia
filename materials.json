@@ -1,0 +1,8 @@
+[
+  {
+    "type": "material",
+    "id": "spirit_stone",
+    "name": "spirit stone",
+    "copy-from": "stone"
+  }
+]

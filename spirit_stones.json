@@ -1,0 +1,26 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "spirit_stone",
+    "name": "spirit stone",
+    "default": "spirit_stone"
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
+    "id": "spirit_stone",
+    "category": "spare_parts",
+    "price": "10 USD",
+    "name": { "str_sp": "spirit stones" },
+    "symbol": "=",
+    "color": "yellow",
+    "description": "Spirit stones.",
+    "flags": [ "TRADER_AVOID" ],
+    "weight": "1 mg",
+    "volume": "100 ml",
+    "ammo_type": "spirit_stone",
+    "material": [ "spirit_stone" ],
+    "count": 10,
+    "looks_like": "battery"
+  }
+]

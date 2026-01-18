@@ -1,0 +1,23 @@
+[
+  {
+    "id": "wuxia_copper_mirror",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "mirror",
+    "name": "copper mirror",
+    "description": "An engraved copper mirror, it appears ancient and dulled, but also seems to call you.",
+    "price": "0 kUSD",
+    "price_postapoc": "0 USD",
+    "weight": "2 g",
+    "volume": "1 ml",
+    "material": [ "copper", "glass", "gemstone" ],
+    "symbol": "o",
+    "color": "light_red",
+    "charges_per_use": 1,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "spirit_stone": 4 } } ],
+    "flags": [ "NO_REPAIR", "NO_UNLOAD", "NO_RELOAD" ],
+    "use_action": { "type": "cast_spell", "spell_id": "spawn_qi_pills", "no_fail": true, "level": 0 },
+    "charge_info": { "recharge_condition": "worn", "recharge_type": "periodic", "time": "20 h", "regenerate_ammo": true },
+    "//passive_effects": [ { "id": "" } ]
+  }
+]
