@@ -1,26 +1,27 @@
 [
   {
     "type": "effect_on_condition",
+    "id": "EOC_LOSE_BLOOD_TINY",
+    "effect": [ { "math": [ "u_vitamin('blood') -= 100" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_SMALL",
-    "//": "",
     "effect": [ { "math": [ "u_vitamin('blood') -= 1000" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_MEDIUM",
-    "//": "",
     "effect": [ { "math": [ "u_vitamin('blood') -= 3000" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_LARGE",
-    "//": "",
     "effect": [ { "math": [ "u_vitamin('blood') -= 5000" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_HUGE",
-    "//": "",
     "effect": [ { "math": [ "u_vitamin('blood') -= 10000" ] } ]
   },
   {
