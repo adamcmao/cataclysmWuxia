@@ -61,7 +61,8 @@
     "eoc_type": "ACTIVATION",
     "effect": [
       { "math": [ "u_spell_level('mountain_shaking_fist') = 0" ] },
-      { "math": [ "u_spell_level('wind_following_steps') = 0" ] }
+      { "math": [ "u_spell_level('wind_following_steps') = 0" ] },
+      { "u_learn_recipe": "meditate_to_restore_qi" }
     ]
   },
   {
