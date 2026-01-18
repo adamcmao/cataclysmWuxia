@@ -1,0 +1,24 @@
+[
+  {
+    "id": "wuxia_jiangshi_basic_inert",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": "inactive white haired jiangshi",
+    "description": "An inactive white haired jiangshi, it lies motionless and still. Without qi circulating through it, it looks smaller and lighter.",
+    "volume": "30000 ml",
+    "weight": "40000 g",
+    "price": "0 kUSD",
+    "price_postapoc": "0 USD",
+    "material": [ "flesh", "blood" ],
+    "symbol": "@",
+    "color": "light_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "wuxia_jiangshi_basic",
+      "friendly_msg": "The dispatch whirs onto its legs and searches for a target.",
+      "hostile_msg": "The dispatch turns on you, whacking at you with its arms!",
+      "moves": 500
+    },
+    "flags": [ "SINGLE_USE" ]
+  }
+]

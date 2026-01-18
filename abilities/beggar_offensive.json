@@ -139,7 +139,7 @@
     "//condition_fail_message": "To beat a dog, you need to wield a staff"
   },
   {
-    "//": "This is the spell repeated by dog_beating_staff_technique",
+    "//": "This is the spell repeated by true_dog_beating_staff_technique",
     "id": "true_dog_beating_staff_technique_actual",
     "type": "SPELL",
     "name": "Dog Beating Staff Technique - Hidden",

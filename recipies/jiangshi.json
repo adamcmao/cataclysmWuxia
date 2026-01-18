@@ -1,0 +1,16 @@
+[
+  {
+    "result": "wuxia_jiangshi_basic_inert",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_WUXIA",
+    "subcategory": "CSC_WUXIA_JIANGSHI",
+    "skill_used": "wuxia",
+    "name": "craft jiangshi",
+    "description": "Using a corpse, along with blood flesh and qi, you force life into a corpse.",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": false,
+    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ]
+  }
+]
