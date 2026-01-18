@@ -25,6 +25,18 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_SPAWN_BLOOD_SWORD",
+    "effect": {
+      "switch": { "math": [ "u_spell_level('crimson_blood_sword')" ] },
+      "cases": [
+        { "case": 0, "effect": { "u_cast_spell": { "id": "spawn_crimson_blood_sword_actual" } } },
+        { "case": 5, "effect": { "u_cast_spell": { "id": "spawn_crimson_blood_sword_actual2" } } },
+        { "case": 10, "effect": { "u_cast_spell": { "id": "spawn_crimson_blood_sword_actual3" } } }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_SCARLET_STOP_BLEEDING",
     "effect": [ { "run_eocs": "EOC_LOSE_BLOOD_SMALL" }, { "u_add_effect": "effect_stop_bleeding", "duration": 0 } ]
   },

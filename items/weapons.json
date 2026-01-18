@@ -6,6 +6,25 @@
     "name": "crimson blood sword",
     "description": "A pulsating blade formed by your own blood.",
     "material": [ "flesh", "blood" ],
+    "subtypes": [ "ARTIFACT" ],
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
     "flags": [ "NONCONDUCTIVE", "NO_REPAIR", "DURABLE_MELEE" ]
+  },
+  {
+    "type": "ITEM",
+    "id": "wuxia_crimson_blood_sword2",
+    "copy-from": "wuxia_crimson_blood_sword",
+    "description": "A pulsating blade formed by your own blood. It leaves a faint red afterimage.",
+    "proportional": { "weight": 0.8, "melee_damage": { "all": 1.2 } },
+    "relative": { "to_hit": 1 }
+  },
+  {
+    "type": "ITEM",
+    "id": "wuxia_crimson_blood_sword3",
+    "copy-from": "wuxia_crimson_blood_sword2",
+    "description": "A humming pulsating blade formed by your own blood. It glows faintly with energy.",
+    "proportional": { "weight": 0.8, "melee_damage": { "all": 1.2 } },
+    "relative": { "to_hit": 1 }
   }
 ]
