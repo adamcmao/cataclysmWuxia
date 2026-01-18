@@ -1,0 +1,11 @@
+[
+  {
+    "type": "ITEM",
+    "id": "wuxia_crimson_blood_sword",
+    "copy-from": "longsword",
+    "name": "crimson blood sword",
+    "description": "A pulsating blade formed by your own blood.",
+    "material": [ "flesh", "blood" ],
+    "flags": [ "NONCONDUCTIVE", "NO_REPAIR", "DURABLE_MELEE" ]
+  }
+]
