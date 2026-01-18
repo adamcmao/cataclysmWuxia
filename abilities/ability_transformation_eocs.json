@@ -30,21 +30,49 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_TEST_QI",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "effect": [
+      { "math": [ "u_spell_level('gain_all_qi') = 0" ] },
+      { "math": [ "u_spell_level('lose_all_qi') = 0" ] },
+      { "math": [ "u_spell_level('gain_100_qi') = 0" ] },
+      { "math": [ "u_spell_level('lose_100_qi') = 0" ] },
+      { "u_message": "You learn DEBUG skills." }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_UNLOCK_BASIC_QI",
     "eoc_type": "ACTIVATION",
     "condition": {
       "and": [ { "math": [ "u_spell_level('straight_punch') >= 1" ] }, { "math": [ "u_spell_level('donkey_roll') >= 1" ] } ]
     },
     "effect": [
-      { "math": [ "u_spell_level('mountain_shaking_fist') = 0" ] },
-      { "math": [ "u_spell_level('wind_following_steps') = 0" ] },
-      { "math": [ "u_spell_level('gain_all_qi') = 0" ] },
-      { "math": [ "u_spell_level('lose_all_qi') = 0" ] },
-      { "math": [ "u_spell_level('gain_100_qi') = 0" ] },
-      { "math": [ "u_spell_level('lose_100_qi') = 0" ] },
+      { "run_eocs": [ "EOC_UNLOCK_BASIC_FIST_QI", "EOC_UNLOCK_BASIC_BEGGAR" ] },
       { "u_forget_recipe": "meditate_to_unlock_qi" },
       { "u_message": "You take your first step towards the truth." }
     ],
     "false_effect": [ { "u_message": "You feel like you are on the verge of a breakthrough, but something is missing." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_BASIC_FIST_QI",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "math": [ "u_spell_level('mountain_shaking_fist') = 0" ] },
+      { "math": [ "u_spell_level('wind_following_steps') = 0" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_BASIC_BEGGAR",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "math": [ "u_spell_level('dog_beating_staff_technique') = 0" ] },
+      { "math": [ "u_spell_level('staff_turns_beggar_firm') = 0" ] },
+      { "math": [ "u_spell_level('pierce_the_alley') = 0" ] },
+      { "math": [ "u_spell_level('stick_snags_the_sleeve') = 0" ] }
+    ]
   }
 ]
