@@ -1,0 +1,46 @@
+[
+  {
+    "type": "mutation",
+    "id": "BEGGAR",
+    "name": "Beggar",
+    "points": 0,
+    "description": "DESCRIPTION",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [  ]
+  },
+  {
+    "type": "mutation",
+    "id": "SCARLET",
+    "name": "Scarlet",
+    "points": 0,
+    "description": "DESCRIPTION",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [  ]
+  },
+  {
+    "type": "mutation",
+    "id": "QI",
+    "name": "QI",
+    "points": 0,
+    "description": "DESCRIPTION",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [  ]
+  },
+  {
+    "type": "mutation",
+    "id": "MARTIAL",
+    "name": "Martial",
+    "points": 0,
+    "description": "DESCRIPTION",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [  ]
+  }
+]

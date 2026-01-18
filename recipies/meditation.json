@@ -28,5 +28,20 @@
     "autolearn": false,
     "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ],
     "result_eocs": [ "EOC_UNLOCK_BASIC_QI" ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "name": "meditate",
+    "id": "meditate_to_restore_qi",
+    "description": "Sit and calm your mind, breathe steadily, and cycle your energy through your meridians.",
+    "category": "CC_WUXIA",
+    "subcategory": "CSC_WUXIA_MEDITATION",
+    "skill_used": "wuxia",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": false,
+    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ],
+    "result_eocs": [ "EOC_MEDITATE_RESTORE_QI_START" ]
   }
 ]
