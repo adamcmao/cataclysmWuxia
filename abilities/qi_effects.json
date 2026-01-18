@@ -1,0 +1,62 @@
+[
+  {
+    "type": "effect_type",
+    "id": "effect_dot_qi_recovery_tier_1",
+    "name": [ "Tiny Qi Recovery" ],
+    "desc": [ "You are slowly recovering qi at a tiny rate." ],
+    "remove_message": "You finish the absorption of the pill.",
+    "rating": "good",
+    "max_duration": 6000,
+    "enchantments": [
+      {
+        "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
+        "intermittent_activation": { "effects": [ { "frequency": "5 seconds", "spell_effects": [ { "id": "gain_5_qi" } ] } ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_dot_qi_recovery_tier_2",
+    "name": [ "Qi Recovery" ],
+    "desc": [ "You are slowly recovering qi at a tiny rate." ],
+    "remove_message": "You finish the absorption of the pill.",
+    "rating": "good",
+    "max_duration": 30000,
+    "enchantments": [
+      {
+        "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
+        "intermittent_activation": { "effects": [ { "frequency": "5 seconds", "spell_effects": [ { "id": "gain_10_qi" } ] } ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_dot_qi_recovery_tier_3",
+    "name": [ "Large Qi Recovery" ],
+    "desc": [ "You are slowly recovering qi at a tiny rate." ],
+    "remove_message": "You finish the absorption of the pill.",
+    "rating": "good",
+    "max_duration": 90000,
+    "enchantments": [
+      {
+        "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
+        "intermittent_activation": { "effects": [ { "frequency": "5 seconds", "spell_effects": [ { "id": "gain_100_qi" } ] } ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_dot_qi_recovery_tier_4",
+    "name": [ "Celestial Qi Recovery" ],
+    "desc": [ "You are absorbing qi faster than water can fall." ],
+    "remove_message": "You finish the absorption of the pill.",
+    "rating": "good",
+    "max_duration": 360000,
+    "enchantments": [
+      {
+        "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
+        "intermittent_activation": { "effects": [ { "frequency": "5 seconds", "spell_effects": [ { "id": "gain_250_qi" } ] } ] }
+      }
+    ]
+  }
+]

@@ -18,7 +18,7 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_WIND_FOLLOWING_STEPS_DRAIN",
-    "condition": { "and": [ { "u_has_effect": "effect_wind_following_steps" }, { "math": [ "u_vitamin('qi') >= 50" ] } ] },
+    "condition": { "and": [ { "u_has_effect": "effect_wind_following_steps" }, { "math": [ "u_vitamin('qi_vitamin') >= 50" ] } ] },
     "effect": [
       { "run_eocs": "EOC_LOSE_50_QI" },
       {
