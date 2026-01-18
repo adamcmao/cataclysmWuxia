@@ -2,6 +2,6 @@
   {
     "type": "recipe_category",
     "id": "CC_WUXIA",
-    "recipe_subcategories": [ "CSC_ALL", "CSC_WUXIA_MEDITATION" ]
+    "recipe_subcategories": [ "CSC_ALL", "CSC_WUXIA_MEDITATION", "CSC_WUXIA_JIANGSHI", "CSC_WUXIA_ALCHEMY" ]
   }
 ]

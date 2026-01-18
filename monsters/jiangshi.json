@@ -1,0 +1,61 @@
+[
+  {
+    "abstract": "wuxia_jiangshi_base",
+    "type": "MONSTER",
+    "name": { "str": "jiangshi" },
+    "description": "The jiangshi abstract",
+    "default_faction": "player",
+    "bodytype": "human",
+    "species": [ "ZOMBIE", "HUMAN", "JIANGSHI" ],
+    "volume": "62500 ml",
+    "weight": "40000 g",
+    "hp": 80,
+    "speed": 70,
+    "material": [ "flesh" ],
+    "symbol": "Z",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
+    "vision_night": 3,
+    "weakpoint_sets": [ "wps_humanoid_body" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_zombie" ],
+    "harvest": "zombie_humanoid",
+    "decay": "zombie_decay_bone_human_skull",
+    "grab_strength": 20,
+    "special_attacks": [
+      [ "PARROT", 400 ],
+      [ "PARROT_AT_DANGER", 0 ],
+      { "id": "grab", "cooldown": 2 },
+      { "id": "bite_humanoid", "cooldown": 5 },
+      { "id": "scratch_humanoid" }
+    ],
+    "//death_drops": "default_jiangshi_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "GRABS",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "UNBREAKABLE_MORALE"
+    ],
+    "anger_triggers": [ "HURT", "FRIEND_ATTACKED", "FRIEND_DIED", "HOSTILE_SEEN" ],
+    "armor": { "electric": 1 }
+  },
+  {
+    "id": "wuxia_jiangshi_basic",
+    "copy-from": "wuxia_jiangshi_base",
+    "type": "MONSTER",
+    "name": "white haired jiangshi",
+    "description": ""
+  }
+]

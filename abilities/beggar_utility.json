@@ -1,0 +1,31 @@
+[
+  {
+    "//": "This will have an advanced version, true_dog_beating_staff_technique unlocked later",
+    "id": "hidden_alley_rat_tide",
+    "type": "SPELL",
+    "name": "Hidden Alley Rat Tide",
+    "description": "Your time lying on the earth has allowed you to call upon those hated.",
+    "message": "Channeling your qi into the ground, you summon those who were as despised as you.",
+    "spell_class": "BEGGAR",
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "wuxia_spirit_rat",
+    "min_damage": { "math": [ "(u_spell_level('hidden_alley_rat_tide') * 0.2) + 1" ] },
+    "max_damage": { "math": [ "(u_spell_level('hidden_alley_rat_tide') * 0.5) + 1" ] },
+    "max_level": 10,
+    "valid_targets": [ "ground" ],
+    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT" ],
+    "base_casting_time": 100,
+    "base_energy_cost": 50,
+    "min_range": 1,
+    "range_increment": 0.25,
+    "max_range": 3,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_duration": { "math": [ "( (u_spell_level('hidden_alley_rat_tide') * 6000) + 6000 )" ] },
+    "max_duration": { "math": [ "( (u_spell_level('hidden_alley_rat_tide') * 6000) + 60000)" ] },
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" },
+    "//condition": { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" },
+    "//condition_fail_message": "To beat a dog, you need to wield a staff"
+  }
+]

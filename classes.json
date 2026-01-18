@@ -12,6 +12,17 @@
   },
   {
     "type": "mutation",
+    "id": "JIANGSHI",
+    "name": "Jiangshi",
+    "points": 0,
+    "description": "DESCRIPTION",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [  ]
+  },
+  {
+    "type": "mutation",
     "id": "SCARLET",
     "name": "Scarlet",
     "points": 0,

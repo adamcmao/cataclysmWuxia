@@ -1,0 +1,52 @@
+[
+  {
+    "//": "TODO: Can we limit more than just size, I would like to have it work for only Jiangshi",
+    "id": "wuxia_wooden_casket",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARMOR" ],
+    "name": "wooden casket",
+    "description": "A sturdy coffin reinforced with binding ropes, used for holding jiangshi.",
+    "weight": "20 kg",
+    "volume": "850 L",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "material": [ "wood", "paper" ],
+    "symbol": "#",
+    "color": "brown",
+    "properties": { "creature_size_capacity": "LARGE" },
+    "use_action": [ "CAPTURE_MONSTER_ACT" ],
+    "flags": [ "TRADER_AVOID", "BELTED", "WATER_FRIENDLY" ],
+    "melee_damage": { "bash": 5 },
+    "armor": [
+      {
+        "encumbrance": 15,
+        "volume_encumber_modifier": 0.2,
+        "coverage": 60,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_hanging_back" ]
+      }
+    ]
+  },
+  {
+    "id": "wuxia_jiangshi_basic_inert",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": "inactive white haired jiangshi",
+    "description": "An inactive white haired jiangshi, it lies motionless and still. Without qi circulating through it, it looks smaller and lighter.",
+    "volume": "30000 ml",
+    "weight": "40000 g",
+    "price": "0 kUSD",
+    "price_postapoc": "0 USD",
+    "material": [ "flesh", "blood" ],
+    "symbol": "@",
+    "color": "light_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "wuxia_jiangshi_basic",
+      "friendly_msg": "The dispatch whirs onto its legs and searches for a target.",
+      "hostile_msg": "The dispatch turns on you, whacking at you with its arms!",
+      "moves": 500
+    },
+    "flags": [ "SINGLE_USE" ]
+  }
+]
