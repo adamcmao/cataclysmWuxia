@@ -2,6 +2,8 @@
   {
     "type": "mapgen",
     "om_terrain": "wuxia_small_cottages",
+    "palettes": [ "wuxia_cottage_palette" ],
+    "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
     "object": {
       "fill_ter": "t_dirtfloor_thatchroof",
       "rows": [
@@ -32,15 +34,6 @@
       ],
       "place_nested": [  ],
       "place_loot": [  ],
-      "terrain": {
-        ".": [ [ "t_grass", 5 ], [ "t_grass_long", 2 ] ],
-        "|": "t_wall_log",
-        "+": "t_door_c",
-        "#": "t_dirtfloor_thatchroof",
-        "o": "t_pit_shallow"
-      },
-      "furniture": { "B": "f_straw_bed", "H": "f_smoking_rack", "O": "f_firering", "n": "f_logstool" },
-      "toilets": { "&": {  } },
       "items": {  },
       "place_monster": [  ]
     }
@@ -48,6 +41,7 @@
   {
     "type": "mapgen",
     "om_terrain": "wuxia_small_cottages_roof",
+    "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
     "object": {
       "fill_ter": "t_open_air_rooved_outside",
       "rows": [
@@ -78,6 +72,19 @@
       ],
       "terrain": { ".": "t_thatch_roof" }
     }
+  },
+  {
+    "type": "palette",
+    "id": "wuxia_cottage_palette",
+    "terrain": {
+      ".": [ [ "t_grass", 5 ], [ "t_grass_long", 2 ] ],
+      "|": "t_wall_log",
+      "+": "t_door_c",
+      "#": "t_dirtfloor_thatchroof",
+      "o": "t_pit_shallow"
+    },
+    "furniture": { "B": "f_straw_bed", "H": "f_smoking_rack", "O": "f_firering", "n": "f_logstool" },
+    "items": {  }
   },
   {
     "type": "overmap_special",
