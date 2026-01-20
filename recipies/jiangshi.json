@@ -11,7 +11,7 @@
     "reversible": { "time": "10 m" },
     "name": "craft wooden casket",
     "qualities": [ [ { "id": "HAMMER", "level": 1 } ] ],
-    "components": [ [ [ "wood_panel", 6 ] ], [ [ "hinge", 2 ] ], [ [ "rope_30", 1 ] ] ],
+    "components": [ [ [ "wood_panel", 6 ] ], [ [ "hinge", 2 ] ], [ [ "rope_30", 1 ] ], [ [ "paper", 10 ] ] ],
     "description": "Using a corpse, along with blood flesh and qi, you force life into a corpse.",
     "autolearn": false,
     "flags": [ "AFFECTED_BY_PAIN", "NO_ENCHANTMENT", "SECRET" ]
