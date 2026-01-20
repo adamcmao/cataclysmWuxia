@@ -1,0 +1,207 @@
+[
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "wuxia_ruined_small_cottage",
+    "object": {
+      "mapgensize": [ 8, 8 ],
+      "rotation": [ 0, 3 ],
+      "rows": [
+        "||||||||",
+        "|B##B#B|",
+        "|n#####|",
+        "|On####+",
+        "|n#####|",
+        "|####B#|",
+        "|B#####|",
+        "||||||||"
+      ],
+      "palettes": [ "wuxia_ruined_cottage_palette" ],
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "wuxia_ruined_small_cottage",
+    "object": {
+      "mapgensize": [ 8, 8 ],
+      "rotation": [ 0, 3 ],
+      "rows": [
+        "        ",
+        "||||||| ",
+        "|B#n#B| ",
+        "|##O##||",
+        "|#B####+",
+        "||||||||",
+        "        ",
+        "        "
+      ],
+      "palettes": [ "wuxia_ruined_cottage_palette" ],
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "wuxia_ruined_small_cottage",
+    "object": {
+      "mapgensize": [ 8, 8 ],
+      "rotation": [ 0, 3 ],
+      "rows": [
+        "  ||||||",
+        " ||B###|",
+        "||#####|",
+        "|B####B|",
+        "|#On#|||",
+        "|####|  ",
+        "|+||||  ",
+        "        "
+      ],
+      "palettes": [ "wuxia_ruined_cottage_palette" ],
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "wuxia_ruined_small_cottage",
+    "object": {
+      "mapgensize": [ 8, 8 ],
+      "rotation": [ 0, 3 ],
+      "rows": [
+        "        ",
+        "        ",
+        " ||+||  ",
+        "||##O|  ",
+        "|B##||  ",
+        "|||||   ",
+        "        ",
+        "        "
+      ],
+      "palettes": [ "wuxia_ruined_cottage_palette" ],
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "om_terrain": "wuxia_ruined_small_cottages",
+    "object": {
+      "fill_ter": "t_dirtfloor",
+      "rows": [
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "....||||||||||..........",
+        "....|##B#####+..........",
+        "....|####nO##||||.......",
+        "....|#B###n#####|.......",
+        "....||||#B#B###||.......",
+        ".....HH|||||||||........",
+        "........................",
+        "........................",
+        ".....................|||",
+        ".....................+o|",
+        ".....................|||",
+        "........................",
+        "........................"
+      ],
+      "palettes": [ "wuxia_ruined_cottage_palette" ],
+      "place_nested": [
+        { "chunks": [ "wuxia_ruined_small_cottage" ], "x": 1, "y": 1 },
+        { "chunks": [ "wuxia_ruined_small_cottage" ], "x": 12, "y": 3 }
+      ],
+      "place_loot": [  ],
+      "items": {  },
+      "place_monster": [  ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "om_terrain": "wuxia_ruined_small_cottages_roof",
+    "object": {
+      "fill_ter": "t_open_air_rooved_outside",
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "    ..........          ",
+        "    ..........          ",
+        "    .............       ",
+        "    .............       ",
+        "    .............       ",
+        "       .........        ",
+        "                        ",
+        "                        ",
+        "                     ...",
+        "                     ...",
+        "                     ...",
+        "                        ",
+        "                        "
+      ],
+      "terrain": { ".": "t_thatch_roof" }
+    }
+  },
+  {
+    "type": "palette",
+    "id": "wuxia_ruined_cottage_palette",
+    "terrain": {
+      ".": [ [ "t_grass", 5 ], [ "t_grass_long", 2 ] ],
+      "|": [ [ "t_wall_log", 1 ], [ "t_wall_log_chipped", 1 ], [ "t_wall_log_broken", 1 ] ],
+      "+": [ [ "t_door_c", 1 ], [ "t_door_makeshift_c", 1 ] ],
+      "#": [ [ "t_dirtfloor", 1 ] ],
+      "o": "t_pit_shallow"
+    },
+    "furniture": { "B": [ "f_straw_bed", "f_makeshift_bed" ], "H": "f_smoking_rack", "O": "f_firering", "n": "f_logstool" },
+    "items": {  }
+  },
+  {
+    "type": "overmap_special",
+    "id": "wuxia_ruined_small_cottages",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "wuxia_ruined_small_cottages_north" },
+      { "point": [ 0, 0, 1 ], "overmap": "wuxia_ruined_small_cottages_roof_north" }
+    ],
+    "locations": [ "wilderness" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, 20 ],
+    "occurrences": [ 0, 5 ],
+    "flags": [ "MAN_MADE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "wuxia_ruined_small_cottages",
+    "name": "cottages",
+    "sym": "C",
+    "color": "green",
+    "see_cost": "high",
+    "extras": "build",
+    "vision_levels": "blends_till_details",
+    "travel_cost_type": "structure",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "wuxia_ruined_small_cottages_roof",
+    "name": "cottage roof",
+    "sym": "C",
+    "color": "green",
+    "see_cost": "none",
+    "extras": "build",
+    "vision_levels": "blends_till_outlines",
+    "travel_cost_type": "roof",
+    "mondensity": 2
+  }
+]
