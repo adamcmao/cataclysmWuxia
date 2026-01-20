@@ -1,0 +1,119 @@
+[
+  {
+    "type": "mapgen",
+    "om_terrain": "wuxia_small_cottages",
+    "object": {
+      "fill_ter": "t_dirtfloor_thatchroof",
+      "rows": [
+        "........................",
+        "..|||||||...............",
+        "..|B#n#B|...............",
+        "..|##O##||..............",
+        "..|#B####+..............",
+        "..||||||||..............",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "........................",
+        "....||||||||||..........",
+        "....|##B#####+..........",
+        "....|####nO##||||.......",
+        "....|#B###n#####|.......",
+        "....||||#B#B###||.......",
+        ".......|||||||||........",
+        "........................",
+        "........................",
+        ".....................|||",
+        "......HH.............+o|",
+        ".....................|||",
+        "........................",
+        "........................"
+      ],
+      "place_nested": [  ],
+      "place_loot": [  ],
+      "terrain": {
+        ".": [ [ "t_grass", 5 ], [ "t_grass_long", 2 ] ],
+        "|": "t_wall_log",
+        "+": "t_door_c",
+        "#": "t_dirtfloor_thatchroof",
+        "o": "t_pit_shallow"
+      },
+      "furniture": { "B": "f_straw_bed", "H": "f_smoking_rack", "O": "f_firering", "n": "f_logstool" },
+      "toilets": { "&": {  } },
+      "items": {  },
+      "place_monster": [  ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "om_terrain": "wuxia_small_cottages_roof",
+    "object": {
+      "fill_ter": "t_open_air_rooved_outside",
+      "rows": [
+        "                        ",
+        "  .......               ",
+        "  .......               ",
+        "  ........              ",
+        "  ........              ",
+        "  ........              ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "    ..........          ",
+        "    ..........          ",
+        "    .............       ",
+        "    .............       ",
+        "    .............       ",
+        "       .........        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "terrain": { ".": "t_thatch_roof" }
+    }
+  },
+  {
+    "type": "overmap_special",
+    "id": "wuxia_small_cottages",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "wuxia_small_cottages_north" },
+      { "point": [ 0, 0, 1 ], "overmap": "wuxia_small_cottages_roof_north" }
+    ],
+    "locations": [ "wilderness" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, 20 ],
+    "occurrences": [ 0, 5 ],
+    "flags": [ "MAN_MADE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "wuxia_small_cottages",
+    "name": "cottages",
+    "sym": "C",
+    "color": "green",
+    "see_cost": "high",
+    "extras": "build",
+    "vision_levels": "blends_till_details",
+    "travel_cost_type": "structure",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "wuxia_small_cottages_roof",
+    "name": "cabin",
+    "sym": "C",
+    "color": "green",
+    "see_cost": "none",
+    "extras": "build",
+    "vision_levels": "blends_till_outlines",
+    "travel_cost_type": "roof",
+    "mondensity": 2
+  }
+]
