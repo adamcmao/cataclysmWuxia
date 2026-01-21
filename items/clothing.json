@@ -1,0 +1,30 @@
+[
+  {
+    "id": "hedgehog_vest_ench",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "incoming_damage_mod": [ { "type": "stab", "add": -10 }, { "type": "cut", "add": -10 }, { "type": "bash", "add": -10 } ],
+    "hit_me_effect": [ { "id": "hedgehog_reflect" } ]
+  },
+  {
+    "id": "wuxia_hedgehog_vest",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
+    "name": { "str": "soft hedgehog vest" },
+    "description": "A featherweight yet durable vest worn under clothing. When you apply pressure to it, the soft texture transforms into painful spikes.",
+    "weight": "300 g",
+    "volume": "2450 ml",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "light_blue",
+    "armor": [ { "covers": [ "torso" ], "coverage": 85, "encumbrance": 5 } ],
+    "warmth": 10,
+    "material_thickness": 0.75,
+    "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT", "PADDED", "STURDY" ],
+    "passive_effects": [ { "id": "hedgehog_vest_ench" } ]
+  }
+]

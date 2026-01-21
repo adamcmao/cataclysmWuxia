@@ -1,0 +1,18 @@
+[
+  {
+    "id": "hedgehog_reflect",
+    "type": "SPELL",
+    "name": "Hedgehog Reflect Damage - DEBUG",
+    "description": "",
+    "message": "Test print",
+    "valid_targets": [ "hostile" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "stab",
+    "min_damage": 5,
+    "max_damage": 15,
+    "flags": [ "RANDOM_DAMAGE", "NO_PROJECTILE", "SILENT", "NO_EXPLOSION_SFX" ],
+    "min_range": 1,
+    "max_range": 1
+  }
+]
