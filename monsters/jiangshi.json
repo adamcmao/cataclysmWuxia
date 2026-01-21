@@ -33,7 +33,7 @@
       { "id": "bite_humanoid", "cooldown": 5 },
       { "id": "scratch_humanoid" }
     ],
-    "//death_drops": "default_jiangshi_death_drops",
+    "death_drops": "default_jiangshi_death_drops",
     "flags": [
       "SEES",
       "HEARS",
