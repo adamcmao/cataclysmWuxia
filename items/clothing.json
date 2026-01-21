@@ -26,5 +26,44 @@
     "material_thickness": 0.75,
     "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT", "PADDED", "STURDY" ],
     "passive_effects": [ { "id": "hedgehog_vest_ench" } ]
+  },
+  {
+    "id": "wuxia_water_running_boots",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
+    "copy-from": "boots_hiking",
+    "name": "wave running boots",
+    "looks_like": "boots_hiking",
+    "price_postapoc": "0 USD",
+    "description": "A pair of simple and ancient pair of boots, but on closer inspection you see symbols that looks like a flowing breeze over water.",
+    "warmth": 30,
+    "material_thickness": 3,
+    "environmental_protection": 3,
+    "flags": [ "WATERPROOF", "STURDY" ],
+    "material": [ "leather" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 3.0 } ],
+        "encumbrance": 6,
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4 } ],
+        "coverage": 100
+      }
+    ]
   }
 ]
