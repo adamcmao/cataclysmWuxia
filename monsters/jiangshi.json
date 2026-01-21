@@ -4,7 +4,7 @@
     "type": "MONSTER",
     "name": { "str": "jiangshi" },
     "description": "The jiangshi abstract",
-    "default_faction": "player",
+    "default_faction": "zombie",
     "bodytype": "human",
     "species": [ "ZOMBIE", "HUMAN", "JIANGSHI" ],
     "volume": "62500 ml",

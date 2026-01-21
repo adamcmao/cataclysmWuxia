@@ -43,8 +43,8 @@
     "use_action": {
       "type": "place_monster",
       "monster_id": "wuxia_jiangshi_basic",
-      "friendly_msg": "The dispatch whirs onto its legs and searches for a target.",
-      "hostile_msg": "The dispatch turns on you, whacking at you with its arms!",
+      "friendly_msg": "You watch as the jiangshi rises, unfocused eyes staring aimlessly.",
+      "hostile_msg": "As you bring the jiangshi to life, it suddenly snaps towards you!",
       "moves": 500
     },
     "flags": [ "SINGLE_USE" ]
