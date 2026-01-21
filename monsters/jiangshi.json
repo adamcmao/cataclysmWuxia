@@ -4,7 +4,7 @@
     "type": "MONSTER",
     "name": { "str": "jiangshi" },
     "description": "The jiangshi abstract",
-    "default_faction": "player",
+    "default_faction": "zombie",
     "bodytype": "human",
     "species": [ "ZOMBIE", "HUMAN", "JIANGSHI" ],
     "volume": "62500 ml",
@@ -33,7 +33,7 @@
       { "id": "bite_humanoid", "cooldown": 5 },
       { "id": "scratch_humanoid" }
     ],
-    "//death_drops": "default_jiangshi_death_drops",
+    "death_drops": "default_jiangshi_death_drops",
     "flags": [
       "SEES",
       "HEARS",

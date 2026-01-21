@@ -1,0 +1,45 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "default_jiangshi_death_drops",
+    "entries": [
+      { "collection": [ { "group": "jiangshi_shoes", "damage": [ 1, 4 ] } ] },
+      { "collection": [ { "group": "jiangshi_torso", "damage": [ 1, 4 ] } ] },
+      { "collection": [ { "group": "jiangshi_pants", "damage": [ 1, 4 ] } ] }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "jiangshi_shoes",
+    "items": [
+      [ "footrags", 70 ],
+      [ "shoes_birchbark", 70 ],
+      [ "straw_sandals", 70 ],
+      [ "bastsandals", 70 ],
+      [ "geta", 25 ],
+      [ "footrags_leather", 25 ],
+      [ "leathersandals", 25 ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "jiangshi_torso",
+    "items": [
+      [ "coat_straw", 25 ],
+      [ "judo_gi", 25 ],
+      [ "kariginu", 25 ],
+      [ "kasaya", 25 ],
+      [ "kimono", 25 ],
+      [ "yukata", 25 ],
+      [ "robe", 25 ],
+      [ "thawb", 25 ],
+      [ "cheongsam", 25 ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "jiangshi_pants",
+    "items": [ [ "antarvasa", 25 ], [ "loincloth", 25 ], [ "trousers_ninja", 25 ], [ "zubon_gi", 25 ] ]
+  }
+]
