@@ -35,6 +35,10 @@
     "symbol": "]",
     "color": "black",
     "flags": [ "NO_REPAIR" ],
-    "use_action": { "type": "cast_spell", "spell_id": "cicada_wing_reveal", "no_fail": true, "level": 0 }
+    "use_action": {
+      "type": "effect_on_conditions",
+      "//description": "Activate the cicada wing",
+      "effect_on_conditions": [ "EOC_CICADA_WING_REVEAL" ]
+    }
   }
 ]
