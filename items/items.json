@@ -40,5 +40,29 @@
       "//description": "Activate the cicada wing",
       "effect_on_conditions": [ "EOC_CICADA_WING_REVEAL" ]
     }
+  },
+  {
+    "id": "wuxia_cicada_wing_temp",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "chitin_piece",
+    "name": "whispering cicada wing temp",
+    "description": "YOU SHOULD NOT SEE THIS.",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "weight": "5 g",
+    "volume": "100 ml",
+    "material": [ "chitin" ],
+    "symbol": "]",
+    "color": "black",
+    "flags": [ "NO_REPAIR" ],
+    "use_action": {
+      "type": "reveal_map",
+      "radius": 10,
+      "terrain": [
+        { "om_terrain": "forest_thick", "om_terrain_match_type": "PREFIX" },
+        { "om_terrain": "forest", "om_terrain_match_type": "PREFIX" }
+      ]
+    }
   }
 ]

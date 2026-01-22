@@ -25,8 +25,24 @@
     "type": "effect_on_condition",
     "id": "EOC_CICADA_WING_REVEAL",
     "eoc_type": "ACTIVATION",
-    "//condition": {  },
-    "effect": [ { "u_location_variable": { "context_val": "loc" } }, { "reveal_map": { "context_val": "loc" }, "radius": 50 } ],
-    "//false_effect": [ { "u_message": "As you hold the wing to you ear, you hear nothing." } ]
+    "condition": { "and": [ "u_is_outside", { "or": [ { "u_at_om_location": "forest" }, { "u_at_om_location": "forest_thick" } ] } ] },
+    "effect": [
+      { "u_message": "The wing wispers and reveals the surrounding forest." },
+      { "u_spawn_item": "wuxia_cicada_wing_temp", "suppress_message": true },
+      { "run_eocs": "EOC_FIND_AND_TRIGGER_CICADA_WING" },
+      { "u_remove_item_with": "wuxia_cicada_wing_temp" }
+    ],
+    "false_effect": [ { "u_message": "As you hold the wing to you ear, you hear nothing." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_FIND_AND_TRIGGER_CICADA_WING",
+    "effect": [
+      {
+        "u_run_inv_eocs": "random",
+        "search_data": [ { "id": "wuxia_cicada_wing_temp" } ],
+        "true_eocs": [ { "id": "EOC_USE_CICADA_WING_TEMP", "effect": { "u_activate": "reveal_map" } } ]
+      }
+    ]
   }
 ]
