@@ -1,0 +1,85 @@
+[
+  {
+    "id": "wuxia_copper_mirror",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "mirror",
+    "name": "copper mirror",
+    "description": "An engraved copper mirror, it appears ancient and dulled, but also seems to call you.",
+    "price": "0 kUSD",
+    "price_postapoc": "0 USD",
+    "weight": "2 kg",
+    "volume": "1 ml",
+    "material": [ "copper", "glass", "gemstone" ],
+    "symbol": "o",
+    "color": "light_red",
+    "charges_per_use": 1,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "spirit_stone": 4 } } ],
+    "flags": [ "NO_REPAIR", "NO_UNLOAD", "NO_RELOAD" ],
+    "use_action": { "type": "cast_spell", "spell_id": "spawn_qi_pills", "no_fail": true, "level": 0 },
+    "charge_info": { "recharge_condition": "worn", "recharge_type": "periodic", "time": "20 h", "regenerate_ammo": true },
+    "//passive_effects": [ { "id": "" } ]
+  },
+  {
+    "id": "wuxia_cicada_wing",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "chitin_piece",
+    "name": "whispering cicada wing",
+    "description": "A vibrating cicada wing that still smells of the forest.",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "weight": "5 g",
+    "volume": "100 ml",
+    "material": [ "chitin" ],
+    "symbol": "]",
+    "color": "black",
+    "flags": [ "NO_REPAIR" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "//description": "Activate the cicada wing",
+      "effect_on_conditions": [ "EOC_CICADA_WING_REVEAL" ]
+    }
+  },
+  {
+    "id": "wuxia_cicada_wing_temp",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "chitin_piece",
+    "name": "whispering cicada wing temp",
+    "description": "YOU SHOULD NOT SEE THIS.",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "weight": "5 g",
+    "volume": "100 ml",
+    "material": [ "chitin" ],
+    "symbol": "]",
+    "color": "black",
+    "flags": [ "NO_REPAIR" ],
+    "use_action": {
+      "type": "reveal_map",
+      "radius": 10,
+      "terrain": [
+        { "om_terrain": "forest_thick", "om_terrain_match_type": "PREFIX" },
+        { "om_terrain": "forest", "om_terrain_match_type": "PREFIX" }
+      ]
+    }
+  },
+  {
+    "id": "wuxia_thunder_splitting_bell",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "cow_bell",
+    "name": "thunder splitting bell",
+    "description": "A vibrating cicada wing that still smells of the forest.",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "weight": "330 g",
+    "volume": "300 ml",
+    "material": [ "bronze" ],
+    "symbol": "^",
+    "color": "yellow",
+    "flags": [ "NO_REPAIR" ],
+    "use_action": { "type": "cast_spell", "spell_id": "thunder_splitting_bell", "no_fail": true, "level": 0 }
+  }
+]

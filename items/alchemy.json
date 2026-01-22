@@ -58,7 +58,7 @@
     "volume": "2 ml",
     "material": [ "drug_filler" ],
     "symbol": ".",
-    "color": "green",
+    "color": "light_green",
     "flags": [ "WATER_DISSOLVE", "NO_TEMP" ],
     "use_action": { "type": "cast_spell", "spell_id": "dot_qi_recovery_tier_1", "no_fail": true, "level": 0 }
   },
@@ -73,7 +73,7 @@
     "volume": "2 ml",
     "material": [ "drug_filler" ],
     "symbol": ".",
-    "color": "green",
+    "color": "light_green",
     "flags": [ "WATER_DISSOLVE", "NO_TEMP" ],
     "use_action": { "type": "cast_spell", "spell_id": "dot_qi_recovery_tier_2", "no_fail": true, "level": 0 }
   },
@@ -88,7 +88,7 @@
     "volume": "2 ml",
     "material": [ "drug_filler" ],
     "symbol": ".",
-    "color": "green",
+    "color": "light_green",
     "flags": [ "WATER_DISSOLVE", "NO_TEMP" ],
     "use_action": { "type": "cast_spell", "spell_id": "dot_qi_recovery_tier_3", "no_fail": true, "level": 0 }
   },
@@ -103,8 +103,38 @@
     "volume": "2 ml",
     "material": [ "drug_filler" ],
     "symbol": ".",
-    "color": "green",
+    "color": "blue",
     "flags": [ "WATER_DISSOLVE", "NO_TEMP" ],
     "use_action": { "type": "cast_spell", "spell_id": "dot_qi_recovery_tier_4", "no_fail": true, "level": 0 }
+  },
+  {
+    "//": "TODO",
+    "id": "wuxia_poison_pill_tier_1",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "MED",
+    "name": "poison pill tier 1",
+    "description": "poison pill tier 1",
+    "weight": "3 g",
+    "volume": "2 ml",
+    "material": [ "drug_filler" ],
+    "symbol": ".",
+    "color": "green",
+    "flags": [ "WATER_DISSOLVE", "NO_TEMP" ]
+  },
+  {
+    "//": "TODO",
+    "id": "wuxia_poison_pill_tier_2",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "MED",
+    "name": "poison pill tier 2",
+    "description": "poison pill tier 2",
+    "weight": "3 g",
+    "volume": "2 ml",
+    "material": [ "drug_filler" ],
+    "symbol": ".",
+    "color": "green",
+    "flags": [ "WATER_DISSOLVE", "NO_TEMP" ]
   }
 ]

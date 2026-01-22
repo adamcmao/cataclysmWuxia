@@ -1,0 +1,37 @@
+[
+  {
+    "id": "hedgehog_reflect",
+    "type": "SPELL",
+    "name": "Hedgehog Reflect Damage - DEBUG",
+    "description": "",
+    "//message": "Test print",
+    "valid_targets": [ "hostile" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "stab",
+    "min_damage": 5,
+    "max_damage": 15,
+    "flags": [ "RANDOM_DAMAGE", "NO_PROJECTILE", "SILENT", "NO_EXPLOSION_SFX" ],
+    "min_range": 1,
+    "max_range": 1
+  },
+  {
+    "id": "thunder_splitting_bell",
+    "type": "SPELL",
+    "name": "Thunder Splitting Bell - DEBUG",
+    "description": "",
+    "message": "A resounding boom resonates out from the bell.",
+    "valid_targets": [ "hostile", "ground" ],
+    "effect": "attack",
+    "effect_str": "dazed",
+    "shape": "cone",
+    "damage_type": "bash",
+    "min_aoe": 45,
+    "max_aoe": 45,
+    "min_range": 4,
+    "max_range": 4,
+    "min_duration": 100,
+    "max_duration": 500,
+    "flags": [ "NO_PROJECTILE", "LOUD", "NO_EXPLOSION_SFX", "RANDOM_DURATION" ]
+  }
+]

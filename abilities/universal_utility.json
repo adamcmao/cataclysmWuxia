@@ -63,5 +63,45 @@
     "base_casting_time": 100,
     "base_energy_cost": 150,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "wuxia_three_needles",
+    "type": "requirement",
+    "//components": [ [ [ "bronze_nail", 3 ], [ "nail", 3 ] ] ],
+    "components": [
+      [
+        [ "combatnail", 3 ],
+        [ "needle_bone", 3 ],
+        [ "needle_curved", 3 ],
+        [ "needle_wood", 3 ],
+        [ "needle_steel", 3 ],
+        [ "syringe", 3 ],
+        [ "bronze_nail", 3 ],
+        [ "nail", 3 ]
+      ]
+    ]
+  },
+  {
+    "id": "three_needles_draw_venom",
+    "//": "",
+    "type": "SPELL",
+    "name": "Three Needles Draw Venom",
+    "description": "Carefully insert needles to draw poison from your body",
+    "message": "You insert needles across your chest to expel the poison in your body.",
+    "spell_class": "QI",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_THREE_NEEDLES_DRAW_VENOM_START",
+    "max_level": 10,
+    "valid_targets": [ "self" ],
+    "components": "wuxia_three_needles",
+    "flags": [ "NON_MAGICAL", "NO_HANDS", "LOUD" ],
+    "base_casting_time": 60000,
+    "casting_time_increment": -5400,
+    "final_casting_time": 6000,
+    "base_energy_cost": 300,
+    "energy_increment": -20,
+    "final_energy_cost": 100,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
