@@ -64,5 +64,22 @@
         { "om_terrain": "forest", "om_terrain_match_type": "PREFIX" }
       ]
     }
+  },
+  {
+    "id": "wuxia_thunder_splitting_bell",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "cow_bell",
+    "name": "thunder splitting bell",
+    "description": "A vibrating cicada wing that still smells of the forest.",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "weight": "330 g",
+    "volume": "300 ml",
+    "material": [ "bronze" ],
+    "symbol": "^",
+    "color": "yellow",
+    "flags": [ "NO_REPAIR" ],
+    "use_action": { "type": "cast_spell", "spell_id": "thunder_splitting_bell", "no_fail": true, "level": 0 }
   }
 ]
