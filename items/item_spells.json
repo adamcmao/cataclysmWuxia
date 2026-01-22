@@ -4,7 +4,7 @@
     "type": "SPELL",
     "name": "Hedgehog Reflect Damage - DEBUG",
     "description": "",
-    "message": "Test print",
+    "//message": "Test print",
     "valid_targets": [ "hostile" ],
     "effect": "attack",
     "shape": "blast",
@@ -14,5 +14,19 @@
     "flags": [ "RANDOM_DAMAGE", "NO_PROJECTILE", "SILENT", "NO_EXPLOSION_SFX" ],
     "min_range": 1,
     "max_range": 1
+  },
+  {
+    "id": "cicada_wing_reveal",
+    "type": "SPELL",
+    "name": "Cicada Wing Reveal - DEBUG",
+    "description": "",
+    "//message": "Test print",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_CICADA_WING_REVEAL",
+    "flags": [ "NO_PROJECTILE", "SILENT", "NO_EXPLOSION_SFX" ],
+    "min_range": 0,
+    "max_range": 0
   }
 ]

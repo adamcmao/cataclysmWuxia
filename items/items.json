@@ -8,7 +8,7 @@
     "description": "An engraved copper mirror, it appears ancient and dulled, but also seems to call you.",
     "price": "0 kUSD",
     "price_postapoc": "0 USD",
-    "weight": "2 g",
+    "weight": "2 kg",
     "volume": "1 ml",
     "material": [ "copper", "glass", "gemstone" ],
     "symbol": "o",
@@ -19,5 +19,22 @@
     "use_action": { "type": "cast_spell", "spell_id": "spawn_qi_pills", "no_fail": true, "level": 0 },
     "charge_info": { "recharge_condition": "worn", "recharge_type": "periodic", "time": "20 h", "regenerate_ammo": true },
     "//passive_effects": [ { "id": "" } ]
+  },
+  {
+    "id": "wuxia_cicada_wing",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "looks_like": "chitin_piece",
+    "name": "whispering cicada wing",
+    "description": "A vibrating cicada wing that still smells of the forest.",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "weight": "5 g",
+    "volume": "100 ml",
+    "material": [ "chitin" ],
+    "symbol": "]",
+    "color": "black",
+    "flags": [ "NO_REPAIR" ],
+    "use_action": { "type": "cast_spell", "spell_id": "cicada_wing_reveal", "no_fail": true, "level": 0 }
   }
 ]

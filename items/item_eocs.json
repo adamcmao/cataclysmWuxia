@@ -20,5 +20,13 @@
       { "u_add_effect": "wuxia_run_on_water", "duration": "PERMANENT" }
     ],
     "false_effect": [ { "u_message": "You are not running, you are" }, { "u_lose_effect": "wuxia_run_on_water" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CICADA_WING_REVEAL",
+    "eoc_type": "ACTIVATION",
+    "//condition": {  },
+    "effect": [ { "u_location_variable": { "context_val": "loc" } }, { "reveal_map": { "context_val": "loc" }, "radius": 50 } ],
+    "//false_effect": [ { "u_message": "As you hold the wing to you ear, you hear nothing." } ]
   }
 ]
