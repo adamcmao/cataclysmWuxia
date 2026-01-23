@@ -10,5 +10,75 @@
     "max_duration": "1 days",
     "max_intensity": 25,
     "enchantments": [ { "values": [ { "value": "SPEED", "add": { "math": [ "u_spell_level('wind_following_steps') * 5" ] } } ] } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "qi_deviation_stat_boost",
+    "name": [ "Qi Deviation" ],
+    "desc": [ "With your soul as fuel, you are in a state of transcendence." ],
+    "apply_message": "You transcend all mortality!",
+    "rating": "good",
+    "max_duration": "5 minutes",
+    "enchantments": [
+      {
+        "values": [
+          { "value": "STRENGTH", "add": 20 },
+          { "value": "DEXTERITY", "add": 20 },
+          { "value": "INTELLIGENCE", "add": 20 },
+          { "value": "PERCEPTION", "add": 20 },
+          { "value": "ATTACK_SPEED", "multiply": 0.5 },
+          { "value": "BONUS_BLOCK", "multiply": 2 },
+          { "value": "BONUS_DODGE", "multiply": 2 },
+          { "value": "DODGE_CHANCE", "add": 20 },
+          { "value": "FALL_DAMAGE", "multiply": 0 },
+          { "value": "KNOCKBACK_RESIST", "multiply": 2 },
+          { "value": "KNOCKDOWN_RESIST", "multiply": 2 },
+          { "value": "MELEE_DAMAGE", "multiply": 1.5 },
+          { "value": "MELEE_TO_HIT", "add": 10 },
+          { "value": "RANGED_DAMAGE", "multiply": 1.5 },
+          { "value": "RANGE_DODGE", "add": 10 },
+          { "value": "REGEN_HP", "multiply": 50 },
+          { "value": "REGEN_HP_AWAKE", "multiply": 1 },
+          { "value": "REGEN_STAMINA", "multiply": 10 },
+          { "value": "SPEED", "add": 100 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "qi_deviation_stat_negative",
+    "name": [ "Qi Deviation" ],
+    "desc": [ "Your soul is nothing more than a dying ember." ],
+    "apply_message": "Nothing is left, you wait for death to embrace you.",
+    "rating": "bad",
+    "max_duration": "1 day",
+    "removes_effects": [ "qi_deviation_stat_boost" ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "STRENGTH", "multiply": -0.5 },
+          { "value": "DEXTERITY", "multiply": -0.5 },
+          { "value": "INTELLIGENCE", "multiply": -0.5 },
+          { "value": "PERCEPTION", "multiply": -0.5 },
+          { "value": "ATTACK_SPEED", "multiply": -0.5 },
+          { "value": "BONUS_BLOCK", "multiply": -0.5 },
+          { "value": "BONUS_DODGE", "multiply": -0.5 },
+          { "value": "DODGE_CHANCE", "add": -20 },
+          { "value": "FALL_DAMAGE", "multiply": -0.5 },
+          { "value": "KNOCKBACK_RESIST", "multiply": -0.5 },
+          { "value": "KNOCKDOWN_RESIST", "multiply": -0.5 },
+          { "value": "MELEE_DAMAGE", "multiply": 0.5 },
+          { "value": "MELEE_TO_HIT", "add": -10 },
+          { "value": "RANGED_DAMAGE", "multiply": -0.5 },
+          { "value": "RANGE_DODGE", "add": -10 },
+          { "value": "REGEN_HP", "multiply": -1.1 },
+          { "value": "REGEN_STAMINA", "multiply": -0.5 }
+        ]
+      },
+      {
+        "intermittent_activation": { "effects": [ { "frequency": "10 seconds", "spell_effects": [ { "id": "lose_all_qi" } ] } ] }
+      }
+    ]
   }
 ]

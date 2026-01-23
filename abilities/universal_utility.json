@@ -103,5 +103,24 @@
     "energy_increment": -20,
     "final_energy_cost": 100,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "soul_burning_meridian_reversal",
+    "//": "Give huge buff for 5 minutes. After 1 minute side effects start kicking in. After the 5 minutes, 1 day penalty",
+    "///": "You will probably die",
+    "type": "SPELL",
+    "name": "Soul Burning Meridian Reversal",
+    "description": "Burn your soul, and reverse you qi. Your death will arrive soon.",
+    "message": "You raise your hand, wondering if these will be your final moments.",
+    "spell_class": "QI",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SOUL_BURNING_MERIDIAN_REVERSAL_CONFIRM",
+    "max_level": 0,
+    "valid_targets": [ "self" ],
+    "flags": [ "NON_MAGICAL", "NO_HANDS", "LOUD", "NO_FAIL" ],
+    "base_casting_time": 50,
+    "base_energy_cost": 0,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]

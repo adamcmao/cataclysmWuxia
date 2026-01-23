@@ -140,5 +140,20 @@
     "flags": [ "NO_FAIL", "SILENT" ],
     "base_energy_cost": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "lose_250_qi",
+    "//": "Test ability to lose 250 qi",
+    "type": "SPELL",
+    "name": "Recover 250 Qi",
+    "description": "Recovers 250 Qi",
+    "message": "Through the power of TEST, you recover 250 qi",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_LOSE_250_QI",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL", "SILENT" ],
+    "base_energy_cost": 0,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
