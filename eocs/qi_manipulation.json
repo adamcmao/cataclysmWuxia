@@ -2,294 +2,252 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_1000_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 1000" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_900_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 900" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_800_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 800" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_700_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 700" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_600_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 600" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_500_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 500" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_450_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 450" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_400_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 400" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_350_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 350" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_300_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 300" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_250_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 250" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_200_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 200" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_175_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 175" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_150_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 150" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_125_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 125" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_100_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 100" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_75_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 75" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_50_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 50" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_10_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 10" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_5_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 5" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_GAIN_1_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') += 1" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_1000_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 1000" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_900_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 900" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_800_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 800" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_700_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 700" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_600_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 600" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_500_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 500" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_450_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 450" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_400_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 400" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_350_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 350" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_300_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 300" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_250_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 250" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_200_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 200" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_175_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 175" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_150_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 150" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_125_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 125" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_100_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 100" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_75_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 75" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_50_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 50" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_10_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 10" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_5_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 5" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_1_QI",
-    "//": "",
     "eoc_type": "ACTIVATION",
     "effect": [ { "math": [ "u_vitamin('qi_vitamin') -= 1" ] } ]
   },
