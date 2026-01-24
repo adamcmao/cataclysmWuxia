@@ -75,7 +75,7 @@
     "type": "SPELL",
     "name": "Pierce the Alley",
     "description": "Thrust your staff forward towards your foe",
-    "message": "",
+    "message": "With feet planted, you thrust your staff forward, bridging the gap between yourself and your foes.",
     "spell_class": "BEGGAR",
     "shape": "line",
     "effect": "effect_on_condition",

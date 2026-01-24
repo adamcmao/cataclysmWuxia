@@ -24,23 +24,9 @@
     "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
-      { "message": "_thrusting: <global_val:_thrusting>" },
-      {
-        "if": { "math": [ "_thrusting != 1" ] },
-        "then": [
-          { "message": "With feet planted, you thrust your staff forward, bridging the gap between yourself and your foes." },
-          { "math": [ "_thrusting = 1" ] }
-        ]
-      },
       { "run_eocs": [ "EOC_STAFF_SOUND_RANDOMIZER" ] },
-      { "npc_cast_spell": { "id": "pierce_the_alley_actual" }, "loc": { "context_val": "loc" } },
-      { "run_eocs": "EOC_PIERCE_THE_ALLEY_CLEAR", "time_in_future": "5 seconds" }
+      { "npc_cast_spell": { "id": "pierce_the_alley_actual" }, "loc": { "context_val": "loc" } }
     ],
     "false_effect": [ { "message": "Without a quarterstaff in hand you simply practice the motion." } ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_PIERCE_THE_ALLEY_CLEAR",
-    "effect": [ { "math": [ "_thrusting = 0" ] }, { "message": "Reset thrusting to 0" } ]
   }
 ]
