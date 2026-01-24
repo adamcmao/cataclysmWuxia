@@ -87,23 +87,6 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "wuxia_three_needles",
-    "type": "requirement",
-    "//components": [ [ [ "bronze_nail", 3 ], [ "nail", 3 ] ] ],
-    "components": [
-      [
-        [ "combatnail", 3 ],
-        [ "needle_bone", 3 ],
-        [ "needle_curved", 3 ],
-        [ "needle_wood", 3 ],
-        [ "needle_steel", 3 ],
-        [ "syringe", 3 ],
-        [ "bronze_nail", 3 ],
-        [ "nail", 3 ]
-      ]
-    ]
-  },
-  {
     "id": "three_needles_draw_venom",
     "//": "",
     "type": "SPELL",
@@ -116,7 +99,7 @@
     "effect_str": "EOC_THREE_NEEDLES_DRAW_VENOM_START",
     "max_level": 10,
     "valid_targets": [ "self" ],
-    "components": "wuxia_three_needles",
+    "components": "spell_components_three_needles",
     "flags": [ "NON_MAGICAL", "NO_HANDS", "LOUD" ],
     "base_casting_time": 60000,
     "casting_time_increment": -5400,

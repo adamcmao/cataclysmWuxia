@@ -53,7 +53,7 @@
         "run_eocs": [
           "EOC_UNLOCK_UNIVERSAL_QI",
           "EOC_UNLOCK_BASIC_BEGGAR",
-          "EOC_UNLOCK_BASIC_BLOOD",
+          "EOC_UNLOCK_BASIC_DEMONIC",
           "EOC_UNLOCK_JIANGSHI",
           "EOC_UNLOCK_EMPTY_HAND"
         ]
@@ -89,7 +89,7 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_UNLOCK_BASIC_BLOOD",
+    "id": "EOC_UNLOCK_BASIC_DEMONIC",
     "eoc_type": "ACTIVATION",
     "effect": [
       { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] },
