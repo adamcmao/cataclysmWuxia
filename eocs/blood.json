@@ -38,16 +38,22 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_SCARLET_STOP_BLEEDING",
-    "effect": [ { "run_eocs": "EOC_LOSE_BLOOD_SMALL" }, { "u_add_effect": "effect_stop_bleeding", "duration": 0 } ]
-  },
-  {
-    "type": "effect_type",
-    "id": "effect_stop_bleeding",
-    "name": [ "Stop Bleeding" ],
-    "desc": [ "You do not bleed.  At all." ],
-    "rating": "good",
-    "removes_effects": [ "bleed" ],
-    "flags": [ "BLEED_IMMUNE" ]
+    "id": "EOC_RED_THREAD_BINDING_START",
+    "condition": {
+      "or": [
+        { "u_has_effect": "bleed", "bodypart": "head" },
+        { "u_has_effect": "bleed", "bodypart": "torso" },
+        { "u_has_effect": "bleed", "bodypart": "arm_r" },
+        { "u_has_effect": "bleed", "bodypart": "arm_l" },
+        { "u_has_effect": "bleed", "bodypart": "leg_r" },
+        { "u_has_effect": "bleed", "bodypart": "leg_l" }
+      ]
+    },
+    "effect": [
+      { "message": "You scream as you draw threads from your own blood and weave your wounds closed." },
+      { "run_eocs": "EOC_LOSE_BLOOD_SMALL" },
+      { "u_lose_effect": "bleed" }
+    ],
+    "false_effect": [ { "message": "You are not bleeding, so you just practice the motion." } ]
   }
 ]

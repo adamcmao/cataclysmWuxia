@@ -1,13 +1,5 @@
 [
   {
-    "type": "effect_type",
-    "id": "wuxia_run_on_water",
-    "//": "Lets you run on water while, used with wuxia_water_running_boots",
-    "name": [ "" ],
-    "desc": [ "" ],
-    "flags": [ "ITEM_WATERPROOFING", "WATERWALKING" ]
-  },
-  {
     "type": "effect_on_condition",
     "id": "EOC_WATER_RUNNING",
     "eoc_type": "EVENT",
@@ -15,11 +7,8 @@
     "condition": {
       "and": [ { "compare_string": [ "run", { "context_val": "movement_mode" } ] }, { "u_is_wearing": "wuxia_water_running_boots" } ]
     },
-    "effect": [
-      { "u_message": "You are running with water running boots on" },
-      { "u_add_effect": "wuxia_run_on_water", "duration": "PERMANENT" }
-    ],
-    "false_effect": [ { "u_message": "You are not running, you are" }, { "u_lose_effect": "wuxia_run_on_water" } ]
+    "effect": [ { "u_add_effect": "wuxia_run_on_water", "duration": "PERMANENT" } ],
+    "false_effect": [ { "u_lose_effect": "wuxia_run_on_water" } ]
   },
   {
     "type": "effect_on_condition",

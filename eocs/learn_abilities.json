@@ -15,7 +15,7 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_BASIC_PHYSICAL",
     "eoc_type": "ACTIVATION",
-    "condition": { "and": [ { "math": [ "u_spell_level('clumsy_dash') == 1" ] }, { "math": [ "u_spell_level('weak_punch') == 1" ] } ] },
+    "condition": { "and": [ { "math": [ "u_spell_level('clumsy_dash') >= 1" ] }, { "math": [ "u_spell_level('weak_punch') >= 1" ] } ] },
     "effect": [
       { "math": [ "u_spell_level('clumsy_dash') = -1" ] },
       { "math": [ "u_spell_level('weak_punch') = -1" ] },
@@ -50,7 +50,13 @@
     },
     "effect": [
       {
-        "run_eocs": [ "EOC_UNLOCK_UNIVERSAL_QI", "EOC_UNLOCK_BASIC_BEGGAR", "EOC_UNLOCK_BASIC_BLOOD", "EOC_UNLOCK_JIANGSHI" ]
+        "run_eocs": [
+          "EOC_UNLOCK_UNIVERSAL_QI",
+          "EOC_UNLOCK_BASIC_BEGGAR",
+          "EOC_UNLOCK_BASIC_BLOOD",
+          "EOC_UNLOCK_JIANGSHI",
+          "EOC_UNLOCK_EMPTY_HAND"
+        ]
       },
       { "u_forget_recipe": "meditate_to_unlock_qi" },
       { "u_message": "You take your first step towards the truth." }
@@ -65,6 +71,7 @@
       { "math": [ "u_spell_level('mountain_shaking_fist') = 0" ] },
       { "math": [ "u_spell_level('wind_following_steps') = 0" ] },
       { "math": [ "u_spell_level('three_needles_draw_venom') = 0" ] },
+      { "math": [ "u_spell_level('soul_burning_meridian_reversal') = 0" ] },
       { "u_learn_recipe": "meditate_to_restore_qi" }
     ]
   },
@@ -88,7 +95,8 @@
       { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] },
       { "math": [ "u_spell_level('red_thread_binding') = 0" ] },
       { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] },
-      { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] }
+      { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] },
+      { "math": [ "u_spell_level('flowing_blood_blades') = 0" ] }
     ]
   },
   {
@@ -99,6 +107,18 @@
       { "u_learn_recipe": "wuxia_jiangshi_basic_inert" },
       { "u_learn_recipe": "wuxia_wooden_casket" },
       { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_EMPTY_HAND",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "math": [ "u_spell_level('flowing_water_palm') = 0" ] },
+      { "math": [ "u_spell_level('three_point_seal') = 0" ] },
+      { "math": [ "u_spell_level('countering_still_hand') = 0" ] },
+      { "math": [ "u_spell_level('dragon_tail_strike') = 0" ] },
+      { "math": [ "u_spell_level('heaven_earth_mortal') = 0" ] }
     ]
   }
 ]
