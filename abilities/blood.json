@@ -15,7 +15,7 @@
     "max_level": 10,
     "valid_targets": [ "hostile" ],
     "flags": [ "SILENT", "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
-    "base_casting_time": 150,
+    "base_casting_time": 100,
     "base_energy_cost": 25,
     "min_range": 5,
     "range_increment": 0.5,
@@ -207,5 +207,49 @@
     "base_energy_cost": 0,
     "max_range": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "blood", "color": "c_red" }
+  },
+  {
+    "id": "flowing_blood_blades",
+    "type": "SPELL",
+    "name": "Flowing Blood Blades",
+    "description": "Fire a pair of thin spinning blades made of your own essence.",
+    "message": "Slicing your own hands, you throw a pair of spinning blades.",
+    "spell_class": "SCARLET",
+    "shape": "line",
+    "effect": "attack",
+    "extra_effects": [
+      { "id": "flowing_blood_blades_actual", "hit_self": false },
+      { "id": "flowing_blood_blades_actual", "hit_self": false }
+    ],
+    "max_level": 10,
+    "valid_targets": [ "hostile", "ground" ],
+    "flags": [ "SILENT", "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
+    "base_casting_time": 100,
+    "base_energy_cost": 25,
+    "min_range": 5,
+    "range_increment": 0.5,
+    "max_range": 10,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "flowing_blood_blades_actual",
+    "type": "SPELL",
+    "name": "Flowing Blood Blades - HIDDEN",
+    "description": "",
+    "message": "",
+    "spell_class": "SCARLET",
+    "shape": "line",
+    "effect": "attack",
+    "damage_type": "cut",
+    "extra_effects": [ { "id": "drain_blood_small_hidden", "hit_self": true } ],
+    "min_damage": { "math": [ "(u_spell_level('flowing_blood_blades') * 1) + 10 " ] },
+    "max_damage": { "math": [ "(u_spell_level('flowing_blood_blades') * 5) + 20" ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile", "ground" ],
+    "flags": [ "SILENT", "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
+    "min_range": 5,
+    "range_increment": 0.5,
+    "max_range": 10,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
