@@ -1,0 +1,16 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_YIN_ESSENCE_REFORGING_START",
+    "condition": { "u_has_species": "JIANGSHI" },
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      {
+        "message": "As your energy flows into the jiangshi, you see torn flesh and bones twist and snap into its original form."
+      },
+      { "u_lose_effect": "bleed" },
+      { "npc_cast_spell": { "id": "yin_essence_reforging_actual" }, "loc": { "context_val": "loc" } }
+    ],
+    "false_effect": [ { "message": "As only a Jiangshi can be healed, you practice the motion instead." } ]
+  }
+]
