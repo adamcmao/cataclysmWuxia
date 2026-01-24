@@ -50,7 +50,13 @@
     },
     "effect": [
       {
-        "run_eocs": [ "EOC_UNLOCK_UNIVERSAL_QI", "EOC_UNLOCK_BASIC_BEGGAR", "EOC_UNLOCK_BASIC_BLOOD", "EOC_UNLOCK_JIANGSHI" ]
+        "run_eocs": [
+          "EOC_UNLOCK_UNIVERSAL_QI",
+          "EOC_UNLOCK_BASIC_BEGGAR",
+          "EOC_UNLOCK_BASIC_BLOOD",
+          "EOC_UNLOCK_JIANGSHI",
+          "EOC_UNLOCK_EMPTY_HAND"
+        ]
       },
       { "u_forget_recipe": "meditate_to_unlock_qi" },
       { "u_message": "You take your first step towards the truth." }
@@ -100,6 +106,16 @@
       { "u_learn_recipe": "wuxia_jiangshi_basic_inert" },
       { "u_learn_recipe": "wuxia_wooden_casket" },
       { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_EMPTY_HAND",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "math": [ "u_spell_level('flowing_water_palm') = 0" ] },
+      { "math": [ "u_spell_level('three_point_seal') = 0" ] },
+      { "math": [ "u_spell_level('countering_still_hand') = 0" ] }
     ]
   }
 ]

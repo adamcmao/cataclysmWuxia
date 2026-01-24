@@ -150,5 +150,39 @@
         "intermittent_activation": { "effects": [ { "frequency": "10 seconds", "spell_effects": [ { "id": "lose_all_qi" } ] } ] }
       }
     ]
+  },
+  {
+    "type": "effect_type",
+    "id": "wuxia_countering_still_hand_stance",
+    "name": [ "Countering Still Hand" ],
+    "desc": [ "Heels dug in, you focus on defense instead of aggression." ],
+    "rating": "good",
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "incoming_damage_mod": [
+          {
+            "type": "stab",
+            "add": {
+              "math": [ "trunc(rng((u_spell_level('countering_still_hand') * -1),(u_spell_level('countering_still_hand') * -2)))" ]
+            }
+          },
+          {
+            "type": "cut",
+            "add": {
+              "math": [ "trunc(rng((u_spell_level('countering_still_hand') * -1),(u_spell_level('countering_still_hand') * -2)))" ]
+            }
+          },
+          {
+            "type": "bash",
+            "add": {
+              "math": [ "trunc(rng((u_spell_level('countering_still_hand') * -1),(u_spell_level('countering_still_hand') * -2)))" ]
+            }
+          }
+        ],
+        "hit_me_effect": [ { "id": "countering_still_hand_actual" } ]
+      }
+    ],
+    "flags": [ "CANNOT_MOVE", "CANNOT_ATTACK" ]
   }
 ]
