@@ -184,5 +184,13 @@
       }
     ],
     "flags": [ "CANNOT_MOVE", "CANNOT_ATTACK" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "qi_drained",
+    "name": [ "Qi Drained" ],
+    "show_in_info": true,
+    "desc": [ "Should only be on monsters as a flag, you shoulnd't see this." ],
+    "rating": "bad"
   }
 ]

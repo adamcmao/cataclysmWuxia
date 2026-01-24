@@ -96,7 +96,8 @@
       { "math": [ "u_spell_level('red_thread_binding') = 0" ] },
       { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] },
       { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] },
-      { "math": [ "u_spell_level('flowing_blood_blades') = 0" ] }
+      { "math": [ "u_spell_level('flowing_blood_blades') = 0" ] },
+      { "math": [ "u_spell_level('heaven_devouring_art') = 0" ] }
     ]
   },
   {
