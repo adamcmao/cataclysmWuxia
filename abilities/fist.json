@@ -89,5 +89,43 @@
     "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ],
     "min_range": 1,
     "max_range": 1
+  },
+  {
+    "id": "dragon_tail_strike",
+    "//": "As this is a kick, it doesn't need the EoC for weapon check",
+    "type": "SPELL",
+    "name": "Dragon Tail Strike",
+    "description": "Coil your leg, and whip it towards your opponent, attempting to create distance.",
+    "message": "",
+    "spell_class": "EMPTY",
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "bash",
+    "extra_effects": [ { "id": "dragon_tail_strike_followup", "hit_self": false } ],
+    "max_level": 10,
+    "min_damage": { "math": [ "(u_spell_level('dragon_tail_strike') * 3) + 5" ] },
+    "max_damage": { "math": [ "(u_spell_level('dragon_tail_strike') * 5) + 10" ] },
+    "valid_targets": [ "hostile" ],
+    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
+    "base_casting_time": 75,
+    "base_energy_cost": 50,
+    "min_range": 1,
+    "max_range": 1,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "dragon_tail_strike_followup",
+    "type": "SPELL",
+    "name": "Dragon Tail Strike - HIDDEN",
+    "description": "",
+    "shape": "blast",
+    "effect": "directed_push",
+    "min_damage": 0,
+    "max_damage": 2,
+    "valid_targets": [ "hostile" ],
+    "max_level": 10,
+    "min_range": 1,
+    "max_range": 1,
+    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ]
   }
 ]
