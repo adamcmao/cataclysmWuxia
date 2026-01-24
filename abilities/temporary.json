@@ -1,7 +1,7 @@
 [
   {
     "id": "weak_punch",
-    "//": "A skill that you start with that will be removed once it hits max level",
+    "//": "A skill that you start with that will be removed later",
     "type": "SPELL",
     "name": "Punch",
     "description": "You swing your arm with all your might!",
@@ -12,7 +12,7 @@
     "damage_type": "bash",
     "min_damage": { "math": [ "(u_spell_level('weak_punch') * 0.5)" ] },
     "max_damage": { "math": [ "(u_spell_level('weak_punch') * 1)" ] },
-    "max_level": 1,
+    "max_level": 3,
     "valid_targets": [ "hostile" ],
     "flags": [ "NON_MAGICAL", "LOUD", "NO_LEGS" ],
     "base_casting_time": 150,
@@ -23,7 +23,7 @@
   },
   {
     "id": "clumsy_dash",
-    "//": "A movement skill that you start with that will be removed once it hits max level",
+    "//": "A movement skill that you start with that will be removed later",
     "type": "SPELL",
     "name": "Dash",
     "description": "You have heard rumours of being able to move light on your feet, perhaps you can try it yourself?",
@@ -34,7 +34,7 @@
     "damage_type": "bash",
     "min_damage": 0,
     "max_damage": 0,
-    "max_level": 1,
+    "max_level": 3,
     "valid_targets": [ "ground" ],
     "flags": [ "NON_MAGICAL", "LOUD", "NO_HANDS" ],
     "base_casting_time": 150,

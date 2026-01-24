@@ -27,29 +27,18 @@
     "type": "SPELL",
     "name": "Red Thread Binding",
     "description": "Use your own flowing blood to stitch your wounds shut.",
-    "message": "You scream as you draw threads from your own blood and weave your wounds closed.",
+    "message": "",
     "spell_class": "SCARLET",
     "shape": "blast",
     "effect": "effect_on_condition",
-    "effect_str": "EOC_SCARLET_STOP_BLEEDING",
+    "effect_str": "EOC_RED_THREAD_BINDING_START",
     "//": "I don't think this condition is actually doing anything",
-    "condition": {
-      "or": [
-        { "u_has_effect": "bleed", "bodypart": "head" },
-        { "u_has_effect": "bleed", "bodypart": "torso" },
-        { "u_has_effect": "bleed", "bodypart": "arm_r" },
-        { "u_has_effect": "bleed", "bodypart": "arm_l" },
-        { "u_has_effect": "bleed", "bodypart": "leg_r" },
-        { "u_has_effect": "bleed", "bodypart": "leg_l" }
-      ]
-    },
     "max_level": 1,
     "valid_targets": [ "self" ],
     "flags": [ "LOUD", "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
     "base_casting_time": 1000,
     "base_energy_cost": 100,
-    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" },
-    "condition_fail_message": "You are not bleeding."
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
     "id": "red_asura_revival_art",

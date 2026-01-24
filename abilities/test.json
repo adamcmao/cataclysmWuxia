@@ -10,7 +10,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_GAIN_1000_QI",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_FAIL" ],
+    "flags": [ "NO_FAIL", "NO_HANDS" ],
     "base_energy_cost": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -25,7 +25,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_LOSE_1000_QI",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_FAIL" ],
+    "flags": [ "NO_FAIL", "NO_HANDS" ],
     "base_energy_cost": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -40,7 +40,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_LOSE_100_QI",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_FAIL" ],
+    "flags": [ "NO_FAIL", "NO_HANDS" ],
     "base_energy_cost": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -55,7 +55,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_FORGET_TEST_ABILITY",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_FAIL" ],
+    "flags": [ "NO_FAIL", "NO_HANDS" ],
     "base_energy_cost": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -70,7 +70,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_LEARN_TEST_ABILITY",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_FAIL" ],
+    "flags": [ "NO_FAIL", "NO_HANDS" ],
     "base_energy_cost": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -83,7 +83,7 @@
     "message": "Through the power of TEST, you do nothing?",
     "shape": "blast",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_FAIL" ],
+    "flags": [ "NO_FAIL", "NO_HANDS" ],
     "effect": "noise",
     "base_energy_cost": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }

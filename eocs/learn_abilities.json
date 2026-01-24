@@ -15,7 +15,7 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_BASIC_PHYSICAL",
     "eoc_type": "ACTIVATION",
-    "condition": { "and": [ { "math": [ "u_spell_level('clumsy_dash') == 1" ] }, { "math": [ "u_spell_level('weak_punch') == 1" ] } ] },
+    "condition": { "and": [ { "math": [ "u_spell_level('clumsy_dash') >= 1" ] }, { "math": [ "u_spell_level('weak_punch') >= 1" ] } ] },
     "effect": [
       { "math": [ "u_spell_level('clumsy_dash') = -1" ] },
       { "math": [ "u_spell_level('weak_punch') = -1" ] },
