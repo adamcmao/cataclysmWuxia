@@ -2,7 +2,7 @@
   {
     "type": "snippet",
     "category": "<STAFF_SOUNDS>",
-    "text": [ "Fum!", "Dom!", "Bop!", "Thwok!", "Hnng!", "Wack!", "Whump!", "Tok!", "Krack!", "Pak!" ]
+    "text": [ "Fum!", "Dom!", "Bop!", "Thwok!", "Hnng!", "Wack!", "Whump!", "Tok!", "Krack!", "Pak!", "Pow!" ]
   },
   {
     "type": "snippet",
@@ -10,23 +10,27 @@
     "text": [
       "You strike the lower regions with a resounding <STAFF_SOUNDS>",
       "<STAFF_SOUNDS> You attack the center of mass!",
-      "Weaving you slam into your target, <STAFF_SOUNDS>"
+      "Weaving you slam into your target, <STAFF_SOUNDS>",
+      "Feinting high <STAFF_SOUNDS> You visciously smash the midsection.",
+      "With a half spin you coil your energy and unleash it with a twist of the hips <STAFF_SOUNDS>",
+      "You spread out low to the ground, your chest nearly touching the floor only to suddenly whip up <STAFF_SOUNDS>",
+      "<STAFF_SOUNDS> You dodge midair with your legs spread apart while you strike downwards!"
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_PIERCE_THE_ALLEY",
+    "id": "EOC_PIERCE_THE_ALLEY_START",
     "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "message": "<STAFF_SOUNDS>" },
       { "npc_cast_spell": { "id": "pierce_the_alley_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "Without a quarterstaff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_DOG_BEATING_STAFF_TECHNIQUE_AMOUNT",
+    "id": "EOC_DOG_BEATING_STAFF_TECHNIQUE_START",
     "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
@@ -37,7 +41,7 @@
       },
       { "run_eocs": [ "EOC_DOG_BEATING_STAFF_TECHNIQUE_LOOP" ] }
     ],
-    "false_effect": [ { "message": "Without a quarterstaff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
   },
   {
     "type": "effect_on_condition",
@@ -52,24 +56,23 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_DOG_BEATING_STAFF_TECHNIQUE",
+    "id": "EOC_STAFF_TURNS_BEGGAR_FIRM_START",
     "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "message": "<STAFF_SOUNDS>" },
-      { "npc_cast_spell": { "id": "dog_beating_staff_technique_actual" }, "loc": { "context_val": "loc" } }
+      { "npc_cast_spell": { "id": "staff_turns_beggar_firm_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "Without a quarterstaff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_TRUE_DOG_BEATING_STAFF_TECHNIQUE",
+    "id": "EOC_STICK_SNAGS_THE_SLEEVE_START",
     "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
-      { "message": "<STAFF_SOUNDS>" },
-      { "npc_cast_spell": { "id": "true_dog_beating_staff_technique_actual" }, "loc": { "context_val": "loc" } }
+      { "npc_cast_spell": { "id": "stick_snags_the_sleeve_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "Without a quarterstaff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
   }
 ]
