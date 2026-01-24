@@ -1,13 +1,5 @@
 [
   {
-    "type": "effect_type",
-    "id": "wuxia_run_on_water",
-    "//": "Lets you run on water while, used with wuxia_water_running_boots",
-    "name": [ "" ],
-    "desc": [ "" ],
-    "flags": [ "ITEM_WATERPROOFING", "WATERWALKING" ]
-  },
-  {
     "type": "effect_on_condition",
     "id": "EOC_WATER_RUNNING",
     "eoc_type": "EVENT",
