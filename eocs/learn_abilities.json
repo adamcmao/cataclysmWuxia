@@ -116,7 +116,8 @@
       { "math": [ "u_spell_level('flowing_water_palm') = 0" ] },
       { "math": [ "u_spell_level('three_point_seal') = 0" ] },
       { "math": [ "u_spell_level('countering_still_hand') = 0" ] },
-      { "math": [ "u_spell_level('dragon_tail_strike') = 0" ] }
+      { "math": [ "u_spell_level('dragon_tail_strike') = 0" ] },
+      { "math": [ "u_spell_level('heaven_earth_mortal') = 0" ] }
     ]
   }
 ]

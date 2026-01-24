@@ -42,5 +42,21 @@
       }
     ],
     "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HEAVEN_EARTH_MORTAL_START",
+    "condition": { "not": "npc_has_weapon" },
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      { "message": "Like the heavens you rise upwards and strike!" },
+      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "message": "Like the earth you drive close, slamming with an elbow!" },
+      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "message": "Like the mortal you drive your opponent into the ground to rest!" },
+      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "u_add_effect": "downed", "duration": "5 seconds" }
+    ],
+    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead." } ]
   }
 ]
