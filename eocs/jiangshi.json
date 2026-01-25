@@ -6,11 +6,25 @@
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       {
-        "message": "As your energy flows into the jiangshi, you see torn flesh and bones twist and snap into its original form."
+        "message": "As your energy flows into the jiangshi, you see torn flesh and bones twist and snap into its original form.",
+        "type": "good"
       },
       { "u_lose_effect": "bleed" },
       { "npc_cast_spell": { "id": "yin_essence_reforging_actual" }, "loc": { "context_val": "loc" } }
     ],
     "false_effect": [ { "message": "As only a Jiangshi can be healed, you practice the motion instead.", "type": "mixed" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNROTTING_CORPSE_ENHANCEMENT_START",
+    "condition": { "u_has_species": "JIANGSHI" },
+    "effect": [
+      { "message": "As your energy flows into the jiangshi, you see it's body become more resilient.", "type": "good" },
+      {
+        "u_add_effect": "effect_unrotting_corpse_enhancement",
+        "duration": { "math": [ "n_spell_level('unrotting_corpse_enhancement') * time('5 s')" ] }
+      }
+    ],
+    "false_effect": [ { "message": "As only a Jiangshi can be enhanced, you practice the motion instead.", "type": "mixed" } ]
   }
 ]

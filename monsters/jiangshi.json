@@ -83,9 +83,10 @@
     "melee_skill": 5,
     "melee_dice": 3,
     "melee_dice_sides": 4,
+    "bleed_rate": 50,
     "melee_damage": [ { "damage_type": "cut", "amount": 5 }, { "damage_type": "bash", "amount": 5 } ],
     "armor": { "bash": 8, "cut": 8, "stab": 8, "bullet": 8, "electric": 2, "acid": 2 },
-    "extend": { "flags": [ "BLEEDSLOW2" ], "special_attacks": [ { "id": "slam", "cooldown": 2 } ] }
+    "extend": { "special_attacks": [ { "id": "slam", "cooldown": 2 } ] }
   },
   {
     "id": "wuxia_jiangshi_flying",
@@ -98,10 +99,11 @@
     "melee_skill": 7,
     "melee_dice": 5,
     "melee_dice_sides": 6,
+    "bleed_rate": 20,
     "melee_damage": [ { "damage_type": "cut", "amount": 10 }, { "damage_type": "bash", "amount": 10 } ],
     "armor": { "bash": 15, "cut": 15, "stab": 15, "bullet": 15, "electric": 5, "acid": 5 },
     "extend": {
-      "flags": [ "LEVITATION" ],
+      "flags": [ "FLIES" ],
       "special_attacks": [ { "id": "smash", "cooldown": 2 }, { "id": "hulk_wide_swing", "cooldown": 2 } ]
     }
   }

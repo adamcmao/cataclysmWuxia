@@ -39,5 +39,25 @@
     "effect": "attack",
     "shape": "blast",
     "flags": [ "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "SILENT", "NO_HANDS", "PERCENTAGE_DAMAGE" ]
+  },
+  {
+    "id": "unrotting_corpse_enhancement",
+    "type": "SPELL",
+    "name": "Unrotting Corpse Enhancement",
+    "description": "Draw energy from yourself to strength a jiangshi.",
+    "message": "",
+    "spell_class": "JIANGSHI",
+    "valid_targets": [ "ally", "hostile" ],
+    "max_level": 10,
+    "min_range": 1,
+    "range_increment": 0.25,
+    "max_range": 3,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_UNROTTING_CORPSE_ENHANCEMENT_START",
+    "shape": "blast",
+    "flags": [ "NON_MAGICAL", "SOMATIC", "SILENT", "NO_HANDS" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
