@@ -24,7 +24,7 @@
     "type": "SPELL",
     "name": "Dog Beating Staff - HIDDEN",
     "description": "You should not see this",
-    "message": "<ATTACK_SOUNDS>",
+    "message": "<BASH_SOUNDS>",
     "spell_class": "BEGGAR",
     "shape": "blast",
     "effect": "attack",

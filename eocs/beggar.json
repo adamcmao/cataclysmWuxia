@@ -1,20 +1,20 @@
 [
   {
     "type": "snippet",
-    "category": "<ATTACK_SOUNDS>",
+    "category": "<BASH_SOUNDS>",
     "text": [ "Fum!", "Dom!", "Bop!", "Thwok!", "Hnng!", "Wack!", "Whump!", "Tok!", "Krack!", "Pak!", "Pow!" ]
   },
   {
     "type": "snippet",
     "category": "<STAFF_HIT_MESSAGES>",
     "text": [
-      "You strike the lower regions with a resounding <ATTACK_SOUNDS>",
-      "<ATTACK_SOUNDS> You attack the center of mass!",
-      "Weaving you slam into your target, <ATTACK_SOUNDS>",
-      "Feinting high <ATTACK_SOUNDS> You visciously smash the midsection.",
-      "With a half spin you coil your energy and unleash it with a twist of the hips <ATTACK_SOUNDS>",
-      "You spread out low to the ground, your chest nearly touching the floor only to suddenly whip up <ATTACK_SOUNDS>",
-      "<ATTACK_SOUNDS> You dodge midair with your legs spread apart while you strike downwards!"
+      "You strike the lower regions with a resounding <BASH_SOUNDS>",
+      "<BASH_SOUNDS> You attack the center of mass!",
+      "Weaving you slam into your target, <BASH_SOUNDS>",
+      "Feinting high <BASH_SOUNDS> You visciously smash the midsection.",
+      "With a half spin you coil your energy and unleash it with a twist of the hips <BASH_SOUNDS>",
+      "You spread out low to the ground, your chest nearly touching the floor only to suddenly whip up <BASH_SOUNDS>",
+      "<BASH_SOUNDS> You dodge midair with your legs spread apart while you strike downwards!"
     ]
   },
   {
@@ -23,7 +23,7 @@
     "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
-      { "message": "<ATTACK_SOUNDS>" },
+      { "message": "<BASH_SOUNDS>" },
       { "npc_cast_spell": { "id": "pierce_the_alley_actual" }, "loc": { "context_val": "loc" } }
     ],
     "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
@@ -48,7 +48,7 @@
     "id": "EOC_DOG_BEATING_STAFF_TECHNIQUE_LOOP",
     "condition": { "math": [ "npc_spell_count > 0" ] },
     "effect": [
-      { "message": "<ATTACK_SOUNDS>" },
+      { "message": "<BASH_SOUNDS>" },
       { "npc_cast_spell": { "id": "dog_beating_staff_technique_actual" }, "loc": { "context_val": "loc" } },
       { "math": [ "npc_spell_count -= 1" ] },
       { "run_eocs": [ "EOC_DOG_BEATING_STAFF_TECHNIQUE_LOOP" ] }
@@ -60,7 +60,7 @@
     "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
-      { "message": "<ATTACK_SOUNDS>" },
+      { "message": "<BASH_SOUNDS>" },
       { "npc_cast_spell": { "id": "staff_turns_beggar_firm_actual" }, "loc": { "context_val": "loc" } }
     ],
     "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]

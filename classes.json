@@ -75,5 +75,16 @@
     "purifiable": false,
     "valid": false,
     "flags": [  ]
+  },
+  {
+    "type": "mutation",
+    "id": "JIAN",
+    "name": "Jian",
+    "points": 0,
+    "description": "DESCRIPTION",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [  ]
   }
 ]

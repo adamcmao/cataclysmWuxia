@@ -5,7 +5,7 @@
     "condition": { "not": "npc_has_weapon" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
-      { "message": "<ATTACK_SOUNDS>" },
+      { "message": "<BASH_SOUNDS>" },
       { "npc_cast_spell": { "id": "flowing_water_palm_actual" }, "loc": { "context_val": "loc" } }
     ],
     "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead.", "type": "mixed" } ]
@@ -16,7 +16,7 @@
     "condition": { "not": "npc_has_weapon" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
-      { "message": "<ATTACK_SOUNDS> <ATTACK_SOUNDS> <ATTACK_SOUNDS> You press your finger into 3 mermeridian." },
+      { "message": "<BASH_SOUNDS> <BASH_SOUNDS> <BASH_SOUNDS> You press your finger into 3 mermeridian." },
       {
         "u_add_effect": "downed",
         "duration": {
