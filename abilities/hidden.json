@@ -1,0 +1,25 @@
+[
+  {
+    "id": "flying_silk_severing_blade",
+    "type": "SPELL",
+    "name": "Flying Silk Severing Blade",
+    "description": "Manipulate a blade and string using qi to slice a distant target.",
+    "message": "The string disintegrates being unable to hold your qi.",
+    "spell_class": "HIDDEN",
+    "components": "spell_components_long_string",
+    "shape": "blast",
+    "effect": "attack",
+    "damage_type": "cut",
+    "min_damage": { "math": [ "(u_spell_level('flying_silk_severing_blade') * 1) + 10 " ] },
+    "max_damage": { "math": [ "(u_spell_level('flying_silk_severing_blade') * 5) + 20" ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile" ],
+    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT" ],
+    "base_casting_time": 75,
+    "base_energy_cost": 50,
+    "min_range": 5,
+    "range_increment": 0.5,
+    "max_range": 10,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  }
+]
