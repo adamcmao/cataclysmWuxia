@@ -21,7 +21,7 @@
       { "run_eocs": "EOC_FIND_AND_TRIGGER_CICADA_WING" },
       { "u_remove_item_with": "wuxia_cicada_wing_temp" }
     ],
-    "false_effect": [ { "u_message": "As you hold the wing to you ear, you hear nothing." } ]
+    "false_effect": [ { "u_message": "As you hold the wing to you ear, you hear nothing.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",

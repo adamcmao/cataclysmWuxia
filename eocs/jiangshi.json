@@ -11,6 +11,6 @@
       { "u_lose_effect": "bleed" },
       { "npc_cast_spell": { "id": "yin_essence_reforging_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "As only a Jiangshi can be healed, you practice the motion instead." } ]
+    "false_effect": [ { "message": "As only a Jiangshi can be healed, you practice the motion instead.", "type": "mixed" } ]
   }
 ]

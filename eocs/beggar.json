@@ -26,7 +26,7 @@
       { "message": "<ATTACK_SOUNDS>" },
       { "npc_cast_spell": { "id": "pierce_the_alley_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -41,7 +41,7 @@
       },
       { "run_eocs": [ "EOC_DOG_BEATING_STAFF_TECHNIQUE_LOOP" ] }
     ],
-    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -63,7 +63,7 @@
       { "message": "<ATTACK_SOUNDS>" },
       { "npc_cast_spell": { "id": "staff_turns_beggar_firm_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -73,6 +73,6 @@
       { "u_location_variable": { "context_val": "loc" } },
       { "npc_cast_spell": { "id": "stick_snags_the_sleeve_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion." } ]
+    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
   }
 ]

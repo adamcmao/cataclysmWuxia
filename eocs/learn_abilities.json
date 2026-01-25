@@ -26,7 +26,12 @@
       { "u_forget_recipe": "meditate_to_basic_physical" },
       { "u_learn_recipe": "meditate_to_unlock_qi" }
     ],
-    "false_effect": [ { "u_message": "Something doesn't feel right. You feet don't move as you want, and your fists swing off target" } ]
+    "false_effect": [
+      {
+        "u_message": "Something doesn't feel right. You feet don't move as you want, and your fists swing off target",
+        "type": "mixed"
+      }
+    ]
   },
   {
     "type": "effect_on_condition",
@@ -62,7 +67,7 @@
       { "u_forget_recipe": "meditate_to_unlock_qi" },
       { "u_message": "You take your first step towards the truth." }
     ],
-    "false_effect": [ { "u_message": "You feel like you are on the verge of a breakthrough, but something is missing." } ]
+    "false_effect": [ { "u_message": "You feel like you are on the verge of a breakthrough, but something is missing.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",

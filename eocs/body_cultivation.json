@@ -39,7 +39,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -62,7 +62,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -85,7 +85,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -108,7 +108,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -131,7 +131,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -154,7 +154,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -199,7 +199,7 @@
         "title": "Select which body part."
       }
     ],
-    "false_effect": [ { "u_message": "You need more qi before beginning this process." } ]
+    "false_effect": [ { "u_message": "You need more qi before beginning this process.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -224,7 +224,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -249,7 +249,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -274,7 +274,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -299,7 +299,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -324,7 +324,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -349,7 +349,7 @@
         "else": { "message": "You fail in the tempering.", "type": "bad" }
       }
     ],
-    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+    "false_effect": [ { "u_message": "You have already tempered this body part.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",

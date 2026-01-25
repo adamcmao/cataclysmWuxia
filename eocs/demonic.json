@@ -54,7 +54,7 @@
       { "run_eocs": "EOC_LOSE_BLOOD_SMALL" },
       { "u_lose_effect": "bleed" }
     ],
-    "false_effect": [ { "message": "You are not bleeding, so you just practice the motion." } ]
+    "false_effect": [ { "message": "You are not bleeding, so you just practice the motion.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -68,7 +68,7 @@
         "weighted_list_eocs": [ [ "EOC_HEAVEN_DEVOURING_ART_VISION", 1 ], [ "EOC_HEAVEN_DEVOURING_ART_HALLUCINATE", 1 ] ]
       }
     ],
-    "false_effect": [ { "message": "Something is wrong, you are unable to drain qi from this victim." } ]
+    "false_effect": [ { "message": "Something is wrong, you are unable to drain qi from this victim.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
