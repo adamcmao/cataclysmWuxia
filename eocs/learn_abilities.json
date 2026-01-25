@@ -137,7 +137,9 @@
     "eoc_type": "ACTIVATION",
     "effect": [
       { "math": [ "u_spell_level('flying_silk_severing_blade') = 0" ] },
-      { "math": [ "u_spell_level('solar_lotus_burst') = 0" ] }
+      { "math": [ "u_spell_level('solar_lotus_burst') = 0" ] },
+      { "math": [ "u_spell_level('frozen_soul_shroud') = 0" ] },
+      { "math": [ "u_spell_level('needle_of_heavens_spark') = 0" ] }
     ]
   }
 ]

@@ -25,5 +25,15 @@
     "id": "spell_components_explosion_ingredients",
     "type": "requirement",
     "components": [ [ [ "flour", 3 ] ] ]
+  },
+  {
+    "id": "spell_components_water_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "water", 3 ], [ "water_clean", 3 ] ] ]
+  },
+  {
+    "id": "spell_components_electric_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "scrap_copper", 1 ] ] ]
   }
 ]
