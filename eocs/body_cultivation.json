@@ -1,64 +1,157 @@
 [
   {
     "type": "effect_on_condition",
-    "id": "EOC_BODY_TEMPERING",
+    "id": "EOC_BODY_TEMPERING_START",
     "effect": [
-      { "run_eocs": [ "EOC_BODY_TEMPERING_SELECT_BODY_PART" ] },
-      { "set_string_var": "<u_val:u_tempering_body_part>", "target_var": { "context_val": "tempering_body_part" } },
-      { "message": "Body Part: <u_val:u_tempering_body_part>" },
-      { "message": "Body Part2: <context_val:tempering_body_part>" },
-      { "message": "Body Part3: u_val('tempering_body_part')" },
-      { "message": "Body Part4: u_val('u_tempering_body_part')" },
-      { "message": "Gritting your teeth you slam down onto yourself, hammering at your own body." },
-      { "math": [ "u_hp(torso) -= 20" ] },
-      { "u_add_effect": "effect_tempering_in_progress", "target_part": "torso", "duration": "PERMANENT" },
       {
-        "if": {
-          "and": [
-            { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_l" },
-            { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_r" },
-            { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_l" },
-            { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_r" },
-            { "u_has_effect": "effect_tempering_in_progress", "bodypart": "torso" },
-            { "u_has_effect": "effect_tempering_in_progress", "bodypart": "head" }
-          ]
-        },
-        "then": [
-          { "u_forget_recipe": "ritual_body_tempered" },
-          { "u_lose_effect": "effect_tempering_in_progress" },
-          { "u_add_effect": "effect_body_tempered", "duration": "PERMANENT" }
-        ]
+        "run_eoc_selector": [
+          "EOC_BODY_TEMPERING_HEAD",
+          "EOC_BODY_TEMPERING_TORSO",
+          "EOC_BODY_TEMPERING_L_ARM",
+          "EOC_BODY_TEMPERING_R_ARM",
+          "EOC_BODY_TEMPERING_L_LEG",
+          "EOC_BODY_TEMPERING_R_LEG"
+        ],
+        "allow_cancel": true,
+        "names": [ "Head", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg" ],
+        "title": "Select which body part"
       }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_BODY_TEMPERING_SELECT_BODY_PART",
+    "id": "EOC_BODY_TEMPERING_HEAD",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "head" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your head, hammering at yourself." },
+      { "math": [ "u_hp('head') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "head", "duration": "PERMANENT" },
+          { "message": "You succeed in your tempering, but until the process is complete you feel weaker." },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_TORSO",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "torso" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your body, hammering at yourself." },
+      { "math": [ "u_hp('torso') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "torso", "duration": "PERMANENT" },
+          { "message": "You succeed in your tempering, but until the process is complete you feel weaker." },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_L_ARM",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_l" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your left arm, hammering at yourself." },
+      { "math": [ "u_hp('arm_l') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "arm_l", "duration": "PERMANENT" },
+          { "message": "You succeed in your tempering, but until the process is complete you feel weaker." },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_R_ARM",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_r" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your right arm, hammering at yourself." },
+      { "math": [ "u_hp('arm_r') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "arm_r", "duration": "PERMANENT" },
+          { "message": "You succeed in your tempering, but until the process is complete you feel weaker." },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_L_LEG",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_l" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your left leg, hammering at yourself." },
+      { "math": [ "u_hp('leg_l') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "leg_l", "duration": "PERMANENT" },
+          { "message": "You succeed in your tempering, but until the process is complete you feel weaker." },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_R_LEG",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_r" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your right leg, hammering at yourself." },
+      { "math": [ "u_hp('leg_r') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "leg_r", "duration": "PERMANENT" },
+          { "message": "You succeed in your tempering, but until the process is complete you feel weaker." },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_CHECK",
+    "condition": {
+      "and": [
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_l" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_r" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_l" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_r" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "torso" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "head" }
+      ]
+    },
     "effect": [
       {
-        "if": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "head" } },
-        "then": { "u_add_var": "u_tempering_body_part", "value": "head" }
+        "message": "You finish tempering your entire body, all the built up energies are unleashed and swirl internally, you feel tougher then before."
       },
-      {
-        "if": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "torso" } },
-        "then": { "u_add_var": "u_tempering_body_part", "value": "torso" }
-      },
-      {
-        "if": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_r" } },
-        "then": { "u_add_var": "u_tempering_body_part", "value": "arm_r" }
-      },
-      {
-        "if": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_l" } },
-        "then": { "u_add_var": "u_tempering_body_part", "value": "leg_l" }
-      },
-      {
-        "if": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_l" } },
-        "then": { "u_add_var": "u_tempering_body_part", "value": "arm_l" }
-      },
-      {
-        "if": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_r" } },
-        "then": { "u_add_var": "u_tempering_body_part", "value": "leg_r" }
-      }
+      { "u_forget_recipe": "ritual_body_tempered" },
+      { "u_lose_effect": "effect_tempering_in_progress" },
+      { "u_add_effect": "effect_body_tempered", "duration": "PERMANENT" }
     ]
   }
 ]

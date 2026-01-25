@@ -13,6 +13,6 @@
     "autolearn": false,
     "qualities": [ { "id": "HAMMER", "level": 1 } ],
     "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT" ],
-    "result_eocs": [ "EOC_BODY_TEMPERING" ]
+    "result_eocs": [ "EOC_BODY_TEMPERING_START" ]
   }
 ]
