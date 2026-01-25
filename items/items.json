@@ -81,5 +81,24 @@
     "color": "yellow",
     "flags": [ "NO_REPAIR" ],
     "use_action": { "type": "cast_spell", "spell_id": "thunder_splitting_bell", "no_fail": true, "level": 0 }
+  },
+  {
+    "type": "ITEM",
+    "id": "golden_stick",
+    "copy-from": "baton",
+    "name": "golden stick",
+    "material": [ "wood", "qt_steel" ],
+    "description": "An expanded stick.  Right now, it's collapsed.  Activate to expand.",
+    "use_action": { "menu_text": "Expand", "type": "transform", "target": "golden_staff", "msg": "You snap open your stick." },
+    "melee_damage": { "bash": 6 }
+  },
+  {
+    "type": "ITEM",
+    "id": "golden_staff",
+    "copy-from": "qt_steel_staff",
+    "name": "golden staff",
+    "description": "An expanded stick that collapses for easy storage. Activate to collapse.",
+    "use_action": { "menu_text": "Collapse", "type": "transform", "target": "golden_stick", "msg": "You collapse your staff." },
+    "melee_damage": { "bash": 36 }
   }
 ]
