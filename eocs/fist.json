@@ -8,7 +8,7 @@
       { "message": "<ATTACK_SOUNDS>" },
       { "npc_cast_spell": { "id": "flowing_water_palm_actual" }, "loc": { "context_val": "loc" } }
     ],
-    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead." } ]
+    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -24,7 +24,7 @@
         }
       }
     ],
-    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead." } ]
+    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -41,7 +41,7 @@
         }
       }
     ],
-    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead." } ]
+    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -57,6 +57,6 @@
       { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
       { "u_add_effect": "downed", "duration": "5 seconds" }
     ],
-    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead." } ]
+    "false_effect": [ { "message": "Since your hands are full, you decide to practice the motions instead.", "type": "mixed" } ]
   }
 ]

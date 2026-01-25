@@ -87,7 +87,12 @@
         ]
       }
     ],
-    "false_effect": [ { "u_message": "You're not suffering from poisoning and have nothing to detoxify.", "type": "good" } ]
+    "false_effect": [
+      {
+        "u_message": "You're not suffering from poisoning and have nothing to detoxify. You instead decide to practice with the needles.",
+        "type": "mixed"
+      }
+    ]
   },
   {
     "type": "effect_on_condition",
@@ -163,7 +168,7 @@
         "descriptions": [ "You do not fear death.", "I am not ready for what is to come." ]
       }
     ],
-    "false_effect": [ { "u_message": "You are already in a state of qi deviation." } ]
+    "false_effect": [ { "u_message": "You are already in a state of qi deviation.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",

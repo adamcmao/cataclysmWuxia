@@ -17,7 +17,7 @@
     "flags": [ "AFFECTED_BY_PAIN", "NO_ENCHANTMENT", "SECRET" ]
   },
   {
-    "result": "wuxia_jiangshi_basic_inert",
+    "result": "wuxia_jiangshi_white_inert",
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
     "category": "CC_WUXIA",

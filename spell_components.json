@@ -2,8 +2,7 @@
   {
     "id": "spell_components_three_needles",
     "type": "requirement",
-    "components": [ [ [ "needle_steel", 3 ] ] ],
-    "//components": [
+    "components": [
       [
         [ "combatnail", 3 ],
         [ "needle_bone", 3 ],
@@ -15,5 +14,31 @@
         [ "nail", 3 ]
       ]
     ]
+  },
+  {
+    "id": "spell_components_long_string",
+    "type": "requirement",
+    "components": [ [ [ "string_36", 1 ], [ "cordage_36_leather", 1 ], [ "cordage_36", 1 ] ] ],
+    "qualities": [ { "id": "CUT", "level": 2 } ]
+  },
+  {
+    "id": "spell_components_explosion_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "flour", 3 ] ] ]
+  },
+  {
+    "id": "spell_components_water_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "water", 3 ], [ "water_clean", 3 ] ] ]
+  },
+  {
+    "id": "spell_components_electric_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "scrap_copper", 1 ] ] ]
+  },
+  {
+    "id": "spell_components_alcohol_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "mixed_alcohol_strong", 1 ] ] ]
   }
 ]

@@ -16,7 +16,7 @@
     "color": "light_gray",
     "aggression": 100,
     "morale": 100,
-    "melee_skill": 4,
+    "melee_skill": 2,
     "melee_dice": 2,
     "melee_dice_sides": 3,
     "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
@@ -52,10 +52,59 @@
     "armor": { "electric": 1 }
   },
   {
-    "id": "wuxia_jiangshi_basic",
+    "id": "wuxia_jiangshi_white",
     "copy-from": "wuxia_jiangshi_base",
     "type": "MONSTER",
     "name": "white haired jiangshi",
-    "description": ""
+    "description": "A slow white haired hopping corpse."
+  },
+  {
+    "id": "wuxia_jiangshi_black",
+    "copy-from": "wuxia_jiangshi_white",
+    "type": "MONSTER",
+    "name": "black haired jiangshi",
+    "description": "A black haired hopping corpse.",
+    "hp": 100,
+    "speed": 80,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [ { "damage_type": "cut", "amount": 2 }, { "damage_type": "bash", "amount": 2 } ],
+    "armor": { "bash": 3, "cut": 3, "stab": 3, "bullet": 3, "electric": 1, "acid": 1 }
+  },
+  {
+    "id": "wuxia_jiangshi_iron",
+    "copy-from": "wuxia_jiangshi_black",
+    "type": "MONSTER",
+    "name": "black haired jiangshi",
+    "description": "A muscular hopping corpse.",
+    "hp": 150,
+    "speed": 110,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "bleed_rate": 50,
+    "melee_damage": [ { "damage_type": "cut", "amount": 5 }, { "damage_type": "bash", "amount": 5 } ],
+    "armor": { "bash": 8, "cut": 8, "stab": 8, "bullet": 8, "electric": 2, "acid": 2 },
+    "extend": { "special_attacks": [ { "id": "slam", "cooldown": 2 } ] }
+  },
+  {
+    "id": "wuxia_jiangshi_flying",
+    "copy-from": "wuxia_jiangshi_iron",
+    "type": "MONSTER",
+    "name": "flying jiangshi",
+    "description": "A muscular hopping corpse, that seems to glide across the ground.",
+    "hp": 150,
+    "speed": 130,
+    "melee_skill": 7,
+    "melee_dice": 5,
+    "melee_dice_sides": 6,
+    "bleed_rate": 20,
+    "melee_damage": [ { "damage_type": "cut", "amount": 10 }, { "damage_type": "bash", "amount": 10 } ],
+    "armor": { "bash": 15, "cut": 15, "stab": 15, "bullet": 15, "electric": 5, "acid": 5 },
+    "extend": {
+      "flags": [ "FLIES" ],
+      "special_attacks": [ { "id": "smash", "cooldown": 2 }, { "id": "hulk_wide_swing", "cooldown": 2 } ]
+    }
   }
 ]

@@ -26,7 +26,12 @@
       { "u_forget_recipe": "meditate_to_basic_physical" },
       { "u_learn_recipe": "meditate_to_unlock_qi" }
     ],
-    "false_effect": [ { "u_message": "Something doesn't feel right. You feet don't move as you want, and your fists swing off target" } ]
+    "false_effect": [
+      {
+        "u_message": "Something doesn't feel right. You feet don't move as you want, and your fists swing off target",
+        "type": "mixed"
+      }
+    ]
   },
   {
     "type": "effect_on_condition",
@@ -55,13 +60,14 @@
           "EOC_UNLOCK_BASIC_BEGGAR",
           "EOC_UNLOCK_BASIC_DEMONIC",
           "EOC_UNLOCK_JIANGSHI",
-          "EOC_UNLOCK_EMPTY_HAND"
+          "EOC_UNLOCK_EMPTY_HAND",
+          "EOC_UNLOCK_HIDDEN_WEAPONS"
         ]
       },
       { "u_forget_recipe": "meditate_to_unlock_qi" },
       { "u_message": "You take your first step towards the truth." }
     ],
-    "false_effect": [ { "u_message": "You feel like you are on the verge of a breakthrough, but something is missing." } ]
+    "false_effect": [ { "u_message": "You feel like you are on the verge of a breakthrough, but something is missing.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
@@ -106,9 +112,11 @@
     "id": "EOC_UNLOCK_JIANGSHI",
     "eoc_type": "ACTIVATION",
     "effect": [
-      { "u_learn_recipe": "wuxia_jiangshi_basic_inert" },
+      { "u_learn_recipe": "wuxia_jiangshi_white_inert" },
       { "u_learn_recipe": "wuxia_wooden_casket" },
-      { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
+      { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] },
+      { "math": [ "u_spell_level('unrotting_corpse_enhancement') = 0" ] },
+      { "math": [ "u_spell_level('grave_mist_disappearance') = 0" ] }
     ]
   },
   {
@@ -121,6 +129,18 @@
       { "math": [ "u_spell_level('countering_still_hand') = 0" ] },
       { "math": [ "u_spell_level('dragon_tail_strike') = 0" ] },
       { "math": [ "u_spell_level('heaven_earth_mortal') = 0" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_HIDDEN_WEAPONS",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "math": [ "u_spell_level('flying_silk_severing_blade') = 0" ] },
+      { "math": [ "u_spell_level('solar_lotus_burst') = 0" ] },
+      { "math": [ "u_spell_level('frozen_soul_shroud') = 0" ] },
+      { "math": [ "u_spell_level('needle_of_heavens_spark') = 0" ] },
+      { "math": [ "u_spell_level('mist_of_intoxicating_clouds') = 0" ] }
     ]
   }
 ]

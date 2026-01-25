@@ -28,7 +28,7 @@
     ]
   },
   {
-    "id": "wuxia_jiangshi_basic_inert",
+    "id": "wuxia_jiangshi_white_inert",
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "name": "inactive white haired jiangshi",
@@ -42,7 +42,7 @@
     "color": "light_gray",
     "use_action": {
       "type": "place_monster",
-      "monster_id": "wuxia_jiangshi_basic",
+      "monster_id": "wuxia_jiangshi_white",
       "friendly_msg": "You watch as the jiangshi rises, unfocused eyes staring aimlessly.",
       "hostile_msg": "As you bring the jiangshi to life, it suddenly snaps towards you!",
       "moves": 500

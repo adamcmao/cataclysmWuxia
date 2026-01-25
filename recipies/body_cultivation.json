@@ -12,7 +12,7 @@
     "time": "1 s",
     "autolearn": false,
     "qualities": [ { "id": "HAMMER", "level": 1 } ],
-    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT" ],
+    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ],
     "result_eocs": [ "EOC_BODY_TEMPERING_START" ]
   },
   {
@@ -28,7 +28,7 @@
     "time": "1 s",
     "autolearn": false,
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT" ],
+    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ],
     "result_eocs": [ "EOC_BONE_MARROW_REFINING_START" ]
   }
 ]
