@@ -61,7 +61,8 @@
           "EOC_UNLOCK_BASIC_DEMONIC",
           "EOC_UNLOCK_JIANGSHI",
           "EOC_UNLOCK_EMPTY_HAND",
-          "EOC_UNLOCK_HIDDEN_WEAPONS"
+          "EOC_UNLOCK_HIDDEN_WEAPONS",
+          "EOC_UNLOCK_JIAN"
         ]
       },
       { "u_forget_recipe": "meditate_to_unlock_qi" },
@@ -142,5 +143,11 @@
       { "math": [ "u_spell_level('needle_of_heavens_spark') = 0" ] },
       { "math": [ "u_spell_level('mist_of_intoxicating_clouds') = 0" ] }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UNLOCK_JIAN",
+    "eoc_type": "ACTIVATION",
+    "effect": [ { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] } ]
   }
 ]

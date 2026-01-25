@@ -1,0 +1,20 @@
+[
+  {
+    "type": "snippet",
+    "category": "<SWORD_SOUNDS>",
+    "text": [ "Whoosh!", "Whirr!", "Swoop!", "Hiss!", "Fssst!", "Shaaa!", "Shing!", "Zip!", "Shrk!", "Heng!", "Zheng!" ]
+  },
+  {
+    "type": "snippet",
+    "category": "<SWORD_HIT_MESSAGES>",
+    "text": [
+      "You strike the lower regions with a resounding <SWORD_SOUNDS>",
+      "<SWORD_SOUNDS> You attack the center of mass!",
+      "Weaving you slam into your target, <SWORD_SOUNDS>",
+      "Feinting high <SWORD_SOUNDS> You visciously smash the midsection.",
+      "With a half spin you coil your energy and unleash it with a twist of the hips <SWORD_SOUNDS>",
+      "You spread out low to the ground, your chest nearly touching the floor only to suddenly whip up <SWORD_SOUNDS>",
+      "<SWORD_SOUNDS> You dodge midair with your legs spread apart while you strike downwards!"
+    ]
+  }
+]

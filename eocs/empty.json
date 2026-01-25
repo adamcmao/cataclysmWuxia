@@ -1,0 +1,28 @@
+[
+  {
+    "type": "snippet",
+    "category": "<EMPTY_HAND_COUNTER_SOUNDS>",
+    "//": "TODO: I need to figure out how to tie this into the counter stance",
+    "text": [
+      "With a soft turn of the wrist, your palm borrows the enemy's force and sends it back like a returning tide! <BASH_SOUNDS>",
+      "Stepping inside the opponents blow, your elbow resounds like thunder at the opponent's ribs! <BASH_SOUNDS>",
+      "<BASH_SOUNDS> Your knee rising like a crane to shatter the attacker.",
+      "Feinting high. <BASH_SOUNDS> You visciously smash the midsection.",
+      "With proper timing you flex your chest, arms chambered back, you counter with breathe alone. <BASH_SOUNDS>"
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HEAVEN_EARTH_MORTAL_START",
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      { "message": "Like the heavens you rise upwards and strike!" },
+      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "message": "Like the earth you impale the center!" },
+      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "message": "Like the mortal you drive your opponent into the ground to rest!" },
+      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "u_add_effect": "downed", "duration": "5 seconds" }
+    ]
+  }
+]

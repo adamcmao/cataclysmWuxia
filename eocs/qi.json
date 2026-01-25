@@ -40,57 +40,16 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_THREE_NEEDLES_DRAW_VENOM_START",
-    "condition": {
-      "or": [
-        { "u_has_effect": "poison" },
-        { "u_has_effect": "poison", "bodypart": "head" },
-        { "u_has_effect": "poison", "bodypart": "torso" },
-        { "u_has_effect": "poison", "bodypart": "arm_r" },
-        { "u_has_effect": "poison", "bodypart": "arm_l" },
-        { "u_has_effect": "poison", "bodypart": "leg_r" },
-        { "u_has_effect": "poison", "bodypart": "leg_l" },
-        { "u_has_effect": "badpoison" },
-        { "u_has_effect": "badpoison", "bodypart": "head" },
-        { "u_has_effect": "badpoison", "bodypart": "torso" },
-        { "u_has_effect": "badpoison", "bodypart": "arm_r" },
-        { "u_has_effect": "badpoison", "bodypart": "arm_l" },
-        { "u_has_effect": "badpoison", "bodypart": "leg_r" },
-        { "u_has_effect": "badpoison", "bodypart": "leg_l" },
-        { "u_has_effect": "venom_dmg" },
-        { "u_has_effect": "venom_weaken" },
-        { "u_has_effect": "venom_blind" },
-        { "u_has_effect": "venom_pain" },
-        { "u_has_effect": "paralyzepoison" }
-      ]
-    },
     "effect": [
       { "u_message": "Your body convulses as you feel the poison move inside you." },
       {
-        "run_eocs": "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
-        "time_in_future": [
-          { "math": [ "5000-u_spell_level('three_needles_draw_venom')*50" ] },
-          { "math": [ "5000-u_spell_level('three_needles_draw_venom')*100" ] }
-        ]
-      },
-      {
-        "run_eocs": "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
-        "time_in_future": [
-          { "math": [ "5000-u_spell_level('three_needles_draw_venom')*50" ] },
-          { "math": [ "5000-u_spell_level('three_needles_draw_venom')*100" ] }
-        ]
-      },
-      {
-        "run_eocs": "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM",
-        "time_in_future": [
-          { "math": [ "5000-u_spell_level('three_needles_draw_venom')*50" ] },
-          { "math": [ "5000-u_spell_level('three_needles_draw_venom')*100" ] }
-        ]
-      }
-    ],
-    "false_effect": [
-      {
-        "u_message": "You're not suffering from poisoning and have nothing to detoxify. You instead decide to practice with the needles.",
-        "type": "mixed"
+        "run_eocs": [
+          "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
+          "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
+          "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM"
+        ],
+        "time_in_future": [ "5 seconds", "30 seconds" ],
+        "randomize_time_in_future": true
       }
     ]
   },
@@ -109,6 +68,7 @@
       ]
     },
     "effect": [
+      { "message": "TEST: Trying to remove poison." },
       { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
       { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
       { "u_lose_effect": [ "poison" ], "target_part": "ALL" }
@@ -129,6 +89,7 @@
       ]
     },
     "effect": [
+      { "message": "TEST: Trying to remove badpoison." },
       { "u_spawn_item": "wuxia_poison_pill_tier_2", "suppress_message": true },
       { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
       { "u_lose_effect": [ "badpoison" ], "target_part": "ALL" }
@@ -147,6 +108,7 @@
       ]
     },
     "effect": [
+      { "message": "TEST: Trying to remove venom." },
       { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
       { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
       {
@@ -158,7 +120,6 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_SOUL_BURNING_MERIDIAN_REVERSAL_CONFIRM",
-    "condition": { "not": { "or": [ { "u_has_effect": "qi_deviation_stat_boost" }, { "u_has_effect": "qi_deviation_stat_negative" } ] } },
     "effect": [
       {
         "run_eoc_selector": [ "EOC_SOUL_BURNING_MERIDIAN_REVERSAL", "EOC_SOUL_BURNING_MERIDIAN_REVERSAL_NOTHING" ],
@@ -167,8 +128,7 @@
         "title": "Are you sure?",
         "descriptions": [ "You do not fear death.", "I am not ready for what is to come." ]
       }
-    ],
-    "false_effect": [ { "u_message": "You are already in a state of qi deviation.", "type": "mixed" } ]
+    ]
   },
   {
     "type": "effect_on_condition",

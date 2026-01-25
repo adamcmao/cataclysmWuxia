@@ -22,9 +22,9 @@
     "qualities": [ { "id": "CUT", "level": 2 } ]
   },
   {
-    "id": "spell_components_explosion_ingredients",
+    "id": "spell_components_flour_ingredients",
     "type": "requirement",
-    "components": [ [ [ "flour", 3 ] ] ]
+    "components": [ [ [ "flour", 3 ], [ "bread_flour", 3 ] ] ]
   },
   {
     "id": "spell_components_water_ingredients",
@@ -32,13 +32,35 @@
     "components": [ [ [ "water", 3 ], [ "water_clean", 3 ] ] ]
   },
   {
-    "id": "spell_components_electric_ingredients",
+    "id": "spell_components_coin_ingredients",
     "type": "requirement",
-    "components": [ [ [ "scrap_copper", 1 ] ] ]
+    "components": [
+      [
+        [ "coin_penny", 1 ],
+        [ "coin_nickel", 1 ],
+        [ "coin_dime", 1 ],
+        [ "coin_quarter", 1 ],
+        [ "coin_half_dollar", 1 ],
+        [ "coin_dollar", 1 ],
+        [ "coin_silver", 1 ],
+        [ "coin_gold", 1 ]
+      ]
+    ]
   },
   {
     "id": "spell_components_alcohol_ingredients",
     "type": "requirement",
-    "components": [ [ [ "mixed_alcohol_strong", 1 ] ] ]
+    "components": [
+      [
+        [ "whiskey", 1 ],
+        [ "vodka", 1 ],
+        [ "gin", 1 ],
+        [ "rum", 1 ],
+        [ "tequila", 1 ],
+        [ "mixed_alcohol_strong", 1 ],
+        [ "brandy", 1 ],
+        [ "moonshine", 1 ]
+      ]
+    ]
   }
 ]
