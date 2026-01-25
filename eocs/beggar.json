@@ -20,33 +20,19 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_PIERCE_THE_ALLEY_START",
-    "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "message": "<BASH_SOUNDS>" },
       { "npc_cast_spell": { "id": "pierce_the_alley_actual" }, "loc": { "context_val": "loc" } }
-    ],
-    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
+    ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_STAFF_TURNS_BEGGAR_FIRM_START",
-    "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "message": "<BASH_SOUNDS>" },
       { "npc_cast_spell": { "id": "staff_turns_beggar_firm_actual" }, "loc": { "context_val": "loc" } }
-    ],
-    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_STICK_SNAGS_THE_SLEEVE_START",
-    "condition": { "npc_has_wielded_with_weapon_category": "QUARTERSTAVES" },
-    "effect": [
-      { "u_location_variable": { "context_val": "loc" } },
-      { "npc_cast_spell": { "id": "stick_snags_the_sleeve_actual" }, "loc": { "context_val": "loc" } }
-    ],
-    "false_effect": [ { "message": "Without a staff in hand you simply practice the motion.", "type": "mixed" } ]
+    ]
   }
 ]
