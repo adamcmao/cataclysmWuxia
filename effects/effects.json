@@ -192,5 +192,29 @@
     "show_in_info": true,
     "desc": [ "Should only be on monsters as a flag, you shoulnd't see this." ],
     "rating": "bad"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_tempering_in_progress",
+    "name": [ "Tempering" ],
+    "show_in_info": true,
+    "desc": [ "It feels weak due to the tempering process." ],
+    "rating": "good",
+    "enchantments": [
+      { "incoming_damage_mod": [ { "type": "stab", "add": 1 }, { "type": "cut", "add": 1 }, { "type": "bash", "add": 1 } ] }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_body_tempered",
+    "name": [ "Body Tempered" ],
+    "show_in_info": true,
+    "desc": [ "Your entire body feels harder yet supple." ],
+    "rating": "good",
+    "enchantments": [
+      {
+        "incoming_damage_mod": [ { "type": "stab", "add": -2 }, { "type": "cut", "add": -2 }, { "type": "bash", "add": -2 } ]
+      }
+    ]
   }
 ]

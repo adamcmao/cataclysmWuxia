@@ -72,7 +72,8 @@
       { "math": [ "u_spell_level('wind_following_steps') = 0" ] },
       { "math": [ "u_spell_level('three_needles_draw_venom') = 0" ] },
       { "math": [ "u_spell_level('soul_burning_meridian_reversal') = 0" ] },
-      { "u_learn_recipe": "meditate_to_restore_qi" }
+      { "u_learn_recipe": "meditate_to_restore_qi" },
+      { "u_learn_recipe": "ritual_body_tempered" }
     ]
   },
   {
