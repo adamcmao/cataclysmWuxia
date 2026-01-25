@@ -52,7 +52,7 @@
     "armor": { "electric": 1 }
   },
   {
-    "id": "wuxia_jiangshi_basic",
+    "id": "wuxia_jiangshi_white",
     "copy-from": "wuxia_jiangshi_base",
     "type": "MONSTER",
     "name": "white haired jiangshi",
