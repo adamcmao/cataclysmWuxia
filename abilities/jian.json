@@ -11,8 +11,6 @@
     "min_damage": { "math": [ "(u_spell_level('white_crane_spreads_its_wings') * 0.5) + 5" ] },
     "max_damage": { "math": [ "(u_spell_level('white_crane_spreads_its_wings') * 1) + 10" ] },
     "effect": "attack",
-    "//effect": "effect_on_condition",
-    "//effect_str": "EOC_WHITE_CRANE_SPREADS_ITS_WINGS_START",
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
     "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ],
