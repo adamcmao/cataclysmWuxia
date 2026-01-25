@@ -26,5 +26,18 @@
       }
     ],
     "false_effect": [ { "message": "As only a Jiangshi can be enhanced, you practice the motion instead.", "type": "mixed" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GRAVE_MIST_DISAPPEARANCE_START",
+    "condition": { "u_has_species": "JIANGSHI" },
+    "effect": [
+      { "message": "As your energy flows into the jiangshi, it starts to disappear from your sight.", "type": "good" },
+      {
+        "u_add_effect": "invisibility",
+        "duration": { "math": [ "n_spell_level('grave_mist_disappearance') * time('5 s')" ] }
+      }
+    ],
+    "false_effect": [ { "message": "As only a Jiangshi can be enhanced, you practice the motion instead.", "type": "mixed" } ]
   }
 ]

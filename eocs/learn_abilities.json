@@ -115,7 +115,8 @@
       { "u_learn_recipe": "wuxia_jiangshi_white_inert" },
       { "u_learn_recipe": "wuxia_wooden_casket" },
       { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] },
-      { "math": [ "u_spell_level('unrotting_corpse_enhancement') = 0" ] }
+      { "math": [ "u_spell_level('unrotting_corpse_enhancement') = 0" ] },
+      { "math": [ "u_spell_level('grave_mist_disappearance') = 0" ] }
     ]
   },
   {
