@@ -11,7 +11,7 @@
     "effect_str": "EOC_FLOWING_WATER_PALM_START",
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT" ],
     "base_casting_time": 75,
     "base_energy_cost": 50,
     "min_range": 1,
@@ -32,7 +32,7 @@
     "max_damage": { "math": [ "(u_spell_level('flowing_water_palm') * 0.5) + 2" ] },
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
-    "flags": [ "NO_FAIL", "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS", "SILENT" ],
+    "flags": [ "NO_FAIL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS", "SILENT" ],
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
@@ -47,7 +47,7 @@
     "effect_str": "EOC_THREE_POINT_SEAL_START",
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT" ],
     "base_casting_time": 75,
     "base_energy_cost": 50,
     "min_range": 1,
@@ -66,7 +66,7 @@
     "effect_str": "EOC_COUNTERING_STILL_HAND_START",
     "max_level": 10,
     "valid_targets": [ "self" ],
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT" ],
     "base_casting_time": 75,
     "base_energy_cost": 50,
     "max_range": 0,
@@ -86,7 +86,7 @@
     "max_damage": { "math": [ "(u_spell_level('countering_still_hand') * 5)" ] },
     "max_level": 10,
     "valid_targets": [ "hostile" ],
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ],
     "min_range": 1,
     "max_range": 1
   },
@@ -106,7 +106,7 @@
     "min_damage": { "math": [ "(u_spell_level('dragon_tail_strike') * 3) + 5" ] },
     "max_damage": { "math": [ "(u_spell_level('dragon_tail_strike') * 5) + 10" ] },
     "valid_targets": [ "hostile" ],
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
     "base_casting_time": 75,
     "base_energy_cost": 50,
     "min_range": 1,
@@ -126,7 +126,7 @@
     "max_level": 10,
     "min_range": 1,
     "max_range": 1,
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ]
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ]
   },
   {
     "id": "heaven_earth_mortal",
@@ -141,7 +141,7 @@
     "damage_type": "bash",
     "max_level": 10,
     "valid_targets": [ "hostile" ],
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT" ],
     "base_casting_time": 75,
     "base_energy_cost": 100,
     "min_range": 1,
@@ -163,7 +163,7 @@
     "min_damage": { "math": [ "(u_spell_level('heaven_earth_mortal') * 3) + 5" ] },
     "max_damage": { "math": [ "(u_spell_level('heaven_earth_mortal') * 5) + 10" ] },
     "valid_targets": [ "hostile" ],
-    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
     "min_range": 1,
     "max_range": 1
   }

@@ -14,7 +14,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_YIN_ESSENCE_REFORGING_START",
     "shape": "blast",
-    "flags": [ "NON_MAGICAL", "SOMATIC", "SILENT", "NO_HANDS" ],
+    "flags": [ "SOMATIC", "SILENT", "NO_HANDS" ],
     "base_casting_time": 150,
     "base_energy_cost": 50,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
@@ -38,7 +38,7 @@
     "max_range": 3,
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "NON_MAGICAL", "RANDOM_DAMAGE", "SOMATIC", "SILENT", "NO_HANDS", "PERCENTAGE_DAMAGE" ]
+    "flags": [ "RANDOM_DAMAGE", "SOMATIC", "SILENT", "NO_HANDS", "PERCENTAGE_DAMAGE" ]
   },
   {
     "id": "unrotting_corpse_enhancement",
@@ -55,7 +55,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_UNROTTING_CORPSE_ENHANCEMENT_START",
     "shape": "blast",
-    "flags": [ "NON_MAGICAL", "SOMATIC", "SILENT", "NO_HANDS" ],
+    "flags": [ "SOMATIC", "SILENT", "NO_HANDS" ],
     "base_casting_time": 150,
     "base_energy_cost": 50,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
@@ -75,7 +75,7 @@
     "effect": "effect_on_condition",
     "effect_str": "EOC_GRAVE_MIST_DISAPPEARANCE_START",
     "shape": "blast",
-    "flags": [ "NON_MAGICAL", "SOMATIC", "SILENT", "NO_HANDS" ],
+    "flags": [ "SOMATIC", "SILENT", "NO_HANDS" ],
     "base_casting_time": 150,
     "base_energy_cost": 50,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
