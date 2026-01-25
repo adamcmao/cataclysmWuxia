@@ -94,5 +94,31 @@
     "range_increment": 0.3,
     "max_range": 5,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "mist_of_intoxicating_clouds",
+    "type": "SPELL",
+    "name": "Mist of Intoxicating Clouds",
+    "description": "",
+    "message": "",
+    "spell_class": "HIDDEN",
+    "components": "spell_components_alcohol_ingredients",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "drunk",
+    "min_duration": { "math": [ "(u_spell_level('mist_of_intoxicating_clouds') * 100) + 100 " ] },
+    "max_duration": { "math": [ "(u_spell_level('mist_of_intoxicating_clouds') * 500) + 300 " ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile", "ground", "ally", "self" ],
+    "flags": [ "NON_MAGICAL", "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DURATION" ],
+    "base_casting_time": 75,
+    "base_energy_cost": 50,
+    "min_aoe": 1,
+    "aoe_increment": 0.2,
+    "max_aoe": 3,
+    "min_range": 2,
+    "range_increment": 0.3,
+    "max_range": 5,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]

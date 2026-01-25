@@ -35,5 +35,10 @@
     "id": "spell_components_electric_ingredients",
     "type": "requirement",
     "components": [ [ [ "scrap_copper", 1 ] ] ]
+  },
+  {
+    "id": "spell_components_alcohol_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "mixed_alcohol_strong", 1 ] ] ]
   }
 ]
