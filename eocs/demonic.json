@@ -38,28 +38,14 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_RED_THREAD_BINDING_START",
+    "id": "EOC_HEAVEN_DEVOURING_ART_START",
     "condition": {
       "or": [
-        { "u_has_effect": "bleed", "bodypart": "head" },
-        { "u_has_effect": "bleed", "bodypart": "torso" },
-        { "u_has_effect": "bleed", "bodypart": "arm_r" },
-        { "u_has_effect": "bleed", "bodypart": "arm_l" },
-        { "u_has_effect": "bleed", "bodypart": "leg_r" },
-        { "u_has_effect": "bleed", "bodypart": "leg_l" }
+        { "not": { "u_has_species": "JIANGSHI" } },
+        { "not": { "u_has_species": "ZOMBIE" } },
+        { "not": { "u_has_effect": "effect_qi_drained" } }
       ]
     },
-    "effect": [
-      { "message": "You scream as you draw threads from your own blood and weave your wounds closed." },
-      { "run_eocs": "EOC_LOSE_BLOOD_SMALL" },
-      { "u_lose_effect": "bleed" }
-    ],
-    "false_effect": [ { "message": "You are not bleeding, so you just practice the motion.", "type": "mixed" } ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_HEAVEN_DEVOURING_ART_START",
-    "condition": { "or": [ { "not": { "u_has_species": "ZOMBIE" } }, { "not": { "u_has_effect": "effect_qi_drained" } } ] },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "u_add_effect": "effect_qi_drained", "duration": "10 hours" },
