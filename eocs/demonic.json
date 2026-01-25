@@ -55,5 +55,42 @@
       { "u_lose_effect": "bleed" }
     ],
     "false_effect": [ { "message": "You are not bleeding, so you just practice the motion." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HEAVEN_DEVOURING_ART_START",
+    "condition": { "or": [ { "not": { "u_has_species": "ZOMBIE" } }, { "not": { "u_has_effect": "effect_qi_drained" } } ] },
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      { "u_add_effect": "effect_qi_drained", "duration": "10 hours" },
+      { "math": [ "n_vitamin('qi_vitamin') += (rand(n_spell_level('heaven_devouring_art')*5)+50)" ] },
+      {
+        "weighted_list_eocs": [ [ "EOC_HEAVEN_DEVOURING_ART_VISION", 1 ], [ "EOC_HEAVEN_DEVOURING_ART_HALLUCINATE", 1 ] ]
+      }
+    ],
+    "false_effect": [ { "message": "Something is wrong, you are unable to drain qi from this victim." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HEAVEN_DEVOURING_ART_VISION",
+    "condition": { "not": { "npc_has_effect": "visuals" } },
+    "effect": [ { "message": "Your vision blurs", "type": "bad" }, { "npc_add_effect": "visuals", "duration": [ 15, 60 ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HEAVEN_DEVOURING_ART_HALLUCINATE",
+    "effect": [
+      {
+        "message": "As your absorb the energy, your fate is intertwined with your victim, and you see all timelines that could have been.",
+        "type": "bad"
+      },
+      {
+        "npc_spawn_monster": "",
+        "hallucination_count": [ 10, 15 ],
+        "target_range": 10,
+        "max_radius": 10,
+        "lifespan": [ "15 seconds", "1 minutes" ]
+      }
+    ]
   }
 ]

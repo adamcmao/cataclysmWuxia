@@ -1,0 +1,377 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_START",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_BODY_TEMPERING_HEAD",
+          "EOC_BODY_TEMPERING_TORSO",
+          "EOC_BODY_TEMPERING_L_ARM",
+          "EOC_BODY_TEMPERING_R_ARM",
+          "EOC_BODY_TEMPERING_L_LEG",
+          "EOC_BODY_TEMPERING_R_LEG"
+        ],
+        "allow_cancel": true,
+        "names": [ "Head", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg" ],
+        "title": "Select which body part"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_HEAD",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "head" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your head, hammering at yourself.", "type": "bad" },
+      { "math": [ "u_hp('head') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "head", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_TORSO",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "torso" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your body, hammering at yourself.", "type": "bad" },
+      { "math": [ "u_hp('torso') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "torso", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_L_ARM",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_l" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your left arm, hammering at yourself.", "type": "bad" },
+      { "math": [ "u_hp('arm_l') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "arm_l", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_R_ARM",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_r" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your right arm, hammering at yourself.", "type": "bad" },
+      { "math": [ "u_hp('arm_r') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "arm_r", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_L_LEG",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_l" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your left leg, hammering at yourself.", "type": "bad" },
+      { "math": [ "u_hp('leg_l') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "leg_l", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_R_LEG",
+    "condition": { "not": { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_r" } },
+    "effect": [
+      { "message": "Gritting your teeth you slam down onto your right leg, hammering at yourself.", "type": "bad" },
+      { "math": [ "u_hp('leg_r') -= 20" ] },
+      { "math": [ "u_pain() += 20" ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_tempering_in_progress", "target_part": "leg_r", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BODY_TEMPERING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BODY_TEMPERING_CHECK",
+    "condition": {
+      "and": [
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_l" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "arm_r" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_l" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "leg_r" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "torso" },
+        { "u_has_effect": "effect_tempering_in_progress", "bodypart": "head" }
+      ]
+    },
+    "effect": [
+      {
+        "message": "You finish tempering your entire body, all the built up energies are unleashed and swirl internally, you feel tougher then before.",
+        "type": "good"
+      },
+      { "u_forget_recipe": "ritual_body_tempered" },
+      { "u_lose_effect": "effect_tempering_in_progress" },
+      { "u_add_effect": "effect_body_tempered", "duration": "PERMANENT" },
+      { "u_learn_recipe": "bone_marrow_refining" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_START",
+    "condition": { "math": [ "u_vitamin('qi_vitamin') >= 250" ] },
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_BONE_MARROW_REFINING_HEAD",
+          "EOC_BONE_MARROW_REFINING_TORSO",
+          "EOC_BONE_MARROW_REFINING_L_ARM",
+          "EOC_BONE_MARROW_REFINING_R_ARM",
+          "EOC_BONE_MARROW_REFINING_L_LEG",
+          "EOC_BONE_MARROW_REFINING_R_LEG"
+        ],
+        "allow_cancel": true,
+        "names": [ "Head", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg" ],
+        "title": "Select which body part."
+      }
+    ],
+    "false_effect": [ { "u_message": "You need more qi before beginning this process." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_HEAD",
+    "condition": { "not": { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "head" } },
+    "effect": [
+      { "math": [ "u_vitamin('qi_vitamin') -= 250" ] },
+      { "message": "Holding your breath, you slice around your head as you inject qi.", "type": "bad" },
+      { "math": [ "u_hp('head') -= 50" ] },
+      { "math": [ "u_pain() += 30" ] },
+      { "u_add_effect": "bleed", "target_part": "head", "duration": [ 2000, 3000 ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_bone_marrow_refining_in_progress", "target_part": "head", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BONE_MARROW_REFINING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_TORSO",
+    "condition": { "not": { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "torso" } },
+    "effect": [
+      { "math": [ "u_vitamin('qi_vitamin') -= 250" ] },
+      { "message": "Holding your breath, you stab continuously into your chest as you inject qi.", "type": "bad" },
+      { "math": [ "u_hp('torso') -= 50" ] },
+      { "math": [ "u_pain() += 30" ] },
+      { "u_add_effect": "bleed", "target_part": "torso", "duration": [ 2000, 3000 ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_bone_marrow_refining_in_progress", "target_part": "torso", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BONE_MARROW_REFINING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_L_ARM",
+    "condition": { "not": { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "arm_l" } },
+    "effect": [
+      { "math": [ "u_vitamin('qi_vitamin') -= 250" ] },
+      { "message": "Holding your breath, you slice along your arm as you inject qi.", "type": "bad" },
+      { "math": [ "u_hp('arm_l') -= 50" ] },
+      { "math": [ "u_pain() += 30" ] },
+      { "u_add_effect": "bleed", "target_part": "arm_l", "duration": [ 2000, 3000 ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_bone_marrow_refining_in_progress", "target_part": "arm_l", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BONE_MARROW_REFINING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_R_ARM",
+    "condition": { "not": { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "arm_r" } },
+    "effect": [
+      { "math": [ "u_vitamin('qi_vitamin') -= 250" ] },
+      { "message": "Holding your breath, you slice along your arm as you inject qi.", "type": "bad" },
+      { "math": [ "u_hp('arm_r') -= 50" ] },
+      { "math": [ "u_pain() += 30" ] },
+      { "u_add_effect": "bleed", "target_part": "arm_r", "duration": [ 2000, 3000 ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_bone_marrow_refining_in_progress", "target_part": "arm_r", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BONE_MARROW_REFINING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_L_LEG",
+    "condition": { "not": { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "leg_l" } },
+    "effect": [
+      { "math": [ "u_vitamin('qi_vitamin') -= 250" ] },
+      { "message": "Holding your breath, you slice along your leg as you inject qi.", "type": "bad" },
+      { "math": [ "u_hp('leg_l') -= 50" ] },
+      { "math": [ "u_pain() += 30" ] },
+      { "u_add_effect": "bleed", "target_part": "leg_l", "duration": [ 2000, 3000 ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_bone_marrow_refining_in_progress", "target_part": "leg_l", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BONE_MARROW_REFINING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_R_LEG",
+    "condition": { "not": { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "leg_r" } },
+    "effect": [
+      { "math": [ "u_vitamin('qi_vitamin') -= 250" ] },
+      { "message": "Holding your breath, you slice along your leg as you inject qi.", "type": "bad" },
+      { "math": [ "u_hp('leg_r') -= 50" ] },
+      { "math": [ "u_pain() += 30" ] },
+      { "u_add_effect": "bleed", "target_part": "leg_r", "duration": [ 2000, 3000 ] },
+      {
+        "if": { "math": [ "rand(3) == 1" ] },
+        "then": [
+          { "u_add_effect": "effect_bone_marrow_refining_in_progress", "target_part": "leg_r", "duration": "PERMANENT" },
+          {
+            "message": "You succeed in your tempering, but until the process is complete you feel weaker.",
+            "type": "mixed"
+          },
+          { "run_eocs": [ "EOC_BONE_MARROW_REFINING_CHECK" ] }
+        ],
+        "else": { "message": "You fail in the tempering.", "type": "bad" }
+      }
+    ],
+    "false_effect": [ { "u_message": "You have already tempered this body part." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BONE_MARROW_REFINING_CHECK",
+    "condition": {
+      "and": [
+        { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "arm_l" },
+        { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "arm_r" },
+        { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "leg_l" },
+        { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "leg_r" },
+        { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "torso" },
+        { "u_has_effect": "effect_bone_marrow_refining_in_progress", "bodypart": "head" }
+      ]
+    },
+    "effect": [
+      {
+        "message": "You finish tempering your entire body, all the built up energies are unleashed and swirl internally, you feel tougher then before.",
+        "type": "good"
+      },
+      { "u_forget_recipe": "bone_marrow_refining" },
+      { "u_lose_effect": "effect_bone_marrow_refining_in_progress" },
+      { "u_add_effect": "effect_bone_marrow_refining", "duration": "PERMANENT" }
+    ]
+  }
+]

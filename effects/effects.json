@@ -184,5 +184,61 @@
       }
     ],
     "flags": [ "CANNOT_MOVE", "CANNOT_ATTACK" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_qi_drained",
+    "name": [ "Qi Drained" ],
+    "show_in_info": true,
+    "desc": [ "Should only be on monsters as a flag, you shoulnd't see this." ],
+    "rating": "bad"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_tempering_in_progress",
+    "name": [ "Tempering" ],
+    "show_in_info": true,
+    "desc": [ "It feels weak due to the tempering process." ],
+    "rating": "good",
+    "enchantments": [
+      { "incoming_damage_mod": [ { "type": "stab", "add": 1 }, { "type": "cut", "add": 1 }, { "type": "bash", "add": 1 } ] }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_body_tempered",
+    "name": [ "Body Tempered" ],
+    "show_in_info": true,
+    "desc": [ "Your entire body feels harder yet supple." ],
+    "rating": "good",
+    "enchantments": [
+      {
+        "incoming_damage_mod": [ { "type": "stab", "add": -2 }, { "type": "cut", "add": -2 }, { "type": "bash", "add": -2 } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_bone_marrow_refining_in_progress",
+    "name": [ "Tempering" ],
+    "show_in_info": true,
+    "desc": [ "It feels weak due to the tempering process." ],
+    "rating": "good",
+    "enchantments": [
+      { "incoming_damage_mod": [ { "type": "stab", "add": 5 }, { "type": "cut", "add": 5 }, { "type": "bash", "add": 5 } ] }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_bone_marrow_refining",
+    "name": [ "Body Tempered" ],
+    "show_in_info": true,
+    "desc": [ "Your blood pulses with protective energy." ],
+    "rating": "good",
+    "enchantments": [
+      {
+        "incoming_damage_mod": [ { "type": "stab", "add": -3 }, { "type": "cut", "add": -3 }, { "type": "bash", "add": -3 } ]
+      }
+    ]
   }
 ]
