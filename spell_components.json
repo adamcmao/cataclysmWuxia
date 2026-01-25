@@ -20,5 +20,10 @@
     "type": "requirement",
     "components": [ [ [ "string_36", 1 ], [ "cordage_36_leather", 1 ], [ "cordage_36", 1 ] ] ],
     "qualities": [ { "id": "CUT", "level": 2 } ]
+  },
+  {
+    "id": "spell_components_explosion_ingredients",
+    "type": "requirement",
+    "components": [ [ [ "flour", 3 ] ] ]
   }
 ]
