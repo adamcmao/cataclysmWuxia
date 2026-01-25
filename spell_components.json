@@ -2,8 +2,7 @@
   {
     "id": "spell_components_three_needles",
     "type": "requirement",
-    "components": [ [ [ "needle_steel", 3 ] ] ],
-    "//components": [
+    "components": [
       [
         [ "combatnail", 3 ],
         [ "needle_bone", 3 ],
