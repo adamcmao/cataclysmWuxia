@@ -265,7 +265,19 @@
     "id": "EOC_MEDITATE_RESTORE_QI",
     "eoc_type": "ACTIVATION",
     "effect": [
-      { "math": [ "u_vitamin('qi_vitamin') += 10" ] },
+      { "math": [ "u_vitamin('qi_vitamin') += 5" ] },
+      { "math": [ "u_pain() -= 5" ] },
+      {
+        "if": { "math": [ "u_vitamin('qi_vitamin') >= 500" ] },
+        "then": [
+          { "math": [ "u_hp('head') += rand(1)" ] },
+          { "math": [ "u_hp('torso') += rand(1)" ] },
+          { "math": [ "u_hp('arm_l') += rand(1)" ] },
+          { "math": [ "u_hp('arm_r') += rand(1)" ] },
+          { "math": [ "u_hp('leg_l') += rand(1)" ] },
+          { "math": [ "u_hp('leg_r') += rand(1)" ] }
+        ]
+      },
       { "run_eocs": "EOC_MEDITATE_RESTORE_QI", "time_in_future": [ "1 minutes", "5 minutes" ] }
     ]
   },
