@@ -38,7 +38,8 @@
     "material": [ "wood", "qt_steel", "gold" ],
     "description": "An expanded stick.  Right now, it's collapsed.  Activate to expand.",
     "use_action": { "menu_text": "Expand", "type": "transform", "target": "golden_staff", "msg": "You snap open your stick." },
-    "melee_damage": { "bash": 6 }
+    "proportional": { "weight": 0.7, "melee_damage": { "all": 1.3 } },
+    "relative": { "to_hit": 2 }
   },
   {
     "type": "ITEM",
@@ -48,7 +49,9 @@
     "material": [ "wood", "qt_steel", "gold" ],
     "description": "An expanded stick that collapses for easy storage. Activate to collapse.",
     "use_action": { "menu_text": "Collapse", "type": "transform", "target": "golden_stick", "msg": "You collapse your staff." },
-    "melee_damage": { "bash": 36 }
+    "proportional": { "weight": 0.7, "melee_damage": { "all": 1.3 } },
+    "relative": { "to_hit": 2 },
+    "extend": { "qualities": [ [ "FISHING_ROD", 2 ] ] }
   },
   {
     "type": "ITEM",
