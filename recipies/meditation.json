@@ -41,7 +41,7 @@
     "difficulty": 0,
     "time": "0 s",
     "autolearn": false,
-    "flags": [ "BLIND_EASY", "NO_MANIP", "AFFECTED_BY_PAIN", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ],
+    "flags": [ "BLIND_EASY", "NO_MANIP", "NO_BENCH", "NO_ENCHANTMENT", "SECRET" ],
     "result_eocs": [ "EOC_MEDITATE_RESTORE_QI_START" ]
   }
 ]
