@@ -2,27 +2,57 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_TINY",
-    "effect": [ { "math": [ "u_vitamin('blood') -= 100" ] } ]
+    "effect": [ { "math": [ "u_blood_usage = 100" ] }, { "run_eocs": [ "EOC_USE_BLOOD_OR_GROUND" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_SMALL",
-    "effect": [ { "math": [ "u_vitamin('blood') -= 1000" ] } ]
+    "effect": [ { "math": [ "u_blood_usage = 1000" ] }, { "run_eocs": [ "EOC_USE_BLOOD_OR_GROUND" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_MEDIUM",
-    "effect": [ { "math": [ "u_vitamin('blood') -= 3000" ] } ]
+    "effect": [ { "math": [ "u_blood_usage = 3000" ] }, { "run_eocs": [ "EOC_USE_BLOOD_OR_GROUND" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_LARGE",
-    "effect": [ { "math": [ "u_vitamin('blood') -= 5000" ] } ]
+    "effect": [ { "math": [ "u_blood_usage = 5000" ] }, { "run_eocs": [ "EOC_USE_BLOOD_OR_GROUND" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_HUGE",
-    "effect": [ { "math": [ "u_vitamin('blood') -= 10000" ] } ]
+    "effect": [ { "math": [ "u_blood_usage = 10000" ] }, { "run_eocs": [ "EOC_USE_BLOOD_OR_GROUND" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_USE_BLOOD_OR_GROUND",
+    "effect": [
+      {
+        "store_coordinates_in": { "context_val": "bloody_ground" },
+        "stop_at_first": true,
+        "range": 1,
+        "condition": { "and": [ { "map_field_id": "fd_blood", "loc": { "context_val": "bloody_ground" } } ] },
+        "u_map_run_eocs": [
+          {
+            "id": "EOC_TEMP",
+            "effect": [
+              { "math": [ "u_blood_found = 1" ] },
+              {
+                "u_transform_radius": 0,
+                "target_var": { "context_val": "bloody_ground" },
+                "ter_furn_transform": "ter_remove_blood"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "if": { "math": [ "u_blood_found == 0" ] },
+        "then": [ { "math": [ "u_vitamin('blood') -= u_blood_usage" ] } ],
+        "else": { "math": [ "u_blood_found = 0" ] }
+      }
+    ]
   },
   {
     "type": "effect_on_condition",
