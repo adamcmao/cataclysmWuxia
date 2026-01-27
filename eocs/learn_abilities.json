@@ -148,6 +148,9 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_JIAN",
     "eoc_type": "ACTIVATION",
-    "effect": [ { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] } ]
+    "effect": [
+      { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] },
+      { "math": [ "u_spell_level('falling_star_scatters_the_flock') = 0" ] }
+    ]
   }
 ]
