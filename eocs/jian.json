@@ -16,5 +16,43 @@
       "You spread out low to the ground, your chest nearly touching the floor only to suddenly whip up <SWORD_SOUNDS>",
       "<SWORD_SOUNDS> You dodge midair with your legs spread apart while you strike downwards!"
     ]
+  },
+  {
+    "type": "snippet",
+    "category": "<SWORD_HIT_MULTIPLE_MESSAGES>",
+    "text": [
+      "Your blade passes through your opponents with a soft <SWORD_SOUNDS>",
+      "The blade sings as you circle it around you.",
+      "<SWORD_SOUNDS> Nothing but a cold flash as you strike once around yourself.",
+      "Single cut, yet many struck.",
+      "With a spinning slash your opponents are throw into disarray.",
+      "Steel falls like rain, and none could escape its reach."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<DRIPPING_RED_RAIN_MESSAGE>",
+    "text": [
+      "You extend and retract your blade, only after does a drop of crimson fall.",
+      "A touch so light, the air remained undisturbed, only for thin line to appear.",
+      "You stab unfelt.",
+      "Lighter than a falling hair, your cut goes unnoticed.",
+      "Shallow and clean, your cut is unwilling to linger.",
+      "Your sword touches and withdraws, only the wound remembers to bleed."
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIELDING_SWORD",
+    "condition": {
+      "or": [
+        { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }
+      ]
+    }
   }
 ]
