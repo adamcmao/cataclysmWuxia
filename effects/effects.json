@@ -259,12 +259,12 @@
     "type": "effect_type",
     "id": "wuxia_still_water_breaks_the_blade_stance",
     "name": [ "Still Water Breaks the Blade" ],
-    "desc": [ "Every fiber of your body strains, waiting to counter with a perfect blow." ],
+    "desc": [ "Every fiber of your body strains, waiting to deflect and counter with a perfect blow." ],
     "rating": "good",
     "enchantments": [
       {
         "condition": "ALWAYS",
-        "values": [ { "value": "DODGE_CHANCE", "add": 999 }, { "value": "ARMOR_ALL" } ],
+        "values": [ { "value": "ARMOR_ALL", "add": -999 } ],
         "hit_me_effect": [ { "id": "still_water_breaks_the_blade_actual" }, { "id": "still_water_breaks_the_blade_removal", "hit_self": true } ]
       }
     ],

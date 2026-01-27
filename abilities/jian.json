@@ -70,7 +70,7 @@
     "type": "SPELL",
     "name": "Still Water Breaks the Blade",
     "description": "Wait motionless, countering a single incoming strike.",
-    "message": "Standing still, you focus and clear your mind. Every fiber of your body, waiting to counter with a perfect blow.",
+    "message": "Standing still, you focus and clear your mind. Every fiber of your body, waiting to deflect and counter with a perfect blow.",
     "spell_class": "JIAN",
     "shape": "blast",
     "effect": "attack",
