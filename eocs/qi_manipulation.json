@@ -265,7 +265,48 @@
     "id": "EOC_MEDITATE_RESTORE_QI",
     "eoc_type": "ACTIVATION",
     "effect": [
-      { "math": [ "u_vitamin('qi_vitamin') += 10" ] },
+      { "math": [ "u_vitamin('qi_vitamin') += 5" ] },
+      { "math": [ "u_pain() -= rand(1)" ] },
+      {
+        "if": { "math": [ "u_vitamin('qi_vitamin') >= 500" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(5)" ] },
+            "cases": [
+              { "case": 0, "effect": { "math": [ "u_hp('head') += rand(1)" ] } },
+              { "case": 1, "effect": { "math": [ "u_hp('torso') += rand(1)" ] } },
+              {
+                "case": 2,
+                "effect": {
+                  "if": { "not": { "u_has_effect": "disabled", "bodypart": "arm_l" } },
+                  "then": { "math": [ "u_hp('arm_l') += rand(1)" ] }
+                }
+              },
+              {
+                "case": 2,
+                "effect": {
+                  "if": { "not": { "u_has_effect": "disabled", "bodypart": "arm_r" } },
+                  "then": { "math": [ "u_hp('arm_r') += rand(1)" ] }
+                }
+              },
+              {
+                "case": 2,
+                "effect": {
+                  "if": { "not": { "u_has_effect": "disabled", "bodypart": "leg_l" } },
+                  "then": { "math": [ "u_hp('leg_l') += rand(1)" ] }
+                }
+              },
+              {
+                "case": 2,
+                "effect": {
+                  "if": { "not": { "u_has_effect": "disabled", "bodypart": "leg_r" } },
+                  "then": { "math": [ "u_hp('leg_r') += rand(1)" ] }
+                }
+              }
+            ]
+          }
+        ]
+      },
       { "run_eocs": "EOC_MEDITATE_RESTORE_QI", "time_in_future": [ "1 minutes", "5 minutes" ] }
     ]
   },

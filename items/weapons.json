@@ -29,5 +29,38 @@
     "description": "A humming pulsating blade formed by your own blood. It glows faintly with energy.",
     "proportional": { "weight": 0.8, "melee_damage": { "all": 1.2 } },
     "relative": { "to_hit": 1 }
+  },
+  {
+    "type": "ITEM",
+    "id": "golden_stick",
+    "copy-from": "baton",
+    "name": "golden stick",
+    "material": [ "wood", "qt_steel", "gold" ],
+    "description": "An expanded stick.  Right now, it's collapsed.  Activate to expand.",
+    "use_action": { "menu_text": "Expand", "type": "transform", "target": "golden_staff", "msg": "You snap open your stick." },
+    "proportional": { "weight": 0.7, "melee_damage": { "all": 1.3 } },
+    "relative": { "to_hit": 2 }
+  },
+  {
+    "type": "ITEM",
+    "id": "golden_staff",
+    "copy-from": "qt_steel_staff",
+    "name": "golden staff",
+    "material": [ "wood", "qt_steel", "gold" ],
+    "description": "An expanded stick that collapses for easy storage. Activate to collapse.",
+    "use_action": { "menu_text": "Collapse", "type": "transform", "target": "golden_stick", "msg": "You collapse your staff." },
+    "proportional": { "weight": 0.7, "melee_damage": { "all": 1.3 } },
+    "relative": { "to_hit": 2 },
+    "extend": { "qualities": [ [ "FISHING_ROD", 2 ] ] }
+  },
+  {
+    "type": "ITEM",
+    "id": "green_destiny_sword",
+    "copy-from": "qt_longsword",
+    "name": "green destiny sword",
+    "material": [ "wood", "qt_steel", "stone" ],
+    "description": "The blade is green as bamboo, light in the hand yet capable of cleaving iron like silk.",
+    "proportional": { "weight": 0.7, "melee_damage": { "all": 1.3 } },
+    "relative": { "to_hit": 2 }
   }
 ]
