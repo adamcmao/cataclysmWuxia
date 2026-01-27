@@ -104,6 +104,8 @@
     "flags": [ "SILENT", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
     "base_casting_time": 500,
     "base_energy_cost": 100,
+    "caster_condition": { "not": "u_has_weapon" },
+    "caster_condition_fail_message": "You need to empty your hands",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {

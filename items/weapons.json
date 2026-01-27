@@ -9,7 +9,7 @@
     "subtypes": [ "ARTIFACT" ],
     "price": "0 USD",
     "price_postapoc": "0 USD",
-    "flags": [ "NONCONDUCTIVE", "NO_REPAIR", "DURABLE_MELEE" ],
+    "flags": [ "NONCONDUCTIVE", "NO_REPAIR", "FRAGILE_MELEE", "SHEATH_SWORD" ],
     "passive_effects": [
       { "has": "WIELD", "condition": "ALWAYS", "hit_you_effect": [ { "id": "drain_blood_tiny_hidden", "hit_self": true } ] }
     ]
