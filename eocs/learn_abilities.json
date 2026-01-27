@@ -150,7 +150,8 @@
     "eoc_type": "ACTIVATION",
     "effect": [
       { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] },
-      { "math": [ "u_spell_level('falling_star_scatters_the_flock') = 0" ] }
+      { "math": [ "u_spell_level('falling_star_scatters_the_flock') = 0" ] },
+      { "math": [ "u_spell_level('still_water_breaks_the_blade') = 0" ] }
     ]
   }
 ]
