@@ -1,8 +1,43 @@
 [
   {
     "type": "snippet",
-    "category": "<EMPTY_HAND_COUNTER_SOUNDS>",
-    "//": "TODO: I need to figure out how to tie this into the counter stance",
+    "category": "<FLOWING_WATER_PALM_MESSAGES>",
+    "text": [
+      "You calmly place your palm against your opponent. <BASH_SOUNDS> The force drives them away.",
+      "A gentle palm sends the opponent drifting backward like water.",
+      "The palm lands lightly, yet the body is carried away.",
+      "The palm releases a wave that lifts and sets the opponent aside.",
+      "Energy ripples outward, guiding rather than striking.",
+      "The palm flows through resistance, leaving no pain behind."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<THREE_POINT_SEAL_MESSAGES>",
+    "text": [
+      "<BASH_SOUNDS> <BASH_SOUNDS> <BASH_SOUNDS> You press your finger into three of your opponent's meridians.",
+      "Fingers flash, locking three vital points in an instant.",
+      "A precise triad of touches shuts down movement.",
+      "Fingers land like raindrops, and motion dies.",
+      "Light touches carry heavy consequence, disabling without bloodshed.",
+      "Fingers strike thrice, and the body refuses to obey."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<COUNTERING_STILL_HAND_MESSAGES>",
+    "text": [
+      "You widen your stance, letting your body sink like a rooted mountain, heels planted firm, waiting for your opponent to carry their own momentum into your trap.",
+      "The hands settle into stillness, waiting to answer any strike.",
+      "The stance appears passive, yet danger coils within it.",
+      "Hands hover loosely, ready to intercept and return force.",
+      "No strike is thrown—only answered.",
+      "Calm becomes a weapon as the counter awaits."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<COUNTERING_STILL_HAND_ACTUAL_MESSAGES>",
     "text": [
       "With a soft turn of the wrist, your palm borrows the enemy's force and sends it back like a returning tide! <BASH_SOUNDS>",
       "Stepping inside the opponents blow, your elbow resounds like thunder at the opponent's ribs! <BASH_SOUNDS>",
@@ -10,6 +45,22 @@
       "Feinting high. <BASH_SOUNDS> You visciously smash the midsection.",
       "With proper timing you flex your chest, arms chambered back, you counter with breathe alone. <BASH_SOUNDS>"
     ]
+  },
+  {
+    "type": "snippet",
+    "category": "<DRAGON_TAIL_STRIKE_MESSAGES>",
+    "text": [
+      "<BASH_SOUNDS> Your leg lands with a resounding blow",
+      "A whipping kick crashes into the foe, <BASH_SOUNDS> Hurling them backward.",
+      "A sweeping kick lands and sends the opponent flying.",
+      "Impact and push combine, breaking momentum and space.",
+      "The kick slams home, forcing the opponent to retreat violently."
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_COUNTERING_STILL_HAND_MESSAGE",
+    "effect": [ { "message": "<COUNTERING_STILL_HAND_ACTUAL_MESSAGES>" } ]
   },
   {
     "type": "effect_on_condition",
