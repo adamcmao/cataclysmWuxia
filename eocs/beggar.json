@@ -18,6 +18,61 @@
     ]
   },
   {
+    "type": "snippet",
+    "category": "<DOG_BEATING_STAFF_READY_MESSAGES>",
+    "text": [
+      "Knees bending you hunch forward and begin to lash out with a devestating combination.",
+      "Feet rooted to the earth, your staff become a thousand shadows.",
+      "With one slow exhale, your staff vanishes with motion.",
+      "Hips twists, back twists, and killing intent spills like cold rain."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<STAFF_TURNS_BEGGAR_STAND_FIRM_MESSAGES>",
+    "text": [
+      "You seamlessly spin in a lazy circle, your staff outstretched.",
+      "The staff whirls out, a circling dragon that strikes in every direction.",
+      "The staff travels the circle; the man at its center does not.",
+      "The staff spins like a wheel of fate while you stay unmoved.",
+      "Though the staff dances wildly, your stance remains iron.",
+      "You rotate at the waist, your staff snapping out to punish every angle."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<PIERCE_THE_ALLEY_MESSAGES>",
+    "text": [
+      "With feet planted, you thrust your staff forward, bridging the gap between yourself and your foes.",
+      "The alley narrows and the staff claims it.",
+      "Your weapon darts out, claiming the path through",
+      "The line becomes an alley, and the staff its point.",
+      "The staff snaps forward, forcing a way through bodies and fear alike."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<STICK_SNAGS_THE_SLEEVE_MESSAGES>",
+    "text": [
+      "You sharply yank your staff like a fishing rod, pulling your prey close.",
+      "A light catch that turns distance into a fatal closeness.",
+      "One subtle hook, and the enemy is reeled in.",
+      "The staff snatches fabric and forcefully invites foe.",
+      "The staff curls, dragging the enemy close."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<HIDDEN_ALLEY_RAT_TIDE_MESSAGES>",
+    "text": [
+      "Channeling your qi into the ground, you summon those who were as despised as you.",
+      "The ground erupts with a living wave of chittering bodies.",
+      "A vermin swarm heeds your call, flooding the ground around you.",
+      "Hidden places empty as the swarm answers its master.",
+      "Shadows multiply as rodents surge in endless numbers."
+    ]
+  },
+  {
     "type": "effect_on_condition",
     "id": "EOC_PIERCE_THE_ALLEY_START",
     "effect": [
