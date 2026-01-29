@@ -1,0 +1,21 @@
+[
+  {
+    "type": "snippet",
+    "category": "<FLYING_SILK_SEVERING_BLADE_MESSAGES>",
+    "text": [
+      "A thin thread binds blade to wielder, knife dancing through the air, before the string snaps.",
+      "Thread blazing as blade spirals.",
+      "The blade rides a thread, shredding the strands."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<SOLAR_LOTUS_BURST_MESSAGES>",
+    "text": [
+      "Gathering blazing qi into a seal, it blooms in a radiant explosion that incinerates everything within its heart.",
+      "By compressing qi to its limit, you form a glowing lotus that detonates in a violent bloom, leaving only ash when it opens.",
+      "What blooms is not life, but destruction. A lotus born of qi, ending in a thunderous burst.",
+      "A silent lotus of beautiful light appears, floating for a breath only to bursts apart in a roaring eruption."
+    ]
+  }
+]
