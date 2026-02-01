@@ -42,6 +42,16 @@
     ]
   },
   {
+    "type": "snippet",
+    "category": "<WHITE_CRANE_SPREADS_ITS_WINGS_MESSAGE>",
+    "text": [
+      "Shoulders relaxed, arms outstreched, you swing in a powerful wide arc. <SWORD_SOUNDS>",
+      "Your sword flashes in a smooth sweeping arc, striking every enemy in front as feathers of killing intent scatter on the wind.",
+      "You extend both arms releasing a wide slash.",
+      "The blade glides outward as if borne by wind, striking everyone in front."
+    ]
+  },
+  {
     "type": "effect_on_condition",
     "id": "EOC_WIELDING_SWORD",
     "condition": {

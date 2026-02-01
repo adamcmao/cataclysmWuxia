@@ -4,7 +4,7 @@
     "type": "SPELL",
     "name": "White Crane Spreads Its Wings",
     "description": "A technique to attack in a wide arc.",
-    "message": "Shoulders relaxed, arms outstreched, you swing in a powerful wide arc. <SWORD_SOUNDS>",
+    "message": "<WHITE_CRANE_SPREADS_ITS_WINGS_MESSAGE>",
     "spell_class": "JIAN",
     "shape": "line",
     "damage_type": "cut",
