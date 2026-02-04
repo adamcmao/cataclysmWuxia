@@ -1,5 +1,71 @@
 [
   {
+    "type": "snippet",
+    "category": "<SCARLET_KNIFE_PULSE_MESSAGES>",
+    "text": [
+      "Crimson forms a knife that darts like a living shadow.",
+      "A pulse of qi shapes blood into a lethal dart.",
+      "A shimmering, scarlet edge erupts from blood.",
+      "The knife flies, red as fresh wound, unstoppable as fate.",
+      "The pulse sends a slicing ribbon of blood through the air."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<RED_THREAD_BINDING_MESSAGES>",
+    "text": [
+      "Blood twists into a fine thread, sealing wounds with crimson silk.",
+      "A pulse of life draws a red line that stops the flow.",
+      "The wound stops as crimson thread stitches.",
+      "A gentle crimson binding knits flesh together.",
+      "Red lines curl and tighten, holding the wound in place."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<RED_ASURA_REVIVAL_ART_MESSAGES>",
+    "text": [
+      "Crimson qi writhes through the body, forcing it to reshape itself.",
+      "Your body convulses as scarlet threads drag flesh back into place.",
+      "Limb jerks in rhythm with unseen threads, reconstructing itself.",
+      "You shutter as flesh is forced into your open wounds.",
+      "The body quivers as missing parts reassemble with painful precision."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<CRIMSON_BLOOD_SWORD_MESSAGES>",
+    "text": [
+      "Blood coils in your palm, forming a sword that hungers for your life force.",
+      "A sword of blood grows sharp, fed by the user's own essence.",
+      "The crimson blade thrums, drawing vitality with every strike.",
+      "The sword thrives off your blood, sharp and dangerous in equal measure.",
+      "Every swing drains a whisper of life, the sword hungering for more."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<FLOWING_BLOOD_BLADES_MESSAGES>",
+    "text": [
+      "Two scarlet blades spiral forward, unstoppable as a river of fate.",
+      "Twin swords of living blood pierce enemies as easily as wind through reeds.",
+      "Blood blades spiral forward, slicing cleanly through those it meets.",
+      "Flowing forward, striking all who dare approach.",
+      "Spinning crimson edges shoot out, unstoppable and cruel."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<HEAVEN_DEVOURING_ART_MESSAGES>",
+    "text": [
+      "You drive your palm into your opponents center, violently pulling their energy into your body",
+      "Hands clamp down as qi is torn from the opponent like breath from lungs.",
+      "Qi screams as it is forcefully drawn into your hands.",
+      "Palms pulse greedily, drawing power faster than it can resist.",
+      "Hands glow ominously as stolen qi floods inward."
+    ]
+  },
+  {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_TINY",
     "effect": [ { "math": [ "u_blood_usage = 100" ] }, { "run_eocs": [ "EOC_USE_BLOOD_OR_GROUND" ] } ]
