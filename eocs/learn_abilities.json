@@ -124,7 +124,7 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_EMPTY_HAND",
     "eoc_type": "ACTIVATION",
-    "effect": [
+    "//effect": [
       { "math": [ "u_spell_level('flowing_water_palm') = 0" ] },
       { "math": [ "u_spell_level('three_point_seal') = 0" ] },
       { "math": [ "u_spell_level('countering_still_hand') = 0" ] },

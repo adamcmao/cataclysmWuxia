@@ -265,7 +265,7 @@
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_SKILLS",
     "effect": [
-      { "run_eocs": [ "EOC_MEDITATE_LEARN_BEGGAR", "EOC_MEDITATE_LEARN_JIAN" ] },
+      { "run_eocs": [ "EOC_MEDITATE_LEARN_BEGGAR", "EOC_MEDITATE_LEARN_JIAN", "EOC_MEDITATE_LEARN_EMPTY" ] },
       { "run_eocs": [ "EOC_MEDITATE_LEARN_SKILLS" ], "time_in_future": [ "5 minutes", "15 minutes" ] }
     ]
   },
@@ -408,6 +408,71 @@
               { "math": [ "u_spell_level('dripping_red_rain') = 0" ] }
             ],
             "else": { "math": [ "u_spell_exp('dripping_red_rain') += rand(1000)" ] }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_EMPTY",
+    "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": {
+      "switch": { "math": [ "rand(5)" ] },
+      "cases": [
+        {
+          "case": 0,
+          "effect": {
+            "if": { "math": [ "u_spell_level('flowing_water_palm') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Flowing Water Palm", "popup": true },
+              { "math": [ "u_spell_level('flowing_water_palm') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('flowing_water_palm') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 1,
+          "effect": {
+            "if": { "math": [ "u_spell_level('three_point_seal') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Three Point Seal", "popup": true },
+              { "math": [ "u_spell_level('three_point_seal') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('three_point_seal') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 2,
+          "effect": {
+            "if": { "math": [ "u_spell_level('countering_still_hand') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Countering Still Hand", "popup": true },
+              { "math": [ "u_spell_level('countering_still_hand') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('countering_still_hand') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 3,
+          "effect": {
+            "if": { "math": [ "u_spell_level('dragon_tail_strike') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Dragon Tail Strike", "popup": true },
+              { "math": [ "u_spell_level('dragon_tail_strike') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('dragon_tail_strike') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 4,
+          "effect": {
+            "if": { "math": [ "u_spell_level('heaven_earth_mortal') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Heaven Earth Mortal", "popup": true },
+              { "math": [ "u_spell_level('heaven_earth_mortal') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('heaven_earth_mortal') += rand(1000)" ] }
           }
         }
       ]
