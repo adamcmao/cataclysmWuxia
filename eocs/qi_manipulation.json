@@ -265,7 +265,7 @@
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_SKILLS",
     "effect": [
-      { "run_eocs": [ "EOC_MEDITATE_LEARN_BEGGAR" ] },
+      { "run_eocs": [ "EOC_MEDITATE_LEARN_BEGGAR", "EOC_MEDITATE_LEARN_JIAN" ] },
       { "run_eocs": [ "EOC_MEDITATE_LEARN_SKILLS" ], "time_in_future": [ "5 minutes", "15 minutes" ] }
     ]
   },
@@ -329,6 +329,85 @@
               { "math": [ "u_spell_level('hidden_alley_rat_tide') = 0" ] }
             ],
             "else": { "math": [ "u_spell_exp('hidden_alley_rat_tide') += rand(1000)" ] }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_JIAN",
+    "condition": {
+      "and": [
+        {
+          "or": [
+            { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }
+          ]
+        },
+        { "math": [ "rand(30) == 1" ] }
+      ]
+    },
+    "effect": {
+      "switch": { "math": [ "rand(5)" ] },
+      "cases": [
+        {
+          "case": 0,
+          "effect": {
+            "if": { "math": [ "u_spell_level('white_crane_spreads_its_wings') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - White Crane Spreads Its Wings", "popup": true },
+              { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('white_crane_spreads_its_wings') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 1,
+          "effect": {
+            "if": { "math": [ "u_spell_level('falling_star_scatters_the_flock') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Falling Star Scatters The Flock", "popup": true },
+              { "math": [ "u_spell_level('falling_star_scatters_the_flock') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('falling_star_scatters_the_flock') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 2,
+          "effect": {
+            "if": { "math": [ "u_spell_level('still_water_breaks_the_blade') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Still Water Breaks The Blade", "popup": true },
+              { "math": [ "u_spell_level('still_water_breaks_the_blade') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('still_water_breaks_the_blade') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 3,
+          "effect": {
+            "if": { "math": [ "u_spell_level('heavens_blink') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Heavens Blink", "popup": true },
+              { "math": [ "u_spell_level('heavens_blink') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('heavens_blink') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 4,
+          "effect": {
+            "if": { "math": [ "u_spell_level('dripping_red_rain') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Dripping Red Rain", "popup": true },
+              { "math": [ "u_spell_level('dripping_red_rain') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('dripping_red_rain') += rand(1000)" ] }
           }
         }
       ]

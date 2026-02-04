@@ -87,7 +87,7 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_BASIC_BEGGAR",
     "eoc_type": "ACTIVATION",
-    "effect": [
+    "//effect": [
       { "math": [ "u_spell_level('dog_beating_staff_technique') = 0" ] },
       { "math": [ "u_spell_level('staff_turns_beggar_firm') = 0" ] },
       { "math": [ "u_spell_level('pierce_the_alley') = 0" ] },
@@ -148,7 +148,7 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_JIAN",
     "eoc_type": "ACTIVATION",
-    "effect": [
+    "//effect": [
       { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] },
       { "math": [ "u_spell_level('falling_star_scatters_the_flock') = 0" ] },
       { "math": [ "u_spell_level('still_water_breaks_the_blade') = 0" ] },
