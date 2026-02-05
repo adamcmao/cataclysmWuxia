@@ -136,7 +136,7 @@
     "type": "effect_on_condition",
     "id": "EOC_UNLOCK_HIDDEN_WEAPONS",
     "eoc_type": "ACTIVATION",
-    "effect": [
+    "//effect": [
       { "math": [ "u_spell_level('flying_silk_severing_blade') = 0" ] },
       { "math": [ "u_spell_level('solar_lotus_burst') = 0" ] },
       { "math": [ "u_spell_level('frozen_soul_shroud') = 0" ] },

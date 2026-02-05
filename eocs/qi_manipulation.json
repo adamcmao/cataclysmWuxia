@@ -266,7 +266,13 @@
     "id": "EOC_MEDITATE_LEARN_SKILLS",
     "effect": [
       {
-        "run_eocs": [ "EOC_MEDITATE_LEARN_BEGGAR", "EOC_MEDITATE_LEARN_JIAN", "EOC_MEDITATE_LEARN_EMPTY", "EOC_MEDITATE_LEARN_DEMONIC" ]
+        "run_eocs": [
+          "EOC_MEDITATE_LEARN_BEGGAR",
+          "EOC_MEDITATE_LEARN_JIAN",
+          "EOC_MEDITATE_LEARN_EMPTY",
+          "EOC_MEDITATE_LEARN_DEMONIC",
+          "EOC_MEDITATE_LEARN_HIDDEN"
+        ]
       },
       { "run_eocs": [ "EOC_MEDITATE_LEARN_SKILLS" ], "time_in_future": [ "5 minutes", "15 minutes" ] }
     ]
@@ -552,6 +558,72 @@
               { "math": [ "u_spell_level('heaven_devouring_art') = 0" ] }
             ],
             "else": { "math": [ "u_spell_exp('heaven_devouring_art') += rand(1000)" ] }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_HIDDEN",
+    "//": "TODO: Figure out the learning condition",
+    "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
+    "effect": {
+      "switch": { "math": [ "rand(5)" ] },
+      "cases": [
+        {
+          "case": 0,
+          "effect": {
+            "if": { "math": [ "u_spell_level('flying_silk_severing_blade') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Flying Silk Severing Blade", "popup": true },
+              { "math": [ "u_spell_level('flying_silk_severing_blade') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('flying_silk_severing_blade') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 1,
+          "effect": {
+            "if": { "math": [ "u_spell_level('solar_lotus_burst') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Solar Lotus Burst", "popup": true },
+              { "math": [ "u_spell_level('solar_lotus_burst') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('solar_lotus_burst') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 2,
+          "effect": {
+            "if": { "math": [ "u_spell_level('frozen_soul_shroud') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Frozen Soul Shroud", "popup": true },
+              { "math": [ "u_spell_level('frozen_soul_shroud') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('frozen_soul_shroud') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 3,
+          "effect": {
+            "if": { "math": [ "u_spell_level('needle_of_heavens_spark') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Needle of Heavens Spark", "popup": true },
+              { "math": [ "u_spell_level('needle_of_heavens_spark') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('needle_of_heavens_spark') += rand(1000)" ] }
+          }
+        },
+        {
+          "case": 4,
+          "effect": {
+            "if": { "math": [ "u_spell_level('mist_of_intoxicating_clouds') == -1" ] },
+            "then": [
+              { "message": "You learned a new technique - Mist of Intoxicating Clouds", "popup": true },
+              { "math": [ "u_spell_level('mist_of_intoxicating_clouds') = 0" ] }
+            ],
+            "else": { "math": [ "u_spell_exp('mist_of_intoxicating_clouds') += rand(1000)" ] }
           }
         }
       ]
