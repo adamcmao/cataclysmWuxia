@@ -489,79 +489,88 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_DEMONIC",
-    "//": "TODO: Expand to work when near blood",
-    "condition": { "and": [ { "u_has_effect": "bleed" }, { "math": [ "rand(30) == 1" ] } ] },
-    "effect": {
-      "switch": { "math": [ "rand(6)" ] },
-      "cases": [
-        {
-          "case": 0,
-          "effect": {
-            "if": { "math": [ "u_spell_level('scarlet_knife_pulse') == -1" ] },
-            "then": [
-              { "message": "You learned a new technique - Scarlet Knife Pulse", "popup": true },
-              { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] }
-            ],
-            "else": { "math": [ "u_spell_exp('scarlet_knife_pulse') += rand(1000)" ] }
-          }
+    "effect": [
+      { "u_location_variable": { "context_val": "bloody_ground" }, "field": "fd_blood", "target_max_radius": 1 },
+      {
+        "if": {
+          "and": [ { "map_field_id": "fd_blood", "loc": { "context_val": "bloody_ground" } }, { "math": [ "rand(30) == 1" ] } ]
         },
-        {
-          "case": 1,
-          "effect": {
-            "if": { "math": [ "u_spell_level('red_thread_binding') == -1" ] },
-            "then": [
-              { "message": "You learned a new technique - Red Thread Binding", "popup": true },
-              { "math": [ "u_spell_level('red_thread_binding') = 0" ] }
-            ],
-            "else": { "math": [ "u_spell_exp('red_thread_binding') += rand(1000)" ] }
+        "then": [
+          { "u_message": "Blood is in <context_val:bloody_ground>" },
+          {
+            "switch": { "math": [ "rand(6)" ] },
+            "cases": [
+              {
+                "case": 0,
+                "effect": {
+                  "if": { "math": [ "u_spell_level('scarlet_knife_pulse') == -1" ] },
+                  "then": [
+                    { "message": "You learned a new technique - Scarlet Knife Pulse", "popup": true },
+                    { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] }
+                  ],
+                  "else": { "math": [ "u_spell_exp('scarlet_knife_pulse') += rand(1000)" ] }
+                }
+              },
+              {
+                "case": 1,
+                "effect": {
+                  "if": { "math": [ "u_spell_level('red_thread_binding') == -1" ] },
+                  "then": [
+                    { "message": "You learned a new technique - Red Thread Binding", "popup": true },
+                    { "math": [ "u_spell_level('red_thread_binding') = 0" ] }
+                  ],
+                  "else": { "math": [ "u_spell_exp('red_thread_binding') += rand(1000)" ] }
+                }
+              },
+              {
+                "case": 2,
+                "effect": {
+                  "if": { "math": [ "u_spell_level('crimson_blood_sword') == -1" ] },
+                  "then": [
+                    { "message": "You learned a new technique - Crimson Blood Sword", "popup": true },
+                    { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] }
+                  ],
+                  "else": { "math": [ "u_spell_exp('crimson_blood_sword') += rand(1000)" ] }
+                }
+              },
+              {
+                "case": 3,
+                "effect": {
+                  "if": { "math": [ "u_spell_level('red_asura_revival_art') == -1" ] },
+                  "then": [
+                    { "message": "You learned a new technique - Red Asura Revival Art", "popup": true },
+                    { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] }
+                  ],
+                  "else": { "math": [ "u_spell_exp('red_asura_revival_art') += rand(1000)" ] }
+                }
+              },
+              {
+                "case": 4,
+                "effect": {
+                  "if": { "math": [ "u_spell_level('flowing_blood_blades') == -1" ] },
+                  "then": [
+                    { "message": "You learned a new technique - Flowing Blood Blades", "popup": true },
+                    { "math": [ "u_spell_level('flowing_blood_blades') = 0" ] }
+                  ],
+                  "else": { "math": [ "u_spell_exp('flowing_blood_blades') += rand(1000)" ] }
+                }
+              },
+              {
+                "case": 5,
+                "effect": {
+                  "if": { "math": [ "u_spell_level('heaven_devouring_art') == -1" ] },
+                  "then": [
+                    { "message": "You learned a new technique - Heaven Devouring Art", "popup": true },
+                    { "math": [ "u_spell_level('heaven_devouring_art') = 0" ] }
+                  ],
+                  "else": { "math": [ "u_spell_exp('heaven_devouring_art') += rand(1000)" ] }
+                }
+              }
+            ]
           }
-        },
-        {
-          "case": 2,
-          "effect": {
-            "if": { "math": [ "u_spell_level('crimson_blood_sword') == -1" ] },
-            "then": [
-              { "message": "You learned a new technique - Crimson Blood Sword", "popup": true },
-              { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] }
-            ],
-            "else": { "math": [ "u_spell_exp('crimson_blood_sword') += rand(1000)" ] }
-          }
-        },
-        {
-          "case": 3,
-          "effect": {
-            "if": { "math": [ "u_spell_level('red_asura_revival_art') == -1" ] },
-            "then": [
-              { "message": "You learned a new technique - Red Asura Revival Art", "popup": true },
-              { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] }
-            ],
-            "else": { "math": [ "u_spell_exp('red_asura_revival_art') += rand(1000)" ] }
-          }
-        },
-        {
-          "case": 4,
-          "effect": {
-            "if": { "math": [ "u_spell_level('flowing_blood_blades') == -1" ] },
-            "then": [
-              { "message": "You learned a new technique - Flowing Blood Blades", "popup": true },
-              { "math": [ "u_spell_level('flowing_blood_blades') = 0" ] }
-            ],
-            "else": { "math": [ "u_spell_exp('flowing_blood_blades') += rand(1000)" ] }
-          }
-        },
-        {
-          "case": 5,
-          "effect": {
-            "if": { "math": [ "u_spell_level('heaven_devouring_art') == -1" ] },
-            "then": [
-              { "message": "You learned a new technique - Heaven Devouring Art", "popup": true },
-              { "math": [ "u_spell_level('heaven_devouring_art') = 0" ] }
-            ],
-            "else": { "math": [ "u_spell_exp('heaven_devouring_art') += rand(1000)" ] }
-          }
-        }
-      ]
-    }
+        ]
+      }
+    ]
   },
   {
     "type": "effect_on_condition",
