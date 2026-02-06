@@ -490,6 +490,7 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_JIANGSHI",
+    "condition": { "math": [ "rand(30) == 1" ] },
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       {
@@ -502,54 +503,59 @@
             "id": "EOC_MEDITATE_LEARN_JIANGSHI_SKILL",
             "effect": [
               {
-                "if": { "math": [ "rand(30) == 1" ] },
-                "then": [
+                "switch": { "math": [ "rand(5)" ] },
+                "cases": [
                   {
-                    "switch": { "math": [ "rand(5)" ] },
-                    "cases": [
+                    "case": 0,
+                    "effect": {
+                      "if": { "math": [ "u_spell_level('yin_essence_reforging') == -1" ] },
+                      "then": [
+                        { "message": "You learned a new technique - Yin Essence Reforging", "popup": true },
+                        { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
+                      ],
+                      "else": { "math": [ "u_spell_exp('yin_essence_reforging') += rand(1000)" ] }
+                    }
+                  },
+                  {
+                    "case": 1,
+                    "effect": {
+                      "if": { "math": [ "u_spell_level('unrotting_corpse_enhancement') == -1" ] },
+                      "then": [
+                        { "message": "You learned a new technique - Unrotting Corpse Enhancement", "popup": true },
+                        { "math": [ "u_spell_level('unrotting_corpse_enhancement') = 0" ] }
+                      ],
+                      "else": { "math": [ "u_spell_exp('unrotting_corpse_enhancement') += rand(1000)" ] }
+                    }
+                  },
+                  {
+                    "case": 2,
+                    "effect": {
+                      "if": { "math": [ "u_spell_level('grave_mist_disappearance') == -1" ] },
+                      "then": [
+                        { "message": "You learned a new technique - Grave Mist Disappearance", "popup": true },
+                        { "math": [ "u_spell_level('grave_mist_disappearance') = 0" ] }
+                      ],
+                      "else": { "math": [ "u_spell_exp('grave_mist_disappearance') += rand(1000)" ] }
+                    }
+                  },
+                  {
+                    "case": 3,
+                    "effect": [
                       {
-                        "case": 0,
-                        "effect": {
-                          "if": { "math": [ "u_spell_level('yin_essence_reforging') == -1" ] },
-                          "then": [
-                            { "message": "You learned a new technique - Yin Essence Reforging", "popup": true },
-                            { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
-                          ],
-                          "else": { "math": [ "u_spell_exp('yin_essence_reforging') += rand(1000)" ] }
-                        }
-                      },
-                      {
-                        "case": 1,
-                        "effect": {
-                          "if": { "math": [ "u_spell_level('unrotting_corpse_enhancement') == -1" ] },
-                          "then": [
-                            { "message": "You learned a new technique - Unrotting Corpse Enhancement", "popup": true },
-                            { "math": [ "u_spell_level('unrotting_corpse_enhancement') = 0" ] }
-                          ],
-                          "else": { "math": [ "u_spell_exp('unrotting_corpse_enhancement') += rand(1000)" ] }
-                        }
-                      },
-                      {
-                        "case": 2,
-                        "effect": {
-                          "if": { "math": [ "u_spell_level('grave_mist_disappearance') == -1" ] },
-                          "then": [
-                            { "message": "You learned a new technique - Grave Mist Disappearance", "popup": true },
-                            { "math": [ "u_spell_level('grave_mist_disappearance') = 0" ] }
-                          ],
-                          "else": { "math": [ "u_spell_exp('grave_mist_disappearance') += rand(1000)" ] }
-                        }
-                      },
-                      {
-                        "case": 3,
-                        "effect": [
+                        "if": { "not": { "u_know_recipe": "wuxia_jiangshi_white_inert" } },
+                        "then": [
                           { "u_learn_recipe": "wuxia_jiangshi_white_inert" },
                           { "message": "You learned a new recipe - White Jiangshi", "popup": true }
                         ]
-                      },
+                      }
+                    ]
+                  },
+                  {
+                    "case": 4,
+                    "effect": [
                       {
-                        "case": 4,
-                        "effect": [
+                        "if": { "not": { "u_know_recipe": "wuxia_wooden_casket" } },
+                        "then": [
                           { "u_learn_recipe": "wuxia_wooden_casket" },
                           { "message": "You learned a new recipe - Wooden Casket", "popup": true }
                         ]
@@ -567,12 +573,11 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_DEMONIC",
+    "condition": { "math": [ "rand(30) == 1" ] },
     "effect": [
       { "u_location_variable": { "context_val": "bloody_ground" }, "field": "fd_blood", "target_max_radius": 1 },
       {
-        "if": {
-          "and": [ { "map_field_id": "fd_blood", "loc": { "context_val": "bloody_ground" } }, { "math": [ "rand(30) == 1" ] } ]
-        },
+        "if": { "and": [ { "map_field_id": "fd_blood", "loc": { "context_val": "bloody_ground" } } ] },
         "then": [
           { "u_message": "Blood is in <context_val:bloody_ground>" },
           {
