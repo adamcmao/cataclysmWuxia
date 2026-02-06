@@ -155,5 +155,452 @@
       { "math": [ "u_spell_level('heavens_blink') = 0" ] },
       { "math": [ "u_spell_level('dripping_red_rain') = 0" ] }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_SKILLS",
+    "effect": [
+      {
+        "run_eocs": [
+          "EOC_MEDITATE_LEARN_BEGGAR",
+          "EOC_MEDITATE_LEARN_JIAN",
+          "EOC_MEDITATE_LEARN_EMPTY",
+          "EOC_MEDITATE_LEARN_DEMONIC",
+          "EOC_MEDITATE_LEARN_HIDDEN",
+          "EOC_MEDITATE_LEARN_JIANGSHI"
+        ]
+      },
+      { "run_eocs": [ "EOC_MEDITATE_LEARN_SKILLS" ], "time_in_future": [ "5 minutes", "15 minutes" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_BEGGAR",
+    "condition": { "and": [ { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_LEVEL_UP_HIDDEN_ALLEY_RAT_TIDE", 1 ],
+        [ "EOC_LEVEL_UP_STICK_SNAGS_THE_SLEEVE", 1 ],
+        [ "EOC_LEVEL_UP_PIERCE_THE_ALLEY", 1 ],
+        [ "EOC_LEVEL_UP_DOG_BEATING_STAFF_TECHNIQUE", 1 ],
+        [ "EOC_LEVEL_UP_DOG_STAFF_TURNS_BEGGAR_FIRM", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_HIDDEN_ALLEY_RAT_TIDE",
+    "condition": { "math": [ "u_spell_level('hidden_alley_rat_tide') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Hidden Alley Rat Tide", "popup": true },
+      { "math": [ "u_spell_level('hidden_alley_rat_tide') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('hidden_alley_rat_tide') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_STICK_SNAGS_THE_SLEEVE",
+    "condition": { "math": [ "u_spell_level('stick_snags_the_sleeve') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Stick Snags The Sleeve", "popup": true },
+      { "math": [ "u_spell_level('stick_snags_the_sleeve') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('stick_snags_the_sleeve') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_PIERCE_THE_ALLEY",
+    "condition": { "math": [ "u_spell_level('pierce_the_alley') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Pierce The Alley", "popup": true },
+      { "math": [ "u_spell_level('pierce_the_alley') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('pierce_the_alley') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_DOG_BEATING_STAFF_TECHNIQUE",
+    "condition": { "math": [ "u_spell_level('dog_beating_staff_technique') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Dog Beating Staff Technique", "popup": true },
+      { "math": [ "u_spell_level('dog_beating_staff_technique') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('dog_beating_staff_technique') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_DOG_STAFF_TURNS_BEGGAR_FIRM",
+    "condition": { "math": [ "u_spell_level('staff_turns_beggar_firm') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Staff Turns Beggar Firm", "popup": true },
+      { "math": [ "u_spell_level('staff_turns_beggar_firm') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('staff_turns_beggar_firm') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_JIAN",
+    "condition": {
+      "and": [
+        {
+          "or": [
+            { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
+            { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }
+          ]
+        },
+        { "math": [ "rand(30) == 1" ] }
+      ]
+    },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_LEVEL_UP_DRIPPING_RED_RAIN", 1 ],
+        [ "EOC_LEVEL_UP_HEAVENS_BLINK", 1 ],
+        [ "EOC_LEVEL_UP_STILL_WATER_BREAKS_THE_BLADE", 1 ],
+        [ "EOC_LEVEL_UP_FALLING_STAR_SCATTERS_THE_FLOCK", 1 ],
+        [ "EOC_LEVEL_UP_WHITE_CRANE_SPREADS_ITS_WINGS", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_DRIPPING_RED_RAIN",
+    "condition": { "math": [ "u_spell_level('dripping_red_rain') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Dripping Red Rain", "popup": true },
+      { "math": [ "u_spell_level('dripping_red_rain') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('dripping_red_rain') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_HEAVENS_BLINK",
+    "condition": { "math": [ "u_spell_level('heavens_blink') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Heavens Blink", "popup": true },
+      { "math": [ "u_spell_level('heavens_blink') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('heavens_blink') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_STILL_WATER_BREAKS_THE_BLADE",
+    "condition": { "math": [ "u_spell_level('still_water_breaks_the_blade') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Still Water Breaks The Blade", "popup": true },
+      { "math": [ "u_spell_level('still_water_breaks_the_blade') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('still_water_breaks_the_blade') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_FALLING_STAR_SCATTERS_THE_FLOCK",
+    "condition": { "math": [ "u_spell_level('falling_star_scatters_the_flock') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Falling Star Scatters The Flock", "popup": true },
+      { "math": [ "u_spell_level('falling_star_scatters_the_flock') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('falling_star_scatters_the_flock') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_WHITE_CRANE_SPREADS_ITS_WINGS",
+    "condition": { "math": [ "u_spell_level('white_crane_spreads_its_wings') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - White Crane Spreads Its Wings", "popup": true },
+      { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('white_crane_spreads_its_wings') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_EMPTY",
+    "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_LEVEL_UP_FLOWING_WATER_PALM", 1 ],
+        [ "EOC_LEVEL_UP_THREE_POINT_SEAL", 1 ],
+        [ "EOC_LEVEL_UP_COUNTERING_STILL_HAND", 1 ],
+        [ "EOC_LEVEL_UP_DRAGON_TAIL_STRIKE", 1 ],
+        [ "EOC_LEVEL_UP_HEAVEN_EARTH_MORTAL", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_FLOWING_WATER_PALM",
+    "condition": { "math": [ "u_spell_level('flowing_water_palm') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Flowing Water Palm", "popup": true },
+      { "math": [ "u_spell_level('flowing_water_palm') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('flowing_water_palm') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_THREE_POINT_SEAL",
+    "condition": { "math": [ "u_spell_level('three_point_seal') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Three Point Seal", "popup": true },
+      { "math": [ "u_spell_level('three_point_seal') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('three_point_seal') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_COUNTERING_STILL_HAND",
+    "condition": { "math": [ "u_spell_level('countering_still_hand') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Countering Still Hand", "popup": true },
+      { "math": [ "u_spell_level('countering_still_hand') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('countering_still_hand') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_DRAGON_TAIL_STRIKE",
+    "condition": { "math": [ "u_spell_level('dragon_tail_strike') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Dragon Tail Strike", "popup": true },
+      { "math": [ "u_spell_level('dragon_tail_strike') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('dragon_tail_strike') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_HEAVEN_EARTH_MORTAL",
+    "condition": { "math": [ "u_spell_level('heaven_earth_mortal') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Heaven Earth Mortal", "popup": true },
+      { "math": [ "u_spell_level('heaven_earth_mortal') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('heaven_earth_mortal') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_JIANGSHI",
+    "condition": { "math": [ "rand(30) == 1" ] },
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      {
+        "u_map_run_item_eocs": "random",
+        "loc": { "context_val": "loc" },
+        "search_data": [ { "category": "corpses" } ],
+        "max_radius": 1,
+        "true_eocs": [
+          {
+            "id": "EOC_MEDITATE_LEARN_JIANGSHI_SKILL",
+            "effect": [
+              {
+                "weighted_list_eocs": [
+                  [ "EOC_LEVEL_UP_YIN_ESSENCE_REFORGING", 1 ],
+                  [ "EOC_LEVEL_UP_UNROTTING_CORPSE_ENHANCEMENT", 1 ],
+                  [ "EOC_LEVEL_UP_GRAVE_MIST_DISAPPEARANCE", 1 ],
+                  [ "EOC_LEARN_JIANGSHI_WHITE", 1 ],
+                  [ "EOC_LEARN_WOODEN_CASKET", 1 ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_YIN_ESSENCE_REFORGING",
+    "condition": { "math": [ "u_spell_level('yin_essence_reforging') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Yin Essence Reforging", "popup": true },
+      { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('yin_essence_reforging') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_UNROTTING_CORPSE_ENHANCEMENT",
+    "condition": { "math": [ "u_spell_level('unrotting_corpse_enhancement') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Unrotting Corpse Enhancement", "popup": true },
+      { "math": [ "u_spell_level('unrotting_corpse_enhancement') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('unrotting_corpse_enhancement') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_GRAVE_MIST_DISAPPEARANCE",
+    "condition": { "math": [ "u_spell_level('grave_mist_disappearance') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Grave Mist Disappearance", "popup": true },
+      { "math": [ "u_spell_level('grave_mist_disappearance') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('grave_mist_disappearance') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEARN_JIANGSHI_WHITE",
+    "condition": { "u_know_recipe": "wuxia_jiangshi_white_inert" },
+    "false_effect": [
+      { "u_learn_recipe": "wuxia_jiangshi_white_inert" },
+      { "message": "You learned a new recipe - White Jiangshi", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEARN_WOODEN_CASKET",
+    "condition": { "u_know_recipe": "wuxia_wooden_casket" },
+    "false_effect": [
+      { "u_learn_recipe": "wuxia_wooden_casket" },
+      { "message": "You learned a new recipe - Wooden Casket", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_DEMONIC",
+    "condition": { "math": [ "rand(30) == 1" ] },
+    "effect": [
+      { "u_location_variable": { "context_val": "bloody_ground" }, "field": "fd_blood", "target_max_radius": 1 },
+      {
+        "if": { "and": [ { "map_field_id": "fd_blood", "loc": { "context_val": "bloody_ground" } } ] },
+        "then": {
+          "weighted_list_eocs": [
+            [ "EOC_LEVEL_UP_SCARLET_KNIFE_PULSE", 1 ],
+            [ "EOC_LEVEL_UP_RED_THREAD_BINDING", 1 ],
+            [ "EOC_LEVEL_UP_CRIMSON_BLOOD_SWORD", 1 ],
+            [ "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART", 1 ],
+            [ "EOC_LEVEL_UP_FLOWING_BLOOD_BLADES", 1 ],
+            [ "EOC_LEVEL_UP_HEAVEN_DEVOURING_ART", 1 ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_SCARLET_KNIFE_PULSE",
+    "condition": { "math": [ "u_spell_level('scarlet_knife_pulse') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Scarlet Knife Pulse", "popup": true },
+      { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('scarlet_knife_pulse') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_RED_THREAD_BINDING",
+    "condition": { "math": [ "u_spell_level('red_thread_binding') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - RED_THREAD_BINDING", "popup": true },
+      { "math": [ "u_spell_level('red_thread_binding') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('red_thread_binding') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_CRIMSON_BLOOD_SWORD",
+    "condition": { "math": [ "u_spell_level('crimson_blood_sword') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Crimson Blood Sword", "popup": true },
+      { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('crimson_blood_sword') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART",
+    "condition": { "math": [ "u_spell_level('red_asura_revival_art') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Red Asura Revival Art", "popup": true },
+      { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('red_asura_revival_art') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_FLOWING_BLOOD_BLADES",
+    "condition": { "math": [ "u_spell_level('flowing_blood_blades') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Flowing Blood Blades", "popup": true },
+      { "math": [ "u_spell_level('flowing_blood_blades') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('flowing_blood_blades') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_HEAVEN_DEVOURING_ART",
+    "condition": { "math": [ "u_spell_level('heaven_devouring_art') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Heaven Devouring Art", "popup": true },
+      { "math": [ "u_spell_level('heaven_devouring_art') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('heaven_devouring_art') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_HIDDEN",
+    "//": "TODO: Figure out the learning condition. I might make these all items you have to make instead.",
+    "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_LEVEL_UP_FLYING_SILK_SEVERING_BLADE", 1 ],
+        [ "EOC_LEVEL_UP_SOLAR_LOTUS_BURST", 1 ],
+        [ "EOC_LEVEL_UP_FROZEN_SOUL_SHROUD", 1 ],
+        [ "EOC_LEVEL_UP_NEEDLE_OF_HEAVENS_SPARK", 1 ],
+        [ "EOC_LEVEL_UP_MIST_OF_INTOXICATING_CLOUDS", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_FLYING_SILK_SEVERING_BLADE",
+    "condition": { "math": [ "u_spell_level('flying_silk_severing_blade') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Flying Silk Severing Blade", "popup": true },
+      { "math": [ "u_spell_level('flying_silk_severing_blade') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('flying_silk_severing_blade') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_SOLAR_LOTUS_BURST",
+    "condition": { "math": [ "u_spell_level('solar_lotus_burst') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Solar Lotus Burst", "popup": true },
+      { "math": [ "u_spell_level('solar_lotus_burst') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('solar_lotus_burst') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_FROZEN_SOUL_SHROUD",
+    "condition": { "math": [ "u_spell_level('frozen_soul_shroud') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Frozen Soul Shroud", "popup": true },
+      { "math": [ "u_spell_level('frozen_soul_shroud') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('frozen_soul_shroud') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_NEEDLE_OF_HEAVENS_SPARK",
+    "condition": { "math": [ "u_spell_level('needle_of_heavens_spark') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Needle Of Heavens Spark", "popup": true },
+      { "math": [ "u_spell_level('needle_of_heavens_spark') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('needle_of_heavens_spark') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_MIST_OF_INTOXICATING_CLOUDS",
+    "condition": { "math": [ "u_spell_level('mist_of_intoxicating_clouds') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Mist of Intoxicating Clouds", "popup": true },
+      { "math": [ "u_spell_level('mist_of_intoxicating_clouds') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('mist_of_intoxicating_clouds') += rand(1000)" ] }
   }
 ]
