@@ -10,6 +10,8 @@ After achieving mastery, you reach an optional end game condition.
 # Righteous
 ## Sword
 Huashan Themed (Plum Blossom)
+	Upgrade condition:
+		Meditate with sword next to a plum tree
 	Counter stance for a single attack
 		Can't move or manually attack, but can counterattack
 	Multi cut technique
@@ -18,47 +20,71 @@ Huashan Themed (Plum Blossom)
 	Hit all enemies in front of you
 ## Staff
 Beggar Themed
+	Upgrade condition:
+		Meditate with staff
 	Line with aoe attack
 	Hit everyone around you with aoe (chance of down)
 	Pull an enemy close
 	Multi hit single target
 ## Palm
 Shaolin Themed
+	Upgrade condition:
+		Meditate unarmed
 	Counter stance for x amount of time
 		Can't move or manually attack, but can counterattack
 	Push enemy
 	Down an opponent -> Paralyze an opponent
-
 ## Medicinal Arts
 Divine Doctor
+	Upgrade condition:
+		Meditate while injured
 	Recipies to restore qi
 	Abilities to stop negative effects
 ## Formations
-Put traps on ground
+Formation Master
+	Upgrade condition:
+		TODO: Figure this out!
+	Put traps on ground
 
 # Unorthodox
 ## Sword
 Assassination Themed
+	Upgrade condition:
+		Meditate with sword at night
 ## Axe
 Includes hooked weapons
 Forest/Mountain bandit Themed
+	Upgrade condition:
+		Meditate with axe next to tree, OR chopping a tree down with an axe
 ## Fist
 Drunken Fist Themed
+	Upgrade condition:
+		Meditate unarmed while drunk
 ## Hidden Weapons
 Gives recipes to create powerful weapons, probably based off of charges
 	Bombs, hidden needles, bolas etc
+	Upgrade condition:
+		TODO: Figure this out
 ## Bestial Arts
 Short term monster summons
+	Upgrade condition:
+		Meditate next to pets
 
 # Demonic
 Focuses 
 ## Sword
-Uses player's blood as an additional resource, can be avoided if near blood
-Create a sword out of blood
-Can shoot blades of blood
-Can shoot knives of blood
+Blood Swordsman
+	Upgrade condition:
+		Meditate with sword next to blood
+	Uses player's blood as an additional resource, can be avoided if near blood
+	Create a sword out of blood
+	Can shoot blades of blood
+	Can shoot knives of blood
 ## Spear
 Includes polearms
+Fallen monk
+	Upgrade condition:
+		Meditate with spear next to blood
 Uses player's blood as an additional resource, can be avoided if near blood
 	Line with no aoe
 	Hit everyone in front of you
@@ -66,14 +92,20 @@ Uses player's blood as an additional resource, can be avoided if near blood
 	Push an enemy a short distance away
 ## Finger
 Stab with finger
+	Upgrade condition:
+		Meditate while unarmed next to blood
 Shoot blood beam
 ## Poison Arts
 Abilities to spread aoe poison
+	Upgrade condition:
+		Meditate while poisoned
 Recipies to give permanent bonuses
 	But includes a small drawback
 		Ex: Immune to poison, weaker in the cold
 ## Jiangshi
 Gives recipies to create a jiangshi from a corpse
+	Upgrade condition:
+		Meditate next to fresh human corpse
 Gives recipies to upgrade a jiangshi
 Gives spells to manipulate the jiangshi
 	Healing, stat bonuses, pulling towards player character, etc
@@ -92,4 +124,9 @@ The effect is lost when
 	The player runs out of qi (the effects have a continous qi drain)
 
 # Meditate
-Most unlocking is done through the meditate recipe. 
+Meditating restores qi over time
+Meditating has a chance to restore a small amount of health to a random body part. The body part must not be broken.
+Most unlocking is done through the meditate recipe.
+If you are wielding a corresponding weapon you have a chance of unlocking skills related to that weapon
+	Ex: While holding a staff, with righteousness staff unlocked, and meditating you have a small chance of unlocking a new staff skill. 
+Other categories may have different or additional conditions, like being near blood, cutting trees, etc
