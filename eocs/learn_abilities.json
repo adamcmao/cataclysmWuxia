@@ -27,16 +27,24 @@
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_SKILLS",
     "effect": [
+      { "run_eocs": [ "EOC_MEDITATE_LEARN_ORTHODOX", "EOC_MEDITATE_LEARN_UNORTHODOX", "EOC_MEDITATE_LEARN_DEMONIC" ] },
+      { "run_eocs": [ "EOC_MEDITATE_LEARN_SKILLS" ], "time_in_future": [ "5 minutes", "15 minutes" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_ORTHODOX",
+    "//condition": "TODO: Add check if you are orthodox",
+    "effect": [
       {
         "run_eocs": [
           "EOC_MEDITATE_LEARN_BEGGAR",
-          "EOC_MEDITATE_LEARN_JIAN",
-          "EOC_MEDITATE_LEARN_EMPTY",
-          "EOC_MEDITATE_LEARN_DEMONIC",
-          "EOC_MEDITATE_LEARN_JIANGSHI"
+          "EOC_MEDITATE_LEARN_DIVINE_DOCTOR",
+          "EOC_MEDITATE_LEARN_FORMATIONS",
+          "EOC_MEDITATE_LEARN_HUA",
+          "EOC_MEDITATE_LEARN_SHAOLIN"
         ]
-      },
-      { "run_eocs": [ "EOC_MEDITATE_LEARN_SKILLS" ], "time_in_future": [ "5 minutes", "15 minutes" ] }
+      }
     ]
   },
   {
@@ -105,7 +113,7 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_MEDITATE_LEARN_JIAN",
+    "id": "EOC_MEDITATE_LEARN_HUA",
     "condition": {
       "and": [
         {
@@ -123,67 +131,56 @@
     },
     "effect": {
       "weighted_list_eocs": [
-        [ "EOC_LEVEL_UP_DRIPPING_RED_RAIN", 1 ],
         [ "EOC_LEVEL_UP_HEAVENS_BLINK", 1 ],
         [ "EOC_LEVEL_UP_STILL_WATER_BREAKS_THE_BLADE", 1 ],
-        [ "EOC_LEVEL_UP_FALLING_STAR_SCATTERS_THE_FLOCK", 1 ],
-        [ "EOC_LEVEL_UP_WHITE_CRANE_SPREADS_ITS_WINGS", 1 ]
+        [ "EOC_LEVEL_UP_SKY_PIERCING_SWORD", 1 ],
+        [ "EOC_LEVEL_UP_CIRCULAR_SWORD", 1 ]
       ]
     }
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_DRIPPING_RED_RAIN",
-    "condition": { "math": [ "u_spell_level('dripping_red_rain') == -1" ] },
-    "effect": [
-      { "message": "You learned a new technique - Dripping Red Rain", "popup": true },
-      { "math": [ "u_spell_level('dripping_red_rain') = 0" ] }
-    ],
-    "false_effect": { "math": [ "u_spell_exp('dripping_red_rain') += rand(1000)" ] }
-  },
-  {
-    "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_HEAVENS_BLINK",
-    "condition": { "math": [ "u_spell_level('heavens_blink') == -1" ] },
+    "condition": { "math": [ "u_spell_level('hua_heavens_blink') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Heavens Blink", "popup": true },
-      { "math": [ "u_spell_level('heavens_blink') = 0" ] }
+      { "math": [ "u_spell_level('hua_heavens_blink') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('heavens_blink') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('hua_heavens_blink') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_STILL_WATER_BREAKS_THE_BLADE",
-    "condition": { "math": [ "u_spell_level('still_water_breaks_the_blade') == -1" ] },
+    "condition": { "math": [ "u_spell_level('hua_still_water_breaks_the_blade') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Still Water Breaks The Blade", "popup": true },
-      { "math": [ "u_spell_level('still_water_breaks_the_blade') = 0" ] }
+      { "math": [ "u_spell_level('hua_still_water_breaks_the_blade') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('still_water_breaks_the_blade') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('hua_still_water_breaks_the_blade') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_FALLING_STAR_SCATTERS_THE_FLOCK",
-    "condition": { "math": [ "u_spell_level('falling_star_scatters_the_flock') == -1" ] },
+    "id": "EOC_LEVEL_UP_SKY_PIERCING_SWORD",
+    "condition": { "math": [ "u_spell_level('hua_sky_piercing_sword') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Falling Star Scatters The Flock", "popup": true },
-      { "math": [ "u_spell_level('falling_star_scatters_the_flock') = 0" ] }
+      { "math": [ "u_spell_level('hua_sky_piercing_sword') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('falling_star_scatters_the_flock') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('hua_sky_piercing_sword') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_WHITE_CRANE_SPREADS_ITS_WINGS",
-    "condition": { "math": [ "u_spell_level('white_crane_spreads_its_wings') == -1" ] },
+    "id": "EOC_LEVEL_UP_CIRCULAR_SWORD",
+    "condition": { "math": [ "u_spell_level('hua_circular_sword') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - White Crane Spreads Its Wings", "popup": true },
-      { "math": [ "u_spell_level('white_crane_spreads_its_wings') = 0" ] }
+      { "math": [ "u_spell_level('hua_circular_sword') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('white_crane_spreads_its_wings') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('hua_circular_sword') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_MEDITATE_LEARN_EMPTY",
+    "id": "EOC_MEDITATE_LEARN_SHAOLIN",
     "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
     "effect": {
       "weighted_list_eocs": [
@@ -198,52 +195,58 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_FLOWING_WATER_PALM",
-    "condition": { "math": [ "u_spell_level('flowing_water_palm') == -1" ] },
+    "condition": { "math": [ "u_spell_level('shaolin_flowing_water_palm') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Flowing Water Palm", "popup": true },
-      { "math": [ "u_spell_level('flowing_water_palm') = 0" ] }
+      { "math": [ "u_spell_level('shaolin_flowing_water_palm') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('flowing_water_palm') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('shaolin_flowing_water_palm') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_THREE_POINT_SEAL",
-    "condition": { "math": [ "u_spell_level('three_point_seal') == -1" ] },
+    "condition": { "math": [ "u_spell_level('shaolin_three_point_seal') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Three Point Seal", "popup": true },
-      { "math": [ "u_spell_level('three_point_seal') = 0" ] }
+      { "math": [ "u_spell_level('shaolin_three_point_seal') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('three_point_seal') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('shaolin_three_point_seal') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_COUNTERING_STILL_HAND",
-    "condition": { "math": [ "u_spell_level('countering_still_hand') == -1" ] },
+    "condition": { "math": [ "u_spell_level('shaolin_countering_still_hand') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Countering Still Hand", "popup": true },
-      { "math": [ "u_spell_level('countering_still_hand') = 0" ] }
+      { "math": [ "u_spell_level('shaolin_countering_still_hand') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('countering_still_hand') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('shaolin_countering_still_hand') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_DRAGON_TAIL_STRIKE",
-    "condition": { "math": [ "u_spell_level('dragon_tail_strike') == -1" ] },
+    "condition": { "math": [ "u_spell_level('shaolin_dragon_tail_strike') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Dragon Tail Strike", "popup": true },
-      { "math": [ "u_spell_level('dragon_tail_strike') = 0" ] }
+      { "math": [ "u_spell_level('shaolin_dragon_tail_strike') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('dragon_tail_strike') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('shaolin_dragon_tail_strike') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_HEAVEN_EARTH_MORTAL",
-    "condition": { "math": [ "u_spell_level('heaven_earth_mortal') == -1" ] },
+    "condition": { "math": [ "u_spell_level('shaolin_heaven_earth_mortal') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Heaven Earth Mortal", "popup": true },
-      { "math": [ "u_spell_level('heaven_earth_mortal') = 0" ] }
+      { "math": [ "u_spell_level('shaolin_heaven_earth_mortal') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('heaven_earth_mortal') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('shaolin_heaven_earth_mortal') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_DEMONIC",
+    "//condition": "TODO: Add check if you are orthodox",
+    "effect": [ { "run_eocs": [ "EOC_MEDITATE_LEARN_JIANGSHI", "EOC_MEDITATE_LEARN_BLOOD_SABRE" ] } ]
   },
   {
     "type": "effect_on_condition",
@@ -325,7 +328,7 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_MEDITATE_LEARN_DEMONIC",
+    "id": "EOC_MEDITATE_LEARN_BLOOD_SABRE",
     "condition": { "math": [ "rand(30) == 1" ] },
     "effect": [
       { "u_location_variable": { "context_val": "bloody_ground" }, "field": "fd_blood", "target_max_radius": 1 },

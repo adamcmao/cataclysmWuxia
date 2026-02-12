@@ -1,6 +1,6 @@
 [
   {
-    "id": "flowing_water_palm",
+    "id": "shaolin_flowing_water_palm",
     "type": "SPELL",
     "name": "Flowing Water Palm",
     "description": "Without harming your opponent, you push them away.",
@@ -9,8 +9,8 @@
     "shape": "blast",
     "effect": "directed_push",
     "damage_type": "bash",
-    "min_damage": { "math": [ "(u_spell_level('flowing_water_palm') * 0.2) + 1" ] },
-    "max_damage": { "math": [ "(u_spell_level('flowing_water_palm') * 0.5) + 2" ] },
+    "min_damage": { "math": [ "(u_spell_level('shaolin_flowing_water_palm') * 0.2) + 1" ] },
+    "max_damage": { "math": [ "(u_spell_level('shaolin_flowing_water_palm') * 0.5) + 2" ] },
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
     "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
@@ -23,7 +23,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "three_point_seal",
+    "id": "shaolin_flowing_water_palm",
     "type": "SPELL",
     "name": "Three Point Seal",
     "description": "Attempt to make your opponent collapse by striking their weak points.",
@@ -32,8 +32,8 @@
     "shape": "blast",
     "effect": "attack",
     "effect_str": "downed",
-    "min_duration": { "math": [ "u_spell_level('three_point_seal') * 50" ] },
-    "max_duration": { "math": [ "u_spell_level('three_point_seal') * 100" ] },
+    "min_duration": { "math": [ "u_spell_level('shaolin_flowing_water_palm') * 50" ] },
+    "max_duration": { "math": [ "u_spell_level('shaolin_flowing_water_palm') * 100" ] },
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
     "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DURATION" ],
@@ -46,7 +46,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "countering_still_hand",
+    "id": "shaolin_countering_still_hand",
     "type": "SPELL",
     "name": "Countering Still Hand",
     "description": "Put yourself into a counter stance.",
@@ -55,8 +55,8 @@
     "shape": "blast",
     "effect": "attack",
     "effect_str": "wuxia_countering_still_hand_stance",
-    "min_duration": { "math": [ "u_spell_level('countering_still_hand') * 300" ] },
-    "max_duration": { "math": [ "u_spell_level('countering_still_hand') * 600" ] },
+    "min_duration": { "math": [ "u_spell_level('shaolin_countering_still_hand') * 300" ] },
+    "max_duration": { "math": [ "u_spell_level('shaolin_countering_still_hand') * 600" ] },
     "max_level": 10,
     "valid_targets": [ "self" ],
     "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DURATION" ],
@@ -68,7 +68,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "countering_still_hand_actual",
+    "id": "shaolin_countering_still_hand_actual",
     "type": "SPELL",
     "name": "Countering Still Hand - HIDDEN",
     "description": "You should not see this",
@@ -78,8 +78,8 @@
     "extra_effects": [ { "id": "countering_still_hand_message" } ],
     "shape": "blast",
     "damage_type": "bash",
-    "min_damage": { "math": [ "(u_spell_level('countering_still_hand') * 3)" ] },
-    "max_damage": { "math": [ "(u_spell_level('countering_still_hand') * 5)" ] },
+    "min_damage": { "math": [ "(u_spell_level('shaolin_countering_still_hand') * 3)" ] },
+    "max_damage": { "math": [ "(u_spell_level('shaolin_countering_still_hand') * 5)" ] },
     "max_level": 10,
     "valid_targets": [ "hostile" ],
     "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ],
@@ -88,7 +88,7 @@
   },
   {
     "//": "This is just a spell to trigger a message print as message isn't printed when called from hit_me_effect",
-    "id": "countering_still_hand_message",
+    "id": "shaolin_countering_still_hand_message",
     "description": "You should not see this",
     "message": "",
     "spell_class": "SHAOLIN",
@@ -100,7 +100,7 @@
     "shape": "blast"
   },
   {
-    "id": "dragon_tail_strike",
+    "id": "shaolin_dragon_tail_strike",
     "//": "As this is a kick, it doesn't need the EoC for weapon check",
     "type": "SPELL",
     "name": "Dragon Tail Strike",
@@ -110,10 +110,10 @@
     "effect": "attack",
     "shape": "blast",
     "damage_type": "bash",
-    "extra_effects": [ { "id": "dragon_tail_strike_followup", "hit_self": false } ],
+    "extra_effects": [ { "id": "shaolin_dragon_tail_strike_followup", "hit_self": false } ],
     "max_level": 10,
-    "min_damage": { "math": [ "(u_spell_level('dragon_tail_strike') * 3) + 5" ] },
-    "max_damage": { "math": [ "(u_spell_level('dragon_tail_strike') * 5) + 10" ] },
+    "min_damage": { "math": [ "(u_spell_level('shaolin_dragon_tail_strike') * 3) + 5" ] },
+    "max_damage": { "math": [ "(u_spell_level('shaolin_dragon_tail_strike') * 5) + 10" ] },
     "valid_targets": [ "hostile" ],
     "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
     "base_casting_time": 75,
@@ -123,7 +123,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "dragon_tail_strike_followup",
+    "id": "shaolin_dragon_tail_strike_followup",
     "type": "SPELL",
     "name": "Dragon Tail Strike - HIDDEN",
     "description": "",
@@ -138,7 +138,8 @@
     "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ]
   },
   {
-    "id": "heaven_earth_mortal",
+    "//": "TODO: I don't actually like this skill, figure it out",
+    "id": "shaolin_heaven_earth_mortal",
     "type": "SPELL",
     "name": "Heaven Earth Mortal",
     "description": "Each strike feeds the next, closing range, collapsing defenses, and leaving no room to escape.",
@@ -160,7 +161,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "heaven_earth_mortal_actual",
+    "id": "shaolin_heaven_earth_mortal_actual",
     "//": "As this is a kick, it doesn't need the EoC for weapon check",
     "type": "SPELL",
     "name": "Heaven Earth Mortal - HIDDEN",
@@ -171,8 +172,8 @@
     "shape": "blast",
     "damage_type": "bash",
     "max_level": 10,
-    "min_damage": { "math": [ "(u_spell_level('heaven_earth_mortal') * 3) + 5" ] },
-    "max_damage": { "math": [ "(u_spell_level('heaven_earth_mortal') * 5) + 10" ] },
+    "min_damage": { "math": [ "(u_spell_level('shaolin_heaven_earth_mortal') * 3) + 5" ] },
+    "max_damage": { "math": [ "(u_spell_level('shaolin_heaven_earth_mortal') * 5) + 10" ] },
     "valid_targets": [ "hostile" ],
     "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DAMAGE" ],
     "min_range": 1,

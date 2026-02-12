@@ -67,7 +67,7 @@
   },
   {
     "//": "It takes one turn to take effect, so be careful",
-    "id": "still_water_breaks_the_blade",
+    "id": "hua_still_water_breaks_the_blade",
     "type": "SPELL",
     "name": "Still Water Breaks the Blade",
     "description": "Wait motionless, countering a single incoming strike.",
@@ -89,7 +89,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "still_water_breaks_the_blade_actual",
+    "id": "hua_still_water_breaks_the_blade_actual",
     "type": "SPELL",
     "name": "Still Water Breaks the Blade - HIDDEN",
     "description": "You should not see this",
@@ -109,7 +109,7 @@
     "caster_condition_fail_message": "Without a sword in hand you cannot use this ability."
   },
   {
-    "id": "still_water_breaks_the_blade_removal",
+    "id": "hua_still_water_breaks_the_blade_removal",
     "type": "SPELL",
     "name": "Still Water Breaks the Blade Removal - HIDDEN",
     "description": "Removes the still water breaks the blade effect. You should not see this",
@@ -123,7 +123,7 @@
     "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ]
   },
   {
-    "id": "heavens_blink",
+    "id": "hua_heavens_blink",
     "type": "SPELL",
     "name": "Heaven's Blink",
     "description": "Loudly cut through the air itself with a qi enhanced slash, blinding opponents.",
