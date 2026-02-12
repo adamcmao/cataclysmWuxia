@@ -1,0 +1,82 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_START",
+    "effect": [
+      { "u_message": "Your body convulses as you feel the poison move inside you." },
+      {
+        "run_eocs": [
+          "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
+          "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
+          "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM"
+        ],
+        "time_in_future": [ "5 seconds", "30 seconds" ],
+        "randomize_time_in_future": true
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
+    "condition": {
+      "or": [
+        { "u_has_effect": "poison" },
+        { "u_has_effect": "poison", "bodypart": "head" },
+        { "u_has_effect": "poison", "bodypart": "torso" },
+        { "u_has_effect": "poison", "bodypart": "arm_r" },
+        { "u_has_effect": "poison", "bodypart": "arm_l" },
+        { "u_has_effect": "poison", "bodypart": "leg_r" },
+        { "u_has_effect": "poison", "bodypart": "leg_l" }
+      ]
+    },
+    "effect": [
+      { "message": "TEST: Trying to remove poison." },
+      { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
+      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
+      { "u_lose_effect": [ "poison" ], "target_part": "ALL" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
+    "condition": {
+      "or": [
+        { "u_has_effect": "badpoison" },
+        { "u_has_effect": "badpoison", "bodypart": "head" },
+        { "u_has_effect": "badpoison", "bodypart": "torso" },
+        { "u_has_effect": "badpoison", "bodypart": "arm_r" },
+        { "u_has_effect": "badpoison", "bodypart": "arm_l" },
+        { "u_has_effect": "badpoison", "bodypart": "leg_r" },
+        { "u_has_effect": "badpoison", "bodypart": "leg_l" }
+      ]
+    },
+    "effect": [
+      { "message": "TEST: Trying to remove badpoison." },
+      { "u_spawn_item": "wuxia_poison_pill_tier_2", "suppress_message": true },
+      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
+      { "u_lose_effect": [ "badpoison" ], "target_part": "ALL" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM",
+    "condition": {
+      "or": [
+        { "u_has_effect": "venom_dmg" },
+        { "u_has_effect": "venom_weaken" },
+        { "u_has_effect": "venom_blind" },
+        { "u_has_effect": "venom_pain" },
+        { "u_has_effect": "paralyzepoison" }
+      ]
+    },
+    "effect": [
+      { "message": "TEST: Trying to remove venom." },
+      { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
+      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
+      {
+        "u_lose_effect": [ "venom_dmg", "venom_weaken", "venom_blind", "venom_pain", "paralyzepoison" ],
+        "target_part": "ALL"
+      }
+    ]
+  }
+]

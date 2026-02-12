@@ -1,0 +1,22 @@
+[
+  {
+    "id": "heaven_devouring_art",
+    "type": "SPELL",
+    "name": "Heaven Devouring Art",
+    "description": "Forcefully absorb qi from your living opponent. This demonic art induces madness.",
+    "message": "<HEAVEN_DEVOURING_ART_MESSAGES>",
+    "spell_class": "DEMONIC",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HEAVEN_DEVOURING_ART_START",
+    "max_level": 10,
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "NO_FAIL", "SILENT", "NO_HANDS", "NO_EXPLOSION_SFX" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_range": 1,
+    "caster_condition": { "not": "u_has_weapon" },
+    "caster_condition_fail_message": "You need to empty your hands",
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  }
+]

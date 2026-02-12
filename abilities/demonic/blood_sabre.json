@@ -23,55 +23,6 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "red_thread_binding",
-    "type": "SPELL",
-    "name": "Red Thread Binding",
-    "description": "Use blood to stitch your wounds shut.",
-    "message": "<RED_THREAD_BINDING_MESSAGES>",
-    "spell_class": "DEMONIC",
-    "shape": "blast",
-    "effect": "remove_effect",
-    "effect_str": "bleed",
-    "extra_effects": [ { "id": "drain_blood_small_hidden", "hit_self": true }, { "id": "scarlet_cause_pain", "hit_self": true } ],
-    "max_level": 10,
-    "valid_targets": [ "self" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_HANDS" ],
-    "base_casting_time": { "math": [ "1000-(u_spell_level('red_thread_binding') * 75)" ] },
-    "base_energy_cost": 100,
-    "caster_condition": {
-      "or": [
-        { "u_has_effect": "bleed", "bodypart": "head" },
-        { "u_has_effect": "bleed", "bodypart": "torso" },
-        { "u_has_effect": "bleed", "bodypart": "arm_r" },
-        { "u_has_effect": "bleed", "bodypart": "arm_l" },
-        { "u_has_effect": "bleed", "bodypart": "leg_r" },
-        { "u_has_effect": "bleed", "bodypart": "leg_l" }
-      ]
-    },
-    "caster_condition_fail_message": "You have nothing to stitch closed.",
-    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
-  },
-  {
-    "id": "red_asura_revival_art",
-    "type": "SPELL",
-    "name": "Red Asura Revival Art",
-    "description": "Consume blood to forcefully heal your wounds.",
-    "message": "<RED_ASURA_REVIVAL_ART_MESSAGES>",
-    "spell_class": "DEMONIC",
-    "valid_targets": [ "self" ],
-    "min_damage": { "math": [ "(u_spell_level('red_asura_revival_art') * -0.5) - 1" ] },
-    "max_damage": { "math": [ "(u_spell_level('red_asura_revival_art') * -1.5) - 5" ] },
-    "max_level": 10,
-    "max_range": 0,
-    "effect": "attack",
-    "extra_effects": [ { "id": "drain_blood_small_hidden", "hit_self": true }, { "id": "scarlet_cause_pain", "hit_self": true } ],
-    "shape": "blast",
-    "flags": [ "RANDOM_DAMAGE", "SOMATIC", "LOUD" ],
-    "base_casting_time": 300,
-    "base_energy_cost": 100,
-    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
-  },
-  {
     "id": "scarlet_cause_pain",
     "type": "SPELL",
     "name": "Create pain",
@@ -264,26 +215,6 @@
     "min_range": 5,
     "range_increment": 0.5,
     "max_range": 10,
-    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
-  },
-  {
-    "id": "heaven_devouring_art",
-    "type": "SPELL",
-    "name": "Heaven Devouring Art",
-    "description": "Forcefully absorb qi from your living opponent. This demonic art induces madness.",
-    "message": "<HEAVEN_DEVOURING_ART_MESSAGES>",
-    "spell_class": "DEMONIC",
-    "shape": "blast",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_HEAVEN_DEVOURING_ART_START",
-    "max_level": 10,
-    "valid_targets": [ "hostile", "ally" ],
-    "flags": [ "NO_FAIL", "SILENT", "NO_HANDS", "NO_EXPLOSION_SFX" ],
-    "base_casting_time": 150,
-    "base_energy_cost": 50,
-    "min_range": 1,
-    "caster_condition": { "not": "u_has_weapon" },
-    "caster_condition_fail_message": "You need to empty your hands",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]

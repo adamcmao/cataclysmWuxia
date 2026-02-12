@@ -2,12 +2,12 @@
 Add Wuxia elements to the Cataclysm
 
 # How it works
-Some categories have branches depending on if you choose Righteous, Unorthodox, or Demonic. Other are universal
+Some categories have branches depending on if you choose Orthodox, Unorthodox, or Demonic. Other are universal
 Weapon categories require you to be wielding an appropriate weapon to cast
 Some spells can transform into new spells after reaching certain thresholds/conditons
 After achieving mastery, you reach an optional end game condition.
 
-# Righteous
+# Orthodox
 ## Sword
 Huashan Themed (Plum Blossom)
 	Upgrade condition:
@@ -133,5 +133,5 @@ Meditating restores qi over time
 Meditating has a chance to restore a small amount of health to a random body part. The body part must not be broken.
 Most unlocking is done through the meditate recipe.
 If you are wielding a corresponding weapon you have a chance of unlocking skills related to that weapon
-	Ex: While holding a staff, with righteousness staff unlocked, and meditating you have a small chance of unlocking a new staff skill. 
+	Ex: While holding a staff, with Orthodox staff unlocked, and meditating you have a small chance of unlocking a new staff skill. 
 Other categories may have different or additional conditions, like being near blood, cutting trees, etc
