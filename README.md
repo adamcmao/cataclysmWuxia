@@ -38,7 +38,7 @@ Shaolin Themed
 Divine Doctor
 	Upgrade condition:
 		Meditate while injured
-	Recipies to restore qi
+	Recipies to restore qi, temporary positive effects
 	Abilities to stop negative effects
 ## Formations
 Formation Master
@@ -60,15 +60,18 @@ Forest/Mountain bandit Themed
 Drunken Fist Themed
 	Upgrade condition:
 		Meditate unarmed while drunk
+## Poison Arts
+Abilities to spread aoe poison
+	Upgrade condition:
+		Meditate while poisoned
+Recipies to give permanent bonuses
+	But includes a small drawback
+		Ex: Immune to poison, weaker in the cold
 ## Hidden Weapons
 Gives recipes to create powerful weapons, probably based off of charges
 	Bombs, hidden needles, bolas etc
 	Upgrade condition:
 		TODO: Figure this out
-## Bestial Arts
-Short term monster summons
-	Upgrade condition:
-		Meditate next to pets
 
 # Demonic
 Focuses 
@@ -95,13 +98,12 @@ Stab with finger
 	Upgrade condition:
 		Meditate while unarmed next to blood
 Shoot blood beam
-## Poison Arts
-Abilities to spread aoe poison
+## Gu Arts
+Abilities for single target debuffs
 	Upgrade condition:
-		Meditate while poisoned
+		TODO: Figure this out, holding insect eggs?
 Recipies to give permanent bonuses
-	But includes a small drawback
-		Ex: Immune to poison, weaker in the cold
+	But includes a large drawback
 ## Jiangshi
 Gives recipies to create a jiangshi from a corpse
 	Upgrade condition:
@@ -122,6 +124,8 @@ The effect is lost when
 	The player casts a spell that gives a different qinggong effect (as you can only have one qinggong effect at a time)
 	The player crouches/goes prone/gets knocked down/is winded/ etc
 	The player runs out of qi (the effects have a continous qi drain)
+Have a super fast one tile dash
+	Have its cost increase each time it is cast in a row
 
 # Meditate
 Meditating restores qi over time
