@@ -257,7 +257,8 @@
     "eoc_type": "ACTIVATION",
     "effect": [
       { "u_assign_activity": "ACT_MEDITATE_RESTORE_QI", "duration": "24 hours" },
-      { "run_eocs": "EOC_MEDITATE_RESTORE_QI" }
+      { "run_eocs": "EOC_MEDITATE_RESTORE_QI" },
+      { "run_eocs": [ "EOC_MEDITATE_LEARN_SKILLS" ], "time_in_future": [ "5 minutes", "15 minutes" ] }
     ]
   },
   {
@@ -283,21 +284,21 @@
                 }
               },
               {
-                "case": 2,
+                "case": 3,
                 "effect": {
                   "if": { "not": { "u_has_effect": "disabled", "bodypart": "arm_r" } },
                   "then": { "math": [ "u_hp('arm_r') += rand(1)" ] }
                 }
               },
               {
-                "case": 2,
+                "case": 4,
                 "effect": {
                   "if": { "not": { "u_has_effect": "disabled", "bodypart": "leg_l" } },
                   "then": { "math": [ "u_hp('leg_l') += rand(1)" ] }
                 }
               },
               {
-                "case": 2,
+                "case": 5,
                 "effect": {
                   "if": { "not": { "u_has_effect": "disabled", "bodypart": "leg_r" } },
                   "then": { "math": [ "u_hp('leg_r') += rand(1)" ] }
