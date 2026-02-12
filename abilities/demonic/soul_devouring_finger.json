@@ -5,7 +5,7 @@
     "name": "Heaven Devouring Art",
     "description": "Forcefully absorb qi from your living opponent. This demonic art induces madness.",
     "message": "<HEAVEN_DEVOURING_ART_MESSAGES>",
-    "spell_class": "DEMONIC",
+    "spell_class": "SOUL_DEVOURING_FINGER",
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_HEAVEN_DEVOURING_ART_START",

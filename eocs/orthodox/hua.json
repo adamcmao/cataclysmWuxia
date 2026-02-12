@@ -1,5 +1,19 @@
 [
   {
+    "type": "effect_on_condition",
+    "id": "EOC_WIELDING_SWORD",
+    "condition": {
+      "or": [
+        { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }
+      ]
+    }
+  },
+  {
     "type": "snippet",
     "category": "<SWORD_SOUNDS>",
     "text": [ "Whoosh!", "Whirr!", "Swoop!", "Hiss!", "Fssst!", "Shaaa!", "Shing!", "Zip!", "Shrk!", "Heng!", "Zheng!" ]
@@ -31,19 +45,7 @@
   },
   {
     "type": "snippet",
-    "category": "<DRIPPING_RED_RAIN_MESSAGES>",
-    "text": [
-      "You extend and retract your blade, only after does a drop of crimson fall.",
-      "A touch so light, the air remained undisturbed, only for thin line to appear.",
-      "You stab unfelt.",
-      "Lighter than a falling hair, your cut goes unnoticed.",
-      "Shallow and clean, your cut is unwilling to linger.",
-      "Your sword touches and withdraws, only the wound remembers to bleed."
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<WHITE_CRANE_SPREADS_ITS_WINGS_MESSAGES>",
+    "category": "<HUA_CIRCULAR_SWORD_MESSAGES>",
     "text": [
       "Shoulders relaxed, arms outstreched, you swing in a powerful wide arc. <SWORD_SOUNDS>",
       "Your sword flashes in a smooth sweeping arc, striking every enemy in front as feathers of killing intent scatter on the wind.",
@@ -60,19 +62,5 @@
       "Like a meteor plunging from the heavens, you close the distance in a single bound, your sword flashing in a circular sweep.",
       "You fall from the sky striking the earth, landing at the enemy, blade flashing in a radiant ring."
     ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_WIELDING_SWORD",
-    "condition": {
-      "or": [
-        { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }
-      ]
-    }
   }
 ]

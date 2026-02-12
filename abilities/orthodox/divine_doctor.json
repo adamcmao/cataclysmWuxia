@@ -6,7 +6,7 @@
     "name": "Three Needles Draw Venom",
     "description": "Carefully insert needles to draw poison from your body",
     "message": "You insert needles across your chest to expel the poison in your body.",
-    "spell_class": "QI",
+    "spell_class": "DIVINE_DOCTOR",
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_THREE_NEEDLES_DRAW_VENOM_START",

@@ -33,6 +33,18 @@
     ]
   },
   {
+    "type": "snippet",
+    "category": "<DRIPPING_RED_RAIN_MESSAGES>",
+    "text": [
+      "You extend and retract your blade, only after does a drop of crimson fall.",
+      "A touch so light, the air remained undisturbed, only for thin line to appear.",
+      "You stab unfelt.",
+      "Lighter than a falling hair, your cut goes unnoticed.",
+      "Shallow and clean, your cut is unwilling to linger.",
+      "Your sword touches and withdraws, only the wound remembers to bleed."
+    ]
+  },
+  {
     "type": "effect_on_condition",
     "id": "EOC_LOSE_BLOOD_TINY",
     "effect": [ { "math": [ "u_blood_usage = 100" ] }, { "run_eocs": [ "EOC_USE_BLOOD_OR_GROUND" ] } ]
