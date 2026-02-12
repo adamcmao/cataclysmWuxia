@@ -126,6 +126,7 @@ The effect is lost when
 	The player runs out of qi (the effects have a continous qi drain)
 Have a super fast one tile dash
 	Have its cost increase each time it is cast in a row
+		Look into u_spellcasting_adjustment, and creating an effect with increasing intensity to tie into this
 
 # Meditate
 Meditating restores qi over time
