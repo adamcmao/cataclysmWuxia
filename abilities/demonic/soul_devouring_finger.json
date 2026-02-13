@@ -1,6 +1,6 @@
 [
   {
-    "id": "heaven_devouring_art",
+    "id": "sdf_heaven_devouring_art",
     "type": "SPELL",
     "name": "Heaven Devouring Art",
     "description": "Forcefully absorb qi from your living opponent. This demonic art induces madness.",
@@ -20,7 +20,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "soul_burning_meridian_reversal",
+    "id": "sdf_soul_burning_meridian_reversal",
     "//": "Give huge buff for 5 minutes. After 1 minute side effects start kicking in. After the 5 minutes, 1 day penalty",
     "///": "You will probably die",
     "type": "SPELL",

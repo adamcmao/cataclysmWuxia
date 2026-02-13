@@ -1,6 +1,6 @@
 [
   {
-    "id": "dog_beating_staff_technique",
+    "id": "beggar_dog_beating_staff_technique",
     "type": "SPELL",
     "name": "Dog Beating Staff",
     "description": "A deceptive series of flowing moves that to the untrained eye appear to be nothing more than untrained swings.",
@@ -8,9 +8,9 @@
     "spell_class": "BEGGAR",
     "shape": "blast",
     "effect": "attack",
-    "extra_effects": [ { "id": "dog_beating_staff_technique_actual" } ],
-    "min_damage": { "math": [ "(u_spell_level('dog_beating_staff_technique') * 0.5) + 2" ] },
-    "max_damage": { "math": [ "(u_spell_level('dog_beating_staff_technique') * 1) + 5" ] },
+    "extra_effects": [ { "id": "beggar_dog_beating_staff_technique_actual" } ],
+    "min_damage": { "math": [ "(u_spell_level('beggar_dog_beating_staff_technique') * 0.5) + 2" ] },
+    "max_damage": { "math": [ "(u_spell_level('beggar_dog_beating_staff_technique') * 1) + 5" ] },
     "max_level": 10,
     "valid_targets": [ "hostile" ],
     "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT", "WONDER" ],
@@ -24,7 +24,7 @@
   },
   {
     "//": "This is the spell repeated by dog_beating_staff_technique",
-    "id": "dog_beating_staff_technique_actual",
+    "id": "beggar_dog_beating_staff_technique_actual",
     "type": "SPELL",
     "name": "Dog Beating Staff - HIDDEN",
     "description": "You should not see this",
@@ -33,15 +33,15 @@
     "shape": "blast",
     "effect": "attack",
     "damage_type": "bash",
-    "min_damage": { "math": [ "(u_spell_level('dog_beating_staff_technique') * 0.5) + 5" ] },
-    "max_damage": { "math": [ "(u_spell_level('dog_beating_staff_technique') * 1) + 10" ] },
+    "min_damage": { "math": [ "(u_spell_level('beggar_dog_beating_staff_technique') * 0.5) + 5" ] },
+    "max_damage": { "math": [ "(u_spell_level('beggar_dog_beating_staff_technique') * 1) + 10" ] },
     "max_level": 10,
     "valid_targets": [ "hostile" ],
     "flags": [ "NO_FAIL", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS", "SILENT" ],
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "staff_turns_beggar_firm",
+    "id": "beggar_staff_turns_beggar_firm",
     "type": "SPELL",
     "name": "Staff Turns, Beggar Stand Firm",
     "description": "Sweep the floor around you, striking anyone in your way.",
@@ -62,7 +62,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "staff_turns_beggar_firm_actual",
+    "id": "beggar_staff_turns_beggar_firm_actual",
     "type": "SPELL",
     "name": "Staff Turns, Beggar Stand Firm - HIDDEN",
     "description": "You should not see this",
@@ -71,15 +71,15 @@
     "shape": "blast",
     "effect": "attack",
     "damage_type": "bash",
-    "min_damage": { "math": [ "(u_spell_level('staff_turns_beggar_firm') * 0.5) + 1 " ] },
-    "max_damage": { "math": [ "(u_spell_level('staff_turns_beggar_firm') * 2) + 5" ] },
+    "min_damage": { "math": [ "(u_spell_level('beggar_staff_turns_beggar_firm') * 0.5) + 1 " ] },
+    "max_damage": { "math": [ "(u_spell_level('beggar_staff_turns_beggar_firm') * 2) + 5" ] },
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
     "flags": [ "SILENT", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
     "min_range": 0
   },
   {
-    "id": "pierce_the_alley",
+    "id": "beggar_pierce_the_alley",
     "type": "SPELL",
     "name": "Pierce the Alley",
     "description": "Thrust your staff forward towards your foe",
@@ -102,7 +102,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "pierce_the_alley_actual",
+    "id": "beggar_pierce_the_alley_actual",
     "type": "SPELL",
     "name": "Pierce the Alley - HIDDEN",
     "description": "You should not see this",
@@ -110,8 +110,8 @@
     "shape": "blast",
     "effect": "attack",
     "damage_type": "bash",
-    "min_damage": { "math": [ "(u_spell_level('pierce_the_alley') * 1) + 5 " ] },
-    "max_damage": { "math": [ "(u_spell_level('pierce_the_alley') * 2) + 10" ] },
+    "min_damage": { "math": [ "(u_spell_level('beggar_pierce_the_alley') * 1) + 5 " ] },
+    "max_damage": { "math": [ "(u_spell_level('beggar_pierce_the_alley') * 2) + 10" ] },
     "max_level": 10,
     "valid_targets": [ "hostile", "ally" ],
     "flags": [ "SILENT", "RANDOM_DAMAGE", "SOMATIC", "NO_HANDS" ],
@@ -122,7 +122,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "stick_snags_the_sleeve",
+    "id": "beggar_stick_snags_the_sleeve",
     "type": "SPELL",
     "name": "Stick Snags the Sleeve",
     "description": "Pull your enemy close to you",
@@ -145,7 +145,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "hidden_alley_rat_tide",
+    "id": "beggar_hidden_alley_rat_tide",
     "type": "SPELL",
     "name": "Hidden Alley Rat Tide",
     "description": "Your time lying on the earth has allowed you to call upon those hated.",
@@ -154,8 +154,8 @@
     "shape": "blast",
     "effect": "summon",
     "effect_str": "wuxia_spirit_rat",
-    "min_damage": { "math": [ "(u_spell_level('hidden_alley_rat_tide') * 0.2) + 1" ] },
-    "max_damage": { "math": [ "(u_spell_level('hidden_alley_rat_tide') * 2) + 1" ] },
+    "min_damage": { "math": [ "(u_spell_level('beggar_hidden_alley_rat_tide') * 0.2) + 1" ] },
+    "max_damage": { "math": [ "(u_spell_level('beggar_hidden_alley_rat_tide') * 2) + 1" ] },
     "max_level": 10,
     "valid_targets": [ "ground" ],
     "flags": [ "SOMATIC", "NO_HANDS", "SILENT" ],
@@ -166,8 +166,8 @@
     "max_range": 3,
     "min_aoe": 1,
     "max_aoe": 1,
-    "min_duration": { "math": [ "( (u_spell_level('hidden_alley_rat_tide') * 6000) + 6000 )" ] },
-    "max_duration": { "math": [ "( (u_spell_level('hidden_alley_rat_tide') * 6000) + 60000)" ] },
+    "min_duration": { "math": [ "( (u_spell_level('beggar_hidden_alley_rat_tide') * 6000) + 6000 )" ] },
+    "max_duration": { "math": [ "( (u_spell_level('beggar_hidden_alley_rat_tide') * 6000) + 60000)" ] },
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]

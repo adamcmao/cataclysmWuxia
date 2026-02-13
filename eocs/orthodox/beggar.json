@@ -78,7 +78,7 @@
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "message": "<BASH_SOUNDS>" },
-      { "npc_cast_spell": { "id": "pierce_the_alley_actual" }, "loc": { "context_val": "loc" } }
+      { "npc_cast_spell": { "id": "beggar_pierce_the_alley_actual" }, "loc": { "context_val": "loc" } }
     ]
   },
   {
@@ -87,7 +87,7 @@
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "message": "<BASH_SOUNDS>" },
-      { "npc_cast_spell": { "id": "staff_turns_beggar_firm_actual" }, "loc": { "context_val": "loc" } }
+      { "npc_cast_spell": { "id": "beggar_staff_turns_beggar_firm_actual" }, "loc": { "context_val": "loc" } }
     ]
   }
 ]

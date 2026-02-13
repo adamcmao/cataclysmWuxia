@@ -68,11 +68,11 @@
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "message": "Like the heavens you rise upwards and strike!" },
-      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "shaolin_heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
       { "message": "Like the earth you impale the center!" },
-      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "shaolin_heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
       { "message": "Like the mortal you drive your opponent into the ground to rest!" },
-      { "npc_cast_spell": { "id": "heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "shaolin_heaven_earth_mortal_actual" }, "loc": { "context_val": "loc" } },
       { "u_add_effect": "downed", "duration": "5 seconds" }
     ]
   }

@@ -1,6 +1,6 @@
 [
   {
-    "id": "yin_essence_reforging",
+    "id": "jiangshi_yin_essence_reforging",
     "type": "SPELL",
     "name": "Yin Essence Reforging",
     "description": "Draw energy from yourself to heal a jiangshi",
@@ -20,19 +20,19 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "yin_essence_reforging_actual",
+    "id": "jiangshi_yin_essence_reforging_actual",
     "type": "SPELL",
     "name": "Yin Essence Reforging - HIDDEN",
     "description": "",
     "message": "",
     "spell_class": "JIANGSHI",
     "valid_targets": [ "ally", "hostile" ],
-    "min_damage": { "math": [ "(u_spell_level('yin_essence_reforging') * -2) - 1" ] },
-    "max_damage": { "math": [ "(u_spell_level('yin_essence_reforging') * -5) - 5" ] },
-    "min_dot": { "math": [ "(u_spell_level('yin_essence_reforging') * -0.5)" ] },
-    "max_dot": { "math": [ "(u_spell_level('yin_essence_reforging') * -1)" ] },
-    "min_duration": { "math": [ "(u_spell_level('yin_essence_reforging') * 100) + 900" ] },
-    "max_duration": { "math": [ "(u_spell_level('yin_essence_reforging') * 250) + 1000" ] },
+    "min_damage": { "math": [ "(u_spell_level('jiangshi_yin_essence_reforging') * -2) - 1" ] },
+    "max_damage": { "math": [ "(u_spell_level('jiangshi_yin_essence_reforging') * -5) - 5" ] },
+    "min_dot": { "math": [ "(u_spell_level('jiangshi_yin_essence_reforging') * -0.5)" ] },
+    "max_dot": { "math": [ "(u_spell_level('jiangshi_yin_essence_reforging') * -1)" ] },
+    "min_duration": { "math": [ "(u_spell_level('jiangshi_yin_essence_reforging') * 100) + 900" ] },
+    "max_duration": { "math": [ "(u_spell_level('jiangshi_yin_essence_reforging') * 250) + 1000" ] },
     "max_level": 10,
     "min_range": 3,
     "max_range": 3,
@@ -41,7 +41,7 @@
     "flags": [ "RANDOM_DAMAGE", "SOMATIC", "SILENT", "NO_HANDS", "PERCENTAGE_DAMAGE" ]
   },
   {
-    "id": "unrotting_corpse_enhancement",
+    "id": "jiangshi_unrotting_corpse_enhancement",
     "type": "SPELL",
     "name": "Unrotting Corpse Enhancement",
     "description": "Draw energy from yourself to strength a jiangshi.",
@@ -61,7 +61,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "grave_mist_disappearance",
+    "id": "jiangshi_grave_mist_disappearance",
     "type": "SPELL",
     "name": "Grave Mist Disappearance",
     "description": "Draw energy from yourself to strength a jiangshi.",

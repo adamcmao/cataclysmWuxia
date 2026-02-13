@@ -23,7 +23,7 @@
     "effect": [
       { "u_location_variable": { "context_val": "loc" } },
       { "u_add_effect": "effect_qi_drained", "duration": "10 hours" },
-      { "math": [ "n_vitamin('qi_vitamin') += (rand(n_spell_level('heaven_devouring_art')*5)+50)" ] },
+      { "math": [ "n_vitamin('qi_vitamin') += (rand(n_spell_level('sdf_heaven_devouring_art')*5)+50)" ] },
       {
         "weighted_list_eocs": [ [ "EOC_HEAVEN_DEVOURING_ART_VISION", 1 ], [ "EOC_HEAVEN_DEVOURING_ART_HALLUCINATE", 1 ] ]
       }

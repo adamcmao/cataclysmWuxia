@@ -1,6 +1,6 @@
 [
   {
-    "id": "three_needles_draw_venom",
+    "id": "divine_doctor_three_needles_draw_venom",
     "//": "TODO: Figure out why spell components aren't working",
     "type": "SPELL",
     "name": "Three Needles Draw Venom",

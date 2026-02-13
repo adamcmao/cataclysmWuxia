@@ -4,11 +4,7 @@
     "id": "EOC_UNLOCK_MEDITATE",
     "eoc_type": "EVENT",
     "required_event": "game_start",
-    "effect": [
-      { "math": [ "u_spell_level('soul_burning_meridian_reversal') = 0" ] },
-      { "u_learn_recipe": "meditate_to_restore_qi" },
-      { "u_learn_recipe": "ritual_body_tempered" }
-    ]
+    "effect": [ { "u_learn_recipe": "meditate_to_restore_qi" }, { "u_learn_recipe": "ritual_body_tempered" } ]
   },
   {
     "type": "effect_on_condition",
@@ -64,52 +60,52 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_HIDDEN_ALLEY_RAT_TIDE",
-    "condition": { "math": [ "u_spell_level('hidden_alley_rat_tide') == -1" ] },
+    "condition": { "math": [ "u_spell_level('beggar_hidden_alley_rat_tide') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Hidden Alley Rat Tide", "popup": true },
-      { "math": [ "u_spell_level('hidden_alley_rat_tide') = 0" ] }
+      { "math": [ "u_spell_level('beggar_hidden_alley_rat_tide') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('hidden_alley_rat_tide') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('beggar_hidden_alley_rat_tide') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_STICK_SNAGS_THE_SLEEVE",
-    "condition": { "math": [ "u_spell_level('stick_snags_the_sleeve') == -1" ] },
+    "condition": { "math": [ "u_spell_level('beggar_stick_snags_the_sleeve') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Stick Snags The Sleeve", "popup": true },
-      { "math": [ "u_spell_level('stick_snags_the_sleeve') = 0" ] }
+      { "math": [ "u_spell_level('beggar_stick_snags_the_sleeve') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('stick_snags_the_sleeve') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('beggar_stick_snags_the_sleeve') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_PIERCE_THE_ALLEY",
-    "condition": { "math": [ "u_spell_level('pierce_the_alley') == -1" ] },
+    "condition": { "math": [ "u_spell_level('beggar_pierce_the_alley') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Pierce The Alley", "popup": true },
-      { "math": [ "u_spell_level('pierce_the_alley') = 0" ] }
+      { "math": [ "u_spell_level('beggar_pierce_the_alley') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('pierce_the_alley') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('beggar_pierce_the_alley') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_DOG_BEATING_STAFF_TECHNIQUE",
-    "condition": { "math": [ "u_spell_level('dog_beating_staff_technique') == -1" ] },
+    "condition": { "math": [ "u_spell_level('beggar_dog_beating_staff_technique') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Dog Beating Staff Technique", "popup": true },
-      { "math": [ "u_spell_level('dog_beating_staff_technique') = 0" ] }
+      { "math": [ "u_spell_level('beggar_dog_beating_staff_technique') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('dog_beating_staff_technique') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('beggar_dog_beating_staff_technique') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_DOG_STAFF_TURNS_BEGGAR_FIRM",
-    "condition": { "math": [ "u_spell_level('staff_turns_beggar_firm') == -1" ] },
+    "condition": { "math": [ "u_spell_level('beggar_staff_turns_beggar_firm') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Staff Turns Beggar Firm", "popup": true },
-      { "math": [ "u_spell_level('staff_turns_beggar_firm') = 0" ] }
+      { "math": [ "u_spell_level('beggar_staff_turns_beggar_firm') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('staff_turns_beggar_firm') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('beggar_staff_turns_beggar_firm') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
@@ -245,7 +241,7 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_DEMONIC",
-    "//condition": "TODO: Add check if you are orthodox",
+    "//condition": "TODO: Add check if you are demonic",
     "effect": [ { "run_eocs": [ "EOC_MEDITATE_LEARN_JIANGSHI", "EOC_MEDITATE_LEARN_BLOOD_SABRE" ] } ]
   },
   {
@@ -281,32 +277,32 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_YIN_ESSENCE_REFORGING",
-    "condition": { "math": [ "u_spell_level('yin_essence_reforging') == -1" ] },
+    "condition": { "math": [ "u_spell_level('jiangshi_yin_essence_reforging') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Yin Essence Reforging", "popup": true },
-      { "math": [ "u_spell_level('yin_essence_reforging') = 0" ] }
+      { "math": [ "u_spell_level('jiangshi_yin_essence_reforging') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('yin_essence_reforging') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('jiangshi_yin_essence_reforging') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_UNROTTING_CORPSE_ENHANCEMENT",
-    "condition": { "math": [ "u_spell_level('unrotting_corpse_enhancement') == -1" ] },
+    "condition": { "math": [ "u_spell_level('jiangshi_unrotting_corpse_enhancement') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Unrotting Corpse Enhancement", "popup": true },
-      { "math": [ "u_spell_level('unrotting_corpse_enhancement') = 0" ] }
+      { "math": [ "u_spell_level('jiangshi_unrotting_corpse_enhancement') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('unrotting_corpse_enhancement') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('jiangshi_unrotting_corpse_enhancement') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_GRAVE_MIST_DISAPPEARANCE",
-    "condition": { "math": [ "u_spell_level('grave_mist_disappearance') == -1" ] },
+    "condition": { "math": [ "u_spell_level('jiangshi_grave_mist_disappearance') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Grave Mist Disappearance", "popup": true },
-      { "math": [ "u_spell_level('grave_mist_disappearance') = 0" ] }
+      { "math": [ "u_spell_level('jiangshi_grave_mist_disappearance') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('grave_mist_disappearance') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('jiangshi_grave_mist_disappearance') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
@@ -350,61 +346,61 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_SCARLET_KNIFE_PULSE",
-    "condition": { "math": [ "u_spell_level('scarlet_knife_pulse') == -1" ] },
+    "condition": { "math": [ "u_spell_level('blood_sabre_scarlet_knife_pulse') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Scarlet Knife Pulse", "popup": true },
-      { "math": [ "u_spell_level('scarlet_knife_pulse') = 0" ] }
+      { "math": [ "u_spell_level('blood_sabre_scarlet_knife_pulse') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('scarlet_knife_pulse') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('blood_sabre_scarlet_knife_pulse') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_RED_THREAD_BINDING",
-    "condition": { "math": [ "u_spell_level('red_thread_binding') == -1" ] },
+    "condition": { "math": [ "u_spell_level('gu_red_thread_binding') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - RED_THREAD_BINDING", "popup": true },
-      { "math": [ "u_spell_level('red_thread_binding') = 0" ] }
+      { "math": [ "u_spell_level('gu_red_thread_binding') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('red_thread_binding') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('gu_red_thread_binding') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_CRIMSON_BLOOD_SWORD",
-    "condition": { "math": [ "u_spell_level('crimson_blood_sword') == -1" ] },
+    "condition": { "math": [ "u_spell_level('blood_sabre_crimson_blood_sword') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Crimson Blood Sword", "popup": true },
-      { "math": [ "u_spell_level('crimson_blood_sword') = 0" ] }
+      { "math": [ "u_spell_level('blood_sabre_crimson_blood_sword') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('crimson_blood_sword') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('blood_sabre_crimson_blood_sword') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART",
-    "condition": { "math": [ "u_spell_level('red_asura_revival_art') == -1" ] },
+    "condition": { "math": [ "u_spell_level('gu_red_asura_revival_art') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Red Asura Revival Art", "popup": true },
-      { "math": [ "u_spell_level('red_asura_revival_art') = 0" ] }
+      { "math": [ "u_spell_level('gu_red_asura_revival_art') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('red_asura_revival_art') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('gu_red_asura_revival_art') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_FLOWING_BLOOD_BLADES",
-    "condition": { "math": [ "u_spell_level('flowing_blood_blades') == -1" ] },
+    "condition": { "math": [ "u_spell_level('blood_sabre_flowing_blood_blades') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Flowing Blood Blades", "popup": true },
-      { "math": [ "u_spell_level('flowing_blood_blades') = 0" ] }
+      { "math": [ "u_spell_level('blood_sabre_flowing_blood_blades') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('flowing_blood_blades') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('blood_sabre_flowing_blood_blades') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LEVEL_UP_HEAVEN_DEVOURING_ART",
-    "condition": { "math": [ "u_spell_level('heaven_devouring_art') == -1" ] },
+    "condition": { "math": [ "u_spell_level('sdf_heaven_devouring_art') == -1" ] },
     "effect": [
       { "message": "You learned a new technique - Heaven Devouring Art", "popup": true },
-      { "math": [ "u_spell_level('heaven_devouring_art') = 0" ] }
+      { "math": [ "u_spell_level('sdf_heaven_devouring_art') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('heaven_devouring_art') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('sdf_heaven_devouring_art') += rand(1000)" ] }
   }
 ]

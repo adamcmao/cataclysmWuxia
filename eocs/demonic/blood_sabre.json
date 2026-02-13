@@ -103,11 +103,11 @@
     "type": "effect_on_condition",
     "id": "EOC_SPAWN_BLOOD_SWORD",
     "effect": {
-      "switch": { "math": [ "u_spell_level('crimson_blood_sword')" ] },
+      "switch": { "math": [ "u_spell_level('blood_sabre_crimson_blood_sword')" ] },
       "cases": [
-        { "case": 0, "effect": { "u_cast_spell": { "id": "spawn_crimson_blood_sword_actual" } } },
-        { "case": 5, "effect": { "u_cast_spell": { "id": "spawn_crimson_blood_sword_actual2" } } },
-        { "case": 10, "effect": { "u_cast_spell": { "id": "spawn_crimson_blood_sword_actual3" } } }
+        { "case": 0, "effect": { "u_cast_spell": { "id": "blood_sabre_spawn_crimson_blood_sword_actual" } } },
+        { "case": 5, "effect": { "u_cast_spell": { "id": "blood_sabre_spawn_crimson_blood_sword_actual2" } } },
+        { "case": 10, "effect": { "u_cast_spell": { "id": "blood_sabre_spawn_crimson_blood_sword_actual3" } } }
       ]
     }
   }
