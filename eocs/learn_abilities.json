@@ -109,6 +109,30 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_DIVINE_DOCTOR",
+    "//condition": "TODO: Figure out more details",
+    "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [ [ "EOC_LEVEL_UP_THREE_NEEDLES_DRAW_VENOM", 1 ] ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_THREE_NEEDLES_DRAW_VENOM",
+    "condition": { "math": [ "u_spell_level('divine_doctor_three_needles_draw_venom') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Three Needles Draw Venom", "popup": true },
+      { "math": [ "u_spell_level('divine_doctor_three_needles_draw_venom') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('divine_doctor_three_needles_draw_venom') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_FORMATIONS",
+    "//condition": "TODO: Figure out more details",
+    "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [  ] }
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_HUA",
     "condition": {
       "and": [
@@ -240,9 +264,174 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_UNORTHODOX",
+    "//condition": "TODO: Add check if you are unorthodox",
+    "effect": [
+      {
+        "run_eocs": [
+          "EOC_MEDITATE_LEARN_DRUNKEN_FIST",
+          "EOC_MEDITATE_LEARN_FIVE_VENOMS",
+          "EOC_MEDITATE_LEARN_HIDDEN_WEAPONS",
+          "EOC_MEDITATE_LEARN_MOUNTAIN_SPLITTING_AXE",
+          "EOC_MEDITATE_LEARN_SHADOWLESS_SWORD"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_DRUNKEN_FIST",
+    "//condition": "TODO: Figure this out, maybe while drunk?",
+    "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [  ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_FIVE_VENOMS",
+    "//condition": "TODO: Figure this out, maybe while poisoned?",
+    "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [  ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_HIDDEN_WEAPONS",
+    "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [  ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_MOUNTAIN_SPLITTING_AXE",
+    "condition": {
+      "and": [
+        {
+          "or": [
+            { "u_has_wielded_with_weapon_category": "GREAT_AXES" },
+            { "u_has_wielded_with_weapon_category": "HAND_AXES" },
+            { "u_has_wielded_with_weapon_category": "GREAT_HAMMERS" },
+            { "u_has_wielded_with_weapon_category": "MACES" },
+            { "u_has_wielded_with_weapon_category": "FLAILS" },
+            { "u_has_wielded_with_weapon_category": "BATONS" }
+          ]
+        },
+        { "math": [ "rand(30) == 1" ] }
+      ]
+    },
+    "effect": { "weighted_list_eocs": [  ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_SHADOWLESS_SWORD",
+    "//condition": "TODO: Figure this out, probably w/sword at night, or maybe just night",
+    "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [  ] }
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_DEMONIC",
     "//condition": "TODO: Add check if you are demonic",
-    "effect": [ { "run_eocs": [ "EOC_MEDITATE_LEARN_JIANGSHI", "EOC_MEDITATE_LEARN_BLOOD_SABRE" ] } ]
+    "effect": [
+      {
+        "run_eocs": [
+          "EOC_MEDITATE_LEARN_BLOOD_SABRE",
+          "EOC_MEDITATE_LEARN_FALLEN_BUDDHA_SPEAR",
+          "EOC_MEDITATE_LEARN_GU",
+          "EOC_MEDITATE_LEARN_JIANGSHI",
+          "EOC_MEDITATE_LEARN_SOUL_DEVOURING_FINGER"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_BLOOD_SABRE",
+    "condition": { "math": [ "rand(30) == 1" ] },
+    "effect": [
+      { "u_location_variable": { "context_val": "bloody_ground" }, "field": "fd_blood", "target_max_radius": 1 },
+      {
+        "if": { "and": [ { "map_field_id": "fd_blood", "loc": { "context_val": "bloody_ground" } } ] },
+        "then": {
+          "weighted_list_eocs": [
+            [ "EOC_LEVEL_UP_SCARLET_KNIFE_PULSE", 1 ],
+            [ "EOC_LEVEL_UP_CRIMSON_BLOOD_SWORD", 1 ],
+            [ "EOC_LEVEL_UP_FLOWING_BLOOD_BLADES", 1 ],
+            [ "EOC_LEVEL_UP_DRIPPING_RED_RAIN", 1 ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_SCARLET_KNIFE_PULSE",
+    "condition": { "math": [ "u_spell_level('blood_sabre_scarlet_knife_pulse') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Scarlet Knife Pulse", "popup": true },
+      { "math": [ "u_spell_level('blood_sabre_scarlet_knife_pulse') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('blood_sabre_scarlet_knife_pulse') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_CRIMSON_BLOOD_SWORD",
+    "condition": { "math": [ "u_spell_level('blood_sabre_crimson_blood_sword') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Crimson Blood Sword", "popup": true },
+      { "math": [ "u_spell_level('blood_sabre_crimson_blood_sword') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('blood_sabre_crimson_blood_sword') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_FLOWING_BLOOD_BLADES",
+    "condition": { "math": [ "u_spell_level('blood_sabre_flowing_blood_blades') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Flowing Blood Blades", "popup": true },
+      { "math": [ "u_spell_level('blood_sabre_flowing_blood_blades') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('blood_sabre_flowing_blood_blades') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_DRIPPING_RED_RAIN",
+    "condition": { "math": [ "u_spell_level('blood_sabre_dripping_red_rain') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Dripping Red Rain", "popup": true },
+      { "math": [ "u_spell_level('blood_sabre_dripping_red_rain') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('blood_sabre_dripping_red_rain') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_FALLEN_BUDDHA_SPEAR",
+    "condition": { "and": [ { "u_has_wielded_with_weapon_category": "SPEARS" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [  ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MEDITATE_LEARN_GU",
+    "//condition": "TODO: Figure this out",
+    "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
+    "effect": { "weighted_list_eocs": [ [ "EOC_LEVEL_UP_RED_THREAD_BINDING", 1 ], [ "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART", 1 ] ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_RED_THREAD_BINDING",
+    "condition": { "math": [ "u_spell_level('gu_red_thread_binding') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - RED_THREAD_BINDING", "popup": true },
+      { "math": [ "u_spell_level('gu_red_thread_binding') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('gu_red_thread_binding') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART",
+    "condition": { "math": [ "u_spell_level('gu_red_asura_revival_art') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Red Asura Revival Art", "popup": true },
+      { "math": [ "u_spell_level('gu_red_asura_revival_art') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('gu_red_asura_revival_art') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
@@ -324,74 +513,11 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_MEDITATE_LEARN_BLOOD_SABRE",
-    "condition": { "math": [ "rand(30) == 1" ] },
-    "effect": [
-      { "u_location_variable": { "context_val": "bloody_ground" }, "field": "fd_blood", "target_max_radius": 1 },
-      {
-        "if": { "and": [ { "map_field_id": "fd_blood", "loc": { "context_val": "bloody_ground" } } ] },
-        "then": {
-          "weighted_list_eocs": [
-            [ "EOC_LEVEL_UP_SCARLET_KNIFE_PULSE", 1 ],
-            [ "EOC_LEVEL_UP_RED_THREAD_BINDING", 1 ],
-            [ "EOC_LEVEL_UP_CRIMSON_BLOOD_SWORD", 1 ],
-            [ "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART", 1 ],
-            [ "EOC_LEVEL_UP_FLOWING_BLOOD_BLADES", 1 ],
-            [ "EOC_LEVEL_UP_HEAVEN_DEVOURING_ART", 1 ]
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_SCARLET_KNIFE_PULSE",
-    "condition": { "math": [ "u_spell_level('blood_sabre_scarlet_knife_pulse') == -1" ] },
-    "effect": [
-      { "message": "You learned a new technique - Scarlet Knife Pulse", "popup": true },
-      { "math": [ "u_spell_level('blood_sabre_scarlet_knife_pulse') = 0" ] }
-    ],
-    "false_effect": { "math": [ "u_spell_exp('blood_sabre_scarlet_knife_pulse') += rand(1000)" ] }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_RED_THREAD_BINDING",
-    "condition": { "math": [ "u_spell_level('gu_red_thread_binding') == -1" ] },
-    "effect": [
-      { "message": "You learned a new technique - RED_THREAD_BINDING", "popup": true },
-      { "math": [ "u_spell_level('gu_red_thread_binding') = 0" ] }
-    ],
-    "false_effect": { "math": [ "u_spell_exp('gu_red_thread_binding') += rand(1000)" ] }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_CRIMSON_BLOOD_SWORD",
-    "condition": { "math": [ "u_spell_level('blood_sabre_crimson_blood_sword') == -1" ] },
-    "effect": [
-      { "message": "You learned a new technique - Crimson Blood Sword", "popup": true },
-      { "math": [ "u_spell_level('blood_sabre_crimson_blood_sword') = 0" ] }
-    ],
-    "false_effect": { "math": [ "u_spell_exp('blood_sabre_crimson_blood_sword') += rand(1000)" ] }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART",
-    "condition": { "math": [ "u_spell_level('gu_red_asura_revival_art') == -1" ] },
-    "effect": [
-      { "message": "You learned a new technique - Red Asura Revival Art", "popup": true },
-      { "math": [ "u_spell_level('gu_red_asura_revival_art') = 0" ] }
-    ],
-    "false_effect": { "math": [ "u_spell_exp('gu_red_asura_revival_art') += rand(1000)" ] }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_FLOWING_BLOOD_BLADES",
-    "condition": { "math": [ "u_spell_level('blood_sabre_flowing_blood_blades') == -1" ] },
-    "effect": [
-      { "message": "You learned a new technique - Flowing Blood Blades", "popup": true },
-      { "math": [ "u_spell_level('blood_sabre_flowing_blood_blades') = 0" ] }
-    ],
-    "false_effect": { "math": [ "u_spell_exp('blood_sabre_flowing_blood_blades') += rand(1000)" ] }
+    "id": "EOC_MEDITATE_LEARN_SOUL_DEVOURING_FINGER",
+    "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [ [ "EOC_LEVEL_UP_HEAVEN_DEVOURING_ART", 1 ], [ "EOC_LEVEL_UP_SOUL_BURNING_MERIDIAN_REVERSAL", 1 ] ]
+    }
   },
   {
     "type": "effect_on_condition",
@@ -402,5 +528,15 @@
       { "math": [ "u_spell_level('sdf_heaven_devouring_art') = 0" ] }
     ],
     "false_effect": { "math": [ "u_spell_exp('sdf_heaven_devouring_art') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_SOUL_BURNING_MERIDIAN_REVERSAL",
+    "condition": { "math": [ "u_spell_level('sdf_soul_burning_meridian_reversal') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Soul Burning Meridian Reversal", "popup": true },
+      { "math": [ "u_spell_level('sdf_soul_burning_meridian_reversal') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('sdf_soul_burning_meridian_reversal') += rand(1000)" ] }
   }
 ]
