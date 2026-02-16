@@ -1,6 +1,15 @@
 [
   {
     "type": "effect_type",
+    "id": "effect_phantom_step",
+    "name": [ "Phantom Step" ],
+    "desc": [ "The quick movement stresses your body" ],
+    "rating": "good",
+    "max_intensity": 10,
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
     "id": "effect_dot_qi_recovery_tier_1",
     "name": [ "Tiny Qi Recovery" ],
     "desc": [ "You are slowly recovering qi at a tiny rate." ],

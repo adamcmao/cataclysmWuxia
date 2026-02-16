@@ -1,5 +1,15 @@
 [
   {
+    "type": "snippet",
+    "category": "<PHANTOM_STEP_MESSAGES>",
+    "text": [
+      "Between heartbeats, you step swiftly.",
+      "You flicker and reappear.",
+      "Blurring, you vanish in a shimmer.",
+      "You step, and the world lags behind you."
+    ]
+  },
+  {
     "type": "effect_on_condition",
     "id": "EOC_WIND_FOLLOWING_STEPS_START",
     "condition": { "not": { "u_has_effect": "effect_wind_following_steps" } },
@@ -36,5 +46,89 @@
     "id": "EOC_WIND_FOLLOWING_STEPS_STOP",
     "condition": { "u_has_effect": "effect_wind_following_steps" },
     "effect": [ { "u_lose_effect": "effect_wind_following_steps" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_QINGGONG_PHANTOM_STEP",
+    "//effect": "TODO: Is there a better way to do this?",
+    "effect": [
+      {
+        "if": { "npc_has_effect": "effect_phantom_step", "intensity": 4 },
+        "then": [
+          { "npc_lose_effect": "effect_phantom_step" },
+          { "message": "Adding effect_phantom_step 5" },
+          { "npc_add_effect": "effect_phantom_step", "intensity": 5, "duration": "1 minutes" }
+        ],
+        "else": [
+          {
+            "if": { "npc_has_effect": "effect_phantom_step", "intensity": 3 },
+            "then": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "message": "Adding effect_phantom_step 4" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 4, "duration": "1 minutes" }
+            ],
+            "else": [
+              {
+                "if": { "npc_has_effect": "effect_phantom_step", "intensity": 2 },
+                "then": [
+                  { "npc_lose_effect": "effect_phantom_step" },
+                  { "message": "Adding effect_phantom_step 3" },
+                  { "npc_add_effect": "effect_phantom_step", "intensity": 3, "duration": "1 minutes" }
+                ],
+                "else": [
+                  {
+                    "if": { "npc_has_effect": "effect_phantom_step", "intensity": 1 },
+                    "then": [
+                      { "npc_lose_effect": "effect_phantom_step" },
+                      { "message": "Adding effect_phantom_step 2" },
+                      { "npc_add_effect": "effect_phantom_step", "intensity": 2, "duration": "1 minutes" }
+                    ],
+                    "else": [
+                      {
+                        "if": { "not": { "npc_has_effect": "effect_phantom_step" } },
+                        "then": [
+                          { "message": "Adding effect_phantom_step" },
+                          { "npc_add_effect": "effect_phantom_step", "intensity": 1, "duration": "1 minutes" }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PHANTOM_STEP_ADJUSTMENTS",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+    "condition": { "and": [ { "u_has_effect": "effect_phantom_step" } ] },
+    "//effect": "TODO: Is there a better way to do this?",
+    "effect": [
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 1 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 2" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 2 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 3" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 3 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 4" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 4 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 5" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 5 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 6" ] }
+      }
+    ]
   }
 ]
