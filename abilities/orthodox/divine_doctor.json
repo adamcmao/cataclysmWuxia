@@ -46,4 +46,13 @@
     "caster_condition_fail_message": "You're not suffering from poisoning and have nothing to detoxify.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
+  // All require needles
+  // Golden Lotus Bone Setting Art
+    // Skill to set bones
+  // Nine Pulse Rejuvenation Needles
+    // Skill to add long term health regen, up to 50% - 75% max
+  // Golden Thread Suturing Qi 
+    // Skill to reduce bleeding
+  // Golden Boar Meridian Stimulation
+    // Skill to add temp stat boosts
 ]
