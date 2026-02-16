@@ -1,0 +1,35 @@
+[
+  {
+    "type": "mutation",
+    "id": "ORTHODOX",
+    "name": "Orthodox",
+    "points": 0,
+    "description": "Uphold honour, loyalty, and justice.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "cancels": [ "UNORTHODOX", "DEMONIC" ]
+  },
+  {
+    "type": "mutation",
+    "id": "UNORTHODOX",
+    "name": "Unorthodox",
+    "points": 0,
+    "description": "Reject the rules, and follow your own path.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "cancels": [ "ORTHODOX", "DEMONIC" ]
+  },
+  {
+    "type": "mutation",
+    "id": "DEMONIC",
+    "name": "Demonic",
+    "points": 0,
+    "description": "Be ruthless and break all taboos.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "cancels": [ "ORTHODOX", "UNORTHODOX" ]
+  }
+]

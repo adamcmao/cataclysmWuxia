@@ -30,7 +30,7 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_ORTHODOX",
-    "//condition": "TODO: Add check if you are orthodox",
+    "condition": { "u_has_trait": "ORTHODOX" },
     "effect": [
       {
         "run_eocs": [
@@ -265,7 +265,7 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_UNORTHODOX",
-    "//condition": "TODO: Add check if you are unorthodox",
+    "condition": { "u_has_trait": "UNORTHODOX" },
     "effect": [
       {
         "run_eocs": [
@@ -328,7 +328,7 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_DEMONIC",
-    "//condition": "TODO: Add check if you are demonic",
+    "condition": { "u_has_trait": "DEMONIC" },
     "effect": [
       {
         "run_eocs": [
