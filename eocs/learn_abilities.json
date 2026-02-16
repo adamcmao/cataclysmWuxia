@@ -32,7 +32,6 @@
     "id": "EOC_PICK_CLASS",
     "condition": { "not": { "or": [ { "u_has_trait": "ORTHODOX" }, { "u_has_trait": "UNORTHODOX" }, { "u_has_trait": "DEMONIC" } ] } },
     "effect": [
-      { "message": "Picking a class" },
       {
         "run_eoc_selector": [ "EOC_BECOME_ORTHODOX", "EOC_BECOME_UNORTHODOX", "EOC_BECOME_DEMONIC" ],
         "allow_cancel": true,
@@ -62,7 +61,6 @@
     "id": "EOC_MEDITATE_LEARN_ORTHODOX",
     "condition": { "u_has_trait": "ORTHODOX" },
     "effect": [
-      { "message": "Trying to learn orthodox skills" },
       {
         "run_eocs": [
           "EOC_MEDITATE_LEARN_BEGGAR",
@@ -79,7 +77,6 @@
     "id": "EOC_MEDITATE_LEARN_BEGGAR",
     "condition": { "and": [ { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" }, { "math": [ "rand(30) == 1" ] } ] },
     "effect": [
-      { "message": "Learning a begger skills" },
       {
         "weighted_list_eocs": [
           [ "EOC_LEVEL_UP_HIDDEN_ALLEY_RAT_TIDE", 1 ],
@@ -146,10 +143,7 @@
     "id": "EOC_MEDITATE_LEARN_DIVINE_DOCTOR",
     "//condition": "TODO: Figure out more details",
     "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
-    "effect": [
-      { "message": "Trying to learn a divine doctor skill" },
-      { "weighted_list_eocs": [ [ "EOC_LEVEL_UP_THREE_NEEDLES_DRAW_VENOM", 1 ] ] }
-    ]
+    "effect": [ { "weighted_list_eocs": [ [ "EOC_LEVEL_UP_THREE_NEEDLES_DRAW_VENOM", 1 ] ] } ]
   },
   {
     "type": "effect_on_condition",
@@ -166,7 +160,7 @@
     "id": "EOC_MEDITATE_LEARN_FORMATIONS",
     "//condition": "TODO: Figure out more details",
     "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
-    "effect": [ { "message": "Trying to learn a formation skill" }, { "weighted_list_eocs": [  ] } ]
+    "effect": [  ]
   },
   {
     "type": "effect_on_condition",
@@ -187,7 +181,6 @@
       ]
     },
     "effect": [
-      { "message": "Trying to learn a hua skill" },
       {
         "weighted_list_eocs": [
           [ "EOC_LEVEL_UP_HEAVENS_BLINK", 1 ],
@@ -243,7 +236,6 @@
     "id": "EOC_MEDITATE_LEARN_SHAOLIN",
     "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
     "effect": [
-      { "message": "Trying to learn a shaolin skill" },
       {
         "weighted_list_eocs": [
           [ "EOC_LEVEL_UP_FLOWING_WATER_PALM", 1 ],
@@ -310,7 +302,6 @@
     "id": "EOC_MEDITATE_LEARN_UNORTHODOX",
     "condition": { "u_has_trait": "UNORTHODOX" },
     "effect": [
-      { "message": "Trying to learn a unorthodox skill" },
       {
         "run_eocs": [
           "EOC_MEDITATE_LEARN_DRUNKEN_FIST",
@@ -374,7 +365,6 @@
     "id": "EOC_MEDITATE_LEARN_DEMONIC",
     "condition": { "u_has_trait": "DEMONIC" },
     "effect": [
-      { "message": "Trying to learn a demonic skill" },
       {
         "run_eocs": [
           "EOC_MEDITATE_LEARN_BLOOD_SABRE",
