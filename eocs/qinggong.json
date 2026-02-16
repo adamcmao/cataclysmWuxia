@@ -50,54 +50,57 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_QINGGONG_PHANTOM_STEP",
-    "//effect": "TODO: Is there a better way to do this?",
     "effect": [
       {
-        "if": { "npc_has_effect": "effect_phantom_step", "intensity": 4 },
-        "then": [
-          { "npc_lose_effect": "effect_phantom_step" },
-          { "message": "Adding effect_phantom_step 5" },
-          { "npc_add_effect": "effect_phantom_step", "intensity": 5, "duration": "1 minutes" }
-        ],
-        "else": [
+        "switch": { "math": [ "n_effect_intensity('effect_phantom_step')" ] },
+        "cases": [
           {
-            "if": { "npc_has_effect": "effect_phantom_step", "intensity": 3 },
-            "then": [
+            "case": 0,
+            "effect": [
               { "npc_lose_effect": "effect_phantom_step" },
-              { "message": "Adding effect_phantom_step 4" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 1, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 1,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 2, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 2,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 3, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 3,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
               { "npc_add_effect": "effect_phantom_step", "intensity": 4, "duration": "1 minutes" }
-            ],
-            "else": [
-              {
-                "if": { "npc_has_effect": "effect_phantom_step", "intensity": 2 },
-                "then": [
-                  { "npc_lose_effect": "effect_phantom_step" },
-                  { "message": "Adding effect_phantom_step 3" },
-                  { "npc_add_effect": "effect_phantom_step", "intensity": 3, "duration": "1 minutes" }
-                ],
-                "else": [
-                  {
-                    "if": { "npc_has_effect": "effect_phantom_step", "intensity": 1 },
-                    "then": [
-                      { "npc_lose_effect": "effect_phantom_step" },
-                      { "message": "Adding effect_phantom_step 2" },
-                      { "npc_add_effect": "effect_phantom_step", "intensity": 2, "duration": "1 minutes" }
-                    ],
-                    "else": [
-                      {
-                        "if": { "not": { "npc_has_effect": "effect_phantom_step" } },
-                        "then": [
-                          { "message": "Adding effect_phantom_step" },
-                          { "npc_add_effect": "effect_phantom_step", "intensity": 1, "duration": "1 minutes" }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
+            ]
+          },
+          {
+            "case": 4,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 5, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 5,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 6, "duration": "1 minutes" }
             ]
           }
         ]
+      },
+      {
+        "if": { "not": { "npc_has_effect": "effect_phantom_step" } },
+        "then": [ { "npc_add_effect": "effect_phantom_step", "intensity": 1, "duration": "1 minutes" } ]
       }
     ]
   },
@@ -128,6 +131,10 @@
       {
         "if": { "u_has_effect": "effect_phantom_step", "intensity": 5 },
         "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 6" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 6 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 7" ] }
       }
     ]
   }
