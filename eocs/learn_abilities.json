@@ -210,7 +210,67 @@
     "id": "EOC_MEDITATE_LEARN_FORMATIONS",
     "//condition": "TODO: Figure out more details",
     "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
-    "effect": [  ]
+    "effect": [
+      {
+        "weighted_list_eocs": [
+          [ "EOC_LEVEL_UP_PEACH_BLOSSOM_FORMATION", 1 ],
+          [ "EOC_LEVEL_UP_CONCEALING_FOG_ARRAY", 1 ],
+          [ "EOC_LEVEL_UP_QI_SUPPRESSING_FORMATION", 1 ],
+          [ "EOC_LEVEL_UP_MERIDIAN_LOCK_FORMATION", 1 ],
+          [ "EOC_LEVEL_UP_HEAVENLY_DEMON_REPELLING_FORMATION", 1 ]
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_PEACH_BLOSSOM_FORMATION",
+    "condition": { "math": [ "u_spell_level('formations_peach_blossom_formation') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Peach Blossom Formation", "popup": true },
+      { "math": [ "u_spell_level('formations_peach_blossom_formation') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('formations_peach_blossom_formation') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_CONCEALING_FOG_ARRAY",
+    "condition": { "math": [ "u_spell_level('formations_concealing_fog_array') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Concealing Fog Array", "popup": true },
+      { "math": [ "u_spell_level('formations_concealing_fog_array') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('formations_concealing_fog_array') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_QI_SUPPRESSING_FORMATION",
+    "condition": { "math": [ "u_spell_level('formations_qi_suppressing_formation') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Qi Suppressing Formation", "popup": true },
+      { "math": [ "u_spell_level('formations_qi_suppressing_formation') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('formations_qi_suppressing_formation') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_MERIDIAN_LOCK_FORMATION",
+    "condition": { "math": [ "u_spell_level('formations_meridian_lock_formation') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Meridian Lock Formation", "popup": true },
+      { "math": [ "u_spell_level('formations_meridian_lock_formation') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('formations_meridian_lock_formation') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_HEAVENLY_DEMON_REPELLING_FORMATION",
+    "condition": { "math": [ "u_spell_level('formations_heavenly_demon_repelling_formation') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Heavenly Demon Repelling Formation", "popup": true },
+      { "math": [ "u_spell_level('formations_heavenly_demon_repelling_formation') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('formations_heavenly_demon_repelling_formation') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
