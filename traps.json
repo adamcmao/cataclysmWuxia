@@ -1,0 +1,95 @@
+[
+  {
+    "type": "trap",
+    "id": "trap_peach_blossom",
+    "name": "peach blossom formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "flags": [ "UNDODGEABLE" ],
+    "action": "eocs",
+    "eocs": [ "EOC_PEACH_BLOSSOM_FORMATION" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PEACH_BLOSSOM_FORMATION",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "u_message": "The air shimmers around you…" },
+      {
+        "if": { "and": [ { "not": "u_is_avatar" }, "player_see_u" ] },
+        "then": { "message": "The air shimmers around <u_name>…" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "trap_location" },
+        "x_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(u_spell_level('formations_peach_blossom_formation')) + 1)" ] },
+        "y_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(u_spell_level('formations_peach_blossom_formation')) + 1)" ] }
+      },
+      { "u_teleport": { "context_val": "trap_location" } }
+    ]
+  },
+  {
+    "type": "trap",
+    "id": "trap_concealing_fog",
+    "name": "concealing fog array",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "action": "spell",
+    "flags": [ "UNDODGEABLE" ],
+    "spell_data": { "id": "formations_peach_blossom_formation_actual" }
+  },
+  {
+    "type": "trap",
+    "id": "trap_qi_suppressing",
+    "name": "qi suppressing formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "action": "spell",
+    "flags": [ "UNDODGEABLE" ],
+    "spell_data": { "id": "formations_peach_blossom_formation_actual" }
+  },
+  {
+    "type": "trap",
+    "id": "trap_meridian_lock",
+    "name": "meridian lock formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "action": "spell",
+    "flags": [ "UNDODGEABLE" ],
+    "spell_data": { "id": "formations_peach_blossom_formation_actual" }
+  },
+  {
+    "type": "trap",
+    "id": "trap_heavenly_demon_repelling",
+    "name": "heavenly demon repelling formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "action": "spell",
+    "flags": [ "UNDODGEABLE" ],
+    "spell_data": { "id": "formations_peach_blossom_formation_actual" }
+  }
+]

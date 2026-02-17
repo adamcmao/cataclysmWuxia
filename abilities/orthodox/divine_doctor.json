@@ -66,7 +66,7 @@
     "base_energy_cost": 300,
     "energy_increment": -20,
     "final_energy_cost": 100,
-    "caster_condition": { "not": [ { "u_has_effect": "effect_golden_meridian_buff" } ] },
+    "caster_condition": { "not": { "u_has_effect": "effect_golden_meridian_buff" } },
     "caster_condition_fail_message": "You are already strengthened.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -125,7 +125,7 @@
     "base_energy_cost": 300,
     "energy_increment": -20,
     "final_energy_cost": 100,
-    "caster_condition": { "not": [ { "u_has_effect": "effect_nine_pulse_rejuvenation_buff" } ] },
+    "caster_condition": { "not": { "u_has_effect": "effect_nine_pulse_rejuvenation_buff" } },
     "caster_condition_fail_message": "You are already strengthened.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
