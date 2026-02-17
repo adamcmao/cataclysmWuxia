@@ -143,7 +143,17 @@
     "id": "EOC_MEDITATE_LEARN_DIVINE_DOCTOR",
     "//condition": "TODO: Figure out more details",
     "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
-    "effect": [ { "weighted_list_eocs": [ [ "EOC_LEVEL_UP_THREE_NEEDLES_DRAW_VENOM", 1 ] ] } ]
+    "effect": [
+      {
+        "weighted_list_eocs": [
+          [ "EOC_LEVEL_UP_THREE_NEEDLES_DRAW_VENOM", 1 ],
+          [ "EOC_LEVEL_UP_GOLDEN_MERIDIAN_STIMULATION", 1 ],
+          [ "EOC_LEVEL_UP_GOLDEN_THREAD_SUTURING", 1 ],
+          [ "EOC_LEVEL_UP_NINE_PULSE_REJUVENATION", 1 ],
+          [ "EOC_LEVEL_UP_GOLDEN_LOTUS_BONE_SETTING_ART", 1 ]
+        ]
+      }
+    ]
   },
   {
     "type": "effect_on_condition",
@@ -154,6 +164,46 @@
       { "math": [ "u_spell_level('divine_doctor_three_needles_draw_venom') = 0" ] }
     ],
     "false_effect": { "math": [ "u_spell_exp('divine_doctor_three_needles_draw_venom') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_GOLDEN_MERIDIAN_STIMULATION",
+    "condition": { "math": [ "u_spell_level('divine_doctor_golden_meridian_stimulation') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Golden Meridian Stimulation", "popup": true },
+      { "math": [ "u_spell_level('divine_doctor_golden_meridian_stimulation') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('divine_doctor_golden_meridian_stimulation') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_GOLDEN_THREAD_SUTURING",
+    "condition": { "math": [ "u_spell_level('divine_doctor_golden_thread_suturing') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Golden Thread Suturing", "popup": true },
+      { "math": [ "u_spell_level('divine_doctor_golden_thread_suturing') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('divine_doctor_golden_thread_suturing') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_NINE_PULSE_REJUVENATION",
+    "condition": { "math": [ "u_spell_level('divine_doctor_nine_pulse_rejuvenation') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Nine Pulse Rejuvenation", "popup": true },
+      { "math": [ "u_spell_level('divine_doctor_nine_pulse_rejuvenation') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('divine_doctor_nine_pulse_rejuvenation') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_GOLDEN_LOTUS_BONE_SETTING_ART",
+    "condition": { "math": [ "u_spell_level('divine_doctor_golden_lotus_bone_setting_art') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Golden Lotus Bone Setting Art", "popup": true },
+      { "math": [ "u_spell_level('divine_doctor_golden_lotus_bone_setting_art') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('divine_doctor_golden_lotus_bone_setting_art') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
