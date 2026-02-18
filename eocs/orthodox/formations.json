@@ -1,0 +1,19 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SPAWN_PEACH_BLOSSOM_FORMATION",
+    "effect": [
+      {
+        "npc_transform_radius": 0,
+        "ter_furn_transform": "transform_to_peach_blossom",
+        "target_var": { "context_val": "spell_location" }
+      }
+    ]
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "transform_to_peach_blossom",
+    "terrain": [ { "result":  "trap_peach_blossom" , "valid_flags": [ "FLAT" ] } ]
+  }
+]
+// f_null instead of FLAT?
