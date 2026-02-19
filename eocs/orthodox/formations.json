@@ -9,5 +9,49 @@
         "loc": { "context_val": "spell_location" }
       }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SPAWN_CONCEALING_FOG_ARRAY",
+    "effect": [
+      { "math": [ "pb_level = n_spell_level('formations_concealing_fog_array')" ] },
+      {
+        "npc_cast_spell": { "id": "formations_concealing_fog_array_actual" },
+        "loc": { "context_val": "spell_location" }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SPAWN_QI_SUPPRESSING_FORMATION",
+    "effect": [
+      { "math": [ "pb_level = n_spell_level('formations_qi_suppressing_formation')" ] },
+      {
+        "npc_cast_spell": { "id": "formations_qi_suppressing_formation_actual" },
+        "loc": { "context_val": "spell_location" }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SPAWN_MERIDIAN_LOCK_FORMATION",
+    "effect": [
+      { "math": [ "pb_level = n_spell_level('formations_meridian_lock_formation')" ] },
+      {
+        "npc_cast_spell": { "id": "formations_meridian_lock_formation_actual" },
+        "loc": { "context_val": "spell_location" }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SPAWN_HEAVENLY_DEMON_REPELLING_FORMATION",
+    "effect": [
+      { "math": [ "pb_level = n_spell_level('formations_heavenly_demon_repelling_formation')" ] },
+      {
+        "npc_cast_spell": { "id": "formations_heavenly_demon_repelling_formation_actual" },
+        "loc": { "context_val": "spell_location" }
+      }
+    ]
   }
 ]
