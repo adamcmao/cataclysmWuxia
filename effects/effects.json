@@ -223,7 +223,7 @@
     "id": "effect_qi_drained",
     "name": [ "Qi Drained" ],
     "show_in_info": true,
-    "desc": [ "Should only be on monsters as a flag, you shoulnd't see this." ],
+    "desc": [ "Should only be on monsters as a flag, you shouldn't see this on you." ],
     "rating": "bad"
   },
   {
@@ -302,5 +302,15 @@
       }
     ],
     "flags": [ "CANNOT_MOVE", "CANNOT_ATTACK" ]
+  },
+  {
+    "type": "effect_type",
+    "//": "TODO: Need to figure out how to make scaling negative effects that work for both the player and enemies",
+    "id": "effect_qi_suppression",
+    "name": [ "Qi Suppressed" ],
+    "desc": [ "Why does everyone feel stronger?" ],
+    "max_intensity": 5,
+    "show_in_info": true,
+    "rating": "bad"
   }
 ]

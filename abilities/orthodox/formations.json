@@ -104,7 +104,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "//": "Trap that weaken opponents in aoe",
+    "//": "Trap that weakens those caught.",
     "id": "formations_qi_suppressing_formation",
     "type": "SPELL",
     "name": "Qi Suppressing Formation",
@@ -130,7 +130,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "//": "Trap that weaken opponents in aoe",
+    "//": "Trap that weakens those caught.",
     "id": "formations_qi_suppressing_formation_actual",
     "type": "SPELL",
     "name": "Qi Suppressing Formation",
