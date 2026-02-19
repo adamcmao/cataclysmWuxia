@@ -3,17 +3,11 @@
     "type": "effect_on_condition",
     "id": "EOC_SPAWN_PEACH_BLOSSOM_FORMATION",
     "effect": [
+      { "math": [ "pb_level = n_spell_level('formations_peach_blossom_formation')" ] },
       {
-        "npc_transform_radius": 0,
-        "ter_furn_transform": "transform_to_peach_blossom",
-        "target_var": { "context_val": "spell_location" }
+        "npc_cast_spell": { "id": "formations_peach_blossom_formation_actual" },
+        "loc": { "context_val": "spell_location" }
       }
     ]
-  },
-  {
-    "type": "ter_furn_transform",
-    "id": "transform_to_peach_blossom",
-    "terrain": [ { "result":  "trap_peach_blossom" , "valid_flags": [ "FLAT" ] } ]
   }
 ]
-// f_null instead of FLAT?

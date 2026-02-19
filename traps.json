@@ -19,6 +19,7 @@
     "id": "EOC_PEACH_BLOSSOM_FORMATION",
     "eoc_type": "ACTIVATION",
     "effect": [
+      { "message": "Your character pb spell level is <global_val:pb_level>", "type": "debug" },
       { "u_message": "The air shimmers around you…" },
       {
         "if": { "and": [ { "not": "u_is_avatar" }, "player_see_u" ] },
@@ -26,8 +27,8 @@
       },
       {
         "location_variable_adjust": { "context_val": "trap_location" },
-        "x_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(u_spell_level('formations_peach_blossom_formation')) + 1)" ] },
-        "y_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(u_spell_level('formations_peach_blossom_formation')) + 1)" ] }
+        "x_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(pb_level) + 1)" ] },
+        "y_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(pb_level) + 1)" ] }
       },
       { "u_teleport": { "context_val": "trap_location" } }
     ]
