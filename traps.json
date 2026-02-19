@@ -92,9 +92,20 @@
     "avoidance": 20,
     "difficulty": 99,
     "trap_radius": 0,
-    "action": "spell",
     "flags": [ "UNDODGEABLE" ],
-    "spell_data": { "id": "formations_meridian_lock_formation_actual" }
+    "action": "eocs",
+    "eocs": [ "EOC_MERIDIAN_LOCK_FORMATION" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MERIDIAN_LOCK_FORMATION",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "message": "ml_level is <global_val:ml_level>", "type": "debug" },
+      { "u_add_effect": "immobilization", "duration": { "math": [ "ml_level * time('5 s')" ] } },
+      { "u_add_effect": "motor_seizure", "duration": { "math": [ "ml_level * time('5 s')" ] } },
+      { "u_add_effect": "downed", "duration": { "math": [ "ml_level * time('5 s')" ] } }
+    ]
   },
   {
     "type": "trap",
@@ -107,8 +118,14 @@
     "avoidance": 20,
     "difficulty": 99,
     "trap_radius": 0,
-    "action": "spell",
     "flags": [ "UNDODGEABLE" ],
-    "spell_data": { "id": "formations_heavenly_demon_repelling_formation_actual" }
+    "action": "eocs",
+    "eocs": [ "EOC_HEAVENLY_DEMON_REPELLING_FORMATION" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HEAVENLY_DEMON_REPELLING_FORMATION",
+    "eoc_type": "ACTIVATION",
+    "effect": [ { "message": "hdr_level is <global_val:hdr_level>", "type": "debug" } ]
   }
 ]
