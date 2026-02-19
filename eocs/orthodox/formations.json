@@ -14,7 +14,7 @@
     "type": "effect_on_condition",
     "id": "EOC_SPAWN_CONCEALING_FOG_ARRAY",
     "effect": [
-      { "math": [ "pb_level = n_spell_level('formations_concealing_fog_array')" ] },
+      { "math": [ "cf_level = n_spell_level('formations_concealing_fog_array')" ] },
       {
         "npc_cast_spell": { "id": "formations_concealing_fog_array_actual" },
         "loc": { "context_val": "spell_location" }

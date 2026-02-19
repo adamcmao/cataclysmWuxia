@@ -19,7 +19,7 @@
     "id": "EOC_PEACH_BLOSSOM_FORMATION",
     "eoc_type": "ACTIVATION",
     "effect": [
-      { "message": "Your character pb spell level is <global_val:pb_level>", "type": "debug" },
+      { "message": "pb_level is <global_val:pb_level>", "type": "debug" },
       { "u_message": "The air shimmers around you…" },
       {
         "if": { "and": [ { "not": "u_is_avatar" }, "player_see_u" ] },
@@ -44,9 +44,18 @@
     "avoidance": 20,
     "difficulty": 99,
     "trap_radius": 0,
-    "action": "spell",
     "flags": [ "UNDODGEABLE" ],
-    "spell_data": { "id": "formations_peach_blossom_formation_actual" }
+    "action": "eocs",
+    "eocs": [ "EOC_CONCEALING_FOG_ARRAY" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CONCEALING_FOG_ARRAY",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "message": "cf_level is <global_val:cf_level>", "type": "debug" },
+      { "u_set_field": "fd_smoke", "radius": { "math": [ "rand(cf_level) + 1" ] }, "intensity": 3 }
+    ]
   },
   {
     "type": "trap",
