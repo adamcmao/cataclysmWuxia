@@ -119,13 +119,7 @@
     "difficulty": 99,
     "trap_radius": 0,
     "flags": [ "UNDODGEABLE" ],
-    "action": "eocs",
-    "eocs": [ "EOC_HEAVENLY_DEMON_REPELLING_FORMATION" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_HEAVENLY_DEMON_REPELLING_FORMATION",
-    "eoc_type": "ACTIVATION",
-    "effect": [ { "message": "hdr_level is <global_val:hdr_level>", "type": "debug" } ]
+    "action": "spell",
+    "spell_data": { "id": "formations_heavenly_demon_repelling_formation_actual" }
   }
 ]
