@@ -16,16 +16,7 @@
     "flags": [ "LOUD", "SOMATIC", "NO_HANDS" ],
     "base_casting_time": { "math": [ "1000-(u_spell_level('gu_red_thread_binding') * 75)" ] },
     "base_energy_cost": 100,
-    "caster_condition": {
-      "or": [
-        { "u_has_effect": "bleed", "bodypart": "head" },
-        { "u_has_effect": "bleed", "bodypart": "torso" },
-        { "u_has_effect": "bleed", "bodypart": "arm_r" },
-        { "u_has_effect": "bleed", "bodypart": "arm_l" },
-        { "u_has_effect": "bleed", "bodypart": "leg_r" },
-        { "u_has_effect": "bleed", "bodypart": "leg_l" }
-      ]
-    },
+    "caster_condition": { "test_eoc": "EOC_HAS_BLEED" },
     "caster_condition_fail_message": "You have nothing to stitch closed.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },

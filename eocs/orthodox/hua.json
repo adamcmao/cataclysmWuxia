@@ -1,19 +1,5 @@
 [
   {
-    "type": "effect_on_condition",
-    "id": "EOC_WIELDING_SWORD",
-    "condition": {
-      "or": [
-        { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
-        { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }
-      ]
-    }
-  },
-  {
     "type": "snippet",
     "category": "<SWORD_SOUNDS>",
     "text": [ "Whoosh!", "Whirr!", "Swoop!", "Hiss!", "Fssst!", "Shaaa!", "Shing!", "Zip!", "Shrk!", "Heng!", "Zheng!" ]

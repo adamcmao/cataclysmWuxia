@@ -20,29 +20,7 @@
     "base_energy_cost": 300,
     "energy_increment": -20,
     "final_energy_cost": 100,
-    "caster_condition": {
-      "or": [
-        { "u_has_effect": "poison" },
-        { "u_has_effect": "poison", "bodypart": "head" },
-        { "u_has_effect": "poison", "bodypart": "torso" },
-        { "u_has_effect": "poison", "bodypart": "arm_r" },
-        { "u_has_effect": "poison", "bodypart": "arm_l" },
-        { "u_has_effect": "poison", "bodypart": "leg_r" },
-        { "u_has_effect": "poison", "bodypart": "leg_l" },
-        { "u_has_effect": "badpoison" },
-        { "u_has_effect": "badpoison", "bodypart": "head" },
-        { "u_has_effect": "badpoison", "bodypart": "torso" },
-        { "u_has_effect": "badpoison", "bodypart": "arm_r" },
-        { "u_has_effect": "badpoison", "bodypart": "arm_l" },
-        { "u_has_effect": "badpoison", "bodypart": "leg_r" },
-        { "u_has_effect": "badpoison", "bodypart": "leg_l" },
-        { "u_has_effect": "venom_dmg" },
-        { "u_has_effect": "venom_weaken" },
-        { "u_has_effect": "venom_blind" },
-        { "u_has_effect": "venom_pain" },
-        { "u_has_effect": "paralyzepoison" }
-      ]
-    },
+    "caster_condition": { "test_eoc": "EOC_HAS_POISON" },
     "caster_condition_fail_message": "You're not suffering from poisoning and have nothing to detoxify.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -90,17 +68,7 @@
     "base_energy_cost": 300,
     "energy_increment": -20,
     "final_energy_cost": 100,
-    "caster_condition": {
-      "or": [
-        { "u_has_effect": "bleed" },
-        { "u_has_effect": "bleed", "bodypart": "head" },
-        { "u_has_effect": "bleed", "bodypart": "torso" },
-        { "u_has_effect": "bleed", "bodypart": "arm_r" },
-        { "u_has_effect": "bleed", "bodypart": "arm_l" },
-        { "u_has_effect": "bleed", "bodypart": "leg_r" },
-        { "u_has_effect": "bleed", "bodypart": "leg_l" }
-      ]
-    },
+    "caster_condition": { "test_eoc": "EOC_HAS_BLEED" },
     "caster_condition_fail_message": "You are not bleeding.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -161,14 +129,7 @@
     "base_energy_cost": 300,
     "energy_increment": -20,
     "final_energy_cost": 100,
-    "caster_condition": {
-      "or": [
-        { "math": [ "u_hp('arm_r') == 0" ] },
-        { "math": [ "u_hp('arm_l') == 0" ] },
-        { "math": [ "u_hp('leg_r') == 0" ] },
-        { "math": [ "u_hp('leg_l') == 0" ] }
-      ]
-    },
+    "caster_condition": { "test_eoc": "EOC_HAS_BROKEN_LIMB" },
     "caster_condition_fail_message": "You have no broken bones.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }

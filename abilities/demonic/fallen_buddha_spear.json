@@ -19,7 +19,7 @@
     "base_energy_cost": 50,
     "min_range": 5,
     "max_range": 5,
-    "caster_condition": { "or": [ { "u_has_wielded_with_weapon_category": "POLEARMS" }, { "u_has_wielded_with_weapon_category": "SPEARS" } ] },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_SPEAR" },
     "caster_condition_fail_message": "Without a spear in hand you cannot use this ability.",
     "target_condition": { "test_eoc": "EOC_MIN_DISTANCE_OF_THREE" },
     "target_condition_fail_message": "Your target is to close.",

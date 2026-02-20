@@ -1,0 +1,85 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIELDING_QUARTERSTAFF",
+    "condition": { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIELDING_NOTHING",
+    "condition": { "not": "u_has_weapon" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIELDING_SPEAR",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "POLEARMS" }, { "u_has_wielded_with_weapon_category": "SPEARS" } ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIELDING_SWORD",
+    "condition": {
+      "or": [
+        { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
+        { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HAS_POISON",
+    "condition": {
+      "or": [
+        { "u_has_effect": "poison" },
+        { "u_has_effect": "poison", "bodypart": "head" },
+        { "u_has_effect": "poison", "bodypart": "torso" },
+        { "u_has_effect": "poison", "bodypart": "arm_r" },
+        { "u_has_effect": "poison", "bodypart": "arm_l" },
+        { "u_has_effect": "poison", "bodypart": "leg_r" },
+        { "u_has_effect": "poison", "bodypart": "leg_l" },
+        { "u_has_effect": "badpoison" },
+        { "u_has_effect": "badpoison", "bodypart": "head" },
+        { "u_has_effect": "badpoison", "bodypart": "torso" },
+        { "u_has_effect": "badpoison", "bodypart": "arm_r" },
+        { "u_has_effect": "badpoison", "bodypart": "arm_l" },
+        { "u_has_effect": "badpoison", "bodypart": "leg_r" },
+        { "u_has_effect": "badpoison", "bodypart": "leg_l" },
+        { "u_has_effect": "venom_dmg" },
+        { "u_has_effect": "venom_weaken" },
+        { "u_has_effect": "venom_blind" },
+        { "u_has_effect": "venom_pain" },
+        { "u_has_effect": "paralyzepoison" }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HAS_BLEED",
+    "condition": {
+      "or": [
+        { "u_has_effect": "bleed" },
+        { "u_has_effect": "bleed", "bodypart": "head" },
+        { "u_has_effect": "bleed", "bodypart": "torso" },
+        { "u_has_effect": "bleed", "bodypart": "arm_r" },
+        { "u_has_effect": "bleed", "bodypart": "arm_l" },
+        { "u_has_effect": "bleed", "bodypart": "leg_r" },
+        { "u_has_effect": "bleed", "bodypart": "leg_l" }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HAS_BROKEN_LIMB",
+    "condition": {
+      "or": [
+        { "math": [ "u_hp('arm_r') == 0" ] },
+        { "math": [ "u_hp('arm_l') == 0" ] },
+        { "math": [ "u_hp('leg_r') == 0" ] },
+        { "math": [ "u_hp('leg_l') == 0" ] }
+      ]
+    }
+  }
+]

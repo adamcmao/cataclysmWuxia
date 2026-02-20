@@ -18,7 +18,7 @@
     "base_energy_cost": 50,
     "min_range": 1,
     "max_range": 1,
-    "caster_condition": { "not": "u_has_weapon" },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_NOTHING" },
     "caster_condition_fail_message": "You need to empty your hands",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -41,7 +41,7 @@
     "base_energy_cost": 50,
     "min_range": 1,
     "max_range": 1,
-    "caster_condition": { "not": "u_has_weapon" },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_NOTHING" },
     "caster_condition_fail_message": "You need to empty your hands",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -63,7 +63,7 @@
     "base_casting_time": 75,
     "base_energy_cost": 50,
     "max_range": 0,
-    "caster_condition": { "not": "u_has_weapon" },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_NOTHING" },
     "caster_condition_fail_message": "You need to empty your hands",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -156,7 +156,7 @@
     "base_energy_cost": 100,
     "min_range": 1,
     "max_range": 1,
-    "caster_condition": { "not": "u_has_weapon" },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_NOTHING" },
     "caster_condition_fail_message": "You need to empty your hands",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },

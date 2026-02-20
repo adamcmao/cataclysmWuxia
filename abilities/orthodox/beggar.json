@@ -18,7 +18,7 @@
     "base_energy_cost": 50,
     "min_range": 1,
     "max_range": 1,
-    "caster_condition": { "or": [ { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" } ] },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_QUARTERSTAFF" },
     "caster_condition_fail_message": "Without a staff in hand you cannot use this ability.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -57,7 +57,7 @@
     "base_energy_cost": 50,
     "min_range": 0,
     "min_aoe": 1,
-    "caster_condition": { "or": [ { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" } ] },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_QUARTERSTAFF" },
     "caster_condition_fail_message": "Without a staff in hand you cannot use this ability.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -97,7 +97,7 @@
     "range_increment": 0.2,
     "max_range": 4,
     "min_aoe": 0,
-    "caster_condition": { "or": [ { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" } ] },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_QUARTERSTAFF" },
     "caster_condition_fail_message": "Without a staff in hand you cannot use this ability.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
@@ -140,7 +140,7 @@
     "min_range": 2,
     "range_increment": 0.4,
     "max_range": 6,
-    "caster_condition": { "or": [ { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" } ] },
+    "caster_condition": { "test_eoc": "EOC_WIELDING_QUARTERSTAFF" },
     "caster_condition_fail_message": "Without a staff in hand you cannot use this ability.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
