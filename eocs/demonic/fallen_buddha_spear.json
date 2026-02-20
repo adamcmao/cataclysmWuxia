@@ -1,0 +1,7 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MIN_DISTANCE_OF_THREE",
+    "condition": { "math": [ "distance('u', 'npc') >= 3" ] }
+  }
+]

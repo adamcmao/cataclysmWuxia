@@ -1,3 +1,28 @@
 [
-  
+  {
+    "//": "TODO: I want this ability to either not be castable at close range, or to a different ability at close range",
+    "id": "fallen_buddha_broken_oath_pierces_the_heart",
+    "type": "SPELL",
+    "name": "Broken Oath Pierces The Heart",
+    "description": "TODO: Fill me out",
+    "message": "TODO: Fill me out",
+    "spell_class": "FALLEN_BUDDHA_SPEAR",
+    "shape": "blast",
+    "effect": "attack",
+    "damage_type": "stab",
+    "min_damage": { "math": [ "(u_spell_level('fallen_buddha_broken_oath_pierces_the_heart') * 5) + 10" ] },
+    "max_damage": { "math": [ "(u_spell_level('fallen_buddha_broken_oath_pierces_the_heart') * 10) + 10" ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_range": 5,
+    "max_range": 5,
+    "caster_condition": { "or": [ { "u_has_wielded_with_weapon_category": "POLEARMS" }, { "u_has_wielded_with_weapon_category": "SPEARS" } ] },
+    "caster_condition_fail_message": "Without a spear in hand you cannot use this ability.",
+    "target_condition": { "test_eoc": "EOC_MIN_DISTANCE_OF_THREE" },
+    "target_condition_fail_message": "Your target is to close.",
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  }
 ]
