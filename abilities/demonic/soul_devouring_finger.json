@@ -1,0 +1,43 @@
+[
+  {
+    "id": "sdf_heaven_devouring_art",
+    "type": "SPELL",
+    "name": "Heaven Devouring Art",
+    "description": "Forcefully absorb qi from your living opponent. This demonic art induces madness.",
+    "message": "<HEAVEN_DEVOURING_ART_MESSAGES>",
+    "spell_class": "SOUL_DEVOURING_FINGER",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HEAVEN_DEVOURING_ART_START",
+    "max_level": 10,
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "NO_FAIL", "SILENT", "NO_HANDS", "NO_EXPLOSION_SFX" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_range": 1,
+    "caster_condition": { "not": "u_has_weapon" },
+    "caster_condition_fail_message": "You need to empty your hands",
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "id": "sdf_soul_burning_meridian_reversal",
+    "//": "Give huge buff for 5 minutes. After 1 minute side effects start kicking in. After the 5 minutes, 1 day penalty",
+    "///": "You will probably die",
+    "type": "SPELL",
+    "name": "Soul Burning Meridian Reversal",
+    "description": "Burn your soul, and reverse you qi. Your death will arrive soon.",
+    "message": "You raise your hand, wondering if these will be your final moments.",
+    "spell_class": "SOUL_DEVOURING_FINGER",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SOUL_BURNING_MERIDIAN_REVERSAL_CONFIRM",
+    "max_level": 0,
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_HANDS", "LOUD", "NO_FAIL" ],
+    "base_casting_time": 50,
+    "base_energy_cost": 0,
+    "caster_condition": { "not": { "or": [ { "u_has_effect": "qi_deviation_stat_boost" }, { "u_has_effect": "qi_deviation_stat_negative" } ] } },
+    "caster_condition_fail_message": "You are already in a state of qi deviation.",
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  }
+]

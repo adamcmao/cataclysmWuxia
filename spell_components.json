@@ -16,6 +16,16 @@
     ]
   },
   {
+    "id": "spell_components_three_twigs",
+    "type": "requirement",
+    "components": [ [ [ "twig", 3 ] ] ]
+  },
+  {
+    "id": "spell_components_short_string",
+    "type": "requirement",
+    "components": [ [ [ "string_6", 1 ], [ "cordage_6_leather", 1 ], [ "cordage_6", 1 ] ] ]
+  },
+  {
     "id": "spell_components_long_string",
     "type": "requirement",
     "components": [ [ [ "string_36", 1 ], [ "cordage_36_leather", 1 ], [ "cordage_36", 1 ] ] ],

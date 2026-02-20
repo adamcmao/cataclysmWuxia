@@ -1,0 +1,125 @@
+[
+  {
+    "type": "trap",
+    "id": "trap_peach_blossom",
+    "name": "peach blossom formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "flags": [ "UNDODGEABLE" ],
+    "action": "eocs",
+    "eocs": [ "EOC_PEACH_BLOSSOM_FORMATION" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PEACH_BLOSSOM_FORMATION",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "message": "pb_level is <global_val:pb_level>", "type": "debug" },
+      { "u_message": "The air shimmers around you…" },
+      {
+        "if": { "and": [ { "not": "u_is_avatar" }, "player_see_u" ] },
+        "then": { "message": "The air shimmers around <u_name>…" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "trap_location" },
+        "x_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(pb_level) + 1)" ] },
+        "y_adjust": { "math": [ "((-1) ^ rand(1)) * (rand(pb_level) + 1)" ] }
+      },
+      { "u_teleport": { "context_val": "trap_location" } }
+    ]
+  },
+  {
+    "type": "trap",
+    "id": "trap_concealing_fog",
+    "name": "concealing fog array",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "flags": [ "UNDODGEABLE" ],
+    "action": "eocs",
+    "eocs": [ "EOC_CONCEALING_FOG_ARRAY" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CONCEALING_FOG_ARRAY",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "message": "cf_level is <global_val:cf_level>", "type": "debug" },
+      { "u_set_field": "fd_smoke", "radius": { "math": [ "rand(cf_level) + 1" ] }, "intensity": 3 }
+    ]
+  },
+  {
+    "type": "trap",
+    "id": "trap_qi_suppressing",
+    "name": "qi suppressing formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "flags": [ "UNDODGEABLE" ],
+    "action": "eocs",
+    "eocs": [ "EOC_QI_SUPPRESSING_FORMATION" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_QI_SUPPRESSING_FORMATION",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "message": "qs_level is <global_val:qs_level>", "type": "debug" },
+      { "u_add_effect": "effect_qi_suppression", "duration": { "math": [ "qs_level * time('5 s')" ] } }
+    ]
+  },
+  {
+    "type": "trap",
+    "id": "trap_meridian_lock",
+    "name": "meridian lock formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "flags": [ "UNDODGEABLE" ],
+    "action": "eocs",
+    "eocs": [ "EOC_MERIDIAN_LOCK_FORMATION" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MERIDIAN_LOCK_FORMATION",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "message": "ml_level is <global_val:ml_level>", "type": "debug" },
+      { "u_add_effect": "immobilization", "duration": { "math": [ "ml_level * time('5 s')" ] } },
+      { "u_add_effect": "motor_seizure", "duration": { "math": [ "ml_level * time('5 s')" ] } },
+      { "u_add_effect": "downed", "duration": { "math": [ "ml_level * time('5 s')" ] } }
+    ]
+  },
+  {
+    "type": "trap",
+    "id": "trap_heavenly_demon_repelling",
+    "name": "heavenly demon repelling formation",
+    "color": "red",
+    "symbol": "#",
+    "always_invisible": true,
+    "visibility": 2,
+    "avoidance": 20,
+    "difficulty": 99,
+    "trap_radius": 0,
+    "flags": [ "UNDODGEABLE" ],
+    "action": "spell",
+    "spell_data": { "id": "formations_heavenly_demon_repelling_formation_actual" }
+  }
+]

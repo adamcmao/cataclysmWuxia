@@ -1,6 +1,39 @@
 [
   {
     "type": "effect_type",
+    "id": "effect_phantom_step",
+    "name": [ "Phantom Step" ],
+    "desc": [ "The quick movement stresses your body" ],
+    "rating": "good",
+    "max_intensity": 10,
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_golden_meridian_buff",
+    "name": [ "Golden Meridian Stimulation" ],
+    "desc": [ "You feel strength pulsing through your body." ],
+    "rating": "good",
+    "max_intensity": 10,
+    "scaling_mods": { "str_mod": [ 0.5 ], "dex_mod": [ 0.5 ] },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_nine_pulse_rejuvenation_buff",
+    "name": [ "Nine Pulse Rejuvenation" ],
+    "desc": [ "You feel yourself healing." ],
+    "rating": "good",
+    "enchantments": [
+      {
+        "intermittent_activation": {
+          "effects": [ { "frequency": "5 seconds", "spell_effects": [ { "id": "divine_doctor_nine_pulse_rejuvenation_actual" } ] } ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
     "id": "effect_dot_qi_recovery_tier_1",
     "name": [ "Tiny Qi Recovery" ],
     "desc": [ "You are slowly recovering qi at a tiny rate." ],
@@ -190,7 +223,7 @@
     "id": "effect_qi_drained",
     "name": [ "Qi Drained" ],
     "show_in_info": true,
-    "desc": [ "Should only be on monsters as a flag, you shoulnd't see this." ],
+    "desc": [ "Should only be on monsters as a flag, you shouldn't see this on you." ],
     "rating": "bad"
   },
   {
@@ -269,5 +302,15 @@
       }
     ],
     "flags": [ "CANNOT_MOVE", "CANNOT_ATTACK" ]
+  },
+  {
+    "type": "effect_type",
+    "//": "TODO: Need to figure out how to make scaling negative effects that work for both the player and enemies",
+    "id": "effect_qi_suppression",
+    "name": [ "Qi Suppressed" ],
+    "desc": [ "Why does everyone feel stronger?" ],
+    "max_intensity": 5,
+    "show_in_info": true,
+    "rating": "bad"
   }
 ]

@@ -1,0 +1,121 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_START",
+    "effect": [
+      { "u_message": "Your body convulses as you feel the poison move inside you." },
+      {
+        "run_eocs": [
+          "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
+          "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
+          "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM"
+        ],
+        "time_in_future": [ "5 seconds", "30 seconds" ],
+        "randomize_time_in_future": true
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
+    "condition": {
+      "or": [
+        { "u_has_effect": "poison" },
+        { "u_has_effect": "poison", "bodypart": "head" },
+        { "u_has_effect": "poison", "bodypart": "torso" },
+        { "u_has_effect": "poison", "bodypart": "arm_r" },
+        { "u_has_effect": "poison", "bodypart": "arm_l" },
+        { "u_has_effect": "poison", "bodypart": "leg_r" },
+        { "u_has_effect": "poison", "bodypart": "leg_l" }
+      ]
+    },
+    "effect": [
+      { "message": "TEST: Trying to remove poison." },
+      { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
+      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
+      { "u_lose_effect": [ "poison" ], "target_part": "ALL" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
+    "condition": {
+      "or": [
+        { "u_has_effect": "badpoison" },
+        { "u_has_effect": "badpoison", "bodypart": "head" },
+        { "u_has_effect": "badpoison", "bodypart": "torso" },
+        { "u_has_effect": "badpoison", "bodypart": "arm_r" },
+        { "u_has_effect": "badpoison", "bodypart": "arm_l" },
+        { "u_has_effect": "badpoison", "bodypart": "leg_r" },
+        { "u_has_effect": "badpoison", "bodypart": "leg_l" }
+      ]
+    },
+    "effect": [
+      { "message": "TEST: Trying to remove badpoison." },
+      { "u_spawn_item": "wuxia_poison_pill_tier_2", "suppress_message": true },
+      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
+      { "u_lose_effect": [ "badpoison" ], "target_part": "ALL" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM",
+    "condition": {
+      "or": [
+        { "u_has_effect": "venom_dmg" },
+        { "u_has_effect": "venom_weaken" },
+        { "u_has_effect": "venom_blind" },
+        { "u_has_effect": "venom_pain" },
+        { "u_has_effect": "paralyzepoison" }
+      ]
+    },
+    "effect": [
+      { "message": "TEST: Trying to remove venom." },
+      { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
+      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
+      {
+        "u_lose_effect": [ "venom_dmg", "venom_weaken", "venom_blind", "venom_pain", "paralyzepoison" ],
+        "target_part": "ALL"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GOLDEN_MERIDIAN_START",
+    "effect": [
+      { "u_lose_effect": "effect_golden_meridian_buff" },
+      {
+        "u_add_effect": "effect_golden_meridian_buff",
+        "intensity": { "math": [ "u_spell_level('divine_doctor_golden_meridian_stimulation')" ] },
+        "duration": { "math": [ "u_spell_level('divine_doctor_golden_meridian_stimulation') * time('30 s')" ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GOLDEN_THREAD_START",
+    "effect": [ { "u_lose_effect": "bleed" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_NINE_PULSE_REJUVENATION_START",
+    "effect": [
+      { "u_lose_effect": "effect_nine_pulse_rejuvenation_buff" },
+      {
+        "u_add_effect": "effect_nine_pulse_rejuvenation_buff",
+        "intensity": { "math": [ "u_spell_level('divine_doctor_nine_pulse_rejuvenation')" ] },
+        "duration": { "math": [ "u_spell_level('divine_doctor_nine_pulse_rejuvenation') * time('30 s')" ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GOLDEN_LOTUS_BONE_SETTING_ART_START",
+    "effect": [
+      { "if": { "math": [ "u_hp('arm_r') == 0" ] }, "then": { "math": [ "u_hp('arm_r') = 1" ] } },
+      { "if": { "math": [ "u_hp('arm_l') == 0" ] }, "then": { "math": [ "u_hp('arm_l') = 1" ] } },
+      { "if": { "math": [ "u_hp('leg_r') == 0" ] }, "then": { "math": [ "u_hp('leg_r') = 1" ] } },
+      { "if": { "math": [ "u_hp('leg_l') == 0" ] }, "then": { "math": [ "u_hp('leg_l') = 1" ] } }
+    ]
+  }
+]

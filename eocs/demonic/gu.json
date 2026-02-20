@@ -1,0 +1,24 @@
+[
+  {
+    "type": "snippet",
+    "category": "<RED_THREAD_BINDING_MESSAGES>",
+    "text": [
+      "Blood twists into a fine thread, sealing wounds with crimson silk.",
+      "A pulse of life draws a red line that stops the flow.",
+      "The wound stops as crimson thread stitches.",
+      "A gentle crimson binding knits flesh together.",
+      "Red lines curl and tighten, holding the wound in place."
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<RED_ASURA_REVIVAL_ART_MESSAGES>",
+    "text": [
+      "Crimson qi writhes through the body, forcing it to reshape itself.",
+      "Your body convulses as scarlet threads drag flesh back into place.",
+      "Limb jerks in rhythm with unseen threads, reconstructing itself.",
+      "You shutter as flesh is forced into your open wounds.",
+      "The body quivers as missing parts reassemble with painful precision."
+    ]
+  }
+]

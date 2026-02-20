@@ -1,119 +1,55 @@
 [
   {
+    "type": "snippet",
+    "category": "<HEAVEN_DEVOURING_ART_MESSAGES>",
+    "text": [
+      "You drive your palm into your opponents center, violently pulling their energy into your body",
+      "Hands clamp down as qi is torn from the opponent like breath from lungs.",
+      "Qi screams as it is forcefully drawn into your hands.",
+      "Palms pulse greedily, drawing power faster than it can resist.",
+      "Hands glow ominously as stolen qi floods inward."
+    ]
+  },
+  {
     "type": "effect_on_condition",
-    "id": "EOC_WIND_FOLLOWING_STEPS_START",
-    "condition": { "not": { "u_has_effect": "effect_wind_following_steps" } },
+    "id": "EOC_HEAVEN_DEVOURING_ART_START",
+    "condition": {
+      "or": [
+        { "not": { "u_has_species": "JIANGSHI" } },
+        { "not": { "u_has_species": "ZOMBIE" } },
+        { "not": { "u_has_effect": "effect_qi_drained" } }
+      ]
+    },
     "effect": [
-      { "u_add_effect": "effect_wind_following_steps", "duration": "PERMANENT" },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "u_add_effect": "effect_qi_drained", "duration": "10 hours" },
+      { "math": [ "n_vitamin('qi_vitamin') += (rand(n_spell_level('sdf_heaven_devouring_art')*5)+50)" ] },
       {
-        "run_eocs": "EOC_WIND_FOLLOWING_STEPS_DRAIN",
-        "time_in_future": [
-          { "math": [ "(u_spell_level('wind_following_steps') * 5)" ] },
-          { "math": [ "(u_spell_level('wind_following_steps') * 10)" ] }
-        ]
+        "weighted_list_eocs": [ [ "EOC_HEAVEN_DEVOURING_ART_VISION", 1 ], [ "EOC_HEAVEN_DEVOURING_ART_HALLUCINATE", 1 ] ]
       }
     ],
-    "false_effect": [ { "run_eocs": "EOC_WIND_FOLLOWING_STEPS_STOP" } ]
+    "false_effect": [ { "message": "Something is wrong, you are unable to drain qi from this victim.", "type": "mixed" } ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_WIND_FOLLOWING_STEPS_DRAIN",
-    "condition": { "and": [ { "u_has_effect": "effect_wind_following_steps" }, { "math": [ "u_vitamin('qi_vitamin') >= 50" ] } ] },
+    "id": "EOC_HEAVEN_DEVOURING_ART_VISION",
+    "condition": { "not": { "npc_has_effect": "visuals" } },
+    "effect": [ { "message": "Your vision blurs", "type": "bad" }, { "npc_add_effect": "visuals", "duration": [ 15, 60 ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HEAVEN_DEVOURING_ART_HALLUCINATE",
     "effect": [
-      { "run_eocs": "EOC_LOSE_50_QI" },
       {
-        "run_eocs": "EOC_WIND_FOLLOWING_STEPS_DRAIN",
-        "time_in_future": [
-          { "math": [ "(u_spell_level('wind_following_steps') * 5)" ] },
-          { "math": [ "(u_spell_level('wind_following_steps') * 10)" ] }
-        ]
-      }
-    ],
-    "false_effect": [ { "run_eocs": "EOC_WIND_FOLLOWING_STEPS_STOP" } ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_WIND_FOLLOWING_STEPS_STOP",
-    "condition": { "u_has_effect": "effect_wind_following_steps" },
-    "effect": [ { "u_lose_effect": "effect_wind_following_steps" } ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_START",
-    "effect": [
-      { "u_message": "Your body convulses as you feel the poison move inside you." },
+        "message": "As your absorb the energy, your fate is intertwined with your victim, and you see all timelines that could have been.",
+        "type": "bad"
+      },
       {
-        "run_eocs": [
-          "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
-          "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
-          "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM"
-        ],
-        "time_in_future": [ "5 seconds", "30 seconds" ],
-        "randomize_time_in_future": true
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_POISON",
-    "condition": {
-      "or": [
-        { "u_has_effect": "poison" },
-        { "u_has_effect": "poison", "bodypart": "head" },
-        { "u_has_effect": "poison", "bodypart": "torso" },
-        { "u_has_effect": "poison", "bodypart": "arm_r" },
-        { "u_has_effect": "poison", "bodypart": "arm_l" },
-        { "u_has_effect": "poison", "bodypart": "leg_r" },
-        { "u_has_effect": "poison", "bodypart": "leg_l" }
-      ]
-    },
-    "effect": [
-      { "message": "TEST: Trying to remove poison." },
-      { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
-      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
-      { "u_lose_effect": [ "poison" ], "target_part": "ALL" }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_BADPOISON",
-    "condition": {
-      "or": [
-        { "u_has_effect": "badpoison" },
-        { "u_has_effect": "badpoison", "bodypart": "head" },
-        { "u_has_effect": "badpoison", "bodypart": "torso" },
-        { "u_has_effect": "badpoison", "bodypart": "arm_r" },
-        { "u_has_effect": "badpoison", "bodypart": "arm_l" },
-        { "u_has_effect": "badpoison", "bodypart": "leg_r" },
-        { "u_has_effect": "badpoison", "bodypart": "leg_l" }
-      ]
-    },
-    "effect": [
-      { "message": "TEST: Trying to remove badpoison." },
-      { "u_spawn_item": "wuxia_poison_pill_tier_2", "suppress_message": true },
-      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
-      { "u_lose_effect": [ "badpoison" ], "target_part": "ALL" }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_THREE_NEEDLES_DRAW_VENOM_VENOM",
-    "condition": {
-      "or": [
-        { "u_has_effect": "venom_dmg" },
-        { "u_has_effect": "venom_weaken" },
-        { "u_has_effect": "venom_blind" },
-        { "u_has_effect": "venom_pain" },
-        { "u_has_effect": "paralyzepoison" }
-      ]
-    },
-    "effect": [
-      { "message": "TEST: Trying to remove venom." },
-      { "u_spawn_item": "wuxia_poison_pill_tier_1", "suppress_message": true },
-      { "u_set_field": "fd_blood", "radius": 0, "intensity": 1 },
-      {
-        "u_lose_effect": [ "venom_dmg", "venom_weaken", "venom_blind", "venom_pain", "paralyzepoison" ],
-        "target_part": "ALL"
+        "npc_spawn_monster": "",
+        "hallucination_count": [ 10, 15 ],
+        "target_range": 10,
+        "max_radius": 10,
+        "lifespan": [ "15 seconds", "1 minutes" ]
       }
     ]
   },

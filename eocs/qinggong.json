@@ -1,0 +1,141 @@
+[
+  {
+    "type": "snippet",
+    "category": "<PHANTOM_STEP_MESSAGES>",
+    "text": [
+      "Between heartbeats, you step swiftly.",
+      "You flicker and reappear.",
+      "Blurring, you vanish in a shimmer.",
+      "You step, and the world lags behind you."
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIND_FOLLOWING_STEPS_START",
+    "condition": { "not": { "u_has_effect": "effect_wind_following_steps" } },
+    "effect": [
+      { "u_add_effect": "effect_wind_following_steps", "duration": "PERMANENT" },
+      {
+        "run_eocs": "EOC_WIND_FOLLOWING_STEPS_DRAIN",
+        "time_in_future": [
+          { "math": [ "(u_spell_level('wind_following_steps') * 5)" ] },
+          { "math": [ "(u_spell_level('wind_following_steps') * 10)" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_WIND_FOLLOWING_STEPS_STOP" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIND_FOLLOWING_STEPS_DRAIN",
+    "condition": { "and": [ { "u_has_effect": "effect_wind_following_steps" }, { "math": [ "u_vitamin('qi_vitamin') >= 50" ] } ] },
+    "effect": [
+      { "run_eocs": "EOC_LOSE_50_QI" },
+      {
+        "run_eocs": "EOC_WIND_FOLLOWING_STEPS_DRAIN",
+        "time_in_future": [
+          { "math": [ "(u_spell_level('wind_following_steps') * 5)" ] },
+          { "math": [ "(u_spell_level('wind_following_steps') * 10)" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_WIND_FOLLOWING_STEPS_STOP" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_WIND_FOLLOWING_STEPS_STOP",
+    "condition": { "u_has_effect": "effect_wind_following_steps" },
+    "effect": [ { "u_lose_effect": "effect_wind_following_steps" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_QINGGONG_PHANTOM_STEP",
+    "effect": [
+      {
+        "switch": { "math": [ "n_effect_intensity('effect_phantom_step')" ] },
+        "cases": [
+          {
+            "case": 0,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 1, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 1,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 2, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 2,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 3, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 3,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 4, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 4,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 5, "duration": "1 minutes" }
+            ]
+          },
+          {
+            "case": 5,
+            "effect": [
+              { "npc_lose_effect": "effect_phantom_step" },
+              { "npc_add_effect": "effect_phantom_step", "intensity": 6, "duration": "1 minutes" }
+            ]
+          }
+        ]
+      },
+      {
+        "if": { "not": { "npc_has_effect": "effect_phantom_step" } },
+        "then": [ { "npc_add_effect": "effect_phantom_step", "intensity": 1, "duration": "1 minutes" } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PHANTOM_STEP_ADJUSTMENTS",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+    "condition": { "and": [ { "u_has_effect": "effect_phantom_step" } ] },
+    "//effect": "TODO: Is there a better way to do this?",
+    "effect": [
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 1 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 2" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 2 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 3" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 3 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 4" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 4 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 5" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 5 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 6" ] }
+      },
+      {
+        "if": { "u_has_effect": "effect_phantom_step", "intensity": 6 },
+        "then": { "math": [ "u_spellcasting_adjustment('cost', 'spell': 'qinggong_phantom_step'  ) = 7" ] }
+      }
+    ]
+  }
+]
