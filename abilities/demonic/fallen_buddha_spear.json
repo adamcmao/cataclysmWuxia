@@ -56,4 +56,8 @@
     "target_condition_fail_message": "Your target is to close.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
+  // Counter stance for x amount of time that lowers defense, high damage (Vajra's Wrath)
+    // Or make the stance auto hit every time an opponent moves within x range?
+  // Distance stab that causes bleeding (Lotus Rending)
+  // Stab at the ground, x amount of time later it damages whatever is at the target location. (Fate Severing)
 ]

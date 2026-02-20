@@ -1,6 +1,7 @@
 [
   {
     "//": "TODO: Change this to be Gu themed",
+    "///": "Change technique to decrease bleeding effect intensity by n amount every few seconds for m amount of time, pain side effect",
     "id": "gu_red_thread_binding",
     "type": "SPELL",
     "name": "Red Thread Binding",
@@ -21,23 +22,28 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "id": "gu_red_asura_revival_art",
+    "id": "gu_rebirth_cocoon",
     "type": "SPELL",
-    "name": "Red Asura Revival Art",
-    "description": "Use gu to forcefully heal your wounds.",
+    "name": "Rebirth Cocoon",
+    "description": "Use gu to forcefully heal your wounds, side effect is poison",
     "message": "<RED_ASURA_REVIVAL_ART_MESSAGES>",
     "spell_class": "GU",
     "valid_targets": [ "self" ],
-    "min_damage": { "math": [ "(u_spell_level('gu_red_asura_revival_art') * -0.5) - 1" ] },
-    "max_damage": { "math": [ "(u_spell_level('gu_red_asura_revival_art') * -1.5) - 5" ] },
+    "min_damage": { "math": [ "(u_spell_level('gu_rebirth_cocoon') * -0.5) - 1" ] },
+    "max_damage": { "math": [ "(u_spell_level('gu_rebirth_cocoon') * -1.5) - 5" ] },
     "max_level": 10,
     "max_range": 0,
     "effect": "attack",
-    "extra_effects": [ { "id": "drain_blood_small_hidden", "hit_self": true }, { "id": "cause_pain", "hit_self": true } ],
+    "extra_effects": [ { "id": "cause_pain", "hit_self": true } ],
     "shape": "blast",
     "flags": [ "RANDOM_DAMAGE", "SOMATIC", "LOUD" ],
     "base_casting_time": 300,
     "base_energy_cost": 100,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
+  // Abilities should require sugar and insect eggs?
+  // Infuse yourself with bugs to make yourself temporarily stronger, stat debuff is side effect
+  // Large cone attack that does DoT damage
+  // Movement speed debuff
+
 ]
