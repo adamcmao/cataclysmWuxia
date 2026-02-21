@@ -39,9 +39,54 @@
     "caster_condition": { "not": { "or": [ { "u_has_effect": "qi_deviation_stat_boost" }, { "u_has_effect": "qi_deviation_stat_negative" } ] } },
     "caster_condition_fail_message": "You are already in a state of qi deviation.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "//": "TODO: Add bonus damage if you have additional qi.",
+    "id": "sdf_one_yang_finger",
+    "type": "SPELL",
+    "name": " One Yang Finger ",
+    "description": "TODO",
+    "message": "",
+    "spell_class": "SOUL_DEVOURING_FINGER",
+    "shape": "line",
+    "effect": "attack",
+    "damage_type": "stab",
+    "min_damage": { "math": [ "(u_spell_level('sdf_one_yang_finger') * 5) + 5" ] },
+    "max_damage": { "math": [ "(u_spell_level('sdf_one_yang_finger') * 10) + 15" ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "flags": [ "NO_FAIL", "SILENT", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_range": 3,
+    "range_increment": 0.3,
+    "max_range": 6,
+    "caster_condition": { "test_eoc": "EOC_WIELDING_NOTHING" },
+    "caster_condition_fail_message": "You need to empty your hands",
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "//": "TODO: Recover qi if it kills the opponent.",
+    "id": "sdf_spirit_blades_of_six_meridians",
+    "type": "SPELL",
+    "name": "Spirit Blades of Six Meridians",
+    "description": "TODO",
+    "message": "",
+    "spell_class": "SOUL_DEVOURING_FINGER",
+    "shape": "blast",
+    "effect": "attack",
+    "damage_type": "stab",
+    "min_damage": { "math": [ "(u_spell_level('sdf_spirit_blades_of_six_meridians') * 5) + 5" ] },
+    "max_damage": { "math": [ "(u_spell_level('sdf_spirit_blades_of_six_meridians') * 10) + 15" ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "NO_FAIL", "SILENT", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_range": 1,
+    "max_range": 1,
+    "caster_condition": { "test_eoc": "EOC_WIELDING_NOTHING" },
+    "caster_condition_fail_message": "You need to empty your hands",
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
-  // 1 tile pierce on opponent that heals a % on yourself
-    // Maybe have it vary between what it is healing, stamina/health/qi?
-  // line laser beam, does more damage the more qi you have
-  // 1 tile hit, large damage range, but if kills the opponent, recover qi
 ]

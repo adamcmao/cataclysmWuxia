@@ -129,5 +129,32 @@
     "target_condition": { "test_eoc": "EOC_MIN_DISTANCE_OF_THREE" },
     "target_condition_fail_message": "Your target is to close.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "//": "TODO: I need one more spell but don't know what it shold be.",
+    "id": "fallen_buddha_unknown_spell",
+    "type": "SPELL",
+    "name": "I don't know yet, but I want more spells",
+    "description": "TODO: Fill this out",
+    "message": "TODO: Fill me out",
+    "spell_class": "FALLEN_BUDDHA_SPEAR",
+    "shape": "blast",
+    "effect": "attack",
+    "damage_type": "stab",
+    "min_damage": { "math": [ "(u_spell_level('fallen_buddha_unknown_spell') * 5) + 10" ] },
+    "max_damage": { "math": [ "(u_spell_level('fallen_buddha_unknown_spell') * 10) + 10" ] },
+    "max_level": 10,
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_range": 3,
+    "range_increment": 0.2,
+    "max_range": 5,
+    "caster_condition": { "test_eoc": "EOC_WIELDING_SPEAR" },
+    "caster_condition_fail_message": "Without a spear in hand you cannot use this ability.",
+    "target_condition": { "test_eoc": "EOC_MIN_DISTANCE_OF_THREE" },
+    "target_condition_fail_message": "Your target is to close.",
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
 ]
