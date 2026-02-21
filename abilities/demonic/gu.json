@@ -1,5 +1,6 @@
 [
   {
+    "/": "TODO: Add components to all abilities in this category",
     "//": "TODO: Change this to be Gu themed",
     "///": "Change technique to decrease bleeding effect intensity by n amount every few seconds for m amount of time, pain side effect",
     "id": "gu_red_thread_binding",
@@ -40,10 +41,59 @@
     "base_casting_time": 300,
     "base_energy_cost": 100,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+    {
+    "//": "Large cone attack that does DoT damage",
+    "id": "gu_devouring_swarm",
+    "type": "SPELL",
+    "name": "Devouring Swarm",
+    "description": "TODO",
+    "message": "TODO: Fill me out",
+    "spell_class": "GU",
+    "shape": "cone",
+    "effect": "attack",
+    "damage_type": "cut",
+    "min_damage": { "math": [ "(u_spell_level('gu_devouring_swarm') * 0.5) + 1" ] },
+    "max_damage": { "math": [ "(u_spell_level('gu_devouring_swarm') * 1) + 1" ] },
+    "max_level": 10,
+    "min_aoe": 45,
+    "aoe_increment": 4.5,
+    "max_aoe": 90,
+    "min_dot": 1,                                            
+    "dot_increment": 0.4,
+    "max_dot": 5,
+    "min_duration": { "math": [ "(u_spell_level('gu_devouring_swarm') * 50) + 100" ] },
+    "max_duration": { "math": [ "(u_spell_level('gu_devouring_swarm') * 100) + 100" ] },
+    "valid_targets": [ "hostile", "ground", "ally" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "RANDOM_DAMAGE", "SILENT", "RANDOM_DURATION" ],
+    "base_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_range": 5,
+    "range_increment": 0.5,
+    "max_range": 10,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "//": "Infuse yourself with bugs to make yourself temporarily stronger, stat debuff is side effect",
+    "id": "gu_metamorphosis",
+    "type": "SPELL",
+    "name": "Metamorphosis",
+    "description": "TODO",
+    "message": "TODO",
+    "spell_class": "GU",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "wuxia_metamorphosis_effect",
+    "min_duration": { "math": [ "u_spell_level('gu_metamorphosis') * 1000" ] },
+    "max_duration": { "math": [ "u_spell_level('gu_metamorphosis') * 10000" ] },
+    "max_level": 10,
+    "valid_targets": [ "self" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DURATION" ],
+    "base_casting_time": 75,
+    "base_energy_cost": 50,
+    "max_range": 0,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
-  // Abilities should require sugar and insect eggs?
-  // Infuse yourself with bugs to make yourself temporarily stronger, stat debuff is side effect
-  // Large cone attack that does DoT damage
   // Movement speed debuff
 
 ]
