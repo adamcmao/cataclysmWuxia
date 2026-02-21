@@ -40,5 +40,8 @@
     "caster_condition_fail_message": "You are already in a state of qi deviation.",
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
-  // 1 tile pierce on opponent that gives a tiny heal to self
+  // 1 tile pierce on opponent that heals a % on yourself
+    // Maybe have it vary between what it is healing, stamina/health/qi?
+  // line laser beam, does more damage the more qi you have
+  // 1 tile hit, large damage range, but if kills the opponent, recover qi
 ]

@@ -312,5 +312,24 @@
     "max_intensity": 5,
     "show_in_info": true,
     "rating": "bad"
+  },
+  {
+    "type": "effect_type",
+    "id": "wuxia_varjas_wrath_stance",
+    "name": [ "Varjas Wrath" ],
+    "desc": [ "Sacrifice the flesh to pierce the bone." ],
+    "rating": "good",
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "incoming_damage_mod": [
+          { "type": "stab", "add": { "math": [ "rand(10-(u_spell_level('fallen_buddha_vajras_wrath')" ] } },
+          { "type": "cut", "add": { "math": [ "rand(10-(u_spell_level('fallen_buddha_vajras_wrath')" ] } },
+          { "type": "bash", "add": { "math": [ "rand(10-(u_spell_level('fallen_buddha_vajras_wrath')" ] } }
+        ],
+        "hit_me_effect": [ { "id": "fallen_buddha_vajras_wrath_actual" } ]
+      }
+    ],
+    "flags": [ "CANNOT_MOVE", "CANNOT_ATTACK" ]
   }
 ]
