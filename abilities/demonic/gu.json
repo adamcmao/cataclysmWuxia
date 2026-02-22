@@ -1,7 +1,6 @@
 [
   {
-    "/": "TODO: Add components to all abilities in this category",
-    "//": "TODO: Change this to be Gu themed",
+    "//": "TODO: Add components to all abilities in this category",
     "///": "Change technique to decrease bleeding effect intensity by n amount every few seconds for m amount of time, pain side effect",
     "id": "gu_red_thread_binding",
     "type": "SPELL",
@@ -42,7 +41,7 @@
     "base_energy_cost": 100,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
-    {
+  {
     "//": "Large cone attack that does DoT damage",
     "id": "gu_devouring_swarm",
     "type": "SPELL",
@@ -59,7 +58,7 @@
     "min_aoe": 45,
     "aoe_increment": 4.5,
     "max_aoe": 90,
-    "min_dot": 1,                                            
+    "min_dot": 1,
     "dot_increment": 0.4,
     "max_dot": 5,
     "min_duration": { "math": [ "(u_spell_level('gu_devouring_swarm') * 50) + 100" ] },
@@ -93,7 +92,26 @@
     "base_energy_cost": 50,
     "max_range": 0,
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
+  },
+  {
+    "//": "Infuse your opponents to slow their movement speed, or create spider webs on ground?",
+    "id": "gu_silk_extract",
+    "type": "SPELL",
+    "name": "Silk Extract",
+    "description": "TODO",
+    "message": "TODO",
+    "spell_class": "GU",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "wuxia_silk_wrap_effect",
+    "min_duration": { "math": [ "u_spell_level('gu_silk_extract') * 1000" ] },
+    "max_duration": { "math": [ "u_spell_level('gu_silk_extract') * 10000" ] },
+    "max_level": 10,
+    "valid_targets": [ "ground", "self", "ally", "hostile" ],
+    "flags": [ "SOMATIC", "NO_HANDS", "SILENT", "RANDOM_DURATION" ],
+    "base_casting_time": 75,
+    "base_energy_cost": 50,
+    "max_range": 0,
+    "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   }
-  // Movement speed debuff
-
 ]

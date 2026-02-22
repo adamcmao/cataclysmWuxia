@@ -44,7 +44,7 @@
     "//": "TODO: Add bonus damage if you have additional qi.",
     "id": "sdf_one_yang_finger",
     "type": "SPELL",
-    "name": " One Yang Finger ",
+    "name": " One Yang Finger",
     "description": "TODO",
     "message": "",
     "spell_class": "SOUL_DEVOURING_FINGER",

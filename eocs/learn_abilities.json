@@ -549,14 +549,69 @@
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_FALLEN_BUDDHA_SPEAR",
     "condition": { "and": [ { "u_has_wielded_with_weapon_category": "SPEARS" }, { "math": [ "rand(30) == 1" ] } ] },
-    "effect": { "weighted_list_eocs": [  ] }
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_LEVEL_UP_BROKEN_OATH_PIERCES_THE_HEART", 1 ],
+        [ "EOC_LEVEL_UP_LAST_BREATH", 1 ],
+        [ "EOC_LEVEL_UP_VAJRAS_WRATH", 1 ],
+        [ "EOC_LEVEL_UP_LOTUS_RENDING", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_BROKEN_OATH_PIERCES_THE_HEART",
+    "condition": { "math": [ "u_spell_level('fallen_buddha_broken_oath_pierces_the_heart') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Broken Oath Pierces The Heart", "popup": true },
+      { "math": [ "u_spell_level('fallen_buddha_broken_oath_pierces_the_heart') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('fallen_buddha_broken_oath_pierces_the_heart') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_LAST_BREATH",
+    "condition": { "math": [ "u_spell_level('fallen_buddha_last_breath') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Last Breath", "popup": true },
+      { "math": [ "u_spell_level('fallen_buddha_last_breath') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('fallen_buddha_last_breath') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_VAJRAS_WRATH",
+    "condition": { "math": [ "u_spell_level('fallen_buddha_vajras_wrath') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Vajras Wrath", "popup": true },
+      { "math": [ "u_spell_level('fallen_buddha_vajras_wrath') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('fallen_buddha_vajras_wrath') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_LOTUS_RENDING",
+    "condition": { "math": [ "u_spell_level('fallen_buddha_lotus_rending') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Lotus Rending", "popup": true },
+      { "math": [ "u_spell_level('fallen_buddha_lotus_rending') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('fallen_buddha_lotus_rending') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_MEDITATE_LEARN_GU",
     "//condition": "TODO: Figure this out",
     "condition": { "and": [ { "math": [ "rand(30) == 1" ] } ] },
-    "effect": { "weighted_list_eocs": [ [ "EOC_LEVEL_UP_RED_THREAD_BINDING", 1 ], [ "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART", 1 ] ] }
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_LEVEL_UP_RED_THREAD_BINDING", 1 ],
+        [ "EOC_LEVEL_UP_REBIRTH_COCOON", 1 ],
+        [ "EOC_LEVEL_UP_DEVOURING_SWARM", 1 ],
+        [ "EOC_LEVEL_UP_METAMORPHOSIS", 1 ],
+        [ "EOC_LEVEL_UP_SILK_EXTRACT", 1 ]
+      ]
+    }
   },
   {
     "type": "effect_on_condition",
@@ -570,13 +625,43 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_LEVEL_UP_RED_ASURA_REVIVAL_ART",
-    "condition": { "math": [ "u_spell_level('gu_red_asura_revival_art') == -1" ] },
+    "id": "EOC_LEVEL_UP_REBIRTH_COCOON",
+    "condition": { "math": [ "u_spell_level('gu_rebirth_cocoon') == -1" ] },
     "effect": [
-      { "message": "You learned a new technique - Red Asura Revival Art", "popup": true },
-      { "math": [ "u_spell_level('gu_red_asura_revival_art') = 0" ] }
+      { "message": "You learned a new technique - Rebirth Cocoon", "popup": true },
+      { "math": [ "u_spell_level('gu_rebirth_cocoon') = 0" ] }
     ],
-    "false_effect": { "math": [ "u_spell_exp('gu_red_asura_revival_art') += rand(1000)" ] }
+    "false_effect": { "math": [ "u_spell_exp('gu_rebirth_cocoon') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_DEVOURING_SWARM",
+    "condition": { "math": [ "u_spell_level('gu_devouring_swarm') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Devouring Swarm", "popup": true },
+      { "math": [ "u_spell_level('gu_devouring_swarm') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('gu_devouring_swarm') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_METAMORPHOSIS",
+    "condition": { "math": [ "u_spell_level('gu_metamorphosis') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Metamorphosis", "popup": true },
+      { "math": [ "u_spell_level('gu_metamorphosis') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('gu_metamorphosis') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_SILK_EXTRACT",
+    "condition": { "math": [ "u_spell_level('gu_silk_extract') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Silk Extract", "popup": true },
+      { "math": [ "u_spell_level('gu_silk_extract') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('gu_silk_extract') += rand(1000)" ] }
   },
   {
     "type": "effect_on_condition",
@@ -661,7 +746,12 @@
     "id": "EOC_MEDITATE_LEARN_SOUL_DEVOURING_FINGER",
     "condition": { "and": [ { "not": "u_has_weapon" }, { "math": [ "rand(30) == 1" ] } ] },
     "effect": {
-      "weighted_list_eocs": [ [ "EOC_LEVEL_UP_HEAVEN_DEVOURING_ART", 1 ], [ "EOC_LEVEL_UP_SOUL_BURNING_MERIDIAN_REVERSAL", 1 ] ]
+      "weighted_list_eocs": [
+        [ "EOC_LEVEL_UP_HEAVEN_DEVOURING_ART", 1 ],
+        [ "EOC_LEVEL_UP_SOUL_BURNING_MERIDIAN_REVERSAL", 1 ],
+        [ "EOC_LEVEL_UP_ONE_YANG_FINGER", 1 ],
+        [ "EOC_LEVEL_UP_SPIRIT_BLADES_OF_SIX_MERIDIANS", 1 ]
+      ]
     }
   },
   {
@@ -683,5 +773,25 @@
       { "math": [ "u_spell_level('sdf_soul_burning_meridian_reversal') = 0" ] }
     ],
     "false_effect": { "math": [ "u_spell_exp('sdf_soul_burning_meridian_reversal') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_ONE_YANG_FINGER",
+    "condition": { "math": [ "u_spell_level('sdf_one_yang_finger') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - One Yang Finger", "popup": true },
+      { "math": [ "u_spell_level('sdf_one_yang_finger') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('sdf_one_yang_finger') += rand(1000)" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LEVEL_UP_SPIRIT_BLADES_OF_SIX_MERIDIANS",
+    "condition": { "math": [ "u_spell_level('sdf_spirit_blades_of_six_meridians') == -1" ] },
+    "effect": [
+      { "message": "You learned a new technique - Spirit Blades of Six Meridians", "popup": true },
+      { "math": [ "u_spell_level('sdf_spirit_blades_of_six_meridians') = 0" ] }
+    ],
+    "false_effect": { "math": [ "u_spell_exp('sdf_spirit_blades_of_six_meridians') += rand(1000)" ] }
   }
 ]
