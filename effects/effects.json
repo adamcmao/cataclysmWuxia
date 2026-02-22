@@ -24,6 +24,7 @@
     "name": [ "Nine Pulse Rejuvenation" ],
     "desc": [ "You feel yourself healing." ],
     "rating": "good",
+    "show_in_info": true,
     "enchantments": [
       {
         "intermittent_activation": {
@@ -39,6 +40,7 @@
     "desc": [ "You are slowly recovering qi at a tiny rate." ],
     "rating": "good",
     "max_duration": 6000,
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
@@ -53,6 +55,7 @@
     "desc": [ "You are slowly recovering qi at a slow rate." ],
     "rating": "good",
     "max_duration": 30000,
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
@@ -67,6 +70,7 @@
     "desc": [ "You are recovering qi." ],
     "rating": "good",
     "max_duration": 90000,
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
@@ -81,6 +85,7 @@
     "desc": [ "Like a cup beneath a waterfall, your qi is being filled endlessly." ],
     "rating": "good",
     "max_duration": 360000,
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": { "math": [ "u_vitamin('qi_vitamin') < 1000" ] },
@@ -95,6 +100,7 @@
     "desc": [ "Shattered, you simply cannot hold any qi." ],
     "rating": "bad",
     "max_duration": 360000,
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": { "math": [ "u_vitamin('qi_vitamin') > 0" ] },
@@ -112,6 +118,7 @@
     "rating": "good",
     "max_duration": "1 days",
     "max_intensity": 25,
+    "show_in_info": true,
     "enchantments": [ { "values": [ { "value": "SPEED", "add": { "math": [ "u_spell_level('wind_following_steps') * 5" ] } } ] } ]
   },
   {
@@ -121,6 +128,7 @@
     "desc": [ "With your soul as fuel, you are in a state of transcendence." ],
     "apply_message": "You transcend all mortality!",
     "rating": "good",
+    "show_in_info": true,
     "max_duration": "5 minutes",
     "enchantments": [
       {
@@ -156,6 +164,7 @@
     "apply_message": "Nothing is left, you wait for death to embrace you.",
     "rating": "bad",
     "max_duration": "1 day",
+    "show_in_info": true,
     "removes_effects": [ "qi_deviation_stat_boost" ],
     "enchantments": [
       {
@@ -190,6 +199,7 @@
     "name": [ "Countering Still Hand" ],
     "desc": [ "Heels dug in, you focus on defense instead of aggression." ],
     "rating": "good",
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -294,6 +304,7 @@
     "name": [ "Still Water Breaks the Blade" ],
     "desc": [ "Every fiber of your body strains, waiting to deflect and counter with a perfect blow." ],
     "rating": "good",
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -319,6 +330,7 @@
     "name": [ "Varjas Wrath" ],
     "desc": [ "Sacrifice the flesh to pierce the bone." ],
     "rating": "good",
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -338,6 +350,7 @@
     "name": [ "Metamorphosis" ],
     "desc": [ "The insects crawling under your skin strengthen your body as they feast." ],
     "rating": "good",
+    "show_in_info": true,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -358,6 +371,7 @@
     "name": [ "Silk Wrap" ],
     "desc": [ "You are tangled in spider's silk." ],
     "rating": "bad",
+    "show_in_info": true,
     "enchantments": [ { "values": [ { "value": "SPEED", "add": { "math": [ "-1 * u_spell_level('gu_silk_extract') * 5" ] } } ] } ]
   }
 ]
