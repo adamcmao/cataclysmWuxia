@@ -3,5 +3,21 @@
     "type": "effect_on_condition",
     "id": "EOC_MIN_DISTANCE_OF_THREE",
     "condition": { "math": [ "distance('u', 'npc') >= 3" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LAST_BREATH_START",
+    "condition": "has_alpha",
+    "effect": [
+      { "u_location_variable": { "context_val": "target_position" } },
+      { "npc_location_variable": { "context_val": "player_position" } },
+      { "npc_cast_spell": { "id": "fallen_buddha_last_breath_actual" }, "loc": { "context_val": "target_position" } },
+      {
+        "u_knockback": { "math": [ "rand(n_spell_level('fallen_buddha_last_breath'))" ] },
+        "stun": 2,
+        "dam_mult": { "math": [ "1 + (n_spell_level('fallen_buddha_last_breath') * 0.4)" ] },
+        "direction_var": { "context_val": "player_position" }
+      }
+    ]
   }
 ]
