@@ -41,7 +41,7 @@
     "energy_source": { "type": "VITAMIN", "vitamin": "qi_vitamin", "color": "c_blue" }
   },
   {
-    "//": "TODO: Add bonus damage if you have additional qi.",
+    "//": "Does bonus damage if you have over 900 qi, see EOC_ONE_YANG_FINGER_ADJUSTMENTS.",
     "id": "sdf_one_yang_finger",
     "type": "SPELL",
     "name": " One Yang Finger",

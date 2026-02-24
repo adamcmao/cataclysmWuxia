@@ -150,5 +150,20 @@
       { "u_add_effect": "bleed", "target_part": "torso", "duration": [ 1200, 2000 ] },
       { "math": [ "u_hp('torso') -= 40" ] }
     ]
+  },
+  {
+    "//": "Bonus damage when at high qi ratio, need to figure out how to do this when max qi isn't set to 1000",
+    "type": "effect_on_condition",
+    "id": "EOC_ONE_YANG_FINGER_ADJUSTMENTS",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+    "condition": { "math": [ "u_vitamin('qi_vitamin') >= 900" ] },
+    "effect": [
+      {
+        "math": [
+          "u_spellcasting_adjustment('damage', 'spell': 'sdf_one_yang_finger'  ) = max(1.1, 0.2*u_spell_level('sdf_one_yang_finger'))"
+        ]
+      }
+    ]
   }
 ]
