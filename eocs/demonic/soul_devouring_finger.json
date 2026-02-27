@@ -14,7 +14,7 @@
     "type": "effect_on_condition",
     "id": "EOC_HEAVEN_DEVOURING_ART_START",
     "condition": {
-      "or": [
+      "and": [
         { "not": { "u_has_species": "JIANGSHI" } },
         { "not": { "u_has_species": "ZOMBIE" } },
         { "not": { "u_has_effect": "effect_qi_drained" } }
@@ -164,6 +164,23 @@
           "u_spellcasting_adjustment('damage', 'spell': 'sdf_one_yang_finger'  ) = max(1.1, 0.2*u_spell_level('sdf_one_yang_finger'))"
         ]
       }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SPIRIT_BLADES_OF_SIX_MERIDIANS_START",
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      {
+        "if": { "and": [ { "u_has_effect": "effect_qi_drained" }, { "not": { "u_has_effect": "effect_soul_drained" } } ] },
+        "then": [
+          { "u_add_effect": "effect_soul_drained", "duration": "10 hours" },
+          {
+            "math": [ "n_vitamin('qi_vitamin') += (rand(n_spell_level('sdf_spirit_blades_of_six_meridians')*5)+50)" ]
+          }
+        ]
+      },
+      { "npc_cast_spell": { "id": "sdf_spirit_blades_of_six_meridians_actual" }, "loc": { "context_val": "loc" } }
     ]
   }
 ]

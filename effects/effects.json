@@ -238,6 +238,14 @@
   },
   {
     "type": "effect_type",
+    "id": "effect_soul_drained",
+    "name": [ "Soul Drained" ],
+    "show_in_info": true,
+    "desc": [ "Should only be on monsters as a flag, you shouldn't see this on you." ],
+    "rating": "bad"
+  },
+  {
+    "type": "effect_type",
     "id": "effect_tempering_in_progress",
     "name": [ "Tempering" ],
     "show_in_info": true,
