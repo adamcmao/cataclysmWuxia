@@ -131,6 +131,12 @@ Recipies become more and more complex as time goes on
 		Toad style
 			All body parts except one (the player gets to choose), get a strong buff
 			If the unbuffed one gets hit, the player gets a debuff for x amount of time
+		Vajra
+			Standard defense bonus
+		Demonic
+			Higher blood regen?
+		Beast?
+			Weak 1 range counter?
 		TODO: Add other branches as you think of them
 
 ## Qinggong

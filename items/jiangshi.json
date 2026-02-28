@@ -48,5 +48,53 @@
       "moves": 500
     },
     "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "wuxia_jiangshi_black_inert",
+    "copy-from": "wuxia_jiangshi_white_inert",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": "inactive black haired jiangshi",
+    "description": "An inactive black haired jiangshi, it lies motionless and still. Without qi circulating through it, it looks smaller and lighter.",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "wuxia_jiangshi_black",
+      "friendly_msg": "You watch as the jiangshi rises, unfocused eyes staring aimlessly.",
+      "hostile_msg": "As you bring the jiangshi to life, it suddenly snaps towards you!",
+      "moves": 500
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "wuxia_jiangshi_iron_inert",
+    "copy-from": "wuxia_jiangshi_black_inert",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": "inactive iron jiangshi",
+    "description": "An inactive iron jiangshi, it lies motionless and still. Without qi circulating through it, it looks smaller and lighter.",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "wuxia_jiangshi_iron",
+      "friendly_msg": "You watch as the jiangshi rises, unfocused eyes staring aimlessly.",
+      "hostile_msg": "As you bring the jiangshi to life, it suddenly snaps towards you!",
+      "moves": 500
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "wuxia_jiangshi_flying_inert",
+    "copy-from": "wuxia_jiangshi_iron_inert",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": "inactive flying jiangshi",
+    "description": "An inactive flying jiangshi, it lies motionless and still. Without qi circulating through it, it looks smaller and lighter.",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "wuxia_jiangshi_flying",
+      "friendly_msg": "You watch as the jiangshi rises, unfocused eyes staring aimlessly.",
+      "hostile_msg": "As you bring the jiangshi to life, it suddenly snaps towards you!",
+      "moves": 500
+    },
+    "flags": [ "SINGLE_USE" ]
   }
 ]
