@@ -120,6 +120,19 @@ Gives spells to manipulate the jiangshi
 Gives recipies that make you damage yourself, with small chance of getting a permenant bonus
 Once you get a bonus, you lose that recipe, and unlock the recipe for the next tier
 Recipies become more and more complex as time goes on
+	Tier 1
+		Start with doing a lowish amount of damage per body part
+			Only a % chance of success
+			If the body part is successful apply a debuff to that body part
+		Once a`ll body parts are complete, remove all debuffs, and apply the buff
+	Tier 2
+		Same process but more damage, and apply a heavy bleed per body part
+	Branches at Tier 3
+		Toad style
+			All body parts except one (the player gets to choose), get a strong buff
+			If the unbuffed one gets hit, the player gets a debuff for x amount of time
+		TODO: Add other branches as you think of them
+
 ## Qinggong
 Only one qinggong effect can be applied at a time
 The effect is lost when
