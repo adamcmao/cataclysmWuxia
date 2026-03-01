@@ -114,6 +114,11 @@ Gives recipies to create a jiangshi from a corpse
 Gives recipies to upgrade a jiangshi
 Gives spells to manipulate the jiangshi
 	Healing, stat bonuses, pulling towards player character, etc
+	Should you have to craft higher tiers of Jiangshi, or should it mutate on its own over time?
+	Maybe have multiple branches, animal/human/whatever, and you just craft the initial tier and let it mutate over time
+	I like having rituals though
+	Make the initial tier, have a max tier, and then a ritual to get the final tier?
+	Can I mod the pet mounting menu? Maybe add a feed blood/qi option that has a % chance of upgrading the jiangshi
 
 # Universal
 ## Body Tempering
