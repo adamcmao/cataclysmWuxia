@@ -56,7 +56,8 @@
     "copy-from": "wuxia_jiangshi_base",
     "type": "MONSTER",
     "name": "white haired jiangshi",
-    "description": "A slow white haired hopping corpse."
+    "description": "A slow white haired hopping corpse.",
+    "upgrades": { "into": "wuxia_jiangshi_black", "half_life": 28 }
   },
   {
     "id": "wuxia_jiangshi_black",
@@ -70,7 +71,8 @@
     "melee_dice": 2,
     "melee_dice_sides": 3,
     "melee_damage": [ { "damage_type": "cut", "amount": 2 }, { "damage_type": "bash", "amount": 2 } ],
-    "armor": { "bash": 3, "cut": 3, "stab": 3, "bullet": 3, "electric": 1, "acid": 1 }
+    "armor": { "bash": 3, "cut": 3, "stab": 3, "bullet": 3, "electric": 1, "acid": 1 },
+    "upgrades": { "into": "wuxia_jiangshi_iron", "half_life": 28 }
   },
   {
     "id": "wuxia_jiangshi_iron",
@@ -86,7 +88,8 @@
     "bleed_rate": 50,
     "melee_damage": [ { "damage_type": "cut", "amount": 5 }, { "damage_type": "bash", "amount": 5 } ],
     "armor": { "bash": 8, "cut": 8, "stab": 8, "bullet": 8, "electric": 2, "acid": 2 },
-    "extend": { "special_attacks": [ { "id": "slam", "cooldown": 2 } ] }
+    "extend": { "special_attacks": [ { "id": "slam", "cooldown": 2 } ] },
+    "upgrades": { "into": "wuxia_jiangshi_flying", "half_life": 28 }
   },
   {
     "id": "wuxia_jiangshi_flying",

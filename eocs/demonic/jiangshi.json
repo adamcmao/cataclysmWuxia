@@ -1,6 +1,11 @@
 [
   {
     "type": "effect_on_condition",
+    "id": "EOC_IS_JIANGSHI",
+    "condition": { "npc_has_species": "JIANGSHI" }
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_YIN_ESSENCE_REFORGING_START",
     "condition": { "u_has_species": "JIANGSHI" },
     "effect": [
